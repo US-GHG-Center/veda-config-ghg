@@ -33,7 +33,7 @@ taxonomy:
       - Ground Measurements      
 layers:
   - id: enteric-fermentation
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Enteric Fermentation (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -55,6 +55,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 4182634135552
@@ -67,7 +69,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: manure-management
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Manure Management (annual)
     type: raster
     description: Emissions from sector 3B from manure management.
@@ -90,7 +92,7 @@ layers:
         }      
     legend:
       unit: 
-       label: molecule/cm²/s
+       label: CH₄/cm²/s
       type: gradient
       min: 0 
       max: 3062094888960
@@ -103,7 +105,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 4c-rice-cultivation
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Rice Cultivation (annual)
     type: raster
     description: Emissions from sector 4C from rice cultivation.
@@ -125,6 +127,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 6309977522176
@@ -137,7 +141,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 4f-field-burning
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Field Burning (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -159,6 +163,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 27056996352
@@ -171,7 +177,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-exploration-ngs
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas Exploration (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -193,6 +199,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 2611559792640
@@ -205,7 +213,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"  
   - id: 1B2b-production-ngs
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas Production (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -227,6 +235,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 13900969934848
@@ -239,7 +249,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"        
   - id: 1B2b-transmission-storage-ngs
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Transmission and Storage (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -261,6 +271,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 19360041140224
@@ -273,7 +285,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-processing-ngs
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Processing Natural Gas Production (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -295,6 +307,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 63448557813760
@@ -307,7 +321,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-distribution-ngs
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Distribution Natural Gas (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -329,6 +343,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 3239707148288
@@ -341,7 +357,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2a-exploration-ps
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Exploration Petroleum (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -363,6 +379,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 185182912512
@@ -375,7 +393,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"             
   - id: 1B2a-production-ps
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Production Petroleum (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -397,6 +415,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 14142707597312
@@ -409,7 +429,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"              
   - id: 1B2a-transport-ps
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Transportation Petroleum (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -431,6 +451,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 321039630336
@@ -443,7 +465,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"        
   - id: 1B2a-refining-ps
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Refining Petroleum (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -465,6 +487,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 2642320293888
@@ -477,7 +501,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"   
   - id: 5A1-msw-landfill-waste
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Municipal Solid Waste (MSW) Landfills (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -499,6 +523,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 45878274424832
@@ -511,7 +537,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"           
   - id: 5A1-industrial-landfill-waste
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Industrial Landfills (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -533,6 +559,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 43219505119232
@@ -545,7 +573,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"                
   - id: 5A1-dwtd-waste
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Domestic Wastewater Treatment & Discharge (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -567,6 +595,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 13170276040704
@@ -579,7 +609,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 5A1-iwtd-waste
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Industrial Wastewater Treatment & Discharge (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -601,6 +631,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 62315768578048
@@ -613,7 +645,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 5A1-composting-waste
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Composting (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -635,6 +667,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 726430777344
@@ -647,7 +681,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 1B1a-underground-coal
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Underground Coal Mining (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -669,6 +703,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 195221799305216
@@ -681,7 +717,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 1B1a-abn-underground-coal
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Abandoned Underground Coal Mines Coal Mining (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -703,6 +739,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 11779458465792
@@ -715,7 +753,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 1B1a-surface-coal
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Surface Coal Mining (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -737,6 +775,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 97066218946560
@@ -749,7 +789,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"          
   - id: 1A-stationary-combustion-other
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Stationary combustion (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -771,6 +811,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 1096969945088
@@ -783,7 +825,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"                
   - id: 1A-mobile-combustion-othe
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Mobile combustion (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -805,6 +847,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 356184489984
@@ -817,7 +861,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 1A-abn-ong-other
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Abandoned Oil and Gas Wells (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -839,6 +883,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 4824812748800
@@ -851,7 +897,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 1A-petro-production-other
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Petrochemical Production (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -873,6 +919,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 4687914860544
@@ -885,7 +933,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"            
   - id: 1A-ferroalloy-production-other
-    stacCol: epa-ch4emission-grid-v2express
+    stacCol: epa-ch4emission-yeargrid-v2express
     name: Ferroalloy Production (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -907,6 +955,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: CH₄/cm²/s
       type: gradient
       min: 0
       max: 99607961600
