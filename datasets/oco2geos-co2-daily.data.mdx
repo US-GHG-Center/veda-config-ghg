@@ -9,16 +9,16 @@ usage:
   - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/oco2geos-co2-daygrid-v10r_User_Notebook.ipynb'
     label: Notebook to read, visualize, and explore data statistics
     title: 'OCO-2 GEOS CO₂ data notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2FLPJ-wsl-ch4wetland-emissions.ipynb&branch=main'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Foco2geos-co2-daygrid-v10r_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
 
 media:
   src: ::file ./oco--dataset-cover.jpg
-  alt: Gas Burns
+  alt: Smoking Factory
   author:
-    name: Tawanda W. Johnson
-    url: https://www.aps.org/publications/apsnews/202206/methane.cfm
+    name: Johannes Plenio
+    url: https://unsplash.com/photos/5_9inhy4NSE
 taxonomy:
   - name: Topics
     values:
@@ -46,8 +46,8 @@ layers:
       assets: xco2
       colormap_name: magma
       rescale:
-        - 0
-        - 0.2
+        - 0.00040152
+        - 0.00042850
       nodata: 0
     compare:
       datasetId: oco2-gridded-daily
@@ -60,8 +60,8 @@ layers:
       unit:
         label: mol CO₂/mol dry
       type: gradient
-      min: 0
-      max: 2
+      min: 0.00040152
+      max: 0.00042850
       stops:
         - '#2c115f'
         - '#721f81'
@@ -81,7 +81,7 @@ layers:
       colormap_name: magma
       rescale:
         - 0
-        - 0.2
+        - 0.0000015
       nodata: 0
     compare:
       datasetId: oco2-gridded-daily
@@ -94,8 +94,8 @@ layers:
       unit:
         label: mol CO₂/mol dry
       type: gradient
-      min: -0.2
-      max: 0.2
+      min: 0
+      max: 0.0000015
       stops:
         - '#2c115f'
         - '#721f81'
