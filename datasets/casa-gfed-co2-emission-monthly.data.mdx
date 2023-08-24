@@ -3,10 +3,10 @@ id: land-atmoshphere-co2-emissions-monthly-2022
 name: CASA-GFED3 Land Carbon Flux
 description: Global, monthly 0.5 degree resolution carbon fluxes from Net Primary Production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), and fuel wood burning emissions (FUEL) derived from the CASA-GFED model, version 3
 usage:
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/emit-ch4plume-v1_User_Notebook.ipynb'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/casagfed-carbonflux-monthgrid-v3_Transformation_Code.py'
     label: Notebook to transform netcdf to COG
     title: 'CASA-GFED3 carbon flux data transformation notebook'
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/emit-ch4plume-v1_User_Notebook.ipynb'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/casagfed-carbonflux-monthgrid-v3_User_Notebook.ipynb'
     label: Notebook to read, visualize, and explore data statistics
     title: 'CASA-GFED3 carbon flux data notebook'
   - url: 'https://hub.ghg.center/hub/'
@@ -287,8 +287,6 @@ layers:
     Ott, L., Collatz, J., & Kawa, R. (2020). Description of GEOS-Carb CASA-GFED3 Land Carbon Flux Products. GES DISC. [https://acdisc.gesdisc.eosdis.nasa.gov/data/CMS/GEOS_CASAGFED_M_FLUX.3/doc/README.CASA_GFED.pdf](https://acdisc.gesdisc.eosdis.nasa.gov/data/CMS/GEOS_CASAGFED_M_FLUX.3/doc/README.CASA_GFED.pdf)  
 
     ## Other Relevant Publications
-    
-    ## Acknowledgment
     Gelaro, R., McCarty, W., Suárez, M. J., Todling, R., Molod, A., Takacs, L., Randles, C. A., Darmenov, A., Bosilovich, M. G., Reichle, R., Wargan, K., Coy, L., Cullather, R., Draper, C., Akella, S., Buchard, V., Conaty, A., da Silva, A. M., Gu, W., … Zhao, B. (2017). The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2). Journal of Climate, 30(14), 5419–5454. [https://doi.org/10.1175/jcli-d-16-0758.1](https://doi.org/10.1175/jcli-d-16-0758.1)
 
     Giglio, L., Boschetti, L., Roy, D. P., Humber, M. L., & Justice, C. O. (2018). The Collection 6 MODIS burned area mapping algorithm and product. Remote Sensing of Environment, 217, 72–85. [https://doi.org/10.1016/j.rse.2018.08.005](https://doi.org/10.1016/j.rse.2018.08.005)
@@ -299,12 +297,15 @@ layers:
 
     van der Werf, G. R., Randerson, J. T., Giglio, L., van Leeuwen, T. T., Chen, Y., Rogers, B. M., Mu, M., van Marle, M. J. E., Morton, D. C., Collatz, G. J., Yokelson, R. J., & Kasibhatla, P. S. (2017). Global fire emissions estimates during 1997–2016. Earth System Science Data, 9, 697–720. [https://doi.org/10.5194/essd-9-697-2017](https://doi.org/10.5194/essd-9-697-2017)
 
+    ## Acknowledgment
+    This dataset was produced as part of the [GEOS-Carb project](https://cce-datasharing.gsfc.nasa.gov/cmsprojects/list/h/0/) supported by NASA’s [Carbon Monitoring System (CMS) Program](https://carbon.nasa.gov/cms/).    
+    
     ## License
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)   
     
     ## Data Stewardship
     - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/casagfed-carbonflux-monthgrid-v3_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/GEOSCarb_CASAGFED_netcdf_to_cog.py)
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/casagfed-carbonflux-monthgrid-v3_Transformation_Code.py)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/casagfed-carbonflux-monthgrid-v3_Processing%20and%20Verification%20Report.pdf)
   </Prose>
 </Block>
