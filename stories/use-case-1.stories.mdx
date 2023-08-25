@@ -26,16 +26,29 @@ taxonomy:
             align="left"
             attrAuthor="example author"
             attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
-            width="256"
         />
         <Caption> NOAA CH4 concentration map </Caption>
     </Figure>
     </Block>
 
-    <Block>
+    <Block type="wide">
         <Prose>
             ## Importance of National Greenhouse Gas Inventories & Intro to the U.S. GHG Inventory
+        </Prose>
+    </Block>
 
+    <Block>
+        <Figure>
+            <Image 
+                src={new URL('./power-plant.jpeg', import.meta.url).href}
+                alt="Media example" 
+                align="left"
+                attrAuthor="example author"
+                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+            />
+            {/* <Caption> NOAA CH4 concentration map </Caption> */}
+        </Figure>
+        <Prose>
             ### National greenhouse gas inventories are a fundamental tool for promoting international cooperation to address climate change
 
             The 1992 United Framework Convention on Climate Change (UNFCCC) is an international treaty that established a framework for international cooperation to achieve “stabilization of greenhouse gas concentrations in the atmosphere at a level that would prevent dangerous anthropogenic interference with the climate system” (Article 2). Towards this end, signatories to the UNFCCC are committed to developing and reporting “national inventories of anthropogenic emissions by sources and removals by sinks of all greenhouse gases” (Article 4). These inventories provide a scientific basis for tracking and planning emission mitigation efforts to achieve the long-term objective of the Convention. Inventory reporting is also a continued commitment under Article 13 of the 2015 Paris Agreement. 
@@ -48,9 +61,29 @@ taxonomy:
 
             The Intergovernmental Panel on Climate Change (IPCC) assesses the scientific, technical, and socio-economic information relevant to understanding the scientific basis of risk of human-induced climate change, its potential impacts, and options for adaptation and mitigation (IPCC, 2021). The IPCC has generated a number of methodology reports on national greenhouse gas inventories with a view of providing internationally acceptable inventory methodologies. These methods are largely based on an approach that combines information on human activity data (e.g., the amount of fuel use) and factors that quantify the amount of emissions or removal per unit of activity (e.g., methane emissions per amount of fuel use). These methods can be more or less complex depending on the type of data available for a given source or gas. Currently, national inventories reported to the UNFCCC are required to use methods consistent with the 2006 IPCC Guidelines for National Greenhouse Gas Inventories (2006, IPCC), and its subsequent supplements and refinements, where appropriate. 
         </Prose>
+        <Figure>
+            <Image 
+                src={new URL('./conference.jpeg', import.meta.url).href}
+                alt="Media example" 
+                align="left"
+                attrAuthor="example author"
+                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+            />
+            {/* <Caption> NOAA CH4 concentration map </Caption> */}
+        </Figure>
     </Block>
 
     <Block>
+        <Figure>
+            <Image 
+                src={new URL('./ghgi.png', import.meta.url).href}
+                alt="Media example" 
+                align="left"
+                attrAuthor="example author"
+                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+            />
+            <Caption> Caption: Image from GHGI Explorer </Caption>
+        </Figure>
         <Prose>
             ### Inventory of U.S. Greenhouse Gas Emissions and Sinks 
 
@@ -64,9 +97,29 @@ taxonomy:
 
             Over the last two decades, advancements in atmospheric measurements of methane from satellites, aircraft, and mobile platforms in conjunction with inverse modeling, which is a mathematical technique to infer emissions from concentrations, have revolutionized the ability to estimate methane sources such as biological sources, leaks, and other fugitive emissions. However, in order for these local and regional estimates to be informative for the national-level UNFCCC process (2019 IPCC Refinements), a spatial representation of the US GHGI is needed to enable more direct comparisons. 
         </Prose>
+        <Figure>
+            <Image 
+                src={new URL('./methane-obs.jpeg', import.meta.url).href}
+                alt="Media example" 
+                align="left"
+                attrAuthor="example author"
+                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+            />
+            {/* <Caption> NOAA CH4 concentration map </Caption> */}
+        </Figure>
     </Block>
 
     <Block>
+        <Figure>
+            <Map
+                datasetId='epa-express-extension-gridded-emissions-v2'
+                layerId='enteric-fermentation'
+                dateTime='2020-01-01'
+            />
+            <Caption>
+                EPA Gridded Express 2020 emission
+            </Caption>
+        </Figure>
         <Prose>
             ## Here’s what was done
 
@@ -74,16 +127,13 @@ taxonomy:
 
             A new methane emissions dataset includes a time series of 2012 - 2020 U.S. anthropogenic methane emissions from over 25 individual sources, at the 10 x 10 km scale. Compared to other ‘gridded’ emission products, this dataset is uniquely consistent with the U.S. GHGI, meaning that gridded methane estimates when summed, will equal contiguous U.S. methane emissions in the U.S. GHGI. To maintain consistency with the U.S. GHGI, national methane emissions from each source have been allocated to each grid cell using, where available, the same activity data (e.g., animal counts, gas well locations and production volumes, etc.) that was used to calculate the national U.S. GHGI. Details of this approach are discussed in a recent [paper](https://eartharxiv.org/repository/view/5623/). This dataset was developed through a collaboration between researchers at SRON, Harvard, LBNL, and the U.S. EPA and is an update to a previous dataset published in 2016.
         </Prose>
-        <Figure>
-        <Map
-            datasetId='epa-express-extension-gridded-emissions-v2'
-            layerId='enteric-fermentation'
-            dateTime='2020-01-01'
-        />
-        <Caption>
-            EPA Gridded Express 2020 emission
-        </Caption>
-    </Figure>
+        
+    </Block>
+
+    <Block type="wide">
+        <Prose>
+            ## Example Stories
+        </Prose>
     </Block>
 
     <ScrollytellingBlock>
