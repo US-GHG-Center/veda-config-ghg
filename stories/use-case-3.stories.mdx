@@ -3,7 +3,7 @@ id: 'use-case-3'
 name: Discovering Large Methane Emission Events with Remote Measurement
 description: 'A new generation of satellite and airborne instruments can now map methane emissions from the energy, waste, and agriculture sectors.'
 media:
-  src: ::file ./01_EMIT_ISSmethane.png
+  src: ::file ./emit_above_planet_v4-1.png
   alt: New remote measurement technologies like the EMIT can identify large methane emissions across the globe.
   author:
     name: JPL
@@ -73,14 +73,13 @@ taxonomy:
 
     <Block>
     <Figure>
-        <Map
-        datasetId='jpl-ch4-plume-emissions'
-        layerId='ch4-plume-emissions'
-        dateTime='2023-02-05'
-        compareDatetime='2023-04-15'
+        <CompareImage
+            leftImageSrc={new URL('./plume1.png', import.meta.url).href}
+            rightImageSrc={new URL('./plume2.png', import.meta.url).href}
+            width="100"
         />
         <Caption>
-        Methane plume observed from space near Carlsbad, New Mexico associated with the Permian Basin
+        Methane plume observed from space near Carlsbad, New Mexico associated with the Permian Basin.
         </Caption>
     </Figure>
     </Block>
@@ -96,7 +95,7 @@ taxonomy:
             rightImageSrc={new URL('./plume4.png', import.meta.url).href}
             width="100"
         />
-        <Caption> Methane plume observed from space near Carlsbad, New Mexico associated with the Permian Basin </Caption>
+        <Caption> Methane plume observed from a space from a landfill outside of Phoenix, Arizona. </Caption>
         </Figure>
     </Block>
 
