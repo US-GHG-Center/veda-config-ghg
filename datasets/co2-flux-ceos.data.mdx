@@ -43,7 +43,7 @@ layers:
       - 20
     sourceParams:
       assets: river
-      colormap_name: rainbow
+      colormap_name: coolwarm
       rescale:
         - -120
         - 240
@@ -57,18 +57,21 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: -120
       max: 240
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
   - id: co2-emissions-river-std
     stacCol: nasa-ceos-co2-flux
     name: Lateral river flux - std
@@ -93,7 +96,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 140
@@ -129,7 +132,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 50
       max: 450
@@ -165,7 +168,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 25000
@@ -187,7 +190,7 @@ layers:
       - 20
     sourceParams:
       assets: lnlgis-nbe
-      colormap_name: rainbow
+      colormap_name: coolwarm
       rescale:
         - -1700
         - 2500
@@ -201,18 +204,21 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: -1700
       max: 2500
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'                  
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'                
   - id: co2-emissions-lnlgis-nbe-std
     stacCol: nasa-ceos-co2-flux
     name: LNLGIS Net biosphere exchange - std
@@ -237,7 +243,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 25000
@@ -259,7 +265,7 @@ layers:
       - 20
     sourceParams:
       assets: lnlgis-nce
-      colormap_name: rainbow
+      colormap_name: coolwarm
       rescale:
         - -1770
         - 25300
@@ -273,18 +279,21 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: -1770
       max: 25300
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'             
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'           
   - id: co2-emissions-lnlgis-nce-std
     stacCol: nasa-ceos-co2-flux
     name: LNLGIS Terrestrial net carbon exchange - std
@@ -309,7 +318,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 1400
@@ -331,7 +340,7 @@ layers:
       - 20
     sourceParams:
       assets: lnlgis-dc-loss
-      colormap_name: rainbow
+      colormap_name: coolwarm
       rescale:
         - -1220
         - 25700
@@ -345,18 +354,21 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: -2500
       max: 2500
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'             
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'           
   - id: co2-emissions-lnlgis-dc-loss-std
     stacCol: nasa-ceos-co2-flux
     name:  LNLGIS Net terrestrial carbon stock loss - std
@@ -381,7 +393,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 25000
@@ -403,7 +415,7 @@ layers:
       - 20
     sourceParams:
       assets: crop
-      colormap_name: rainbow
+      colormap_name: coolwarm
       rescale:
         - -800
         - 1500
@@ -417,18 +429,21 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: -800
       max: 1500
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
   - id: co2-emissions-crop-std
     stacCol: nasa-ceos-co2-flux
     name: Lateral crop flux - std
@@ -453,7 +468,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 450
@@ -475,7 +490,7 @@ layers:
       - 20
     sourceParams:
       assets: wood
-      colormap_name: jet
+      colormap_name: coolwarm
       rescale:
         - -2000
         - 900
@@ -489,26 +504,21 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: -2000
       max: 900
       stops:
-        - '#000080'
-        - '#0000D1'
-        - '#0010FF'
-        - '#0058FF'
-        - '#00A4FF'
-        - '#06ECF1'
-        - '#40FFB7'
-        - '#7DFF7A'
-        - '#B7FF40'
-        - '#F1FC06'
-        - '#FFB900'
-        - '#FF7300'
-        - '#FF3000'
-        - '#D10000'
-        - '#800000'
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
   - id: co2-emissions-wood-std
     stacCol: nasa-ceos-co2-flux
     name:  Lateral wood flux - std
@@ -533,7 +543,7 @@ layers:
         }
     legend:
       unit: 
-        label: gC m-2 year-1
+        label: g CO2/m²/yr
       type: gradient
       min: 0
       max: 600
@@ -556,7 +566,7 @@ layers:
     - **Temporal Resolution:** Annual    
     - **Spatial Extent:** Global    
     - **Spatial Resolution:**  1° x 1°   
-    - **Data Units:** Grams of carbon dioxide per square meter per year (g CO2/m2/yr)
+    - **Data Units:** Grams of carbon dioxide per square meter per year (g CO2/m²/yr)
     - **Data Type:** Research
     - **Data Latency:** Research
     
@@ -572,7 +582,7 @@ layers:
 <Block>
   <Prose>
     ## Source Data Product Citation
-    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1, Committee on Earth Observing Satellites, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022    
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1, *Committee on Earth Observing Satellites*, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022    
 
     ## Dataset Accuracy
     The uncertainty in NCE is an estimate of the standard deviation of the v10 OCO-2 MIP ensemble members. This is meant to characterize uncertainties originating from the inversion configuration (such as the transport model, inversion method and prior constraints). However, there are also limitations to this method. First, there is only a small ensemble of 11 MIP ensemble members included in this analysis and an over-representation of inversions using two transport models: TM5 (3) and GEOS-Chem (5), which makes uncertainty quantification challenging. Second, the ensemble-based estimate does not capture some sources of uncertainty. In particular, Bayesian posterior uncertainties are not considered, due to the fact that many of the inversion systems participating in the v10 OCO-2 MIP do not calculate this uncertainty. For more information on the dataset’s uncertainty, refer to [Byrne et al. 2023.](https://doi.org/10.5194/essd-15-963-2023).
@@ -581,10 +591,10 @@ layers:
     All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
   
     ## Key Publications
-    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake. Earth System Science Data, 15, 963–1004. [https://doi.org/10.5194/essd-15-963-2023](https://doi.org/10.5194/essd-15-963-2023)
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake. *Earth System Science Data*, 15, 963–1004. [https://doi.org/10.5194/essd-15-963-2023](https://doi.org/10.5194/essd-15-963-2023)
 
     ## Other Relevant Publications
-    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). Supplement of National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake. Earth System Science Data, 15, 963–1004. [https://doi.org/10.5194/essd-15-963-2023-supplement](https://doi.org/10.5194/essd-15-963-2023-supplement)
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). Supplement of National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake. *Earth System Science Data*, 15, 963–1004. [https://doi.org/10.5194/essd-15-963-2023-supplement](https://doi.org/10.5194/essd-15-963-2023-supplement)
     
     CEOS. (2022). Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1 ReadMe. [https://ceos.org/gst/files/ReadMe.txt](https://ceos.org/gst/files/ReadMe.txt)
     
