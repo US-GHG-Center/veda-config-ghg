@@ -41,9 +41,9 @@ layers:
       - 20
     sourceParams:
       assets: npp
-      colormap_name: plasma
+      colormap_name: coolwarm
       rescale:
-        - 0
+        - -0.2
         - 0.2
       nodata: 0
     compare:
@@ -57,24 +57,19 @@ layers:
       unit:
         label: kg Carbon m²/mon
       type: gradient
-      min: 0
+      min: -0.2
       max: 0.2
       stops:
-        - '#310597'
-        - '#4c02a1'
-        - '#6600a7'
-        - '#7e03a8'
-        - '#9511a1'
-        - '#aa2395'
-        - '#bc3587'
-        - '#cc4778'
-        - '#da5a6a'
-        - '#e66c5c'
-        - '#f0804e'
-        - '#f89540'
-        - '#fdac33'
-        - '#fdc527'
-        - '#f8df25'
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
   - id: casa-gfed-co2-flux-hr
     stacCol: nasa-casa-gfed-co2-flux
     name: Heterotrophic Respiration (Rh)
