@@ -40,7 +40,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: enteric-fermentation
+      assets: total-methane-annual
       colormap_name: rainbow
       rescale:
         - 0
@@ -94,7 +94,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: enteric-fermentation
+      assets: total-agriculture-(annual)
       colormap_name: rainbow
       rescale:
         - 0
@@ -364,7 +364,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: exploration-ngs
+      assets: total-natural-gas-systems-(annual)
       colormap_name: rainbow
       rescale:
         - 0
@@ -372,7 +372,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 1B2b-exploration-ngs
+      layerId: total-natural-gas
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -742,7 +742,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: exploration-ps
+      assets: total-petroleum-systems-(annual)
       colormap_name: rainbow
       rescale:
         - 0
@@ -750,7 +750,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 1B2a-exploration-ps
+      layerId: total-petroleum
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -1012,7 +1012,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: msw-landfill-waste
+      assets: total-waste-(annual)
       colormap_name: rainbow
       rescale:
         - 0
@@ -1020,7 +1020,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 5A1-msw-landfill-waste
+      layerId: total-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -1336,7 +1336,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: underground-coal
+      assets: total-coal-mines-(annual)
       colormap_name: rainbow
       rescale:
         - 0
@@ -1344,7 +1344,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 1B1a-underground-coal
+      layerId: total-coal-mines
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -1552,7 +1552,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: stationary-combustion-other
+      assets: total-other-(annual)
       colormap_name: rainbow
       rescale:
         - 0
@@ -1560,7 +1560,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 1A-stationary-combustion-other
+      layerId: total-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
