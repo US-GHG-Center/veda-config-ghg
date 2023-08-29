@@ -247,7 +247,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"     
-  - id: 4c-rice-cultivation
+  - id: rice-cultivation-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture Rice Cultivation (annual)
     type: raster
@@ -264,7 +264,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 4c-rice-cultivation
+      layerId: rice-cultivation-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -301,7 +301,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"     
-  - id: 4f-field-burning
+  - id: field-burning-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture Field Burning (annual)
     type: raster
@@ -318,7 +318,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 4f-field-burning
+      layerId: field-burning-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -409,7 +409,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"     
-  - id: 1B2b-exploration-ngs
+  - id: exploration-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas Exploration (annual)
     type: raster
@@ -426,7 +426,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 1B2b-exploration-ngs
+      layerId: exploration-ngs-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -463,7 +463,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"     
-  - id: 1B2b-production-ngs
+  - id: production-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas Production (annual)
     type: raster
@@ -480,7 +480,7 @@ layers:
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express-ghgc
-      layerId: 1B2b-production-ngs
+      layerId: production-ngs-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
