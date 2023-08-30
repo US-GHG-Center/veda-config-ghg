@@ -42,10 +42,10 @@ layers:
       - 20
     sourceParams:
       assets: co2
-      colormap_name: coolwarm
+      colormap_name: gist_yarg
       rescale:
-        - -0.056054
-        - 0.05544  
+        - -0.00035
+        - 0.006197 
       nodata: 0
     compare:
       datasetId: eccodarwin-co2flux-monthgrid-v5-ghgc
@@ -58,19 +58,14 @@ layers:
       unit: 
         label: mmol m²/s
       type: gradient
-      min: -0.056054
-      max: 0.05544   
+      min: -0.00035
+      max: 0.006197  
       stops:
-        - '#3B4CC0'
-        - '#5D7CE6'
-        - '#82A6FB'
-        - '#AAC7FD'
-        - '#CDD9EC'
-        - '#EAD4C8'
-        - '#F7B89C'
-        - '#F18D6F'
-        - '#D95847'
-        - '#B40426'
+        - '#000000'
+        - '#404040'
+        - '#808080'
+        - '#C0C0C0'
+        - '#FFFFFF'
 ---
 
 <Block type='wide'>
