@@ -3,15 +3,18 @@ id: epa-ch4emission-yeargrid-v2express-ghgc
 name: Gridded Anthropogenic Methane Emissions Inventory
 description: Spatially disaggregated 0.1°x 0.1° annual maps of U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks
 usage:
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation/scripts/epa-ch4emission-grid-v2express_Transformation_Code.py'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html'
     label: Notebook to trasnform GeoTIFF to COG
     title: 'Express EPA Gridded Anthropogenic Methane Emissions data transformation notebook'
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/epa-ch4emission-grid-v2express_User_Notebook.ipynb'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/epa-ch4emission-grid-v2express_User_Notebook.html'
     label: Notebook to read, visualize, and explore data statistics
     title: 'Express EPA Gridded Anthropogenic Methane Emissions data notebook'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2express_User_Notebook.ipynb&branch=main'
     label: Run example notebook
-    title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)    
+    title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#epa-ch4emission-yeargrid-v2express/
+    label: Browse and download the raw dataset data
+    title: Data Browser
 media:
   src: ::file ./epa-annual--cover.jpg
   alt: emission from industry
@@ -31,6 +34,62 @@ taxonomy:
     values:
       - Ground Data     
 layers:
+  - id: total-methane
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Methane (annual)
+    type: raster
+    description: Total annual methane emission fluxes from all Agriculture, Energy, Waste, and ‘Other’ sources included in this dataset.
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-methane
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 7656391
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-methane
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 7656391
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
   - id: total-agriculture
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Agriculture (annual)
@@ -45,7 +104,7 @@ layers:
       assets: total-agriculture
       colormap_name: rainbow
       rescale:
-        - 0
+        - 1
         - 7656391
       nodata: 0
     compare:
@@ -59,7 +118,7 @@ layers:
       unit: 
        label: Molecules CH₄/cm²/s
       type: gradient
-      min: 0
+      min: 1
       max: 7656391
       stops:
         - "#6F4C9B"
@@ -101,7 +160,7 @@ layers:
       assets: enteric-fermentation
       colormap_name: rainbow
       rescale:
-        - 0
+        - 1229061
         - 4182634135552
       nodata: 0      
     compare:
@@ -115,7 +174,7 @@ layers:
       unit: 
        label: Molecules CH₄/cm²/s
       type: gradient
-      min: 0
+      min: 1229061
       max: 4182634135552
       stops:
         - "#6F4C9B"
@@ -1945,7 +2004,7 @@ layers:
     
     ## Data Stewardship
     - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/epa-ch4emission-grid-v2express_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/epa-ch4emission-grid-v2express_Transformation_Code.py)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/epa-ch4emission-grid-v2express_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>

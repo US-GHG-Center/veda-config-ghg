@@ -3,15 +3,18 @@ id: emit-ch4plume-v1-ghgc
 name: EMIT methane point source plume complexes
 description: Methane point source plume complexes measured by the EMIT imaging spectrometer on the International Space Station (ISS)
 usage:
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/emit-ch4plume-v1_User_Notebook.ipynb'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/emit-ch4plume-v1.html'
     label: Notebook to transform GeoTIFF to COG
     title: 'Methane emission from EMIT transformation notebook'
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/emit-ch4plume-v1_User_Notebook.ipynb'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/emit-ch4plume-v1_User_Notebook.html'
     label: Notebook to read, visualize, and explore data statistics
     title: 'Methane emission from EMIT data notebook'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Femit-ch4plume-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#emit-ch4plume-v1/
+    label: Browse and download the raw dataset data
+    title: Data Browser
 media:
   src: ::file ./emit-plume--cover.jpg
   alt: emission from industry
@@ -32,7 +35,7 @@ taxonomy:
       - Satellite Data
 layers:
   - id: ch4-plume-emissions
-    stacCol: nasa-jpl-plumes-emissions-updated
+    stacCol: emit-ch4plume-v1
     name: CH4 point source plume complexes
     type: raster
     description: Methane point source plume complex extents with methane enhancements
@@ -94,6 +97,14 @@ layers:
     **Scientific Details:** EMIT has demonstrated the capacity to characterize methane point source emissions by measuring gas absorption features in the shortwave infrared. The EMIT GHG point source plumes provided here build on a substantial history of remote greenhouse gas detections from airborne imaging spectrometers (Thorpe et al., 2013, 2014, 2017; Thompson et al., 2015; Frankenberg et al., 2016; Duren et al., 2019; Cusworth et al., 2022). We leverage a per-column adaptive matched filter for the primary detection, due to the speed and efficacy of identifying subtle signatures. Plumes are identified and assessed by scientists following a protocol in order to provide only instances with maximum confidence. For each EMIT point source plume  complex, methane enhancements in units of ppm m are provided.  See the ATBD for more details.
   </Prose>
 </Block>
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://nasa-impact.github.io/interactive-emission-plumes"
+    />
+  </Figure>
+</Block>
 <Block>
   <Prose>
     ## Source Data Product Citation
@@ -129,7 +140,7 @@ layers:
 
     ## Data Stewardship
     - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/emit-ch4plume-v1_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/emit-ch4plume-v1_Transformation_Code.py)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/emit-ch4plume-v1.html)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/emit-ch4plume-v1_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>
