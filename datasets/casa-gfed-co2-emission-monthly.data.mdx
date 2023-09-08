@@ -41,6 +41,7 @@ layers:
     description: Model-estimated net primary production (NPP), which is the amount of carbon available from plants
     projection:
       id: 'equirectangular'
+    basemapId: 'light' | 'dark' | 'satellite' | 'topo'
     zoomExtent:
       - 0
       - 20
@@ -50,7 +51,6 @@ layers:
       rescale:
         - 0
         - 0.3
-      nodata: 0
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux
@@ -82,6 +82,7 @@ layers:
     description: Model-estimated heterotrophic respiration (Rh), which is the flux of carbon from the soil to the atmosphere
     projection:
       id: 'equirectangular'
+    basemapId: 'light' | 'dark' | 'satellite' | 'topo'   
     zoomExtent:
       - 0
       - 20
@@ -91,7 +92,6 @@ layers:
       rescale:
         - 0
         - 0.3
-      nodata: 0
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-hr
@@ -123,6 +123,7 @@ layers:
     description:  Model-estimated net ecosystem exchange (NEE), which is the net carbon flux to the atmosphere
     projection:
       id: 'equirectangular'
+    basemapId: 'light' | 'dark' | 'satellite' | 'topo'
     zoomExtent:
       - 0
       - 20
@@ -132,7 +133,6 @@ layers:
       rescale:
         - -0.03
         - 0.02
-      nodata: 0
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-nee
@@ -144,8 +144,8 @@ layers:
       unit:
         label: kg Carbon m²/mon
       type: gradient
-      min: -0.03
-      max: 0.03
+      min: -0.3
+      max: 0.3
       stops:
         - '#67001F'
         - '#C13639'
@@ -162,6 +162,7 @@ layers:
     description: Model-estimated flux of carbon to the atmosphere from wildfires
     projection:
       id: 'equirectangular'
+    basemapId: 'light' | 'dark' | 'satellite' | 'topo'
     zoomExtent:
       - 0
       - 20
@@ -203,6 +204,7 @@ layers:
     description: Model-estimated flux of carbon to the atmosphere from wood burned for fuel
     projection:
       id: 'equirectangular'
+    basemapId: 'light' | 'dark' | 'satellite' | 'topo'
     zoomExtent:
       - 0
       - 20
@@ -212,7 +214,6 @@ layers:
       rescale:
         - 0
         - 0.3
-      nodata: 0
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-fuel
