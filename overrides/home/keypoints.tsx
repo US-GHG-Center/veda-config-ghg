@@ -44,7 +44,6 @@ export default function Keypoints() {
                   JSON.stringify({ Topics: "Read more about Anthropogenic GHG Emissions" })
                 )}`}
               >
-                Read more about Anthropogenic GHG Emissions
                 Check out relevant datasets
               </ArrowLink>
             }
@@ -55,7 +54,8 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural GHG Sources and Sinks"
-            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere \n Read more about Natural GHG Sources and Sinks "
+            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
+            text = "Read more about Natural GHG Sources and Sinks"
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
