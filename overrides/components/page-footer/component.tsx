@@ -150,7 +150,7 @@ export default function PageFooter(props) {
           </Tip>
         </div>
         <CreditsInfo>
-          <p>U.S. Greenhouse Gas Center Responsible Official: Argyro Kavvada</p>
+          <p>U.S. Greenhouse Gas Center Responsible Official: <b>Argyro Kavvada</b></p>
           <p align="center">
             <a
                 href="#"
