@@ -62,13 +62,9 @@ export default function Keypoints() {
               to="/stories/tracking-greenhouse-gas-cycles"
             >
               Read more about Natural GHG Sources and Sinks
-            </ArrowLink>}
-            {
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+              to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
-              >
                 Check out relevant datasets
               </ArrowLink>
             }
