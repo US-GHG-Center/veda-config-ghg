@@ -55,11 +55,16 @@ export default function Keypoints() {
             linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural GHG Sources and Sinks"
             description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
-            text = "Read more about Natural GHG Sources and Sinks"
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
-            footerContent={
-              <ArrowLink
+            footerContent={              
+            <ArrowLink
+              to="/stories/tracking-greenhouse-gas-cycles"
+            >
+              Read more about Natural GHG Sources and Sinks
+            </ArrowLink>}
+            {
+              ...<ArrowLink
                 to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
