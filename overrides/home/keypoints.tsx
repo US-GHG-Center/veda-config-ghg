@@ -26,6 +26,12 @@ const KeypointsWrapper = styled(Hug)`
   }
 `;
 
+
+const ReadMore = styled.div`
+  padding-bottom: 12px;
+  font-size: 14px;
+`;
+
 export default function Keypoints() {
   return (
     <KeypointsWrapper>
@@ -39,13 +45,16 @@ export default function Keypoints() {
             imgSrc={featureEmissions}
             imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "anthropogenic-emissions" })
-                )}`}
-              >
-                Check out relevant datasets
-              </ArrowLink>
+              <div>
+                <ReadMore> Read more about Anthropogenic GHG Emissions </ReadMore>
+                <ArrowLink
+                  to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                    JSON.stringify({ Topics: "anthropogenic-emissions" })
+                  )}`}
+                >
+                  Check out relevant datasets
+                </ArrowLink>
+              </div>
             }
           />
         </li>
@@ -58,13 +67,16 @@ export default function Keypoints() {
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "natural-emissions-and-sinks" })
-                )}`}
-              >
-                Check out relevant datasets
-              </ArrowLink>
+              <div>
+                <ReadMore>Read more about Natural GHG Sources and Sinks</ReadMore>
+                <ArrowLink
+                  to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                    JSON.stringify({ Topics: "natural-emissions-and-sinks" })
+                  )}`}
+                >
+                  Check out relevant datasets
+                </ArrowLink>
+              </div>
             }
           />
         </li>
@@ -77,13 +89,16 @@ export default function Keypoints() {
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "large-emission-events" })
-                )}`}
-              >
-                Check out relevant datasets
-              </ArrowLink>
+              <div>
+                <ReadMore>Read more about how Large Methane Emission Events are identified</ReadMore>
+                <ArrowLink
+                  to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                    JSON.stringify({ Topics: "large-emission-events" })
+                    )}`}
+                    >
+                  Check out relevant datasets
+                </ArrowLink>
+              </div>
             }
           />
         </li>
