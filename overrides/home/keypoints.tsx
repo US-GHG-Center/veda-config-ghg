@@ -64,7 +64,7 @@ export default function Keypoints() {
               Read more about Natural GHG Sources and Sinks
             </ArrowLink>}
             {
-              ...<ArrowLink
+              <ArrowLink
                 to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
