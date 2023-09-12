@@ -35,11 +35,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/anthropogenic-methane-emissions-distribution"
             title="Anthropogenic GHG Emissions"
-<<<<<<< HEAD
             description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
-=======
-            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry."
->>>>>>> fcbfc4b (Update text on homepage (#104))
             imgSrc={featureEmissions}
             imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
@@ -77,13 +73,8 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
-<<<<<<< HEAD
             title="Large Methane Emission Events"
             description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data"
-=======
-            title="Methane emissions from large events."
-            description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data."
->>>>>>> fcbfc4b (Update text on homepage (#104))
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
