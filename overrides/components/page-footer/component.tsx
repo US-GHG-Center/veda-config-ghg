@@ -150,8 +150,8 @@ export default function PageFooter(props) {
           </Tip>
         </div>
         <CreditsInfo>
-          <p>U.S. Greenhouse Gas Center Responsible Official: <b>Argyro Kavvada</b></p>
-          <p align="center">
+          <p>U.S. Greenhouse Gas Center Responsible Official: Argyro Kavvada</p>
+          <p>
             <a
                 href="#"
                 onClick={(e) => {
@@ -159,7 +159,7 @@ export default function PageFooter(props) {
                   show();
                 }}
               >
-                Click Here to Give Feedback
+                User form to ask a question or provide feedback
             </a>
           </p>
         </CreditsInfo>
