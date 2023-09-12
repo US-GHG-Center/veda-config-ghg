@@ -57,14 +57,13 @@ export default function Keypoints() {
             description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
-            footerContent={              
-            <ArrowLink
-              to="/stories/tracking-greenhouse-gas-cycles"
-            >
-              Read more about Natural GHG Sources and Sinks
-              to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+            footerContent={
+              <ArrowLink
+                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
+              >
+                Read more about Natural GHG Sources and Sinks '\n'
                 Check out relevant datasets
               </ArrowLink>
             }
