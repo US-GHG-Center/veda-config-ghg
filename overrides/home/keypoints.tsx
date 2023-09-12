@@ -55,7 +55,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural GHG Sources and Sinks"
-            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
+            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere \n Read more about Natural GHG Sources and Sinks "
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
@@ -64,11 +64,11 @@ export default function Keypoints() {
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
               >
+                Read more about Natural GHG Sources and Sinks
                 Check out relevant datasets
               </ArrowLink>
-            }>
-              Read more about Natural GHG Sources and Sinks
-          </Card>
+            }
+          />
         </li>
         <li>
           <Card
