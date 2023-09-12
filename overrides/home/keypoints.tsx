@@ -35,7 +35,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/anthropogenic-methane-emissions-distribution"
             title="Anthropogenic GHG Emissions"
-            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
+            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry."
             imgSrc={featureEmissions}
             imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
@@ -52,10 +52,16 @@ export default function Keypoints() {
         <li>
           <Card
             linkLabel="View more"
+<<<<<<< HEAD
             linkTo="/stories/how-ghg-center-tracks-carbon"
             title="Environmental GHG Sources and Sinks"
             description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
 >>>>>>> fcbfc4b (Update text on homepage (#104))
+=======
+            linkTo="/stories/tracking-greenhouse-gas-cycles"
+            title="Natural GHG Sources and Sinks"
+            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
+>>>>>>> develop
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
@@ -73,8 +79,8 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
-            title="Large Methane Emission Events"
-            description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data"
+            title="Methane emissions from large events."
+            description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data."
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
