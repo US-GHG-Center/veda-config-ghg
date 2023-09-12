@@ -64,7 +64,6 @@ export default function Keypoints() {
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
               >
-                Read more about Natural GHG Sources and Sinks
                 Check out relevant datasets
               </ArrowLink>
             }
