@@ -64,11 +64,11 @@ export default function Keypoints() {
                   JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
               >
-                Read more about Natural GHG Sources and Sinks
                 Check out relevant datasets
               </ArrowLink>
-            }
-          />
+            }>
+              Read more about Natural GHG Sources and Sinks
+          </Card>
         </li>
         <li>
           <Card
@@ -84,7 +84,6 @@ export default function Keypoints() {
                   JSON.stringify({ Topics: "Read more about how Large Methane Emission Events are identified" })
                 )}`}
               >
-                Read more about how Large Methane Emission Events are identified
                 Check out relevant datasets
               </ArrowLink>
             }
