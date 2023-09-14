@@ -1,5 +1,5 @@
 ---
-id: oco2geos-co2-daygrid-v10r-ghgc
+id: oco2geos-co2-daygrid-v10r
 name: OCO-2 GEOS Assimilated CO₂ Concentrations
 description: Daily, global 0.5 x 0.625 degree assimilated CO₂ concentrations derived from OCO-2 satellite data, version 10r
 usage:
@@ -55,7 +55,7 @@ layers:
         - 0.00040285
       nodata: 0
     compare:
-      datasetId: oco2geos-co2-daygrid-v10r-ghgc
+      datasetId: oco2geos-co2-daygrid-v10r
       layerId: oco2-dryair-column
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -92,7 +92,7 @@ layers:
         - 0.0000015
       nodata: 0
     compare:
-      datasetId: oco2geos-co2-daygrid-v10r-ghgc
+      datasetId: oco2geos-co2-daygrid-v10r
       layerId: oco2-dryair-column-prec
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
