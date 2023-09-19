@@ -55,13 +55,13 @@ taxonomy:
         <Figure>
             <Image 
                 src={new URL('./annual-methane-emissions.png', import.meta.url).href}
-                alt="A stacked line graph showing the amount of methane released into the atmosphere from different sectors annually from 1990 through 2020 from the United States. The total values decrease over the timeframe from about 31 Tg/year to roughly 26 Tg/year, driven by reductions in emissions from coal, oil and gas, and waste. The emissions from the livestock section increase over this time period." 
+                alt="A stacked line graph showing the amount of methane released into the atmosphere from different sectors annually from 1990 through 2020 from the United States" 
                 align="left"
                 attrAuthor="NIST"
                 attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
                 width="256"
             />
-            <Caption>  A stacked line graph showing the amount of methane released into the atmosphere from different sectors annually from 1990 through 2020 from the United States. The total values decrease over the timeframe from about 31 Tg/year to roughly 26 Tg/year, driven by reductions in emissions from coal, oil and gas, and waste. The emissions from the livestock section increase over this time period. Data aggregated from epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks-1990-2020, using data from 2022 Annex Table, tables 2-2. </Caption>
+            <Caption> A stacked line graph showing the amount of methane released into the atmosphere from different sectors annually from 1990 through 2020 from the United States. The total values decrease over the timeframe from about 31 Tg/year to roughly 26 Tg/year, driven by reductions in emissions from coal, oil and gas, and waste. The emissions from the livestock section increase over this time period. Data aggregated from epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks-1990-2020, using data from 2022 Annex Table, tables 2-2. </Caption>
         </Figure>
     </Block>
 
@@ -113,22 +113,24 @@ taxonomy:
         </Figure>
     </Block>
 
-     <Block>
+     <Block type="wide">
+        <Prose>
+            Methane leaks in populated areas can be a danger to public safety. Detecting plumes at the detail of high spatial resolution can help locate specific emission sources. This information  provides actionable information to utilities so that they can fix leaks. The example provided below shows methane plumes observed using the <a href="https://avirisng.jpl.nasa.gov/" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>Airborne Visible InfraRed Imaging Spectrometer - Next Generation (AVIRIS-NG)↗</a> as part of the California Methane Survey (Duren et al., 2019). Multiple flights on the same day observed methane in this residential location. The gas utility used these methane plume images to verify and repair the leak from a natural gas distribution line in a residential neighborhood.
+        </Prose>
+    </Block>
+
+    <Block type="wide">
         <Figure>
             <Image 
                 src={new URL('./PIA22467_modest.jpg', import.meta.url).href}
                 alt="A three panel figure showing an overhead view of a suburban neighborhood. The left and center figure show the same area, overlaid with methane plume observations made from an airborne sensor. There are squares identifying the central point of the plumes, which is the same in both images, but the plume is extending in different directions due to changes in wind direction. The panel on the right shows the same area after the leak was fixed with no methane detected over the original area."
-                align="left"
+                align="center"
                 attrAuthor="NASA/JPL-Caltech"
                 attrUrl="https://photojournal.jpl.nasa.gov/catalog/PIA22467"
                 width="256"
             />
             <Caption> Methane plumes observed using the airborne AVIRIS-NG instrument for a neighborhood gas leak. Methane plume images and coordinates were shared with the gas utility, resulting in verification of the leak and repair. After the repair, AVIRIS-NG returned to the location and no methane plumes were observed. </Caption>
         </Figure>
-        <Prose>
-            Methane leaks in populated areas can be a danger to public safety. Detecting plumes at the detail of high spatial resolution can help locate specific emission sources. This information  provides actionable information to utilities so that they can fix leaks. The example provided below shows methane plumes observed using the <a href="https://avirisng.jpl.nasa.gov/" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>Airborne Visible InfraRed Imaging Spectrometer - Next Generation (AVIRIS-NG)↗</a> as part of the California Methane Survey (Duren et al., 2019). Multiple flights on the same day observed methane in this residential location. The gas utility used these methane plume images to verify and repair the leak from a natural gas distribution pipeline in a residential neighborhood.
-
-        </Prose>
     </Block>
 
     <Block>
@@ -145,7 +147,6 @@ taxonomy:
                 alt="Media example" 
                 align="left" 
                 attrAuthor="NASA/JPL-Caltech"
-                attrUrl="#"
                 width="256"
             />
             <Caption> Imaging spectrometers measure hundreds of spectral wavelengths from the visible through shortwave infrared. While invisible to the human eye, the methane spectral fingerprint can be measured with remote sensing instruments. </Caption>
@@ -160,7 +161,6 @@ taxonomy:
                 alt="A photograph from the window of the international space station. Solar panels, the EMIT instrument, and the arm are visible in the foreground, with a label indicating the location of EMIT. The edge of the Earth is in the background." 
                 align="left" 
                 attrAuthor="NASA/JPL-Caltech"
-                attrUrl="#"
                 width="256"
             />
             <Caption> EMIT was launched on 14 July 2022 and is currently operating on the International Space Station (ISS). </Caption>
@@ -173,20 +173,21 @@ taxonomy:
 
      <Block>
         <Prose>
-            Methane plumes identified by EMIT are currently visible <a href="https://nasa-impact.github.io/interactive-emission-plumes/" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>here↗</a>.
+            Methane plumes identified by EMIT are currently visible <a href="/data-catalog/emit-ch4plume-v1" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>here</a>.
         </Prose>
     </Block>
 
     <Block>
      <Figure>
+            <a href="https://nasa-impact.github.io/interactive-emission-plumes/" target="_blank" rel="noopener">
             <Image 
                 src={new URL('./emit-plume-map.png', import.meta.url).href}
                 alt="A map of the world with points representing methane plume locations distributed across all continents except antarctica." 
                 align="left" 
                 attrAuthor="GHG Center"
-                attrUrl="#"
                 width="256"
             />
+            </a>
             <Caption> Locations of methane plumes observed with EMIT. </Caption>
         </Figure>
     </Block>
@@ -198,7 +199,6 @@ taxonomy:
                 alt="Three panel photograph, one shows four people in a clean room standing behind an instrument. The bottom left shows an instrument mounted to the floor of a plane. The bottom right shows an image of a plane flying, ‘NASA’ is clearly visible on the tail. " 
                 align="left" 
                 attrAuthor="NASA/JPL-Caltech"
-                attrUrl="#"
                 width="256"
             />
             <Caption> Airborne imaging spectrometers like AVIRIS, AVIRIS-NG, and AVIRIS-3 have been used for methane mapping. The AVIRIS-3 airborne imaging spectrometer in the lab and integrated into an aircraft for methane flights. </Caption>
@@ -218,7 +218,7 @@ taxonomy:
     <Block>
         <Prose>
         ## Resources / References
-       M. Saunois, A. R. Stavert, B. Poulter, P. Bousquet, J. G. Canadell, R. B. Jackson, P. A. Raymond, E. J. Dlugokencky, S. Houweling, P. K. Patra, P. Ciais, V. K. Arora, D. Bastviken, P. Bergamaschi, D. R. Blake, G. Brailsford, L. Bruhwiler, K. M. Carlson, ... Q. Zhuang, The Global Methane Budget 2000–2017. Earth System Science Data. 12, 1561–1623 (2020).
+        M. Saunois, A. R. Stavert, B. Poulter, P. Bousquet, J. G. Canadell, R. B. Jackson, P. A. Raymond, E. J. Dlugokencky, S. Houweling, P. K. Patra, P. Ciais, V. K. Arora, D. Bastviken, P. Bergamaschi, D. R. Blake, G. Brailsford, L. Bruhwiler, K. M. Carlson, ... Q. Zhuang, The Global Methane Budget 2000–2017. Earth System Science Data. 12, 1561–1623 (2020).
 
         G. Myhre, D. Shindell, F.-M. Bréon, W. Collins, J. Fuglestvedt, J. Huang, D. Koch, J. Lamarque, D. Lee, B. Mendoza, T. Nakajima, A. Robock, G. Stephens, T. Takemura, H. Zhang, Anthropogenic and natural radiative forcing. Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change, Tech. Rep (2013).
 
