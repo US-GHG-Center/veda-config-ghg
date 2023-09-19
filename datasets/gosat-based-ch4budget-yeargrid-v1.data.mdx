@@ -41,13 +41,13 @@ layers:
     name: Prior Total
     type: raster
     description: Prior Total
+    basemapId: 'topo'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: post-total
-      colormap: '{"0":[0.0, 0.0, 0.5,0],"1":[0.0, 0.06274509803921569, 1.0,0],"2":[0.0, 0.6431372549019608, 1.0,255],"3":[0.25, 1.0, 0.7176470588235294,255],"4":[0.7176470588235294, 1.0, 0.25098039215686274,255],"5":[1.0, 0.7254901960784313, 0.0,255],"6":[1.0, 0.18823529411764706, 0.0,255],"7":[0.5, 0.0, 0.0,255]}'
-      format: png      
+      colormap_name: jet
       rescale:
         - 0
         - 2
@@ -67,13 +67,15 @@ layers:
       max: 2
       stops:
         - '#000080'
-        - '#0010FF'
-        - '#00A4FF'
-        - '#40FFB7'
-        - '#B7FF40'
-        - '#FFB900'
-        - '#FF3000'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
         - '#800000' 
+        - '#4C0000' 
   - id: post-total-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Post Total
