@@ -196,18 +196,19 @@ layers:
         - '#4C0000'    
   - id: prior-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Prior Wetlands Uncertainty
+    name: Priori Wetlands Uncertainty
     type: raster
-    description: Prior Wetlands Uncertainty
+    description: Priori Wetlands Uncertainty
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: prior-wetland-uncertainty
-      colormap_name: purd
+      colormap_name: jet
       rescale:
         - 0
-        - 1.53
+        - 0.05
       nodata: 0
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
@@ -221,23 +222,24 @@ layers:
         label: Tg CH₄/yr
       type: gradient
       min: 0
-      max: 1.53
+      max: 0.05
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'                          
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000'                         
   - id: post-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Post Wetlands Uncertainty
+    name: Posterior Wetlands Uncertainty
     type: raster
-    description: Post Wetlands Uncertainty
+    description: Posterior Wetlands Uncertainty
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
@@ -246,7 +248,7 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        -  0.367
+        -  0.05
       nodata: 0
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
@@ -260,18 +262,18 @@ layers:
         label: Tg CH₄/yr
       type: gradient
       min: 0
-      max:  0.367
+      max:  0.05
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'                                                 
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000'                                                 
 ---
 
 <Block type='wide'>
