@@ -41,7 +41,7 @@ layers:
     name: Priori Total
     type: raster
     description: Priori Total
-    basemapId: 'topo'
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
@@ -49,7 +49,7 @@ layers:
       assets: post-total
       colormap_name: jet
       rescale:
-        - 0.02
+        - 0
         - 0.3
       nodata: 0
     compare:
@@ -63,7 +63,7 @@ layers:
       unit: 
         label: Tg CH₄/yr
       type: gradient
-      min: 0.02
+      min: 0
       max: 0.3
       stops:
         - '#000080'
@@ -81,6 +81,7 @@ layers:
     name: Posterior Total
     type: raster
     description: Posterior Total
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
@@ -88,45 +89,8 @@ layers:
       assets: post-total
       colormap_name: jet
       rescale:
-        - 0.02
-        - 1
-      nodata: 0
-    compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: post-total-id
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: Tg CH₄/yr
-      type: gradient
-      min: 0.02
-      max: 1
-      stops:
-        - '#000080'
-        - '#0010FF'
-        - '#00A4FF'
-        - '#40FFB7'
-        - '#B7FF40'
-        - '#FFB900'
-        - '#FF3000'
-        - '#800000' 
-  - id: prior-wetland-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Prior Wetlands
-    type: raster
-    description: Prior Wetlands
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: post-wetland
-      colormap_name: purd
-      rescale:
         - 0
-        - 1.222
+        - 0.3
       nodata: 0
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
@@ -140,32 +104,31 @@ layers:
         label: Tg CH₄/yr
       type: gradient
       min: 0
-      max: 1.222
+      max: 0.3
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'                        
-  - id: post-wetland-id
+        - '#000080'
+        - '#0010FF'
+        - '#00A4FF'
+        - '#40FFB7'
+        - '#B7FF40'
+        - '#FFB900'
+        - '#FF3000'
+        - '#800000' 
+  - id: prior-wetland-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Post Wetlands
+    name: Priori Wetlands
     type: raster
-    description: Post Wetlands
+    description: Priori Wetlands
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      assets: post-wetland
-      colormap_name: rdbu
+      assets: prior-wetland
+      colormap_name: jet
       rescale:
-        - -0.838
-        -  2.036
+        - 0
+        - 0.10
       nodata: 0
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
@@ -178,17 +141,59 @@ layers:
       unit: 
         label: Tg CH₄/yr
       type: gradient
-      min: -0.40
-      max:  1.00
+      min: 0
+      max: 0.10
       stops:
-        - '#67001F'
-        - '#C13639'
-        - '#F09C7B'
-        - '#FBE3D4'
-        - '#DBEAF2'
-        - '#87BEDA'
-        - '#2F79B5'
-        - '#053061'     
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000'                       
+  - id: post-wetland-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Posterior Wetlands
+    type: raster
+    description: Posterior Wetlands
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-wetland
+      colormap_name: jet
+      rescale:
+        - 0
+        - 0.10
+      nodata: 0
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: post-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.10
+      stops:
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000'    
   - id: prior-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Prior Wetlands Uncertainty
