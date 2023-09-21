@@ -96,7 +96,7 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 100
+        - 1000
       nodata: 0
     compare:
       datasetId: oco2-mip-co2budget-yeargrid-v1
@@ -110,7 +110,7 @@ layers:
         label: g CO₂/m²/yr
       type: gradient
       min: 0
-      max: 100
+      max: 300
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -179,7 +179,7 @@ layers:
       - 20
     sourceParams:
       assets: lnlgis-nce-std
-      colormap_name: rainbow
+      colormap_name: purd
       rescale:
         - 0
         - 1200
@@ -198,13 +198,16 @@ layers:
       min: 0
       max: 1200
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
   - id: co2-emissions-lnlgis-dc-loss
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss)
@@ -265,7 +268,7 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 600
+        - 800
       nodata: 0
     compare:
       datasetId: oco2-mip-co2budget-yeargrid-v1
@@ -279,7 +282,7 @@ layers:
         label: g CO₂/m²/yr
       type: gradient
       min: 0
-      max: 600
+      max: 800
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -393,7 +396,7 @@ layers:
       assets: ff
       colormap_name: rainbow
       rescale:
-        - 50
+        - 0
         - 450
       nodata: 0
     compare:
@@ -407,7 +410,7 @@ layers:
       unit:
         label: g CO₂/m²/yr
       type: gradient
-      min: 50
+      min: 0
       max: 450
       stops:
         - '#60007d'
@@ -520,7 +523,7 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 80
+        - 60
       nodata: 0
     compare:
       datasetId: oco2-mip-co2budget-yeargrid-v1
@@ -534,7 +537,7 @@ layers:
         label: g CO₂/m²/yr
       type: gradient
       min: 0
-      max: 80
+      max: 60
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
