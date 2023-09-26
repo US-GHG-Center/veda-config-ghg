@@ -1,7 +1,7 @@
 ---
 id: 'intro-us-ghg-center'
 name: Intro to the US GHG Center
-description: The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort to integrate greenhouse gas data from observations and models into credible, authoritative, trusted consensus greenhouse gas emissions and flux products for use in decision-making.
+description: The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort to compile greenhouse gas data from observations and models into trusted, authoritative greenhouse gas emissions and flux products for use in decision-making.
 media:
   src: ::file ./intro-to-ghg-center--cover.png
   alt: Screenshot of the US GHG Center website homepage
@@ -96,8 +96,8 @@ featured: true
     ## Who’s Behind the US GHG Center?
     <Image
         src={new URL("logos.png", import.meta.url).href}
-        alt="logos"
         align="left"
+        alt="logos for the four agencies: EPA, NASA, NIST, NOAA" 
     />
     The U.S. Greenhouse Gas Center is coordinated by NASA in partnership with EPA, NIST and NOAA. These agencies are collaborating to prototype development of the center with the goal of accelerating the production and delivery of quality greenhouse gas (GHG) information, including a curated collection of GHG datasets, workflows and visualizations from the federal government and non-public sector, NASA, EPA, NOAA and NIST. 
     
@@ -138,11 +138,27 @@ featured: true
 
     The US GHG Center contains trusted, authoritative greenhouse gas emissions and flux products.
     
-    The initial 2-yr demonstration phase or the project  targets three GHG areas of study in order to
+    <div style={{display: "flex", "align-items": "center", "justify-content": "center"}}>
+        <figure style={{display: "inline-block", width:"250px", margin:"4px 2px 2px 2px"}}>
+            <img src={new URL('./factory.png', import.meta.url).href} alt='missing' />
+            <figcaption>Anthropogenic GHG Emissions</figcaption>
+        </figure>
+        <figure style={{display: "inline-block", width:"250px", margin:"2px"}}>
+            <img src={new URL('./swamp.png', import.meta.url).href} alt='missing' />
+            <figcaption>Natural GHG Sources and Sinks</figcaption>
+        </figure>
+        <figure style={{display: "inline-block", width:"250px", margin:"2px"}}>
+            <img src={new URL('./plume.png', import.meta.url).href} alt='missing' />
+            <figcaption>Large Methane Emission Events</figcaption>
+        </figure>
+    </div>
+
+    The initial 2-yr demonstration phase or the project targets three GHG areas of study in order to
         - Provide access to selected anthropogenic gas emission data products; 
         - Complement anthropogenic GHG inventories  with estimates of natural GHG emissions, update and other fluxes of GHGs, as well as improved usability and visualizations.  
         - Identify and quantify emissions from large methane (CH4) leak events leveraging aircraft and space-borne instruments. 
         - The US GHG Center is not a comprehensive accounting of all GHG-relevant products and datasets produced by the U.S. Federal Government. Additional features and data sets will be added as additional information is available, with links throughout the site to additional resources.
+
 
     </Prose>
 </Block>
