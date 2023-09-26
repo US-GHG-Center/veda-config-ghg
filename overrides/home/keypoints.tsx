@@ -62,7 +62,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural Greenhouse Gas Sources and Sinks"
-            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
+            description="Naturally-occurring greenhouse gas fluxes from land, ocean, and atmosphere"
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
