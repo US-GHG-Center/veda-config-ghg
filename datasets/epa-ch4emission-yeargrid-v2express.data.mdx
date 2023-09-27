@@ -67,16 +67,26 @@ layers:
       min: 0
       max: 1500
       stops:
-        - '#8000FF'
-        - '#4856FB'
-        - '#10A2F0'
-        - '#2ADDDD'
-        - '#62FBC4'
-        - '#9CFBA4'
-        - '#D4DD80'
-        - '#FFA256' 
-        - '#FF562C' 
-        - '#FF0000'             
+        - '#000080'
+        - '#0000BB'
+        - '#0000F6'
+        - '#0020FF'
+        - '#0054FF'
+        - '#008CFF'
+        - '#00C0FF'
+        - '#0FF8E7' 
+        - '#39FFBE'  
+        - '#66FF90'
+        - '#90FF66'
+        - '#BEFF39'
+        - '#E7FF0F'
+        - '#FFD300'
+        - '#FFA300'
+        - '#FF6F00'
+        - '#FF3F00' 
+        - '#F60B00' 
+        - '#BB0000' 
+        - '#800000'                           
   - id: total-agriculture
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Agriculture (annual)
@@ -93,7 +103,7 @@ layers:
       assets: total-agriculture
       colormap_name: jet
       rescale:
-        - 0
+        - 10
         - 1000
       nodata: 0
     compare:
@@ -111,15 +121,25 @@ layers:
       max: 1000
       stops:
         - '#000080'
-        - '#0000FF'
-        - '#0080FF'
-        - '#00FFFF'
-        - '#00FF80'
-        - '#FFFF00'
-        - '#FF8000'
-        - '#FF0000' 
-        - '#800000' 
-        - '#4C0000'         
+        - '#0000BB'
+        - '#0000F6'
+        - '#0020FF'
+        - '#0054FF'
+        - '#008CFF'
+        - '#00C0FF'
+        - '#0FF8E7' 
+        - '#39FFBE'  
+        - '#66FF90'
+        - '#90FF66'
+        - '#BEFF39'
+        - '#E7FF0F'
+        - '#FFD300'
+        - '#FFA300'
+        - '#FF6F00'
+        - '#FF3F00' 
+        - '#F60B00' 
+        - '#BB0000' 
+        - '#800000'          
   - id: enteric-fermentation
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Enteric Fermentation (annual)
@@ -567,7 +587,7 @@ layers:
       colormap_name: jet
       rescale:
         - 0
-        - 500
+        - 1000
       nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express
@@ -581,7 +601,7 @@ layers:
        label: G Molecules CH₄/cm²/s
       type: gradient
       min: 0
-      max: 500
+      max: 1000
       stops:
         - '#000080'
         - '#0000FF'
