@@ -41,7 +41,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/us-methane-sources"
             title="Gridded Anthropogenic Greenhouse Gas Emissions"
-            description="Emission estimates from human activities including the energy, agriculture, waste and industry sectors"
+            description="Emission estimates from human activities including the energy, agriculture, waste, and industry sectors"
             imgSrc={featureEmissions}
             imgAlt="image of oil refinery"
             footerContent={
@@ -83,7 +83,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
             title="New Observations for Tracking Large Emission Events"
-            description="Identify and quantify emissions from large methane leak events leveraging aircraft and space-based data"
+            description="Identify and quantify large methane leak events leveraging aircraft and space-based data"
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
