@@ -79,10 +79,9 @@ taxonomy:
                 src={new URL('./cop-biden.jpeg', import.meta.url).href}
                 alt="A room of attendees listening to President Biden speak at COP27"
                 align="left"
-                attrAuthor="Presidencia de la República Mexicana (Flikr)"
-                attrUrl="https://www.flickr.com/photos/presidenciamx/22802505643/in/photostream/"
+                attrAuthor="NASA"
             />
-            <Caption>  President Biden addressing the U.N. Climate Change Conference (COP27) in Egypt, November 2022. The image is licensed under https://creativecommons.org/licenses/by/2.0/legalcode </Caption>
+            <Caption>  President Biden addressing the U.N. Climate Change Conference (COP27) in Egypt, November 2022.</Caption>
         </Figure>
     </Block>
 
@@ -132,6 +131,13 @@ taxonomy:
                 layerId='total-methane'
                 dateTime='2020-01-01'
             />
+            {/* <Image
+                src={new URL('./total-methane-emissions-2020.png', import.meta.url).href}
+                alt="visualization of total methane emissions from all sources shown on a map"
+                align="left"
+                attrAuthor="EPA"
+                attrUrl="/data-catalog/epa-ch4emission-yeargrid-v2express/explore"
+            /> */}
             <Caption>
                 EPA Gridded Express 2020 - Total Methane Emissions
             </Caption>
@@ -145,7 +151,7 @@ taxonomy:
 
     <Block type="wide">
         <Prose>
-            ## Different emission sources have different spatial patterns
+            ## Different Emission Sources have Different Spatial Patterns
         </Prose>
     </Block>
 
@@ -181,7 +187,7 @@ taxonomy:
     >
         ## Emissions from Coal Mining
 
-        Surface and underground coal mining activities and associated methane emissions are mainly centralized in Southwest Appalachia, as well as at mines located across other U.S. regions
+        Surface and underground coal mining activities and associated methane emissions are mainly centralized in Southwest Appalachia, as well as at mines located across other U.S. regions.
     </Chapter>
     <Chapter
         center={[-98.5795, 39.8283]}
@@ -302,14 +308,12 @@ taxonomy:
     <Block>
         <Prose>
         ## Resources / References
-        Notebook link that contains a means to generate the images used in the data
+        Users are directed to the following EPA links for more information on U.S. methane emissions:
 
-        Users are directed to the following links for more information on U.S. methane emissions:
-
-        - For U.S. National Methane Emissions → https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks
-        - For U.S. state-level methane emissions → https://www.epa.gov/ghgemissions/state-and-tribal-greenhouse-gas-data-and-resources
-        - For U.S. individual facility emissions → https://epa.gov/ghgreporting
-        - For the gridded methane emission research dataset → https://zenodo.org/record/7672124
+        - [U.S. national methane emissions](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) 
+        - [U.S. state-level methane emissions](https://www.epa.gov/ghgemissions/state-and-tribal-greenhouse-gas-data-and-resources) 
+        - [U.S. individual facility emissions](https://www.epa.gov/ghgreporting)   
+        - [The gridded methane emission research dataset from the EPA](https://zenodo.org/record/7672124)
 
         </Prose>
     </Block>
