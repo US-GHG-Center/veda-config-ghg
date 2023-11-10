@@ -1,6 +1,6 @@
 ---
-id: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
-name: 'CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (demo subset)'
+id: climdex-tmaxxf-access-cm2
+name: 'Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6)'
 featured: false
 description: "Daily near-surface air temperature from the NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6) Project."
 media:
@@ -14,10 +14,10 @@ taxonomy:
     values:
       - Climate
 layers:
-  - id: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
-    stacCol: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
-    name: CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (demo subset)
-    type: zarr
+  - id: climdex-tmaxxf-access-cm2
+    stacCol: climdex-tmaxxf-access-cm2-ssp126
+    name: CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (ACCESS-CM2 ssp126)
+    type: raster
     description: "Historical (1950-2014) daily-mean near-surface (usually, 2 meter) air temperature in Kelvin."
     zoomExtent:
       - 0
@@ -42,6 +42,90 @@ layers:
       - '#f2cbb7'
       - '#ee8468'
       - '#b40426'
+  - id: climdex-tmaxxf-access-cm2
+    stacCol: climdex-tmaxxf-access-cm2-ssp245
+    name: CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (ACCESS-CM2 ssp245)
+    type: raster
+    description: "Historical (1950-2014) daily-mean near-surface (usually, 2 meter) air temperature in Kelvin."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      reference: "true"
+      resampling_method: bilinear
+      variable: tas
+      colormap_name: coolwarm
+      rescale: 232,312
+      maxzoom: 12
+    legend:
+      unit: 
+        label: K
+      type: gradient
+      min: 232
+      max: 312
+      stops:
+      - '#3b4cc0'
+      - '#7b9ff9'
+      - '#c0d4f5'
+      - '#f2cbb7'
+      - '#ee8468'
+      - '#b40426'      
+  - id: climdex-tmaxxf-access-cm2
+    stacCol: climdex-tmaxxf-access-cm2-ssp370
+    name: CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (ACCESS-CM2 ssp370)
+    type: raster
+    description: "Historical (1950-2014) daily-mean near-surface (usually, 2 meter) air temperature in Kelvin."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      reference: "true"
+      resampling_method: bilinear
+      variable: tas
+      colormap_name: coolwarm
+      rescale: 232,312
+      maxzoom: 12
+    legend:
+      unit: 
+        label: K
+      type: gradient
+      min: 232
+      max: 312
+      stops:
+      - '#3b4cc0'
+      - '#7b9ff9'
+      - '#c0d4f5'
+      - '#f2cbb7'
+      - '#ee8468'
+      - '#b40426'
+  - id: climdex-tmaxxf-access-cm2
+    stacCol: climdex-tmaxxf-access-cm2-ssp585
+    name: CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (ACCESS-CM2 ssp585)
+    type: raster
+    description: "Historical (1950-2014) daily-mean near-surface (usually, 2 meter) air temperature in Kelvin."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      reference: "true"
+      resampling_method: bilinear
+      variable: tas
+      colormap_name: coolwarm
+      rescale: 232,312
+      maxzoom: 12
+    legend:
+      unit: 
+        label: K
+      type: gradient
+      min: 232
+      max: 312
+      stops:
+      - '#3b4cc0'
+      - '#7b9ff9'
+      - '#c0d4f5'
+      - '#f2cbb7'
+      - '#ee8468'
+      - '#b40426'      
 ---
 
 <Block>
@@ -73,9 +157,9 @@ There are 2 datasets listed on the AWS Registry of Open Data for [NEX-GDDP-CMIP6
 
 ### This dataset represents a subset of NEX-GDDP-CMIP6
 
-VEDA is hosting a single JSON file which references a subset of the NEX-GDDP-CMIP6 data in NetCDF. We used the [kerchunk](https://fsspec.github.io/kerchunk/) python library to create a JSON file - often called a reference file - which is an index of the chunks of the data stored in the original [NetCDF](https://www.unidata.ucar.edu/software/netcdf/) files. This can be considered a "virtual" Zarr dataset. The virtual Zarr dataset (aka the kerchunk reference file) is used by a dynamic tiling library ([titiler-xarray](https://github.com/developmentseed/titiler-xarray)) to create image tiles from the underlying data. The indexes were generated for the near-surface air temperature variable (TAS) for years 1950-2014, the historical extent of the NEX-GDDP-CMIP6 project.
+VEDA is hosting a single JSON file which references a subset of the NEX-GDDP-CMIP6 data in NetCDF. We used the [kerchunk](https://fsspec.github.io/kerchunk/) python library to create a JSON file - often called a reference file - which is an index of the chunks of the data stored in the original [NetCDF](https://www.unidata.ucar.edu/software/netcdf/) files. This can be considered a "virtual" raster dataset. The virtual raster dataset (aka the kerchunk reference file) is used by a dynamic tiling library ([titiler-xarray](https://github.com/developmentseed/titiler-xarray)) to create image tiles from the underlying data. The indexes were generated for the near-surface air temperature variable (TAS) for years 1950-2014, the historical extent of the NEX-GDDP-CMIP6 project.
 
-We are using these methods to demonstrate a method for visualizing a "virtual" Zarr dataset which allows for dynamic visualization without having to create and maintain any additional copies of data.
+We are using these methods to demonstrate a method for visualizing a "virtual" raster dataset which allows for dynamic visualization without having to create and maintain any additional copies of data.
 
 </Prose>
 </Block>
