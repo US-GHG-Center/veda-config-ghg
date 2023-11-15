@@ -11,6 +11,7 @@ on:
     branches:
     - main
     - develop
+    - subpath-deployment
 
 env:
   NODE: 16
@@ -26,6 +27,8 @@ jobs:
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
             echo "env_name=production" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" = "refs/heads/develop" ]; then
+            echo "env_name=staging" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref }}" = "refs/heads/subpath-deployment" ]; then
             echo "env_name=staging" >> $GITHUB_OUTPUT
           fi
       - name: Print the environment
