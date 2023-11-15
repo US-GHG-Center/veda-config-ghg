@@ -132,4 +132,4 @@ jobs:
         with:
           distribution-id: ${{ secrets.CF_DISTRIBUTION_ID }}
           paths: |
-            "${{ vars.SUBPATH }}*"
+            ${{ vars.SUBPATH }}*
