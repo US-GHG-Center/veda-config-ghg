@@ -295,7 +295,7 @@ export default function PageFooter(props) {
         </FooterContent>
         <FooterContacts>
           <div>
-            <a href="/">
+            <a href="/ghgcenter">
               <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
               <time dateTime={String(nowDate.getFullYear())}>
                 {nowDate.getFullYear()}
