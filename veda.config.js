@@ -29,6 +29,11 @@ module.exports = {
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
+    // Temporary Banner Text/URL
+    tempBanner:
+        "Attending AMS Annual Meeting in Baltimore?  Join the GHG Center / VEDA workshop and learn about Greenhouse Gases using Open Source data and tools. Register Here!",
+    tempBannerUrl:
+        "https://annual.ametsoc.org/index.cfm/2024/registration/short-course-registration/"
   },
 
   strings: {
