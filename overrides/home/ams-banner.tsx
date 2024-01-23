@@ -47,6 +47,9 @@ const BannerContent = styled.div`
     text-align: left;
     font-size: 0.75rem;
   `}
+  a:link, a:visited {
+    color: white;
+  }
 `
 
 export default function Banner() {
