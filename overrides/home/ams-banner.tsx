@@ -30,7 +30,10 @@ const BannerBox = styled.div`
 
 const BannerContainer = styled(Hug)`
   width: 100%;
-  padding: ${glsp(0.5, 0.25)};
+  padding: ${glsp(0, 0.25)};
+  ${media.mediumDown`
+    padding: ${glsp(0.25, 0.25)};
+  `}
 `;
 
 const BannerContent = styled.div`
@@ -49,7 +52,7 @@ const BannerContent = styled.div`
 export default function Banner() {
   const showBanner = (localStorage.getItem(AMS_BANNER_KEY) !== 'false') && !!getString('tempBanner')?.other
   const [ showTempBanner, setShowTempBanner ] = useState(showBanner);
-  
+
   function onClick () {
     localStorage.setItem(
       AMS_BANNER_KEY,
