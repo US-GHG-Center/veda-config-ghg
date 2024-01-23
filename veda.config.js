@@ -44,7 +44,7 @@ module.exports = {
     tempBanner:
         "Attending AMS Annual Meeting in Baltimore?  Join the GHG Center / VEDA workshop and learn about Greenhouse Gases using Open Source data and tools. Register Here!",
     tempBannerUrl:
-        "https://annual.ametsoc.org/index.cfm/2024/registration/short-course-registration/"
+        "https://www.ametsoc.org/index.cfm/ams/education-careers/careers/professional-development/short-courses/advancing-open-science-an-interactive-workshop-on-harnessing-veda-for-earth-science-research-at-the-u-s-greenhouse-gas-center/"
   },
 
   theme: {
