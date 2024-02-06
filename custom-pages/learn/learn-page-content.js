@@ -11,7 +11,7 @@ export const NEWS_ITEMS = [
     description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
   },
   {
-    name: 'New U.S. national strategy for measuring and monitoring GHG emissions',
+    name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
     asLink : {
       url: 'https://www.whitehouse.gov/omb/briefing-room/2023/11/29/interagency-working-group-releases-national-strategy-enhance-nation-greenhouse-gas-measurement-monitoring-capabilities/'
     },
@@ -44,7 +44,7 @@ export const EVENT_ITEMS = [
       src: new URL('./media/events/AMS24_Logo.png', import.meta.url).href,
       alt: 'AMS 24 logo'
     },
-    description: ' Join members of the GHG Center team for several events at the 2024 AMS Annual Meeting in Baltimore, January 28 - February 1.',
+    description: '  Members of the GHG Center team hosted a workshop, town hall, and several presentations at the 2024 AMS Annual Meeting in Baltimore, January 28 – February 1. Workshop participants analyzed and visualized data using open-source tools and datasets. At the town hall and multiple presentations AMS attendees shared feedback and saw demonstrations of the US GHG Center.',
     startDate: '2024-01-28',
     endDate: '2024-02-01'
   },
@@ -57,7 +57,7 @@ export const EVENT_ITEMS = [
       src: new URL('./media/events/summer-school.png', import.meta.url).href,
       alt: 'Summer school info screenshot'
     },
-    description: 'The US GHG Center announces a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG) that is planned for June 11-21, 2024 at Fort Collins, CO, USA.  Graduate students and early career post-docs are invited to apply by January 31st.',
+    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
     startDate: '2024-06-11',
     endDate: '2024-06-21'
   },
