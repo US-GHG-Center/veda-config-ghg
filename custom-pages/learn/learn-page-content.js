@@ -36,6 +36,19 @@ export const NEWS_ITEMS = [
 
 export const EVENT_ITEMS = [
   {
+    name: 'US GHG Center Summer School',
+    asLink : {
+      url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
+    },
+    media: {
+      src: new URL('./media/events/summer-school.png', import.meta.url).href,
+      alt: 'Summer school info screenshot'
+    },
+    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
+    startDate: '2024-06-11',
+    endDate: '2024-06-21'
+  },
+  {
     name: 'American Meteorological Society (AMS) Annual Meeting',
     asLink : {
       url: 'https://us-ghg-center.github.io/ams-2024-workshop/ghg-center-at-ams-2024.html'
@@ -49,19 +62,6 @@ export const EVENT_ITEMS = [
     endDate: '2024-02-01'
   },
   {
-    name: 'US GHG Center Summer School Registration',
-    asLink : {
-      url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
-    },
-    media: {
-      src: new URL('./media/events/summer-school.png', import.meta.url).href,
-      alt: 'Summer school info screenshot'
-    },
-    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
-    startDate: '2024-06-11',
-    endDate: '2024-06-21'
-  },
-  {
     name: 'Launch of the US Greenhouse Gas Center at COP28 (12-4-23)',
     asLink : {
       url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
@@ -70,7 +70,7 @@ export const EVENT_ITEMS = [
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'COP 23 UAE logo'
     },
-    description: 'NASA Administrator Bill Nelson, U.S. Environmental Protection Agency (EPA) Administrator Michael Regan, and other United States government leaders unveiled the U.S. Greenhouse Gas Center.',
+    description: 'NASA Administrator Bill Nelson, U.S. Environmental Protection Agency (EPA) Administrator Michael Regan, and other United States government leaders unveiled the U.S. Greenhouse Gas Center  Monday, Dec. 4 during the 28th annual United Nations Climate Conference (COP28).',
     startDate: '2023-12-04',
     endDate: '2023-12-04'
   },
