@@ -77,7 +77,7 @@ export const EVENT_ITEMS = [
   {
     name: 'US GHG Center Stakeholder Forum',
     asLink : {
-      url: 'https://www.youtube.com/watch?v=HCG7lepiGPI'
+      url: 'https://www.youtube.com/playlist?list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_'
     },
     media: {
       src: new URL('./media/events/stakeholder-forum.png', import.meta.url).href,
