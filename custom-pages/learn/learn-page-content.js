@@ -9,7 +9,7 @@ export const NEWS_ITEMS = [
       alt: 'Cop 28 Logo'
     },
     description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
-  },
+  },  
   {
     name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
     asLink : {
@@ -35,6 +35,19 @@ export const NEWS_ITEMS = [
 ]
 
 export const EVENT_ITEMS = [
+  {
+    name: 'Policy Speaker Series: Implementing the U.S. Greenhouse Gas Center',
+    asLink : {
+      url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
+    },
+    media: {
+      src: new URL('./media/events/cms-speaker.png', import.meta.url).href,
+      alt: 'CMS speaker series screenshot'
+    },
+    description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. [Attendees must register](https://nasaenterprise.webex.com/weblink/register/re5b83eac970f34a06ef431b0c2a89670).',
+    startDate: '2024-06-11',
+    endDate: '2024-06-21'
+  },
   {
     name: 'US GHG Center Summer School',
     asLink : {
