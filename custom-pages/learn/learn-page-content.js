@@ -44,7 +44,7 @@ export const EVENT_ITEMS = [
       src: new URL('./media/events/cms-speaker-list.png', import.meta.url).href,
       alt: 'CMS speaker series screenshot'
     },
-    description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. [Attendees must register](https://nasaenterprise.webex.com/weblink/register/re5b83eac970f34a06ef431b0c2a89670).',
+    description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. Attendees must register.',
     startDate: '2024-06-11',
     endDate: '2024-06-21'
   },
