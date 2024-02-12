@@ -41,6 +41,11 @@ module.exports = {
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    // Temporary Banner Text/URL
+    tempBanner:
+        "Graduate students and early career post-docs are invited to apply for the Summer School for Inverse Modeling of Greenhouse Gases to be held June 11-21, 2024 in Fort Collins, CO. Applications due 1/31/2024.",
+    tempBannerUrl:
+        "https://www.cira.colostate.edu/conferences/rmtgw/"
   },
 
   theme: {
