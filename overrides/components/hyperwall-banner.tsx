@@ -94,7 +94,7 @@ export default function HyperwallBanner({
                 Live Earth Dashboard
               </StyledVarHeading>
               <span>
-                An interactive way to explore what's happening on Earth right now.
+                An interactive way to explore what's happening on Earth right now
               </span>
               <Button
                 forwardedAs="a"
