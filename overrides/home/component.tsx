@@ -17,6 +17,7 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 import ThemeCards from "../components/theme-cards";
 import { themeLandingPageIds } from "../common/story-data";
 import VisitGHG from "../components/visit-ghg";
+import HyperwallBanner from "../components/hyperwall-banner";
 
 import Partners from "./partners";
 
@@ -105,6 +106,7 @@ export default function HomeComponent() {
             <Partners size="small" top={4} />
           </IntroHeadline>
         </HomeDescription>
+        <HyperwallBanner width="82%"/>
         <VisitGHG width="82%"/>
       </GradientWrapper>
         <Fold>
