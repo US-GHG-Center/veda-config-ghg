@@ -78,7 +78,7 @@ const InfoImageContent = styled.div`
 `;
 
 
-export default function HyperwallBanner({
+export default function HyperwallCTA({
     width
   }:
   {
