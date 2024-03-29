@@ -27,6 +27,7 @@ import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import Partners from "../../home/partners";
 import BrandLogo from "../header-brand/logo.svg";
 import { AccessibilityMenuItem } from "../../common/style";
+import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
 const FooterInner = styled.div`
   display: flex;
@@ -81,6 +82,7 @@ const CreditsInfo = styled.div`
   gap: ${glsp(0.25)};
   p {
     text-align: right;
+    margin-top: ${glsp(1.0)};
   }
 `;
 
@@ -110,6 +112,19 @@ const DisclaimerModalFooter = styled(ModalFooter)`
   justify-content: space-between;
   flex-flow: row nowrap;
   margin-top: ${glsp(2)};
+`;
+
+const AccessbilityStatementLink = styled.a`
+  color: ${themeVal("color.link")} !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: ${glsp(0.5)};
+
+  > svg {
+    margin-left: ${glsp(0.5)};
+  }
 `;
 
 const DISCLAIMER_MODALS_DISMISSED_KEY = "disclaimerModalsDismissedKey";
@@ -294,26 +309,31 @@ export default function PageFooter(props) {
         </FooterContent>
         <FooterContacts>
           <div>
-            <a href="/">
-              <LogoWrapper>
-                <img src={BrandLogo} alt="Earth.gov" />
-              </LogoWrapper>
-              <span>By</span> <strong>{process.env.APP_TITLE}</strong>{" "}
-              <span>on</span>{" "}
-              <time dateTime={String(nowDate.getFullYear())}>
-                {nowDate.getFullYear()}
-              </time>
-            </a>
-            {" • "}
-            <Tip
-              content={`Released on ${format(
-                new Date(+props.appBuildTime),
-                "PPPP"
-              )} (veda-ui v${props.appUiVersion})`}
-            >
-              <span>v{props.appVersion}</span>
-            </Tip>
-          </div>
+            <div>
+              <a href="/">
+                <LogoWrapper>
+                  <img src={BrandLogo} alt="Earth.gov" />
+                </LogoWrapper>
+                <span>By</span> <strong>{process.env.APP_TITLE}</strong>{" "}
+                <span>on</span>{" "}
+                <time dateTime={String(nowDate.getFullYear())}>
+                  {nowDate.getFullYear()}
+                </time>
+              </a>
+              {" • "}
+              <Tip
+                content={`Released on ${format(
+                  new Date(+props.appBuildTime),
+                  "PPPP"
+                )} (veda-ui v${props.appUiVersion})`}
+              >
+                <span>v{props.appVersion}</span>
+              </Tip>
+            </div>
+              <AccessbilityStatementLink href="https://www.nasa.gov/accessibility/" target='_blank' rel='noopener'>
+                Our commitment to accessibility<CollecticonExpandTopRight />
+              </AccessbilityStatementLink>
+            </div>
           <CreditsInfo>
             <TintBox>
               <Partners variation="positive" size="small" />
