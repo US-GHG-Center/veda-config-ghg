@@ -44,7 +44,7 @@ const InfoImageContent = styled.div`
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(4px);
+    //filter: blur(4px);
     z-index: 1; // Ensure this is behind the content
   }
 
@@ -77,6 +77,11 @@ const InfoImageContent = styled.div`
   `}
 `;
 
+const GutterText = styled('span')`
+  background-color:black;
+  margin-top:10px;
+`
+
 
 export default function HyperwallCTA({
     width
@@ -93,9 +98,9 @@ export default function HyperwallCTA({
               <StyledVarHeading size="small" as="h2">
                 Live Earth Dashboard
               </StyledVarHeading>
-              <span>
+              <GutterText>
                 An interactive way to explore what's happening on Earth right now
-              </span>
+              </GutterText>
               <Button
                 forwardedAs="a"
                 href="/stories/hyperwall"
