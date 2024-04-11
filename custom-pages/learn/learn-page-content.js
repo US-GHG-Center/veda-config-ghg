@@ -1,3 +1,27 @@
+export const NEWSLETTER_ITEMS = [
+  {
+    name: 'The inaugural US GHG Center Newsletter',
+    asLink : {
+      url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
+    },
+    media: {
+      src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
+      alt: 'March 2024'
+    },
+    description: 'Volume 1.1, March 2024'
+  },
+  {
+    name: 'The US GHG Center Newsletter',
+    asLink : {
+      url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
+    },
+    media: {
+      src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
+      alt: 'March 2024'
+    },
+    description: 'Volume 1.1, March 2024'
+  }
+]
 export const NEWS_ITEMS = [
   {
     name: 'US GHG Center announced at COP28',
