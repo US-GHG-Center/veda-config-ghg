@@ -6,6 +6,7 @@
 # The checks are skipped on the 'main' branch. The project relies on branch
 # protection to avoid pushes straight to 'main'.
 
+
 name: Checks
 
 on:
