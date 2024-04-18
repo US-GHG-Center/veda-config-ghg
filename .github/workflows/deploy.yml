@@ -11,6 +11,7 @@ on:
     branches:
     - main
     - develop
+    - fix-issue-110
 
 env:
   NODE: 16
