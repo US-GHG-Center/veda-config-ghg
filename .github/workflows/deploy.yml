@@ -27,6 +27,7 @@ jobs:
             echo "env_name=production" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" = "refs/heads/develop" ]; then
             echo "env_name=staging" >> $GITHUB_OUTPUT
+          fi
       - name: Print the environment
         run: echo "The environment is ${{ steps.define_environment.outputs.env_name }}"
 
