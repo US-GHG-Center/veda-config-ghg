@@ -90,7 +90,7 @@ layers:
 
   - id: ch4-wetlands-emissions-d-ens
     stacCol: lpjeosim-wetlandch4-daygrid-v2
-    name: Ensemble Mean Wetland CH₄ Emissions LPJ-EOSIM Model 
+    name: (Daily) Ensemble Mean Wetland CH₄ Emissions LPJ-EOSIM Model 
     type: raster
     description: Daily CH₄ emissions from wetlands constructed using an ensemble of climate forcing data sources input to the LPJ-EOSIM model (mean of ERA5 and MERRA-2 layers)
     initialDatetime: newest
@@ -133,8 +133,7 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily
       unit: g CH₄/m²/day           
-
- - id: ch4-wetlands-emissions-m-era
+  - id: ch4-wetlands-emissions-m-era
     stacCol: lpjeosim-wetlandch4-monthgrid-v2
     name: (Monthly) (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
     type: raster
@@ -161,7 +160,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/mon
+        label: g CH₄/m²/day
       type: gradient
       min: 0
       max: 0.02
@@ -178,10 +177,10 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g CH₄/m²/mon         
+      unit: g CH₄/m²/day          
   - id: ch4-wetlands-emissions-d-era
     stacCol: lpjeosim-wetlandch4-daygrid-v2
-    name: (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    name: (Daily) (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
     type: raster
     description: Daily CH₄ from wetlands constructed using ERA5 climate forcing data input to the LPJ-EOSIM model
     initialDatetime: newest
@@ -224,7 +223,6 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily
       unit: g CH₄/m²/day   
-
   - id: ch4-wetlands-emissions-m-merra
     stacCol: lpjeosim-wetlandch4-monthgrid-v2
     name: (Monthly) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -270,10 +268,54 @@ layers:
       spatialExtent: Global
       temporalResolution: Monthly
       unit: g CH₄/m²/mon    
-
+  - id: ch4-wetlands-emissions-m-merra
+    stacCol: lpjeosim-wetlandch4-monthgrid-v2
+    name: (Monthly) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Monthly CH₄ emissions from wetlands constructed using MERRA-2 climate forcing data input to the LPJ-EOSIM model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: merra2-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 0.02
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-m-merra
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/mon
+      type: gradient
+      min: 0
+      max: 0.02
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean 
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/mon          
   - id: ch4-wetlands-emissions-d-merra
     stacCol: lpjeosim-wetlandch4-daygrid-v2
-    name: (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    name: (Daily) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
     type: raster
     description: Daily CH₄ emissions from wetlands constructed using MERRA-2 climate forcing data input to the LPJ-EOSIM model
     initialDatetime: newest
