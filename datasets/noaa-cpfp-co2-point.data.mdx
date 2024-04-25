@@ -118,7 +118,7 @@ layers:
     The CO₂ data displayed in the web map viewer can be directly accessed from NOAA here:
     - [Continuous Surface and Tower In-situ CO₂ Samples](https://gml.noaa.gov/dv/data/index.php?category=Greenhouse%252BGases&type=Insitu&parameter_name=Carbon%2BDioxide). Hourly tower data have been aggregated into daily and monthly averages for display in the US GHG Center. 
     - [Non-Continuous Surface CO₂ Flask Samples](https://gml.noaa.gov/dv/data/index.php?type=Flask&frequency=Discrete&parameter_name=Carbon%2BDioxide)
-    - [Non-Continuous Surface Programmable Flask Package (PFP) CO₂ Samples](https://gml.noaa.gov/dv/data/index.php?parameter_name=Carbon%2BDioxide&frequency=Discrete&type=Surface%2BPFP). Due to the shortness of record, the following Surface PFP sites have been excluded: LAC, INX, BWD, NEB, NWB, TMD, SPF, KLM, MKO, MLO, HFM  
+    - [Non-Continuous Surface Programmable Flask Package (PFP) CO₂ Samples](https://gml.noaa.gov/dv/data/index.php?parameter_name=Carbon%2BDioxide&frequency=Discrete&type=Surface%2BPFP). 
 
     ## Dataset Accuracy
     Measurements are reported on the WMO X2019 CO₂ mole fraction scale. More information on this scale is available at https://gml.noaa.gov/ccl/co2_scale.html.  Accuracy is approximately 0.1 ppm.  For details, see
@@ -127,11 +127,11 @@ layers:
 
     ## Disclaimer
     Every effort is made to produce the most accurate and precise measurements possible. However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified. NOAA is not responsible for results and conclusions based on use of these data without regard to this warning.
-    Due to shortness of record, the following surface PFP flask sites have been excluded:
-    LAC, INX, BWD, NEB, NWB, TMD, SPF, KLM, MKO, MLO, HFM
+    
+    Due to the high data volume of tower measurements which occur hourly, tower measurements have been aggregated into daily and monthly averages for display in the US GHG Center. Hourly data are [available from NOAA](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/in-situ/tower/).
 
-    Due to the high data volume of tower measurements which occur hourly, tower measurements have been aggregated into daily and monthly averages for display in the US GHG Center. 
-    Hourly data are [available from NOAA](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/in-situ/tower/). 
+    Due to shortness of record or complexity of interpretation, the following surface PFP flask sites have been excluded:
+    LAC, INX, BWD, NEB, NWB, TMD, SPF, KLM, MKO, MLO, HFM
 
     ## Scientific Details
     CO₂ measurements are formally reported in mole fraction units of micromol (10<sup>-6</sup> mole) of CO₂ per mol of dry air.  However, for communicating with broader audiences we refer to mole fraction as “concentration” in units of parts per million (ppm). This CO₂ data set provides CO₂ dry air mole fractions from more than 80 NOAA GML GGGRN sites across the globe. Measurements have been made using a highly-calibrated nondispersive infrared absorption analyzer (NDIR, before August 2019) or a cavity ring-down spectrometer (CRDS, since August 2019).
