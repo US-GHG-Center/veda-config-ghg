@@ -31,6 +31,16 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: January 1, 1990 - ongoing
+    - Temporal Resolution: Daily
+    - Spatial Extent: Global
+    - Spatial Resolution: 0.5° x 0.5°
+    - Data Units: Grams of methane per meter squared per day(g CH₄/m²/day)
+    - Data Type: Research
+    - Data Latency: Updated monthly with a 2 month latency
+
 layers:
   - id: ch4-wetlands-emissions-d-ens
     stacCol: lpjeosim-wetlandch4-daygrid-v2
@@ -71,7 +81,13 @@ layers:
         - '#feb078'    
     analysis:
       metrics:
-        - mean          
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: g CH₄/m²/day           
+
   - id: ch4-wetlands-emissions-d-era
     stacCol: lpjeosim-wetlandch4-daygrid-v2
     name: (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -112,6 +128,11 @@ layers:
     analysis:
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: g CH₄/m²/day         
   - id: ch4-wetlands-emissions-d-merra
     stacCol: lpjeosim-wetlandch4-daygrid-v2
     name: (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -151,7 +172,12 @@ layers:
         - '#feb078'    
     analysis:
       metrics:
-        - mean                
+        - mean 
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: g CH₄/m²/day                        
 ---
 
 <Block>
