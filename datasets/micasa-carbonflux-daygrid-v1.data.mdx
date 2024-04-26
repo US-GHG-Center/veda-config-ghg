@@ -1,7 +1,7 @@
 ---
-id: micasa-carbonflux-daygrid-v1
+id: micasa-carbonflux-grid-v1
 name: MiCASA Land Carbon Flux
-description: Global, daily 0.1 degree resolution carbon fluxes from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE) derived from the MiCASA model, version 1
+description: Global, daily and monthly 0.1 degree resolution carbon fluxes from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE) derived from the MiCASA model, version 1
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
     label: Notebooks to read, visualize, and explore data statistics
@@ -33,17 +33,17 @@ taxonomy:
 infoDescription: |
   ::markdown
     - Temporal Extent: January 1, 2001 - December 31, 2023
-    - Temporal Resolution: Daily
+    - Temporal Resolution: Daily and Monthly
     - Spatial Extent: Global
     - Spatial Resolution: 0.1° x 0.1°
-    - Data Units: Kilograms of Carbon per square meter per day (kg Carbon/m²/day)
+    - Data Units: Grams of Carbon per square meter per day (g Carbon/m²/day) and Grams of Carbon per square meter per month (g Carbon/m²/month)
     - Data Type: Research
     - Data Latency: Less than a year, typically 6 months
 
 layers:
   - id: micasa-co2-flux-npp
     stacCol: micasa-carbonflux-daygrid-v1
-    name: Net Primary Production (NPP)
+    name: (Daily) Net Primary Production (NPP)
     type: raster
     description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
     initialDatetime: newest
@@ -58,9 +58,9 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 1.5
+        - 8
     compare:
-      datasetId: micasa-carbonflux-daygrid-v1
+      datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-npp
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -68,10 +68,10 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: g Carbon/m²/day
       type: gradient
       min: 0
-      max: 1.5
+      max: 8
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -90,10 +90,10 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day 
+      unit: g Carbon/m²/day 
   - id: micasa-co2-flux-hr
     stacCol: micasa-carbonflux-daygrid-v1
-    name: Heterotrophic Respiration (Rh)
+    name: (Daily) Heterotrophic Respiration (Rh)
     type: raster
     description: Model-estimated heterotrophic respiration (Rh), which is the flux of carbon from the soil to the atmosphere
     initialDatetime: newest
@@ -108,9 +108,9 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 1.5
+        - 8
     compare:
-      datasetId: micasa-carbonflux-daygrid-v1
+      datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-hr
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -118,10 +118,10 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: g Carbon/m²/day
       type: gradient
       min: 0
-      max: 1.5
+      max: 8
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -140,10 +140,10 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day         
+      unit: g Carbon/m²/day         
   - id: micasa-co2-flux-nee
     stacCol: micasa-carbonflux-daygrid-v1
-    name: Net Ecosystem Exchange (NEE)
+    name: (Daily) Net Ecosystem Exchange (NEE)
     type: raster
     description: Model-estimated net ecosystem exchange (NEE), which is the net carbon flux to the atmosphere from the ecosystem (Rh - NPP)
     initialDatetime: newest
@@ -157,10 +157,10 @@ layers:
       assets: nee
       colormap_name: coolwarm
       rescale:
-        - -1
-        - 1
+        - -4
+        - 4
     compare:
-      datasetId: micasa-carbonflux-daygrid-v1
+      datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-nee
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -168,10 +168,10 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: g Carbon/m²/day
       type: gradient
-      min: -1
-      max: 1
+      min: -4
+      max: 4
       stops:
         - '#3B4CC0'
         - '#6788EE'
@@ -188,10 +188,10 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day 
+      unit: g Carbon/m²/day 
   - id: micasa-co2-flux-nbe
     stacCol: micasa-carbonflux-daygrid-v1
-    name: Net Biosphere Exchange (NBE)
+    name: (Daily) Net Biosphere Exchange (NBE)
     type: raster
     description: Model-estimated net biosphere exchange (NBE), which is the net carbon flux to the atmosphere from the ecosystem, taking into account wildfire and wood fuel burning sources of carbon (Rh + FIRE + FUEL - NPP)
     initialDatetime: newest
@@ -205,10 +205,10 @@ layers:
       assets: nee
       colormap_name: coolwarm
       rescale:
-        - -1
-        - 1
+        - -4
+        - 4
     compare:
-      datasetId: micasa-carbonflux-daygrid-v1
+      datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-nbe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -216,10 +216,10 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: g Carbon/m²/day
       type: gradient
-      min: -1
-      max: 1
+      min: -4
+      max: 4
       stops:
         - '#3B4CC0'
         - '#6788EE'
@@ -236,10 +236,10 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day 
+      unit: g Carbon/m²/day 
   - id: micasa-co2-flux-fe
     stacCol: micasa-carbonflux-daygrid-v1
-    name: Fire Emissions (FIRE)
+    name: (Daily) Fire Emissions (FIRE)
     type: raster
     description: Model-estimated flux of carbon to the atmosphere from wildfires
     initialDatetime: newest
@@ -254,9 +254,9 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 0.3
+        - 8
     compare:
-      datasetId: micasa-carbonflux-daygrid-v1
+      datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-fe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -264,10 +264,10 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: g Carbon/m²/day
       type: gradient
       min: 0
-      max: 0.3
+      max: 8
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -286,10 +286,10 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day 
+      unit: g Carbon/m²/day 
   - id: micasa-co2-flux-fuel
     stacCol: micasa-carbonflux-daygrid-v1
-    name: Wood Fuel Emissions (FUEL)
+    name: (Daily) Wood Fuel Emissions (FUEL)
     type: raster
     description: Model-estimated flux of carbon to the atmosphere from wood burned for fuel
     initialDatetime: newest
@@ -304,9 +304,9 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 0.3
+        - 0.5
     compare:
-      datasetId: micasa-carbonflux-daygrid-v1
+      datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-fuel
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -314,10 +314,10 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: g Carbon/m²/day
       type: gradient
       min: 0
-      max: 0.03
+      max: 0.5
       stops:
         - '#F7FCFD'
         - '#DCE9F2'
@@ -334,20 +334,20 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day 
+      unit: g Carbon/m²/day 
 ---
 
 <Block>
   <Prose>
     **Temporal Extent:** January 1, 2001 - December 31, 2023<br />
-    **Temporal Resolution:** Daily<br />
+    **Temporal Resolution:** Daily and Monthly<br />
     **Spatial Extent:** Global<br />
     **Spatial Resolution:** 0.1° x 0.1°<br />
-    **Data Units:**  Kilograms of Carbon per square meter per day (kg Carbon/m²/day)<br />
+    **Data Units:**  Grams of Carbon per square meter per day (g Carbon/m²/day) and Grams of Carbon per square meter per month (g Carbon/m²/month)<br />
     **Data Type:** Research<br />
     **Data Latency:** Less than a year, typically 6 months<br />
 
-    This dataset presents a variety of carbon flux parameters derived from the Más Informada Carnegie-Ames-Stanford-Approach (MiCASA) model. The model’s input data includes air temperature, precipitation, incident solar radiation, a soil classification map, and several satellite derived products. All model calculations are driven by analyzed meteorological data from NASA’s Modern-Era Retrospective analysis for Research and Application, Version 2 (MERRA-2). The resulting product provides global, daily data at 0.1 degree resolution from January 2001 through December 2023. It includes carbon flux variables expressed in units of kilograms of carbon per square meter per day (kg Carbon/m²/day) from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE). The latter two are derived from the first four (see Scientific Details below). MiCASA is an extensive revision of the CASA – Global Fire Emissions Database, version 3 (CASA-GFED3) product. CASA-GFED3 and earlier versions of MERRA-driven CASA-GFED carbon fluxes have been used in several atmospheric carbon dioxide (CO₂) transport studies, serve as a community standard for priors of flux inversion systems, and through the support of NASA’s Carbon Monitoring System (CMS), help characterize, quantify, understand and predict the evolution of global carbon sources and sinks.
+    This dataset presents a variety of carbon flux parameters derived from the Más Informada Carnegie-Ames-Stanford-Approach (MiCASA) model. The model’s input data includes air temperature, precipitation, incident solar radiation, a soil classification map, and several satellite derived products. All model calculations are driven by analyzed meteorological data from NASA’s Modern-Era Retrospective analysis for Research and Application, Version 2 (MERRA-2). The resulting product provides global, daily and monthly data at 0.1 degree resolution from January 2001 through December 2023. It includes carbon flux variables expressed in units of grams of carbon per square meter per day (g Carbon/m²/day) and grams of carbon per square meter per month (g Carbon/m²/month) from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE). The latter two are derived from the first four (see Scientific Details below). MiCASA is an extensive revision of the CASA – Global Fire Emissions Database, version 3 (CASA-GFED3) product. CASA-GFED3 and earlier versions of MERRA-driven CASA-GFED carbon fluxes have been used in several atmospheric carbon dioxide (CO₂) transport studies, serve as a community standard for priors of flux inversion systems, and through the support of NASA’s Carbon Monitoring System (CMS), help characterize, quantify, understand and predict the evolution of global carbon sources and sinks.
 
   </Prose>
 </Block>
@@ -360,16 +360,14 @@ layers:
     The current dataset version is MiCASA Land Carbon Flux v1, which replaced the CASA-GFED3 Land Carbon Flux v3 dataset in the US GHG Center in April 2024. Summary of dataset update:
     - MiCASA is an extensive revision of CASA-GFED3, which uses updated input data sources for improved spatial and temporal resolution (see Scientific Details above for information on input data)
     - Spatial resolution increase from 0.5° to 0.1°
-    - Temporal resolution increase from monthly to daily
-    - A unit change of kg Carbon/m²/month to kg Carbon/m²/day
+    - Addition of daily data
     - Additional data added with availability from January 2001–December 2023 (previous version data was only available from January 2003–December 2017)
     - Inclusion of the Net Biosphere Exchange (NBE) data layer
     - MiCASA v1 data was delivered to the US GHG Center in Cloud Optimized GeoTIFF (COG) format, whereas CASA-GFED3 data was delivered in NetCDF format and then transformed into COG
 
     ## Disclaimer
     All data is provided to the US GHG Center in Cloud Optimized GeoTIFF (COG) format. Careful quality checks were used to ensure data transformation was performed correctly by the data producer.
-    The full title of this dataset, MiCASA Daily NPP Rh Fire Fuel Fluxes 0.1 degree x 0.1 degree V1, has been shortened for display on the US GHG Center website. The short name of the source dataset is MICASA_D_FLUX, and it is referred to as micasa-carbonflux-daygrid-v1 within the Center system. The source dataset in NetCDF format is available from the NCCS DataPortal (see Source Data Product Citation above). A user guide is available at the following link. [https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf](https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf).
-
+    The full title of this dataset, MiCASA Daily NPP Rh Fire Fuel Fluxes 0.1 degree x 0.1 degree V1, has been shortened for display on the US GHG Center website. The short name of the source dataset is MICASA_D_FLUX (daily data) and MICASA_M_FLUX (monthly data), and it is referred to as micasa-carbonflux-daygrid-v1 (daily data) and micasa-carbonflux-monthgrid-v1 (monthly data) within the Center system. The source dataset in NetCDF format is available from the [NCCS DataPortal](https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/). A user guide is available at the following link. [https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf](https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf).
     ## Scientific Details
     Satellite derived products used as inputs for MiCASA include Moderate Resolution Imaging Spectroradiometer (MODIS) land cover classification (MCD12Q1), vegetation continuous fields (MOD44B), burned area (MCD64A1), and nadir BRDF-adjusted reflectances (MCD43A1). The fractional absorption of solar radiation by the vegetation canopy (fPAR), used for calculating NPP, was derived from the Red and Near-Infrared reflectances from the MCD43A1 product. All MODIS products are from Collection 6.1 except MOD44B which is held at Collection 6 to include high-latitude data. Additional flux variables that can be derived using this daily product are listed below:
     - NEE: daily net ecosystem exchange, NEE = Rh - NPP
