@@ -41,6 +41,56 @@ infoDescription: |
     - Data Latency: Less than a year, typically 6 months
 
 layers:
+  - id: micasa-co2-flux-npp-m
+    stacCol: micasa-carbonflux-monthgrid-v1
+    name: (Monthly) Net Primary Production (NPP)
+    type: raster
+    description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: npp
+      colormap_name: purd
+      rescale:
+        - 0
+        - 8
+    compare:
+      datasetId: micasa-carbonflux-grid-v1
+      layerId: micasa-co2-flux-npp-m
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g Carbon/m²/month
+      type: gradient
+      min: 0
+      max: 8
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g Carbon/m²/month 
   - id: micasa-co2-flux-npp
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Net Primary Production (NPP)
@@ -91,6 +141,56 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily
       unit: g Carbon/m²/day 
+  - id: micasa-co2-flux-hr-m
+    stacCol: micasa-carbonflux-monthgrid-v1
+    name: (Monthly) Heterotrophic Respiration (Rh)
+    type: raster
+    description: Model-estimated heterotrophic respiration (Rh), which is the flux of carbon from the soil to the atmosphere
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: rh
+      colormap_name: purd
+      rescale:
+        - 0
+        - 8
+    compare:
+      datasetId: micasa-carbonflux-grid-v1
+      layerId: micasa-co2-flux-hr-m
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g Carbon/m²/month
+      type: gradient
+      min: 0
+      max: 8
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g Carbon/m²/month         
   - id: micasa-co2-flux-hr
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Heterotrophic Respiration (Rh)
@@ -140,7 +240,55 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day         
+      unit: g Carbon/m²/day 
+  - id: micasa-co2-flux-nee-m
+    stacCol: micasa-carbonflux-monthgrid-v1
+    name: (Monthly) Net Ecosystem Exchange (NEE)
+    type: raster
+    description: Model-estimated net ecosystem exchange (NEE), which is the net carbon flux to the atmosphere from the ecosystem (Rh - NPP)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: nee
+      colormap_name: coolwarm
+      rescale:
+        - -4
+        - 4
+    compare:
+      datasetId: micasa-carbonflux-grid-v1
+      layerId: micasa-co2-flux-nee-m
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g Carbon/m²/month
+      type: gradient
+      min: -4
+      max: 4
+      stops:
+        - '#3B4CC0'
+        - '#6788EE'
+        - '#9ABBFF'
+        - '#C9D7F0'
+        - '#EDD1C2'
+        - '#F7A889'
+        - '#E26952'
+        - '#B40426'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g Carbon/m²/month 
   - id: micasa-co2-flux-nee
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Net Ecosystem Exchange (NEE)
@@ -189,6 +337,54 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily
       unit: g Carbon/m²/day 
+  - id: micasa-co2-flux-nbe-m
+    stacCol: micasa-carbonflux-daygrid-v1
+    name: (Monthly) Net Biosphere Exchange (NBE)
+    type: raster
+    description: Model-estimated net biosphere exchange (NBE), which is the net carbon flux to the atmosphere from the ecosystem, taking into account wildfire and wood fuel burning sources of carbon (Rh + FIRE + FUEL - NPP)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: nee
+      colormap_name: coolwarm
+      rescale:
+        - -4
+        - 4
+    compare:
+      datasetId: micasa-carbonflux-grid-v1
+      layerId: micasa-co2-flux-nbe-m
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g Carbon/m²/month
+      type: gradient
+      min: -4
+      max: 4
+      stops:
+        - '#3B4CC0'
+        - '#6788EE'
+        - '#9ABBFF'
+        - '#C9D7F0'
+        - '#EDD1C2'
+        - '#F7A889'
+        - '#E26952'
+        - '#B40426'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g Carbon/m²/month 
   - id: micasa-co2-flux-nbe
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Net Biosphere Exchange (NBE)
@@ -237,6 +433,56 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily
       unit: g Carbon/m²/day 
+  - id: micasa-co2-flux-fe-m
+    stacCol: micasa-carbonflux-monthgrid-v1
+    name: (Monthly) Fire Emissions (FIRE)
+    type: raster
+    description: Model-estimated flux of carbon to the atmosphere from wildfires
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fire
+      colormap_name: purd
+      rescale:
+        - 0
+        - 8
+    compare:
+      datasetId: micasa-carbonflux-grid-v1
+      layerId: micasa-co2-flux-fe-m
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g Carbon/m²/month
+      type: gradient
+      min: 0
+      max: 8
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g Carbon/m²/month 
   - id: micasa-co2-flux-fe
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Fire Emissions (FIRE)
@@ -287,6 +533,54 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily
       unit: g Carbon/m²/day 
+  - id: micasa-co2-flux-fuel-m
+    stacCol: micasa-carbonflux-monthgrid-v1
+    name: (Monthly) Wood Fuel Emissions (FUEL)
+    type: raster
+    description: Model-estimated flux of carbon to the atmosphere from wood burned for fuel
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fuel
+      colormap_name: purd
+      rescale:
+        - 0
+        - 0.5
+    compare:
+      datasetId: micasa-carbonflux-grid-v1
+      layerId: micasa-co2-flux-fuel-m
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g Carbon/m²/month
+      type: gradient
+      min: 0
+      max: 0.5
+      stops:
+        - '#F7FCFD'
+        - '#DCE9F2'
+        - '#B5CCE3'
+        - '#96ACD2'
+        - '#8C7DBA'
+        - '#894DA3'
+        - '#821580'
+        - '#4D004B'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g Carbon/m²/month 
   - id: micasa-co2-flux-fuel
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Wood Fuel Emissions (FUEL)
