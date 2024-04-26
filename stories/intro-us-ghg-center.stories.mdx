@@ -34,11 +34,13 @@ featured: true
 <Block>
   <Figure>
     <Image
-      src= “https://www.climate.gov/sites/default/files/2024-01/2023-billion-dollar-disaster-map.png”
-      alt=“Map presenting billion-dollar events”
-      align=“left”
-      attrAuthor=“NOAA”
-      attrUrl=“https://www.climate.gov/sites/default/files/2024-01/2023-billion-dollar-disaster-map.png”
+      src={
+        new URL("https://www.climate.gov/sites/default/files/2024-01/2023-billion-dollar-disaster-map.png", import.meta.url).href
+      }
+      alt="Map presenting billion-dollar events"
+      align="left"
+      attrAuthor="NOAA"
+      attrUrl="https://www.climate.gov/sites/default/files/2024-01/2023-billion-dollar-disaster-map"
     />
     <Caption>
       {" "}
