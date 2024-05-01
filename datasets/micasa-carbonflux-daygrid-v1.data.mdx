@@ -59,6 +59,8 @@ layers:
       rescale:
         - 0
         - 8
+      minzoom: 0
+      maxzoom: 5
     compare:
       datasetId: micasa-carbonflux-grid-v1
       layerId: micasa-co2-flux-npp-m
@@ -92,7 +94,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g Carbon/m²/month 
+      unit: g Carbon/m²/month
   - id: micasa-co2-flux-npp
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Net Primary Production (NPP)
@@ -144,7 +146,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day 
+      unit: g Carbon/m²/day
   - id: micasa-co2-flux-hr-m
     stacCol: micasa-carbonflux-monthgrid-v1
     name: (Monthly) Heterotrophic Respiration (Rh)
@@ -196,7 +198,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g Carbon/m²/month         
+      unit: g Carbon/m²/month
   - id: micasa-co2-flux-hr
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Heterotrophic Respiration (Rh)
@@ -248,7 +250,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day 
+      unit: g Carbon/m²/day
   - id: micasa-co2-flux-nee-m
     stacCol: micasa-carbonflux-monthgrid-v1
     name: (Monthly) Net Ecosystem Exchange (NEE)
@@ -298,7 +300,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g Carbon/m²/month 
+      unit: g Carbon/m²/month
   - id: micasa-co2-flux-nee
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Net Ecosystem Exchange (NEE)
@@ -348,7 +350,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day 
+      unit: g Carbon/m²/day
   - id: micasa-co2-flux-nbe-m
     stacCol: micasa-carbonflux-monthgrid-v1
     name: (Monthly) Net Biosphere Exchange (NBE)
@@ -398,7 +400,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g Carbon/m²/month 
+      unit: g Carbon/m²/month
   - id: micasa-co2-flux-nbe
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Net Biosphere Exchange (NBE)
@@ -448,7 +450,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day 
+      unit: g Carbon/m²/day
   - id: micasa-co2-flux-fe-m
     stacCol: micasa-carbonflux-monthgrid-v1
     name: (Monthly) Fire Emissions (FIRE)
@@ -500,7 +502,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g Carbon/m²/month 
+      unit: g Carbon/m²/month
   - id: micasa-co2-flux-fe
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Fire Emissions (FIRE)
@@ -552,7 +554,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day 
+      unit: g Carbon/m²/day
   - id: micasa-co2-flux-fuel-m
     stacCol: micasa-carbonflux-monthgrid-v1
     name: (Monthly) Wood Fuel Emissions (FUEL)
@@ -602,7 +604,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g Carbon/m²/month 
+      unit: g Carbon/m²/month
   - id: micasa-co2-flux-fuel
     stacCol: micasa-carbonflux-daygrid-v1
     name: (Daily) Wood Fuel Emissions (FUEL)
@@ -652,7 +654,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g Carbon/m²/day 
+      unit: g Carbon/m²/day
 ---
 
 <Block>
@@ -673,7 +675,7 @@ layers:
   <Prose>
     ## Source Data Product Citation
     Brad Weir and Lesley Ott (2024), GEOS-Carb MiCASA Daily NPP Rh Fire Fuel Fluxes 0.1 degree x 0.1 degree V1, Greenbelt, MD, USA, NASA Center for Climate Simulation (NCCS) DataPortal, Accessed: [Data Access Date], https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf
-    
+
     ## Version History
     The current dataset version is MiCASA Land Carbon Flux v1, which replaced the CASA-GFED3 Land Carbon Flux v3 dataset in the US GHG Center in April 2024. Summary of dataset update:
     - MiCASA is an extensive revision of CASA-GFED3, which uses updated input data sources for improved spatial and temporal resolution (see Scientific Details above for information on input data)
@@ -692,8 +694,8 @@ layers:
     - NBE: daily net biosphere exchange, net flux from the ecosystem, NBE = Rh + FIRE + FUEL - NPP
 
     ## Key Publications
-    Weir, B. & Ott, L. E. (2024). Description of MiCASA Version 1 Land Carbon Flux Products. [https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf](https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf)    
-    
+    Weir, B. & Ott, L. E. (2024). Description of MiCASA Version 1 Land Carbon Flux Products. [https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf](https://portal.nccs.nasa.gov/datashare/gmao/geos_carb/MiCASA/v1/netcdf/MiCASA_README.pdf)
+
     van der Werf, G. R., Randerson, J. T., Giglio, L., Collatz, G. J., Mu, M., Kasibhatla, P. S., Morton, D. C., DeFries, R. S., Jin, Y., & van Leeuwen, T. T. (2010). Global fire emissions and the contribution of deforestation, savanna, forest, agricultural, and peat fires (1997–2009). *Atmospheric Chemistry and Physics, 10*, 11707–11735. [https://doi.org/10.5194/acp-10-11707-2010](https://doi.org/10.5194/acp-10-11707-2010)
 
     ## Other Relevant Publications
@@ -708,7 +710,7 @@ layers:
     van der Werf, G. R., Randerson, J. T., Giglio, L., van Leeuwen, T. T., Chen, Y., Rogers, B. M., Mu, M., van Marle, M. J. E., Morton, D. C., Collatz, G. J., Yokelson, R. J., & Kasibhatla, P. S. (2017). Global fire emissions estimates during 1997–2016. *Earth System Science Data*, 9, 697–720. [https://doi.org/10.5194/essd-9-697-2017](https://doi.org/10.5194/essd-9-697-2017)
 
     ## Learn More
-    - Compare the difference in Net Ecosystem Exchange (NEE) between January and July 2011 in the [Tracking Greenhouse Gas Cycles Data Insight](https://earth.gov/ghgcenter/stories/tracking-greenhouse-gas-cycles). The NEE variable in the MiCASA dataset represents the balance in absorption of carbon by plants via photosynthesis against the release of carbon by plants during respiration. The comparison of NEE in January and July illustrates the difference between the winter and summer seasons.   
+    - Compare the difference in Net Ecosystem Exchange (NEE) between January and July 2011 in the [Tracking Greenhouse Gas Cycles Data Insight](https://earth.gov/ghgcenter/stories/tracking-greenhouse-gas-cycles). The NEE variable in the MiCASA dataset represents the balance in absorption of carbon by plants via photosynthesis against the release of carbon by plants during respiration. The comparison of NEE in January and July illustrates the difference between the winter and summer seasons.
 
     ## Acknowledgment
     This dataset was produced as part of the [GEOS-Carb project](https://cce-datasharing.gsfc.nasa.gov/cmsprojects/list/h/0/) supported by NASA’s [Carbon Monitoring System (CMS) Program](https://carbon.nasa.gov/cms/).
