@@ -237,7 +237,7 @@ export default function PageFooter(props) {
       text: "About",
     },
     {
-      path: "https://docs.google.com/forms/d/1mDgFqUsNv90Js7pERNDbmyN5RksztIy5ZZojWD0n5Pg/viewform",
+      path: process.env.GOOGLE_FORM,
       text: "Contact Us",
     },
   ]
