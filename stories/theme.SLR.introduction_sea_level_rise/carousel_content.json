@@ -28,10 +28,6 @@
         "title":"Sea Level Through a Porthole",
         "caption":"As the planet warms and polar ice melts, our global average sea level is rising. Although exact ocean heights vary due to local geography, climate over time, and dynamic fluid interactions with gravity and planetary rotation, scientists observe sea level trends by comparing measurements against a 20 year spatial and temporal mean reference. These visualizations use the visual metaphor of a submerged porthole window to observe how far our oceans rose between 1993 and 2022.\nVisualizations by: Andrew J Christensen\nFor more information or to download this public domain video, go to  https://svs.gsfc.nasa.gov/5114"
     },{
-        "src":"NRT",
-        "title":"Sea Surface Temperature (SST) Anomaly - Near Real Time",
-        "caption":"This visualization shows Sea Surface Temperature (SST) Anomaly data from the Jet Propulsion Laboratory (JPL) Multi-scale Ultra-high Resolution (MUR) Sea Surface Temperature Analysis. The analysis data is near-real-time (one day latency) and the visualization is updated daily to include the latest available data.  \n\nData available here: <a href=\"https://podaac.jpl.nasa.gov/dataset/MUR-JPL-L4-GLOB-v4.1\" target=\"_blank\">https://podaac.jpl.nasa.gov/dataset/MUR-JPL-L4-GLOB-v4.1</a>\nVisualizations by: Kel Elkins\nFor more information or to download this public domain video, go to  https://svs.gsfc.nasa.gov/5176"
-    },{
         "src":"https://www.youtube.com/embed/pRR5E95F7N0",
         "title":"2023 Temperature Measurements",
         "caption":"The locations of the temperature measurements that were used in the 2023 GISS Surface Temperature Analysis (v4). The data on land comes from the weather stations that make up the Global Historical Climatology Network (GHCN). Over water temperature measurements come from International Comprehensive Ocean-Atmosphere Data Set (ICOADS). This dataset provides surface marine observational records from ships, buoys, and other platform types.\nVisualizations by: Mark SubbaRao\nFor more information or to download this public domain video, go to  https://svs.gsfc.nasa.gov/5208"
