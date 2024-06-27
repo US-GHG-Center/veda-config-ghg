@@ -28,6 +28,9 @@ import CardGallery from "./components/card_gallery";
 import { greenhouseGasesStoryIds } from "../overrides/common/story-data";
 import VisitGHG from "../overrides/components/visit-ghg";
 
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_content.json';
+
 <VisitGHG />
 <Block type='wide'>
   <Prose>
@@ -45,7 +48,10 @@ import VisitGHG from "../overrides/components/visit-ghg";
 
 </Block>
 
-<CardGallery
-  title={"Greenhouse Gases Stories"}
-  storyIds={greenhouseGasesStoryIds}
-/>
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
+</Block>
+
+<CardGallery title={"Greenhouse Gases Stories"} storyIds={greenhouseGasesStoryIds} />
