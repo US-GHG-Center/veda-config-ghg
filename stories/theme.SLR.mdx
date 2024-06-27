@@ -27,6 +27,9 @@ taxonomy:
 import CardGallery from "./components/card_gallery";
 import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
 
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './theme.SLR.introduction_sea_level_rise/carousel_content.json';
+
 <Block type='wide'>
   <Prose>
     ## Info
@@ -40,6 +43,12 @@ import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
 
     Using a combination space-based observations, ground-based monitoring and modeling, federal agencies work with local organizations across the country and internationally to prepare for and mitigate the impacts of sea level rise.
   </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
 </Block>
 
 <CardGallery title={"Sea Level Rise Stories"} storyIds={seaLevelRiseStoryIds} />
