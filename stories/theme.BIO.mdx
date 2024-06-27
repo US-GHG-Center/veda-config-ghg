@@ -27,6 +27,9 @@ taxonomy:
 import CardGallery from "./components/card_gallery";
 import { biodiversityStoryIds } from "../overrides/common/story-data";
 
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './theme.BIO.introduction_biodiversity/carousel_content.json';
+
 <Block type='wide'>
   <Prose>
     ## Info
@@ -39,6 +42,12 @@ import { biodiversityStoryIds } from "../overrides/common/story-data";
     Additionally, modeling can be used to forecast how species and their habitat may change in the future.
     This information is also used across multiple scales of research and government to inform management practices.
   </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
 </Block>
 
 <CardGallery title={"Biodiversity Stories"} storyIds={biodiversityStoryIds} />
