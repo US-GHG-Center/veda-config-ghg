@@ -32,7 +32,7 @@ import Carousel from "../overrides/common/embedded-video-carousel";
 import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_content.json';
 
 <VisitGHG />
-<Block type='wide'>
+<Block>
   <Prose>
     ## Info
 
@@ -43,9 +43,19 @@ import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_con
     These changes include warmer air and ocean temperatures, changes in precipitation patterns, retreating snow and ice, increasingly severe weather events, such as hurricanes of greater intensity and sea level rise, among other impacts.
     Federal agencies are working together to develop a Greenhouse Gas Monitoring and Information System (GHGMIS) for the U.S. to improve measurement of GHG emissions and sinks and track progress towards meet climate mitigation goals.
     This system uses these advanced capabilities, including the expanded use of GHG observational data and models, to provide enhanced GHG emissions and uptake data estimates that can be used by decision-makers.
-
-  </Prose>
-
+    </Prose>
+    <Figure>
+          <Image
+            src={new URL('./theme.GHG.introduction_greenhouse_gases/AGGI.png', import.meta.url).href}
+            alt='The image shows a NOAA Annual Greenhouse Gas Index from 1980 to 2020. A stacked bar chart on the left displays the annual increase in greenhouse gas concentrations, with red representing CO₂, purple for CH₄, blue for N₂O, and yellow for other gases. The chart indicates a continuous rise in greenhouse gas levels over the four decades. On the right, a donut chart illustrates the relative contributions to global warming, showing CO₂ as the largest contributor, followed by CH₄, N₂O, and other gases.'
+          />
+        <Caption
+          attrAuthor='The NASA Scientific Visualization Studio'
+          attrUrl='https://svs.gsfc.nasa.gov/5126'
+        >
+            The NOAA Annual Greenhouse Gas Index from 1979 to 2021, illustrating the cumulative contributions of different greenhouse gases to global warming. The stacked bar chart shows the increase in greenhouse gas concentrations over time, with each bar representing a year and the different colors indicating the contributions of specific gases: carbon dioxide (CO₂) in red, methane (CH₄) in purple, nitrous oxide (N₂O) in blue, and other gases in yellow. The accompanying donut chart on the right highlights the relative contributions of these gases to global warming, emphasizing the dominant role of CO₂, followed by CH₄, N₂O, and other gases.
+        </Caption>
+    </Figure>
 </Block>
 
 <Block type="wide">

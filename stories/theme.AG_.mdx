@@ -30,12 +30,24 @@ import contentArray from './theme.AG_.introduction_agriculture/carousel_content.
 
 <Block>
   <Prose>
-    ## Info
-    Producing food has always been challenging, and in the 21st century, human-caused climate change is already affecting food security through increasing temperatures, increased frequency of extreme events, and changing precipitation patterns.
+  ## Agriculture
+  Producing food has always been challenging, and in the 21st century, human-caused climate change is already affecting food security through increasing temperatures, increased frequency of extreme events and changing precipitation patterns.
 
-    Earth data has increasingly become part of the food farming process.
-    Observations from satellites, aircraft, ground sensors, and surveys, combined with high-end computer modeling are used by scientists working with federal agencies who collaborate with farmers, ranchers, fishermen, and decision-makers to share their understanding of the relationship between the Earth system and the environments that provide food across the globe.
+  Earth data have increasingly become part of the food farming process.
+  Observations from satellites, aircraft, ground sensors and surveys, combined with high-end computer modeling are used by scientists working with Federal agencies who collaborate with farmers, ranchers, fishermen and decision-makers to share their understanding of the relationship between the Earth system and the environments that provide food across the globe.
   </Prose>
+    <Figure>
+          <Image
+            src={new URL('./theme.AG_.introduction_agriculture/elnino_crops.jpg', import.meta.url).href}
+            alt='a chloropleth map demonstrating the forecasted impact of elnino on crop yields. The colorbar spans from negative (orange) to positive (purple). Positive impacts are located in the northern and southern tips of Africa, India, China, and the southern parts of Australia. Negative impacts are concentrated in the United States, southern parts of South America, and Central Asia.'
+          />
+        <Caption
+          attrAuthor='The NASA Scientific Visualization Studio'
+          attrUrl='https://svs.gsfc.nasa.gov/31278'
+        >
+            a global map forecasting the impact of El Niño on crop yields. Areas colored in shades of orange indicate regions expected to experience negative impacts on crop yields, while areas in shades of purple are expected to see positive impacts. The map highlights significant regional variations, with negative impacts forecasted for parts of South America, Southern Africa, Southeast Asia, and Australia. Conversely, positive impacts are anticipated in certain regions of North and South America, Europe, and Southwest Asia. This visualization underscores the varied effects of El Niño on agricultural productivity across different global regions.
+        </Caption>
+    </Figure>
 </Block>
 
 <Block type="wide">
