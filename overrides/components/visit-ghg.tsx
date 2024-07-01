@@ -85,7 +85,7 @@ export default function VisitGHG({
                 radius="square"
                 variation="primary-fill"
               >
-                Visit the U.S. GHG Center website
+                Visit the US GHG Center website
               </Button>
             </div>
           </InfoImageContent>
