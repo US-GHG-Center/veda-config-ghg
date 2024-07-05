@@ -27,6 +27,9 @@ taxonomy:
 import CardGallery from "./components/card_gallery";
 import { wildfiresStoryIds } from "../overrides/common/story-data";
 
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './theme.WLF.introduction_wildfires/carousel_content.json';
+
 <Block type='wide'>
   <Prose>
     ## Info
@@ -38,6 +41,12 @@ import { wildfiresStoryIds } from "../overrides/common/story-data";
     The unique vantage point offered by Earth observing satellites provides researchers and land managers with the ability to assess broadscale extents of fire related hazards that is not possible with traditional ground-based monitoring.
     This information is used by agencies at multiple levels of government and management teams on the ground during all stages of wildfires, including monitoring fire prone regions, tracking and responding to active wildfires and assessing post wildfire zones.
   </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
 </Block>
 
 <CardGallery title={"Wildfires Stories"} storyIds={wildfiresStoryIds} />
