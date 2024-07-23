@@ -64,7 +64,7 @@ layers:
       rescale:
         - -10
         - 60
-      
+      nodata: -9999
     compare:
       datasetId: odiac-ffco2-monthgrid-v2023
       layerId: co2-emissions
@@ -103,7 +103,7 @@ layers:
       metrics:
         - mean
       sourceParams:
-          
+        nodata: -9999   
         dst_crs: "+proj=cea"
     info:
       source: NASA / NIES
