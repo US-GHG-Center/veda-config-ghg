@@ -29,7 +29,8 @@ module.exports = {
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
-    "/learn": "./custom-pages/learn/index.mdx"
+    "/learn": "./custom-pages/learn/index.mdx",
+    "/urban": "./custom-pages/urban/index.mdx"
   },
 
   strings: {
