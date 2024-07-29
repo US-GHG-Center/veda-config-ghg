@@ -18,6 +18,14 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription:
+  ::markdown
+    - **Temporal Extent:** Input dimensions ranging from 2010 - 2020
+    - **Temporal Resolution:** n/a
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 30 arc-second (~1 km x 1 km)
+    - **Data Units:** relative level of multidimensional deprivation and poverty in each 30 arc-second (~1 km) pixel represented as an index from 0 to 100
+    - **Data Type:** Research
 layers:
   - id: grdi-v1-raster
     stacCol: grdi-v1-raster
@@ -46,6 +54,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-filled-missing-values-count
     stacCol: grdi-filled-missing-values-count
     name: GRDI Constituent Inputs
@@ -73,6 +86,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-v1-built
     stacCol: grdi-v1-built
     name: GRDI Built-Up Area (BUILT)
@@ -100,6 +118,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-cdr-raster
     stacCol: grdi-cdr-raster
     name: GRDI Child Dependency Ratio (CDR)
@@ -127,6 +150,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-imr-raster
     stacCol: grdi-imr-raster
     name: GRDI Infant Mortality Rate (IMR)
@@ -154,6 +182,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-shdi-raster
     stacCol: grdi-shdi-raster
     name: GRDI Subnational Human Development Index (SHDI)
@@ -181,6 +214,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-vnl-raster
     stacCol: grdi-vnl-raster
     name: GRDI VIIRS Night Lights (VNL)
@@ -208,6 +246,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
   - id: grdi-vnl-slope-raster
     stacCol: grdi-vnl-slope-raster
     name: GRDI VIIRS Night Lights (VNL) Slope
@@ -235,6 +278,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: n/a
+      unit: Relative deprivation and poverty as an index from 0 to 100
 ---
 
 <Block type='wide'>

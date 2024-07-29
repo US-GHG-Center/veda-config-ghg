@@ -19,6 +19,14 @@ taxonomy:
     values:
       - Satellite Observations
       - Model Output
+infoDescription:
+  ::markdown
+    - **Temporal Extent:** January 2020 - Ongoing
+    - **Temporal Resolution:** Monthly 
+    - **Spatial Extent:** Global 
+    - **Spatial Resolution:** 0.05 degrees x 0.05 degrees (~approx. 5 km)
+    - **Data Units:** 'Crop condition classification:' Exceptional, Favorable, Watch, Poor, Failure, Out of Season, No Data
+    - **Data Type:** Operational
 layers:
   - id: geoglam
     stacCol: geoglam
@@ -56,6 +64,11 @@ layers:
       exclude: false
       metrics:
         - median
+    info:
+      source: USDA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: Crop condition classification
 ---
 
 <Block type='wide'>
