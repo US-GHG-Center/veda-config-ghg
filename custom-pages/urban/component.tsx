@@ -26,18 +26,19 @@ const Carto = styled.div`
 
 const DatePickerWrapper = styled.div`
   background-color: white;
-  padding: ${glsp(1)};
+  padding: ${glsp(0.5)};
   border-radius: ${themeVal('shape.rounded')};
   border-radius: 
 `
 
 const PanelWrapper = styled.div`
   background-color: white;
-  padding: ${glsp(1)};
+  padding: ${glsp(0.5)};
   border-radius: ${themeVal('shape.rounded')};
   width: 250px;
 `;
 
+// Use Mapbox control styles
 function DatePickerControl(props) {
   const { position, ...rest } = props
   useThemedControl(
@@ -67,8 +68,6 @@ function PanelControl(props) {
   );
   return null;
 }
-
-
 
 export default function UrbanMap(){
   const [selectedDate, setSelectedDate] = useState(new Date('2022-02-03'));
