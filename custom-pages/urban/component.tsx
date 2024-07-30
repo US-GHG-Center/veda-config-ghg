@@ -1,6 +1,6 @@
 import React, { useState } from '$veda-ui/react';
 import styled from '$veda-ui/styled-components';
-import format from '$veda-ui/date-fns/esm/format';
+import { glsp, themeVal } from '$veda-ui/@devseed-ui/theme-provider';
 import { veda_faux_module_datasets } from '$veda-ui-scripts/data-layer/datasets';
 import Map, { MapControls } from '$veda-ui-scripts/components/common/map';
 import { Basemap } from '$veda-ui-scripts/components/common/map/style-generators/basemap';
@@ -13,6 +13,7 @@ import {
   ScaleControl
 } from '$veda-ui-scripts/components/common/map/controls';
 import MapCoordsControl from '$veda-ui-scripts/components/common/map/controls/coords';
+import useThemedControl from '$veda-ui-scripts/components/common/map/controls/hooks/use-themed-control';
 
 import InteractiveMarkerLayer from './custom-layer';
 
@@ -24,22 +25,50 @@ const Carto = styled.div`
 `;
 
 const DatePickerWrapper = styled.div`
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  z-index: 10000;
-  background: white;
-  padding: 10px;
+  background-color: white;
+  padding: ${glsp(1)};
+  border-radius: ${themeVal('shape.rounded')};
+  border-radius: 
 `
 
 const PanelWrapper = styled.div`
-  position: absolute;
-  top: 120px;
-  right: 40px;
-  z-index: 10000;
-  background: white;
-  padding: 10px;
+  background-color: white;
+  padding: ${glsp(1)};
+  border-radius: ${themeVal('shape.rounded')};
+  width: 250px;
 `;
+
+function DatePickerControl(props) {
+  const { position, ...rest } = props
+  useThemedControl(
+    () => <DatePickerWrapper><DatePicker {...rest} /></DatePickerWrapper>,
+    {
+      position
+    }
+  );
+  return null;
+}
+
+function Panel({selectedFeature}) {
+  return <PanelWrapper>
+  {selectedFeature && <div>{JSON.stringify(selectedFeature.properties)}</div>}
+  {!selectedFeature && <div>Please select a feature by clicking a marker.</div>}
+</PanelWrapper>
+}
+
+
+function PanelControl(props) {
+  const { position, ...rest } = props
+  useThemedControl(
+    () => <Panel {...rest} />,
+    {
+      position
+    }
+  );
+  return null;
+}
+
+
 
 export default function UrbanMap(){
   const [selectedDate, setSelectedDate] = useState(new Date('2022-02-03'));
@@ -74,10 +103,7 @@ export default function UrbanMap(){
           <ScaleControl />
           <NavigationControl position='top-left' />
           <MapCoordsControl />
-        </MapControls>
-      </Map>
-      <DatePickerWrapper>
-        <DatePicker 
+          <DatePickerControl 
           triggerHeadReference='Selected Date '
           selectedDay={selectedDate}
           onConfirm={(d) => {
@@ -86,11 +112,11 @@ export default function UrbanMap(){
           }}
           disabled={false}
           tipContent={'some content'}
+          position='top-right'
           />
-      </DatePickerWrapper>
-      <PanelWrapper>
-        {selectedFeature && <div>{JSON.stringify(selectedFeature.properties)}</div>}
-        {!selectedFeature && <div>Please select a feature by clicking a marker.</div>}
-      </PanelWrapper>
+          <PanelControl selectedFeature={selectedFeature} position='bottom-left' />
+        </MapControls>
+      </Map>
+      
   </Carto>)
 }
