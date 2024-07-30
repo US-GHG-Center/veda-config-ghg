@@ -21,7 +21,6 @@ import { MARKER_LAYOUT } from '$veda-ui-scripts/components/common/map/hooks/use-
 import useMaps from '$veda-ui-scripts/components/common/map/hooks/use-maps';
 import useGeneratorParams from '$veda-ui-scripts/components/common/map/hooks/use-generator-params';
 
-
 import {
   ActionStatus,
   S_FAILED,
