@@ -10,7 +10,6 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import Partners from "./partners";
 import Keypoints from "./keypoints";
-import Banner from './banner';
 import VideoModal from "../components/video-modal";
 
 const HomeContent = styled(Hug)`
@@ -105,7 +104,6 @@ export default function HomeComponent() {
   
   return (
     <>
-    <Banner />
       <HomeContent>
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
