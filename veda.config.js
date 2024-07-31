@@ -37,23 +37,10 @@ module.exports = {
       one: "Data Insights",
       other: "Data Insights",
     },
-    banner: {
-      text: 'Read the new data insight on using EMIT and AVIRIS-3 for monitoring large methane emission events.',
-      url: 'stories/emit-and-aviris-3',
-      expires: '2024-08-03T12:00:00-04:00',
-      type: 'info'
-    },
     storiesBanner:
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
-    // Temporary Banner Text/URL/expiry
-    tempBanner:
-        "Read the new data insight on using EMIT and AVIRIS-3 for monitoring large methane emission events.",
-    tempBannerUrl:
-      "stories/emit-and-aviris-3",
-    tempBannerExpires:
-        "2024-07-03T12:00:00-04:00"
   },
 
   theme: {
