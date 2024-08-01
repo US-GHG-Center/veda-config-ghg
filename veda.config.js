@@ -1,3 +1,30 @@
+const defaultMenuLinks = [
+  {
+    title: 'Learn',
+    to: '/learn',
+    type: 'internalLink'
+  },
+  {
+    title: 'Test story',
+    to: '/stories',
+    type: 'internalLink'
+  },
+  {
+    title: 'Dropdown',
+    type: 'dropdown',
+    children: [{
+      title: 'child 1',
+      to: '/stories',
+      type: 'internalLink'
+    },{
+      title: 'child 2',
+      href: 'https://nasa.gov',
+      type: 'externalLink'
+    }]
+    
+  }
+];
+
 module.exports = {
   /**
    * Glob path for the datasets.
@@ -29,7 +56,6 @@ module.exports = {
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
-    nav: "./overrides/components/nav/index.mdx",
     "/learn": "./custom-pages/learn/index.mdx"
   },
 
@@ -73,4 +99,7 @@ module.exports = {
   booleans: {
     'externalLinksInNewTab': true,
   },
+  navItems: {
+    mainNavItems: defaultMenuLinks
+  }
 };
