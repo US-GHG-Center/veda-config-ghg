@@ -25,6 +25,25 @@ const defaultMenuLinks = [
   }
 ];
 
+let subNavItems = [
+  {
+    title: 'About',
+    to: '/about',
+    type: 'internalLink'
+  }
+];
+
+if (config.GOOGLE_FORM) {
+  subNavItems = [
+    ...subNavItems,
+    {
+      title: 'Contact us',
+      src: config.GOOGLE_FORM,
+      type: 'modal'
+    }
+  ];
+}
+
 module.exports = {
   /**
    * Glob path for the datasets.
@@ -100,6 +119,7 @@ module.exports = {
     'externalLinksInNewTab': true,
   },
   navItems: {
-    mainNavItems: defaultMenuLinks
+    mainNavItems: defaultMenuLinks,
+    subNavItems: subNavItems
   }
 };
