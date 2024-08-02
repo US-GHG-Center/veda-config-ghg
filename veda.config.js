@@ -68,7 +68,12 @@ module.exports = {
       },
     },
   },
-  
+  banner: {
+    text: 'Read the new data insight on using EMIT and AVIRIS-3 for monitoring large methane emission events.',
+    url: 'stories/emit-and-aviris-3',
+    expires: '2024-08-03T12:00:00-04:00',
+    type: 'info'
+  },
   booleans: {
     'externalLinksInNewTab': true,
   },
