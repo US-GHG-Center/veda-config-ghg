@@ -1,3 +1,6 @@
+const dotEnvConfig = require('dotenv').config();
+const { parsed: config } = dotEnvConfig;
+
 const defaultMenuLinks = [
   {
     title: 'Learn',
