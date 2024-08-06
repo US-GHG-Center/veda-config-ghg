@@ -18,6 +18,14 @@ taxonomy:
   - name: Product Type
     values:
       - Satellite Observations
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 2015 - Ongoing
+    - **Temporal Resolution:** Monthly
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.1 degrees x 0.1 degrees
+    - **Data Units:** Molecules of nitrogen dioxide per square centimeter (Molecules NO₂/cm²)
+    - **Data Type:** Research
 layers:
   - id: no2-monthly
     stacCol: no2-monthly
@@ -58,6 +66,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: Molecules NO₂/cm²
   - id: no2-monthly-diff
     stacCol: no2-monthly-diff
     name: Nitrogen Dioxide (NO₂) Difference
@@ -96,6 +109,11 @@ layers:
       exclude: false
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: Molecules NO₂/cm²
 ---
 
 <Block type='wide'>
