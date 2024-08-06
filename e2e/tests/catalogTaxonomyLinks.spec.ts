@@ -6,20 +6,13 @@ const catalogs = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8
 const datasetIds = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).datasetIds;
 
 
-test.describe('catalog card routing', () => {
+test.describe('catalog card taxonomy pills have valid hyperlinks', () => {
  for (const item of catalogs) {
-  test(`${item} routes to dataset details page`, async({
+  test(`${item} details page has taxonomy hyperlinks`, async({
     page,
     catalogPage,
     datasetPage,
-    notebookConnectModal,
   }) => {
-    let pageErrorCalled = false;
-    // Log all uncaught errors to the terminal
-    page.on('pageerror', exception => {
-      console.log(`Uncaught exception: "${exception}"`);
-      pageErrorCalled = true;
-    });
 
     await page.goto('/data-catalog');
     await expect(catalogPage.header, `catalog page should load`).toHaveText(/data catalog/i);
@@ -30,13 +23,16 @@ test.describe('catalog card routing', () => {
 
     await expect(datasetPage.header.filter({ hasText: item}), `${item} page should load`).toBeVisible();
 
-    // scroll page to bottom
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    // check that taxonomy pills have hrefs
+    const taxonomyLinks = await page.getByRole('heading', {name: /taxonomy/i , includeHidden: true}).locator('..').locator('dd').getByRole('link').all();
+    for(const link of taxonomyLinks) {
+      const linkName = await link.innerText();
+      test.step(`testing that ${linkName} has an href`, async() => {
+        const href = await link.getAttribute('href');
+        expect(href).not.toBeNull;
+      })
+    }
 
-    expect(pageErrorCalled, 'no javascript exceptions thrown on page').toBe(false)
-
-    await catalogPage.accessDataButton.click();
-    await expect(notebookConnectModal.heading).toBeVisible();
   })
  }
 

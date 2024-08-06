@@ -3,6 +3,7 @@ import AboutPage from './aboutPage';
 import AnalysisPage from './analysisPage';
 import AnalysisResultsPage from './analysisResultsPage';
 import CatalogPage from './catalogPage';
+import ContactModal from './contactModal';
 import DatasetPage from './datasetPage';
 import DatasetSelectorComponent from './datasetSelectorComponent';
 import DisclaimerComponent from './disclaimerComponent';
@@ -10,13 +11,17 @@ import ExplorePage from './explorePage';
 import FooterComponent from './footerComponent';
 import HeaderComponent from './headerComponent';
 import HomePage from './homePage';
+import LearnPage from './learnPage';
+import NotebookConnectModal from './notebookConnectModal';
 import StoryPage from './storyPage';
+import SubscribePage from './subscribePage';
 
 export const test = base.extend<{
   aboutPage: AboutPage;
   analysisPage: AnalysisPage;
   analysisResultsPage: AnalysisResultsPage;
   catalogPage: CatalogPage;
+  contactModal: ContactModal;
   datasetPage: DatasetPage;
   datasetSelectorComponent: DatasetSelectorComponent;
   disclaimerComponent: DisclaimerComponent;
@@ -24,7 +29,10 @@ export const test = base.extend<{
   footerComponent: FooterComponent;
   headerComponent: HeaderComponent;
   homePage: HomePage;
-  storyPage: StoryPage
+  learnPage: LearnPage;
+  storyPage: StoryPage;
+  subscribePage: SubscribePage;
+  notebookConnectModal: NotebookConnectModal;
 }> ({
   aboutPage: async ({page}, use) => {
     await use(new AboutPage(page));
@@ -37,6 +45,9 @@ export const test = base.extend<{
   },
   catalogPage: async ({page}, use) => {
     await use(new CatalogPage(page));
+  },
+  contactModal:  async ({page}, use) => {
+    await use(new ContactModal(page));
   },
   datasetPage: async ({page}, use) => {
     await use(new DatasetPage(page));
@@ -59,8 +70,17 @@ export const test = base.extend<{
   homePage: async ({page}, use) => {
     await use(new HomePage(page));
   },
+  learnPage: async ({page}, use) => {
+    await use(new LearnPage(page));
+  },
+  notebookConnectModal: async({page}, use) => {
+    await use(new NotebookConnectModal(page))
+  },
   storyPage: async ({page}, use) => {
     await use(new StoryPage(page));
+  },
+  subscribePage: async ({page}, use) => {
+    await use(new SubscribePage(page));
   },
 });
 

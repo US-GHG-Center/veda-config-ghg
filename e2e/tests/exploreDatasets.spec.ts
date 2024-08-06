@@ -10,7 +10,7 @@ test.describe('explore dataset', () => {
       page,
       datasetSelectorComponent,
       disclaimerComponent,
-      datasetPage,
+      explorePage,
     }) => {
       let pageErrorCalled = false;
       // Log all uncaught errors to the terminal to be visible in trace
@@ -28,11 +28,14 @@ test.describe('explore dataset', () => {
         const collectionsResponsePromise = page.waitForResponse(response =>
           response.url().includes('collect') && response.status() === 200
         );
+        const datasetName = await datasetSelectorComponent.article.first().getByRole('heading', {level: 3}).innerText()
         await datasetSelectorComponent.addFirstDataset()
 
         const mosaicResponse = await collectionsResponsePromise;
         expect(mosaicResponse.ok(), 'mapbox request should be successful').toBeTruthy();
 
+        await page.getByRole('button', { name: 'Close feature tour' }).click();
+        await expect(explorePage.firstDatasetItem.getByRole('heading', {name: datasetName}).first(), `article with name ${dataset} should be visible`).toBeVisible();
         // scroll page to bottom
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         expect(pageErrorCalled, 'no javascript exceptions thrown on page').toBe(false);

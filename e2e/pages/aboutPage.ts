@@ -2,10 +2,10 @@ import { Locator, Page } from '@playwright/test';
 
 export default class AboutPage {
   readonly page: Page;
-  readonly mainContent: Locator;
+  readonly aboutParagraph: Locator;
 
   constructor(page: Page) {
     this.page = page;
-    this.mainContent = this.page.getByRole('main');
+    this.aboutParagraph = this.page.getByText("The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort");
   }
 }
