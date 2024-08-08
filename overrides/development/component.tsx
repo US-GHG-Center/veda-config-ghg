@@ -5,9 +5,9 @@ import {
   CollecticonSpeechBalloon,
   CollecticonBrandGithub,
 } from "$veda-ui/@devseed-ui/collecticons";
-import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
-import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
-import { FoldProse } from "$veda-ui-scripts/components/common/fold";
+import { variableGlsp } from "$veda-ui-scripts";
+import { useFeedbackModal } from "$veda-ui-scripts";
+import { FoldProse } from "$veda-ui-scripts";
 
 const ContributeCta = styled.div`
   display: flex;

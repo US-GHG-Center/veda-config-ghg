@@ -2,17 +2,16 @@ import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 
-import Constrainer from "$veda-ui-scripts/styles/constrainer";
-import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
-import Image from "$veda-ui-scripts/components/common/blocks/images";
+import { Constrainer, VarHeading, Image } from "$veda-ui-scripts";
+
 import {
   Figcaption,
   Figure,
   FigureAttribution,
-} from "$veda-ui-scripts/components/common/figure";
+} from "$veda-ui-scripts";
 
 import Partners from "../../home/partners";
-import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
+import { useMediaQuery } from "$veda-ui-scripts";
 
 import coverImgSrc from "./earth.png";
 import coverVideoSrc from "url:./earth-gas.mp4";

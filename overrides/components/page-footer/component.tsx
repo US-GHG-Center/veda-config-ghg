@@ -14,17 +14,17 @@ import { Button } from "$veda-ui/@devseed-ui/button";
 import { format } from "$veda-ui/date-fns";
 import { getString } from "veda";
 
-import { Tip } from "$veda-ui-scripts/components/common/tip";
-import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
+import { Tip } from "$veda-ui-scripts";
+import { variableGlsp } from "$veda-ui-scripts";
 import {
   STORIES_PATH,
   DATASETS_PATH,
   ANALYSIS_PATH,
   ABOUT_PATH,
-} from "$veda-ui-scripts/utils/routes";
-import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
-import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
-import { getLinkProps } from "$veda-ui-scripts/utils/url";
+} from "$veda-ui-scripts";
+import { useFeedbackModal } from "$veda-ui-scripts";
+import { useMediaQuery } from "$veda-ui-scripts";
+import { getLinkProps } from "$veda-ui-scripts";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';

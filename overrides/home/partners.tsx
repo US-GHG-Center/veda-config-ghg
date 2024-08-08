@@ -1,10 +1,10 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 
-import Image from "$veda-ui-scripts/components/common/blocks/images";
+import { Image } from "$veda-ui-scripts";
 import { media } from "$veda-ui/@devseed-ui/theme-provider";
 
-import { getLinkProps } from "$veda-ui-scripts/utils/url";
+import { getLinkProps } from "$veda-ui-scripts";
 
 import epaImg from "../media/epa.svg";
 import nasaImg from "../media/nasa.png";

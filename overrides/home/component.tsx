@@ -4,9 +4,9 @@ import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
 import { CollecticonArrowRight, CollecticonCirclePlay } from "$veda-ui/@devseed-ui/collecticons";
-import Hug from "$veda-ui-scripts/styles/hug";
-import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
-import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
+import { Hug } from "$veda-ui-scripts";
+import { VarHeading } from "$veda-ui-scripts";
+import { variableGlsp } from "$veda-ui-scripts";
 
 import Partners from "./partners";
 import Keypoints from "./keypoints";

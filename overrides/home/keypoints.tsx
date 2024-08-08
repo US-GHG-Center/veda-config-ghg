@@ -1,14 +1,14 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { listReset, media, glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
-import Hug from "$veda-ui-scripts/styles/hug";
-import { Card } from "$veda-ui-scripts/components/common/card";
-import { CardFooter } from "$veda-ui-scripts/components/common/card/styles";
-import { variableGlsp } from '$veda-ui-scripts/styles/variable-utils';
+import { Hug } from "$veda-ui-scripts";
+import { Card } from "$veda-ui-scripts";
+import { CardFooter } from "$veda-ui-scripts";
+import { variableGlsp } from '$veda-ui-scripts';
 import { ArrowLink } from "./arrow-link";
 
-import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
-import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
+import { DATASETS_PATH } from "$veda-ui-scripts";
+import { Actions } from "$veda-ui-scripts";
 
 import featureEmissions from "./media/refinery.png";
 import featureSources from "./media/swamp.png";
