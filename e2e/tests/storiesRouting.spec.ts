@@ -4,7 +4,7 @@ const stories = JSON.parse(require('fs').readFileSync('e2e/playwrightTestData.js
 
 test.describe('stories card routing', () => {
  for (const item of stories) {
-  test(`${item} routes to dataset details page`, async({
+  test(`${item} routes from stories to details page`, async({
     page,
     storyPage,
     datasetPage,
@@ -19,9 +19,11 @@ test.describe('stories card routing', () => {
     await page.goto('/stories');
     await expect(storyPage.header, `stories page should load`).toBeVisible();
 
-    const storyCard = storyPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).last();
-    await storyCard.scrollIntoViewIfNeeded();
-    await storyCard.click({force: true});
+    await test.step(`click on ${item} article card`, async() => {
+      const storyCard = storyPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).last();
+      await storyCard.scrollIntoViewIfNeeded();
+      await storyCard.click({force: true});
+    })
     await expect(datasetPage.header.filter({ hasText: item}), `${item} page should load`).toBeVisible();
     expect(pageErrorCalled, 'no javascript exceptions thrown on page').toBe(false)
   })

@@ -1,4 +1,6 @@
-import { Locator, Page } from '@playwright/test';
+import { Locator, Page, test } from '@playwright/test';
+
+type FooterLinkName = "about" | "dataCatalog" | "dataExploration" | "dataInsights" | "hubLink"
 
 export default class FooterComponent {
   readonly page: Page;
@@ -24,5 +26,29 @@ export default class FooterComponent {
     this.pressInfoLink = this.footer.getByRole('link', { name: /press info/i} );
     this.subscribeLink = this.footer.getByRole('link', { name: /subscribe/i} );
     this.contactButton = this.footer.getByRole('button', { name: /contact us/i} );
+  }
+
+  async clickLink(linkName: FooterLinkName) {
+    await test.step(`click on ${linkName} link`, async() => {
+      switch (linkName) {
+        case 'about':
+          await this.aboutLink.click();
+          break;
+        case 'dataCatalog':
+          await this.dataCatalogLink.click();
+          break;
+        case 'dataExploration':
+          await this.dataExplorationLink.click();
+          break;
+        case 'dataInsights':
+          await this.dataInsightsLink.click();
+          break;
+        case 'hubLink':
+          await this.hubLink.click();
+          break;
+        default:
+          throw new Error('unknown link referenced in footer test')
+      }
+    })
   }
 }

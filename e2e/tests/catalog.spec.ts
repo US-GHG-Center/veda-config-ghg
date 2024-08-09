@@ -2,7 +2,7 @@ import { test, expect } from '../pages/basePage';
 
 const catalogs = JSON.parse(require('fs').readFileSync('e2e/playwrightTestData.json', 'utf8'))['catalogs'];
 
-test('load catalogs on /data-catalog route', async ({
+test('catalogs displayed on /data-catalog route', async ({
   page,
   catalogPage,
  }) => {
@@ -17,9 +17,12 @@ test('load catalogs on /data-catalog route', async ({
   await expect(catalogPage.header, `catalog page should load`).toHaveText(/data catalog/i);
 
   for (const item of catalogs) {
-    const catalogCard = catalogPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).last();
-    await catalogCard.scrollIntoViewIfNeeded();
-    await expect(catalogCard, `${item} catalog card should load`).toBeVisible();
+    await test.step(`locate ${item} catalog card`, async() => {
+      const catalogCard =  catalogPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).last();
+      await catalogCard.scrollIntoViewIfNeeded();
+      await expect(catalogCard, `${item} catalog card should load`).toBeVisible();
+    })
+    
   };
 
   expect(pageErrorCalled, 'no javascript exceptions thrown on page').toBe(false)

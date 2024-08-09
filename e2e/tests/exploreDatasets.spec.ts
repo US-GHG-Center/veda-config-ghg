@@ -23,21 +23,26 @@ test.describe('explore dataset', () => {
       await disclaimerComponent.acceptDisclaimer();
 
       if(disabledDatasets.includes(dataset)){
-        await expect(datasetSelectorComponent.noDatasetMessage).toBeVisible();
+        await expect(datasetSelectorComponent.noDatasetMessage, 'dataset set to disabled').toBeVisible();
       } else {
-        const collectionsResponsePromise = page.waitForResponse(response =>
-          response.url().includes('collect') && response.status() === 200
-        );
+        const collectionsResponsePromise = test.step('wait for collect api response', () => {
+           return page.waitForResponse(response =>
+            response.url().includes('collect') && response.status() === 200
+          );
+        })
+        
         const datasetName = await datasetSelectorComponent.article.first().getByRole('heading', {level: 3}).innerText()
         await datasetSelectorComponent.addFirstDataset()
 
         const mosaicResponse = await collectionsResponsePromise;
         expect(mosaicResponse.ok(), 'mapbox request should be successful').toBeTruthy();
 
-        await page.getByRole('button', { name: 'Close feature tour' }).click();
+        await explorePage.closeFeatureTour();
         await expect(explorePage.firstDatasetItem.getByRole('heading', {name: datasetName}).first(), `article with name ${dataset} should be visible`).toBeVisible();
         // scroll page to bottom
-        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        await test.step('scroll to bottom of the page', async() => {
+          await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        })
         expect(pageErrorCalled, 'no javascript exceptions thrown on page').toBe(false);
       }
     })
