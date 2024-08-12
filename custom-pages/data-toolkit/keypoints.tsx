@@ -172,8 +172,8 @@ export function KeypointsData() {
           <KeypointCard
             linkLabel="View more"
             linkTo="https://hub.ghg.center"
-            title="Jupyter Notebook"
-            description="Jupyter Notebook enables analysis of massive archives of Earth science data in the cloud in an interactive environment that alleviates the complexifties of managing compute resources. Log in or request access here."
+            title="JupyterHub"
+            description="JupyterHub enables analysis of massive archives of Earth science data in the cloud in an interactive environment that alleviates the complexifties of managing compute resources. Log in or request access here."
             imgSrc={"https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png"}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             // footerContent={
