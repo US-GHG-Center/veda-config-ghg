@@ -149,7 +149,7 @@ export function KeypointsCities() {
         </li>
         <li>
           <KeypointCard
-            linkLabel="New York"
+            linkLabel="New York City"
             linkTo="/stories/newyork"
             title="New York"
             description="Description"
