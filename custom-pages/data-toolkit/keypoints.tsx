@@ -130,8 +130,8 @@ export function KeypointsData() {
           <KeypointCard
             linkLabel="View more"
             linkTo="/data-catalog"
-            title="Datasets"
-            description="This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events."
+            title="Data Catalog"
+            description="Detailed information for datasets that provides insight into greenhouse gas sources, sinks, emissions, fluxes, and events"
             imgSrc={"https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png"}
             imgAlt="image of oil refinery"
             // footerContent={
@@ -173,7 +173,7 @@ export function KeypointsData() {
             linkLabel="View more"
             linkTo="https://hub.ghg.center"
             title="JupyterHub"
-            description="JupyterHub enables analysis of massive archives of Earth science data in the cloud in an interactive environment that alleviates the complexifties of managing compute resources. Log in or request access here."
+            description="With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here."
             imgSrc={"https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png"}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             // footerContent={
