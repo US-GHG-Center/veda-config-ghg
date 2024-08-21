@@ -5,8 +5,6 @@ import {  Card,
     CardBody,
     Grid,
 } from "$veda-ui/@trussworks/react-uswds";
-import '$veda-ui/@trussworks/react-uswds/lib/uswds.css'
-import '$veda-ui/@trussworks/react-uswds/lib/index.css'
 
 import Keypoints from "../../common/keypoints";
 import { dataEngagements, focusAreasSansDatasets, customInterfaces } from "../../common/constants";
