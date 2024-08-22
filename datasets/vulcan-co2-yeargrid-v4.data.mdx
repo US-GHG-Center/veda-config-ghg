@@ -1,7 +1,7 @@
 ---
 id: vulcan-ffco2-yeargrid-v4
 name: Vulcan Fossil Fuel CO₂ Emissions, Version 4
-description: Annual (2010 - 2015), 1 km resolution estimates of carbon dioxide emissions from fossil fuels and cement production over the conterminous U.S., version 4.0.
+description: Annual (2010 - 2021), 1 km resolution estimates of carbon dioxide emissions from fossil fuels and cement production over the contiguous United States, version 4.0
 usage:
   - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/vulcan-ffco2-yeargrid-v4.html"
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -39,7 +39,7 @@ taxonomy:
       - Model Output
 infoDescription: |
   ::markdown
-    - Temporal Extent: 2010 - 2020
+    - Temporal Extent: 2010 - 2021
     - Temporal Resolution: Annual
     - Spatial Extent: Contiguous United States
     - Spatial Resolution: 1km x 1km
@@ -48,10 +48,10 @@ infoDescription: |
     - Data Latency: Updated annually
 layers:
   - id: vulcan-total-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Total CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Total Fossil Fuel CO₂ Emissions
     type: raster
-    description: Annual Fossil Fuel CO2 Emissions
+    description: Estimated total annual CO₂ emissions from fossil fuel combustion (FFCO₂) across all sectors.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -97,10 +97,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions
   - id: vulcan-air-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Airport Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Airport Fossil Fuel CO₂ Emissions 
     type: raster
-    description: Airport Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from airports.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -146,10 +146,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions
   - id: vulcan-cmt-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Cement Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Cement Fossil Fuel CO₂ Emissions
     type: raster
-    description: Cement Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from cement production.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -195,10 +195,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions
   - id: vulcan-cmv-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Commercial Marine Vessels Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Commercial Marine Vessel Fossil Fuel CO₂ Emissionss
     type: raster
-    description: Commercial Marine Vessels Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from commercial marine vessels.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -244,10 +244,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions
   - id: vulcan-com-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Commercial Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Commercial Fossil Fuel CO₂ Emissions
     type: raster
-    description: Commercial Annual CO2 Emissions
+    description:  Estimated total annual FFCO₂ emissions from commercial sources.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -293,10 +293,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions    
   - id: vulcan-elc-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Powerplants Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Power Plant Fossil Fuel CO₂ Emissions
     type: raster
-    description: Powerplants Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from power plants.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -342,10 +342,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions                       
   - id: vulcan-ind-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Industrial Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Industrial Fossil Fuel CO₂ Emissions 
     type: raster
-    description: Industrial Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from industrial fossil fuel combustion.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -391,10 +391,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions     
   - id: vulcan-nrd-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Nonroad Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Non-Road Fossil Fuel CO₂ Emissions
     type: raster
-    description: Nonroad Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from non-road engines, equipment and vehicles.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -440,10 +440,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions  
   - id: vulcan-onr-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Onroad Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: On-Road Fossil Fuel CO₂ Emissions
     type: raster
-    description: Onroad Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from on-road engines, equipment and vehicles.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -489,10 +489,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions  
   - id: vulcan-res-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Residential Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Residential Fossil Fuel CO₂ Emissions
     type: raster
-    description: Reseidential Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions from residential sources.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -538,10 +538,10 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions
   - id: vulcan-rrd-co2
-    stacCol: vulcan-co2-yeargrid-v4
-    name: Railroad Fossil Fuel CO2 Emissions
+    stacCol: vulcan-ffco2-yeargrid-v4
+    name: Railroad Fossil Fuel CO₂ Emissions
     type: raster
-    description: Railroad Annual CO2 Emissions
+    description: Estimated total annual FFCO₂ emissions coming from railroads.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -590,11 +590,11 @@ layers:
 
 <Block>
   <Prose>
-    **Temporal Extent:** 2010 - 2020
+    **Temporal Extent:** 2010 - 2021<br />
     **Temporal Resolution:** Annual<br />
     **Spatial Extent:** Contiguous United States<br />
     **Spatial Resolution:** 1km x  1km<br />
-    **Data Units:** Units are metric tonnes of carbon per 1 km x 1 km cell per year (tC/km²/year)<br />
+    **Data Units:** Units are metric tonnes of carbon per 1 km x 1 km grid cell per year (tC/km²/year)<br />
     **Data Type:** Research<br />
     **Data Latency:** Updated annually<br />
 
