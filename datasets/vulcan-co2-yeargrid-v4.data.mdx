@@ -49,56 +49,6 @@ infoDescription: |
 layers:
   - id: vulcan-total-co2
     stacCol: vulcan-ffco2-yeargrid-v4-updated
-    name: Total Fossil Fuel CO₂ Emissions (Rainbow)
-    type: raster
-    description: Estimated total annual CO₂ emissions from fossil fuel combustion (FFCO₂) across all sectors.
-    initialDatetime: newest
-    projection:
-      id: "equirectangular"
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: total-co2
-      colormap_name: rainbow
-      rescale:
-        - 0
-        - 150
-    compare:
-      datasetId: vulcan-ffco2-yeargrid-v4
-      layerId: vulcan-total-co2
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: tC/km²/year
-      type: gradient
-      min: 0
-      max: 150
-      stops:
-        - '#8000FF'
-        - '#00BFFF'
-        - '#00FF00'
-        - '#FFFF00'
-        - '#FF0000'
-    analysis:
-      metrics:
-        - mean
-      sourceParams:
-        dst_crs: "+proj=cea"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Annual
-      unit: tC/km²/year
-    media:
-      src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
-      alt: Rendered Fossil Fuel CO2 Emissions
-
-  - id: vulcan-total-co2-s
-    stacCol: vulcan-ffco2-yeargrid-v4-updated
     name: Total Fossil Fuel CO₂ Emissions (Spectral)
     type: raster
     description: Estimated total annual CO₂ emissions from fossil fuel combustion (FFCO₂) across all sectors.
@@ -116,7 +66,7 @@ layers:
         - 150
     compare:
       datasetId: vulcan-ffco2-yeargrid-v4
-      layerId: vulcan-total-co2-s
+      layerId: vulcan-total-co2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -152,9 +102,6 @@ layers:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO2 Emissions     
 
-
-
-
   - id: vulcan-air-co2
     stacCol: vulcan-ffco2-yeargrid-v4-updated
     name: Airport Fossil Fuel CO₂ Emissions 
@@ -168,7 +115,7 @@ layers:
       - 20
     sourceParams:
       assets: air-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -186,11 +133,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -217,7 +169,7 @@ layers:
       - 20
     sourceParams:
       assets: cmt-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -235,11 +187,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -266,7 +223,7 @@ layers:
       - 20
     sourceParams:
       assets: cmv-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -284,11 +241,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -315,7 +277,7 @@ layers:
       - 20
     sourceParams:
       assets: com-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -333,11 +295,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -364,7 +331,7 @@ layers:
       - 20
     sourceParams:
       assets: elc-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -382,11 +349,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -413,7 +385,7 @@ layers:
       - 20
     sourceParams:
       assets: ind-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -431,11 +403,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -462,7 +439,7 @@ layers:
       - 20
     sourceParams:
       assets: nrd-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -480,11 +457,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -511,7 +493,7 @@ layers:
       - 20
     sourceParams:
       assets: onr-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -529,11 +511,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -560,7 +547,7 @@ layers:
       - 20
     sourceParams:
       assets: res-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -578,11 +565,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -609,7 +601,7 @@ layers:
       - 20
     sourceParams:
       assets: rrd-co2
-      colormap_name: rdylbu_r
+      colormap_name: spectral_r
       rescale:
         - 0
         - 150
@@ -627,11 +619,16 @@ layers:
       min: 0
       max: 150
       stops:
-        - "#4575B4"
-        - "#91BFDB"
-        - "#FEE08B"
-        - "#FC8D59"
-        - "#D73027"
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean

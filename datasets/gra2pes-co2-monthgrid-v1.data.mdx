@@ -98,7 +98,6 @@ layers:
     media:
       src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Air-Sea CO₂ Flux
-
   - id: co
     stacCol: gra2pes-co2-monthgrid-v1
     name: CO 
@@ -112,7 +111,7 @@ layers:
       - 20
     sourceParams:
       assets: co
-      colormap_name: magma
+      colormap_name: spectral_r
       rescale:
         - 0
         - 100
@@ -130,11 +129,16 @@ layers:
       min: 0
       max: 100
       stops:
-        - '#2c115f'
-        - '#721f81'
-        - '#b73779'
-        - '#f1605d'
-        - '#feb078'  
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142' 
     analysis:
       metrics:
         - mean
@@ -162,7 +166,7 @@ layers:
       - 20
     sourceParams:
       assets: nox
-      colormap_name: magma
+      colormap_name: greens
       rescale:
         - 0
         - 10
@@ -180,11 +184,11 @@ layers:
       min: 0
       max: 10
       stops:
-        - '#2c115f'
-        - '#721f81'
-        - '#b73779'
-        - '#f1605d'
-        - '#feb078'  
+        - '#f7fcf5'
+        - '#c7e9c0'
+        - '#74c476'
+        - '#31a354'
+        - '#006d2c'  
     analysis:
       metrics:
         - mean
@@ -212,7 +216,7 @@ layers:
       - 20
     sourceParams:
       assets: sox
-      colormap_name: magma
+      colormap_name: blues
       rescale:
         - 0
         - 10
@@ -230,11 +234,11 @@ layers:
       min: 0
       max: 10
       stops:
-        - '#2c115f'
-        - '#721f81'
-        - '#b73779'
-        - '#f1605d'
-        - '#feb078'  
+        - '#f7fbff'
+        - '#c6dbef'
+        - '#6baed6'
+        - '#3182bd'
+        - '#08519c'  
     analysis:
       metrics:
         - mean
@@ -262,7 +266,7 @@ layers:
       - 20
     sourceParams:
       assets: pm25
-      colormap_name: magma
+      colormap_name: reds
       rescale:
         - 0
         - 0.1
@@ -280,11 +284,11 @@ layers:
       min: 0
       max: 0.1
       stops:
-        - '#2c115f'
-        - '#721f81'
-        - '#b73779'
-        - '#f1605d'
-        - '#feb078'  
+        - '#fff5f0'
+        - '#fcbba1'
+        - '#fc9272'
+        - '#de2d26'
+        - '#a50f15'  
     analysis:
       metrics:
         - mean
