@@ -1,11 +1,15 @@
+
+@use "/.veda/ui/app/scripts/styles/mixins";
+
 .blocklink {
-  &:focus { outline: none; }
-  &:focus-visible { outline: 1px solid var(--veda-color-link);}
-  @supports not selector(:focus-visible) {
-    &:focus {
-      outline: 1px solid  var(--veda-color-link);
-    }
-  }
+  // &:focus { outline: none; }
+  // &:focus-visible { outline: 1px solid var(--veda-color-link);}
+  // @supports not selector(:focus-visible) {
+  //   &:focus {
+  //     outline: 1px solid  var(--veda-color-link);
+  //   }
+  // }
+  @include only-focus-visible;
 }
 
 .hug-reset-container {
