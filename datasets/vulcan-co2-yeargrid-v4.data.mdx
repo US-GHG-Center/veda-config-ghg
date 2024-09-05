@@ -681,10 +681,10 @@ layers:
 </Block>
 <Block>
   <Prose>
-    ## Source Data Product Citation (draft)
+    ## Source Data Product Citation
     Gurney, K.R., J. Liang, R. Patarasuk, Y. Song, J. Huang, and G. Roest. 2019. Vulcan: High-Resolution Annual Fossil Fuel CO₂ Emissions in USA, 2010-2015, Version 3. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1741
 
-    ## Dataset Accuracy (draft)
+    ## Dataset Accuracy
     Uncertainty in the ffCO₂ emissions were accounted for within each sector and quantified as the 95% confidence interval bounds. High and low bounds for each sector were gridded in addition to the mean emissions estimates. More information on uncertainty bounds are available in the peer-reviewed paper (see section 2). 
     
     The uncertainty of the Vulcan results are estimated by attempting to capture key input parameter variation. This is accomplished by completing a simulation with key input parameters (e.g. CO emission factor, CO₂ emission factor, CO emissions) set at their upper and lower range (an approximate 95% confidence interval). These two additional simulations estimated total annual domain ffCO₂ emissions as -14.0%/+16.6% of the central estimate for the example year of 2011. Two separate techniques are used to test the general quality of the Vulcan v3.0 ffCO₂ emissions estimate. The first is a comparison to other similar space/time-resolved ffCO₂ emission data products. Comparison to the ACES granular ffCO₂ estimate which only covers 13 Northeastern states was performed. In this comparison, total relative difference of 1.7% (ACES>Vulcan) was found, but much larger differences at the grid cell scale with a grid cell absolute median relative difference of 53.4%. Vulcan v3.0 results were also compared to the ODIAC global gridded ffCO₂ emissions data product which found a total relative difference of 6.9% (100.3 MtC/yr; Vulcan>ODIAC) in 2011. At the grid cell-scale a grid cell absolute median relative difference of 104.4% was observed. See Gurney et al. (2020) for more details. A second approach that compared the results presented here to atmospheric CO₂ inverse estimates was performed. At the whole contiguous US spatial scale and annual temporal scale, the 2010 Vulcan results were within 1.4% of an atmospheric 14CO₂ inversion effort (Basu et al., 2020).
@@ -697,7 +697,7 @@ layers:
     ## Scientific Details
     Vulcan covers 10 emission source sectors and is constructed from numerous public datasets that generate the emissions’ magnitude in addition to space and time distributions. The ffCO₂ emissions are estimated at a mixture of spatial and temporal resolutions (e.g., polygons, points, lines, annual, hourly) depending upon the characteristics of the incoming data sources and spatialization/temporalization techniques. Hence, some sources receive spatial and temporal “conditioning” (e.g., downscaling, interpolation, proxy surrogates) to arrive at the mix of spatial resolutions (point, polylines, polygons) and hourly resolution for each of the years spanning the 2010-2021 period. The emissions are typically gridded to spatial resolutions coarser than 0.5km x 0.5 km and temporal resolutions coarser than hourly. Please refer to the [Vulcan data derivation notes](https://docs.google.com/document/d/1DCwFoMdDy8xGJ-zcdX8IkNwo6cEwFc7E7Xu47IgE2Ik/edit?usp=sharing) for further detail on the methods for estimating emissions in the largest sectors: electricity production, industrial, on-road, and residential/commercial emissions. Methods for the remaining sectors: airport, railroad, commercial marine vessels, non-road, and cement can be found in [Gurney et al., 2020](https://doi.org/10.1029/2020JD032974) which describes the previous version of Vulcan, [Vulcan v3.0](https://doi.org/10.3334/ORNLDAAC/1741).
     
-    ## Key Publications (draft)
+    ## Key Publications
     Gurney, K.R., J. Liang, R. Patarasuk, Y. Song, J. Huang, G. Roest (2020). The Vulcan Version 3.0 High-Resolution Fossil Fuel CO₂ Emissions for the United States. Journal of Geophysical Research: Atmospheres, 125(19), e2020JD032974. [https://doi.org/10.1029/2020JD032974](https://doi.org/10.1029/2020JD032974)
     
     User guide: https://daac.ornl.gov/daacdata/nacp/Vulcan_V3_Annual_Emissions/comp/Vulcan_V3_Annual_Emissions.pdf
