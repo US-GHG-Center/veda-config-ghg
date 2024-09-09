@@ -1,18 +1,18 @@
 ---
-id: gra2pes-co2-monthgrid-v1
+id: gra2pes-ghg-monthgrid-v1
 name: GReenhouse Gas And Air Pollutants Emissions System (GRA²PES)
 description: Monthly, 0.036 degree resolution emissions of fossil fuel carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxide (NOx), sulfur oxide (SOx), and particulate matter (PM2.5) emissions for the year 2021 over the Contiguous United States from the Greenhouse gas And Air Pollutants Emissions System (GRA²PES)
 usage:
-  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gra2pes-co2-monthgrid-v1.html"
+  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gra2pes-ghg-monthgrid-v1.html"
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
   - url: "https://us-ghg-center.github.io/ghgc-docs/datausage.html"
     label: Notebooks to read, visualize, and explore data statistics
     title: 'Data Usage Notebooks'
-  - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fgra2pes-co2-monthgrid-v1_User_Notebook.ipynb&branch=main"
+  - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fgra2pes-ghg-monthgrid-v1_User_Notebook.ipynb&branch=main"
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#gra2pes-co2-monthgrid-v1/
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#gra2pes-ghg-monthgrid-v1/
     label: Browse and download the data
     title: Data Browser
 media:
@@ -49,7 +49,7 @@ infoDescription: |
     - Data Latency: Updated annually
 layers:
   - id: co2
-    stacCol: gra2pes-co2-monthgrid-v1
+    stacCol: gra2pes-ghg-monthgrid-v1
     name: CO₂ 
     type: raster
     description: Monthly mean air-sea CO₂ Flux (negative into ocean)
@@ -66,7 +66,7 @@ layers:
         - 0
         - 100
     compare:
-      datasetId: gra2pes-co2-monthgrid-v1
+      datasetId: gra2pes-ghg-monthgrid-v1
       layerId: co2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -104,7 +104,7 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: Rendered Air-Sea CO₂ Flux
   - id: co
-    stacCol: gra2pes-co2-monthgrid-v1
+    stacCol: gra2pes-ghg-monthgrid-v1
     name: CO 
     type: raster
     description: Monthly mean air-sea CO₂ Flux (negative into ocean)
@@ -121,7 +121,7 @@ layers:
         - 0
         - 2
     compare:
-      datasetId: gra2pes-co2-monthgrid-v1
+      datasetId: gra2pes-ghg-monthgrid-v1
       layerId: co
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -159,7 +159,7 @@ layers:
       alt: Rendered Air-Sea CO₂ Flux
 
   - id: nox
-    stacCol: gra2pes-co2-monthgrid-v1
+    stacCol: gra2pes-ghg-monthgrid-v1
     name: NOx 
     type: raster
     description: Monthly mean air-sea CO₂ Flux (negative into ocean)
@@ -176,7 +176,7 @@ layers:
         - 0
         - 2
     compare:
-      datasetId: gra2pes-co2-monthgrid-v1
+      datasetId: gra2pes-ghg-monthgrid-v1
       layerId: nox
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -209,7 +209,7 @@ layers:
       alt: Rendered Air-Sea CO₂ Flux
 
   - id: sox
-    stacCol: gra2pes-co2-monthgrid-v1
+    stacCol: gra2pes-ghg-monthgrid-v1
     name: SOx 
     type: raster
     description: Monthly mean air-sea CO₂ Flux (negative into ocean)
@@ -226,7 +226,7 @@ layers:
         - 0
         - 0.5
     compare:
-      datasetId: gra2pes-co2-monthgrid-v1
+      datasetId: gra2pes-ghg-monthgrid-v1
       layerId: sox
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -259,7 +259,7 @@ layers:
       alt: Rendered Air-Sea CO₂ Flux 
 
   - id: pm25
-    stacCol: gra2pes-co2-monthgrid-v1
+    stacCol: gra2pes-ghg-monthgrid-v1
     name: PM25 
     type: raster
     description: Monthly mean air-sea CO₂ Flux (negative into ocean)
@@ -276,7 +276,7 @@ layers:
         - 0
         - 0.2
     compare:
-      datasetId: gra2pes-co2-monthgrid-v1
+      datasetId: gra2pes-ghg-monthgrid-v1
       layerId: pm25
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -433,9 +433,9 @@ layers:
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/gra2pes-co2-monthgrid-v1_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gra2pes-co2-monthgrid-v1.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/gra2pes-co2-monthgrid-v1_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/gra2pes-ghg-monthgrid-v1_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gra2pes-ghg-monthgrid-v1.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/gra2pes-ghg-monthgrid-v1_Processing%20and%20Verification%20Report.html)
 
   </Prose>
 </Block>
