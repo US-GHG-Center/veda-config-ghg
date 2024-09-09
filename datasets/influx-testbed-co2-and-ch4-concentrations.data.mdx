@@ -1,9 +1,9 @@
 ---
-id: influx-testbed-co2-and-ch4-concentrations
+id: influx-testbed-ghg-concentrations
 name: Carbon Dioxide and Methane Concentrations from the Indianapolis Flux Experiment (INFLUX) 
 description: Atmospheric concentrations of carbon dioxide (CO₂) and methane (CH₄) collected at Indianapolis Flux Experiment (INFLUX) tower sites
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/noaa-gggrn-concentrations.html'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/influx-testbed-ghg-concentrations.html'
     label: Notebook showing data transformation for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
   - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
@@ -13,14 +13,16 @@ usage:
     label: Browse and download data from NIST
     title: 'Data Browser'    
 media:
-  src: ::file ./media/noaa-air-samples--cover.png
-  alt: aa
+  src: ::file ./media/nist--dataset-cover.jpg
+  alt: Smoke
   author:
-    name: Columbia University
+    name: Chris Leboutillier
+    url: https://unsplash.com/photos/a-large-plume-of-smoke-coming-out-of-a-pipe-NmT8Nk8OJMg
 taxonomy:
   - name: Topics
     values:
       - GHG Concentrations
+      - Urban
   - name: Source
     values:
       - NIST
@@ -43,8 +45,8 @@ infoDescription: |
     - Data Latency: Updated annually        
 disableExplore: true
 layers:
-  - id: influx-testbed-co2-and-ch4-concentrations
-    stacCol: influx-testbed-co2-and-ch4-concentrations
+  - id: influx-testbed-ghg-concentrations
+    stacCol: influx-testbed-ghg-concentrations
     name: Methane Concentration (Air Sample) 
     type: vector
     description: Discrete air sample measurements of methane (CH₄)
@@ -55,15 +57,15 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: influx-testbed-co2-and-ch4-concentrations
+      assets: influx-testbed-ghg-concentrations
       colormap_name: plasma
       rescale:
         - 0
         - 1000
       nodata: 0
     compare:
-      datasetId: influx-testbed-co2-and-ch4-concentrations
-      layerId: influx-testbed-co2-and-ch4-concentrations
+      datasetId: influx-testbed-ghg-concentrations
+      layerId: influx-testbed-ghg-concentrations
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -140,7 +142,7 @@ layers:
     ## Other Relevant Publications    
 
     ## Learn More
-    - Link to NIST/Urban Testbed story (once available)
+    - <Link to="stories/baltimore.stories.mdx">NIST/Urban Testbed story (once available)</Link>
     - Learn more about the [Urban Dome Test Bed System at NIST’s website] (https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds)
     - Learn more about INFLUX at the [Penn State website](https://sites.psu.edu/influx/)
 
@@ -153,9 +155,9 @@ layers:
     This data is published for research academic and related non-commercial purposes consistent with NIST’s mandate to further the science and the promulgation of appropriate standards. 
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/influx-testbed-co2-and-ch4-concentrations_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/noaa-gggrn-concentrations.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/influx-testbed-co2-and-ch4-concentrations_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/influx-testbed-ghg-concentrations_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/influx-testbed-ghg-concentrations.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/influx-testbed-ghg-concentrations_Processing%20and%20Verification%20Report.html)
 
     </Prose>
 </Block>
