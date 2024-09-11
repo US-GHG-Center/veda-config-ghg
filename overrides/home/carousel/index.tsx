@@ -52,19 +52,6 @@ export function DesktopCarousel () {
 
   return (
     <GridContainer aria-roledescription="carousel" aria-label="Highlighted VEDA Dashboard projects">
-      <Grid row className="position-relative carousel--height" aria-live="off"> 
-      <TransitionGroup>
-          <CSSTransition
-            key={itemInProgress.title}
-            timeout={2000}
-            classNames="imagetransition"
-          >
-            <div className="carousel--height width-full position-absolute left-0 top-0 shadow-1">
-              <img className="carousel--content-image" src={itemInProgress.image} /> 
-            </div>
-          </CSSTransition>
-        </TransitionGroup>
-      </Grid>
       <CardGroup className="tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
         {CarouselItems.map((item, itemIdx) => {
           return <CarouselItem 
@@ -80,6 +67,20 @@ export function DesktopCarousel () {
           />
         })}
       </CardGroup>
+      <Grid row className="position-relative carousel--height" aria-live="off"> 
+      <TransitionGroup>
+          <CSSTransition
+            key={itemInProgress.title}
+            timeout={2000}
+            classNames="imagetransition"
+          >
+            <div className="carousel--height width-full position-absolute left-0 top-0 shadow-1">
+              <img className="carousel--content-image" src={itemInProgress.image} /> 
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+      </Grid>
+      
     </GridContainer>)
 }
 
