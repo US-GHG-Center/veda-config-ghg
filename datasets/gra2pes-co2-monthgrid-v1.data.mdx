@@ -157,7 +157,7 @@ layers:
       temporalResolution: Annual
       unit: tonne CO/km²/month
     media:
-      src: ::file ./media/gra2pes-ghg-monthgrid-v1.thumbnails.total.png
+      src: ::file ./media/gra2pes-ghg-co-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO₂ Emissions
 
   - id: nox
@@ -207,7 +207,7 @@ layers:
       temporalResolution: Annual
       unit: tonne NOₓ/km²/month
     media:
-      src: ::file ./media/gra2pes-ghg-monthgrid-v1.thumbnails.total.png
+      src: ::file ./media/gra2pes-ghg-nox-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO₂ Emissions
 
   - id: sox
@@ -257,7 +257,7 @@ layers:
       temporalResolution: Annual
       unit: tonne SO₂/km²/month
     media:
-      src: ::file ./media/gra2pes-ghg-monthgrid-v1.thumbnails.total.png
+      src: ::file ./media/gra2pes-ghg-sox-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO₂ Emissions 
 
   - id: pm25
@@ -307,7 +307,7 @@ layers:
       temporalResolution: Annual
       unit: PM₂.₅/km²/month
     media:
-      src: ::file ./media/gra2pes-ghg-monthgrid-v1.thumbnails.total.png
+      src: ::file ./media/gra2pes-ghg-pm25-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO₂ Emissions                   
 ---
 
@@ -396,120 +396,120 @@ layers:
     <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', border: '1px solid black' }}>
       <thead>
         <tr>
-          <th style={{ borderBottom: '1px solid black' }}>Sector</th>
-          <th style={{ borderBottom: '1px solid black' }}>ffCO₂ Data Source</th>
-          <th style={{ borderBottom: '1px solid black' }}>Air Quality Data Source</th>
-          <th style={{ borderBottom: '1px solid black' }}>Publications</th>
+          <th style={{ border: '1px solid black', padding: '8px' }}>Sector</th>
+          <th style={{ border: '1px solid black', padding: '8px' }}>ffCO₂ Data Source</th>
+          <th style={{ border: '1px solid black', padding: '8px' }}>Air Quality Data Source</th>
+          <th style={{ border: '1px solid black', padding: '8px' }}>Publications</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Industrial fuel</td>
-          <td>GHGI17 + GHGRP</td>
-          <td>NEI17 + GHGRP</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Industrial fuel</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}GHGI17 + GHGRP</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17 + GHGRP</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Industrial processes</td>
-          <td>GHGRP</td>
-          <td>NEI17 + GHGRP</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Industrial processes</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}GHGRP</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17 + GHGRP</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Commercial</td>
-          <td>GHGI17</td>
-          <td>NEI17</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Commercial</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}GHGI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Residential</td>
-          <td>GHGI17</td>
-          <td>NEI17</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Residential</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}GHGI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Railroad</td>
-          <td>EIA</td>
-          <td>NEI17</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Railroad</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}EIA</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Electricity Generating Unit (EGU)</td>
-          <td>CEMS (CO₂)</td>
-          <td>NEI17 + CEMS (NOₓ, SO₂ only)</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Electricity Generating Unit (EGU)</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}CEMS (CO₂)</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17 + CEMS (NOₓ, SO₂ only)</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Airport</td>
-          <td>N/A</td>
-          <td>NEI17</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Airport</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}N/A</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Waste</td>
-          <td>N/A</td>
-          <td>NEI17</td>
-          <td></td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Waste</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}N/A</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
         </tr>
         <tr>
-          <td>Agricultural</td>
-          <td>N/A</td>
-          <td>NEI17</td>
-          <td></td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Agricultural</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}N/A</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
         </tr>
         <tr>
-          <td>Fugitives</td>
-          <td>N/A</td>
-          <td>NEI17</td>
-          <td>He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Fugitives</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}N/A</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}NEI17</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}He et al., 2024</td>
         </tr>
         <tr>
-          <td>Oil and Gas</td>
-          <td>GHGRP + FOG</td>
-          <td>GHGRP + NEI17 + FOG</td>
-          <td>Gorchov Negron et al., 2018, Francoeur et al., 2021</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Oil and Gas</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}GHGRP + FOG</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}GHGRP + NEI17 + FOG</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Gorchov Negron et al., 2018, Francoeur et al., 2021</td>
         </tr>
         <tr>
-          <td>On-road Gasoline</td>
-          <td>FIVE</td>
-          <td>FIVE</td>
-          <td>McDonald et al., 2014, McDonald et al., 2018a, Harkins et al., 2021</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}On-road Gasoline</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}FIVE</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}FIVE</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}McDonald et al., 2014, McDonald et al., 2018a, Harkins et al., 2021</td>
         </tr>
         <tr>
-          <td>On-road Diesel</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td style={{ border: '1px solid black', padding: '8px' }}On-road Diesel</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
         </tr>
         <tr>
-          <td>Nonroad</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Nonroad</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}</td>
         </tr>
         <tr>
-          <td>Volatile chemical products (VCP)</td>
-          <td>N/A</td>
-          <td>VCP</td>
-          <td>McDonald et al., 2018b, Coggon et al., 2021, He et al., 2024</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Volatile chemical products (VCP)</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}N/A</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}VCP</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}McDonald et al., 2018b, Coggon et al., 2021, He et al., 2024</td>
         </tr>
         <tr>
-          <td>Cooking</td>
-          <td>N/A</td>
-          <td>Observations + gridded population</td>
-          <td>Coggon et al., 2024, Zhu et al., 2024 (under review)</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Cooking</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}N/A</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Observations + gridded population</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Coggon et al., 2024, Zhu et al., 2024 (under review)</td>
         </tr>
         <tr>
-          <td>Shipping</td>
-          <td>CAMSv4.2</td>
-          <td>CAMSv4.2</td>
-          <td>Granier et al., 2019</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Shipping</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}CAMSv4.2</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}CAMSv4.2</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Granier et al., 2019</td>
         </tr>
         <tr>
-          <td>International</td>
-          <td>CAMSv4.2</td>
-          <td>CAMSv4.2</td>
-          <td>Granier et al., 2019</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}International</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}CAMSv4.2</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}CAMSv4.2</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}Granier et al., 2019</td>
         </tr>
       </tbody>
     </table>
