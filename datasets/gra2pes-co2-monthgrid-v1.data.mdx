@@ -210,7 +210,7 @@ layers:
       src: ::file ./media/gra2pes-ghg-nox-monthgrid-v1.thumbnails.total.png
       alt: Rendered Fossil Fuel CO₂ Emissions
 
-  - id: sox
+  - id: so2
     stacCol: gra2pes-ghg-monthgrid-v1
     name: SO₂ Emissions 
     type: raster
@@ -222,14 +222,14 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: sox
+      assets: so2
       colormap_name: blues
       rescale:
         - 0
         - 0.5
     compare:
       datasetId: gra2pes-ghg-monthgrid-v1
-      layerId: sox
+      layerId: so2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
