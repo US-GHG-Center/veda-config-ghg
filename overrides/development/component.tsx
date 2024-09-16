@@ -51,7 +51,7 @@ export default function Component() {
           <CollecticonBrandGithub /> Releases
         </Button>
       </ContributeCta>
-      <h2><></><strong>Disclaimer</strong></h2>
+      <h2>Disclaimer</h2>
       <p>
       This U.S. Greenhouse Gas Center contains data from various US government agencies and other organizations. Some of the datasets available are from research efforts and others consist of regulatory data. Data users are advised to examine each dataset landing page for important information, documentation, disclaimers, acknowledgments and citations. 
       </p> 
