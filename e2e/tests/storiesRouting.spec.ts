@@ -1,15 +1,16 @@
 import { test, expect } from '../pages/basePage';
 
-const stories = JSON.parse(require('fs').readFileSync('e2e/playwrightTestData.json', 'utf8'))['stories'];
+const visibleStories = JSON.parse(require('fs').readFileSync('e2e/playwrightTestData.json', 'utf8'))['storiesVisible'];
 
 test.describe('stories card routing', () => {
- for (const item of stories) {
+ for (const item of visibleStories) {
+
   test(`${item} routes from stories to details page`, async({
     page,
     storyPage,
     datasetPage,
   }) => {
-     let pageErrorCalled = false;
+      let pageErrorCalled = false;
     // Log all uncaught errors to the terminal
     page.on('pageerror', exception => {
       console.log(`Uncaught exception: "${exception}"`);

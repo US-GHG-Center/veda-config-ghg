@@ -2,49 +2,36 @@ import exp from 'constants';
 import { test, expect } from '../pages/basePage';
 
 test.describe('ensure links in top navigation route to expected page', async () => {
-  test('data catalog link', async({page, headerComponent, catalogPage}) => {
+  test('stories link', async({page, headerComponent, storyPage}) => {
     await page.goto('/');
     await expect(headerComponent.navigation, 'header should load').toBeVisible()
-    await headerComponent.clickLink('dataCatalog');
-    await expect(catalogPage.header, 'catalog page header should load').toBeVisible();
-    await expect(page, 'should route to /data-catalog').toHaveURL(/\/data-catalog/i);
-  })
-
-  test('exploration link', async({page, headerComponent, datasetSelectorComponent}) => {
-    await page.goto('/');
-    await expect(headerComponent.navigation, 'header should load').toBeVisible()
-    await headerComponent.clickLink('exploration');
-    await expect(datasetSelectorComponent.header, 'data selector should load').toBeVisible();
-    await expect(page, 'should route to /exploration').toHaveURL(/\/exploration/i);
-  })
-  
-  test('data insights link', async({page, headerComponent, storyPage}) => {
-    await page.goto('/');
-    await expect(headerComponent.navigation, 'header should load').toBeVisible()
-    await headerComponent.clickLink('dataInsights');
-    await expect(storyPage.header, 'stories header should be visible').toBeVisible();
+    await headerComponent.clickLink('stories');
+    await expect(storyPage.header, 'story page header should load').toBeVisible();
     await expect(page, 'should route to /stories').toHaveURL(/\/stories/i);
   })
 
-  test('hub link', async({page, headerComponent, datasetSelectorComponent}) => {
-    await page.goto('/');
-    await expect(headerComponent.navigation, 'header should load').toBeVisible();
-    await expect(headerComponent.hubLink, 'hub link should be visible').toBeVisible();
-    const [href, target] = await test.step('get html attributes for link', async() => {
-      const href = await headerComponent.hubLink.getAttribute('href');
-      const target = await headerComponent.hubLink.getAttribute('target');
-      return [href, target]
-    });
-    expect(href, 'href should be hub.ghg.center').toBe('https://hub.ghg.center/');
-    expect(target, 'should be set to open in a new tab').toBe('_blank');
-  })
-
-  test('learn link', async({page, headerComponent, learnPage}) => {
+  test('topics link', async({page, headerComponent, topicsPage}) => {
     await page.goto('/');
     await expect(headerComponent.navigation, 'header should load').toBeVisible()
-    await headerComponent.clickLink('learn');
-    await expect(learnPage.header, 'learn page header should be visible').toBeVisible();
-    await expect(page, 'should route to learn page').toHaveURL(/\/learn/i);
+    await headerComponent.clickLink('topics');
+    await expect(topicsPage.header, 'topics page header should load').toBeVisible();
+    await expect(page, 'should route to /topics').toHaveURL(/\/topics/i);
+  })
+
+  test('data toolkit link', async({page, headerComponent, dataToolkitPage}) => {
+    await page.goto('/');
+    await expect(headerComponent.navigation, 'header should load').toBeVisible()
+    await headerComponent.clickLink('dataToolkit');
+    await expect(dataToolkitPage.header, 'data toolkit page header should load').toBeVisible();
+    await expect(page, 'should route to /data-toolkit').toHaveURL(/\/data-toolkit/i);
+  })
+  
+  test('news & events link', async({page, headerComponent, newsPage}) => {
+    await page.goto('/');
+    await expect(headerComponent.navigation, 'header should load').toBeVisible()
+    await headerComponent.clickLink('news');
+    await expect(newsPage.header, 'news & events page header should be visible').toBeVisible();
+    await expect(page, 'should route to /news-and-events').toHaveURL(/\/news-and-events/i);
   })
 
   test('about link', async({page, headerComponent, aboutPage}) => {

@@ -1,11 +1,11 @@
 import fs from 'fs';
 import { test, expect } from '../pages/basePage';
 
-const datasetIds = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).datasetIds;
-const disabledDatasets = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).disabledDatasets;
+const visibleDatasetIds = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).datasetIdsVisible;
+const disabledDatasets = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).datasetsIdsDisabled;
 
 test.describe('explore dataset', () => {
-  for (const dataset of datasetIds) {
+  for (const dataset of visibleDatasetIds) {
     test(`${dataset} explore page functions`, async({
       page,
       datasetSelectorComponent,

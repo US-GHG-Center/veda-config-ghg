@@ -1,26 +1,24 @@
 import { Locator, Page, test } from '@playwright/test';
 
-type HeaderLinkName = "about" | "dataCatalog" | "exploration" | "dataInsights" | "hubLink" | "learn" | "contact"
+type HeaderLinkName = "stories" | "topics" | "dataToolkit" | "news" | "about" | "contact"
 
 export default class HeaderComponent {
   readonly page: Page;
   readonly navigation: Locator;
-  readonly dataCatalogLink: Locator;
-  readonly explorationLink: Locator;
-  readonly dataInsightsLink: Locator;
-  readonly hubLink: Locator;
-  readonly learnLink: Locator;
+  readonly storiesLink: Locator;
+  readonly topicsLink: Locator;
+  readonly dataToolkitLink: Locator;
+  readonly newsLink: Locator;
   readonly aboutLink: Locator;
   readonly contactButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.navigation = this.page.getByLabel('Global Navigation');
-    this.dataCatalogLink = this.navigation.getByRole('link', { name: /data catalog/i} );
-    this.explorationLink = this.navigation.getByRole('link', { name: /exploration/i} );
-    this.dataInsightsLink = this.navigation.getByRole('link', { name: /data insights/i} );
-    this.hubLink = this.navigation.getByRole('link', { name: /hub/i });
-    this.learnLink = this.page.getByRole('link', { name: "Learn", exact: true })
+    this.storiesLink = this.navigation.getByRole('link', { name: /stories/i} );
+    this.topicsLink = this.navigation.getByRole('link', { name: /topics/i} );
+    this.dataToolkitLink = this.navigation.getByRole('link', { name: /data toolkit/i} );
+    this.newsLink = this.navigation.getByRole('link', { name: /news & events/i });
     this.aboutLink = this.navigation.getByRole('link', { name: /about/i} );
     this.contactButton = this.navigation.getByRole('button', { name: /contact us/i} );
   }
@@ -31,20 +29,17 @@ export default class HeaderComponent {
         case 'about':
           await this.aboutLink.click();
           break;
-        case 'dataCatalog':
-          await this.dataCatalogLink.click();
+        case 'stories':
+          await this.storiesLink.click();
           break;
-        case 'exploration':
-          await this.explorationLink.click();
+        case 'topics':
+          await this.topicsLink.click();
           break;
-        case 'dataInsights':
-          await this.dataInsightsLink.click();
+        case 'dataToolkit':
+          await this.dataToolkitLink.click();
           break;
-        case 'hubLink':
-          await this.hubLink.click();
-          break;
-        case 'learn':
-          await this.learnLink.click();
+        case 'news':
+          await this.newsLink.click();
           break;
         case 'contact':
           await this.contactButton.click();

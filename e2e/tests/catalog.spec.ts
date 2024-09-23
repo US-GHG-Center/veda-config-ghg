@@ -1,6 +1,7 @@
+import fs from 'fs';
 import { test, expect } from '../pages/basePage';
 
-const catalogs = JSON.parse(require('fs').readFileSync('e2e/playwrightTestData.json', 'utf8'))['catalogs'];
+const visibleCatalogs = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8'))['catalogsVisible'];
 
 test('catalogs displayed on /data-catalog route', async ({
   page,
@@ -16,7 +17,7 @@ test('catalogs displayed on /data-catalog route', async ({
   await page.goto('/data-catalog');
   await expect(catalogPage.header, `catalog page should load`).toHaveText(/data catalog/i);
 
-  for (const item of catalogs) {
+  for (const item of visibleCatalogs) {
     await test.step(`locate ${item} catalog card`, async() => {
       const catalogCard =  catalogPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).last();
       await catalogCard.scrollIntoViewIfNeeded();

@@ -22,10 +22,12 @@ test('about page should have no javascript errors', async ({
 test('partner links should have url and image', async ({
   page,
   aboutPage,
+  footerComponent
  }) => {
 
   await page.goto('/about');
   await expect(aboutPage.aboutParagraph, `about page should load`).toBeVisible();
+  await expect(footerComponent.footer).toBeVisible();
 
   const partnerLinks = await aboutPage.getAllPartnerLinks();
 

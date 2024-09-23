@@ -1,10 +1,10 @@
 import fs from 'fs';
 import { test, expect } from '../pages/basePage';
 
-const catalogs = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8'))['catalogs'];
+const visibleCatalogs = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8'))['catalogsVisible'];
 
 test.describe('catalog card routing', () => {
- for (const item of catalogs) {
+ for (const item of visibleCatalogs) {
   test(`${item} routes from catalog to details page`, async({
     page,
     catalogPage,

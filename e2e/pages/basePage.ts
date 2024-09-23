@@ -6,14 +6,17 @@ import CatalogPage from './catalogPage';
 import ContactModal from './contactModal';
 import DatasetPage from './datasetPage';
 import DatasetSelectorComponent from './datasetSelectorComponent';
+import DataToolkitPage from './dataToolkitPage';
 import DisclaimerComponent from './disclaimerComponent';
 import ExplorePage from './explorePage';
 import FooterComponent from './footerComponent';
 import HeaderComponent from './headerComponent';
 import HomePage from './homePage';
 import LearnPage from './learnPage';
+import NewsPage from './newsPage';
 import NotebookConnectModal from './notebookConnectModal';
 import StoryPage from './storyPage';
+import TopicsPage from './topicsPage';
 import SubscribePage from './subscribePage';
 
 export const test = base.extend<{
@@ -24,13 +27,16 @@ export const test = base.extend<{
   contactModal: ContactModal;
   datasetPage: DatasetPage;
   datasetSelectorComponent: DatasetSelectorComponent;
+  dataToolkitPage: DataToolkitPage;
   disclaimerComponent: DisclaimerComponent;
   explorePage: ExplorePage;
   footerComponent: FooterComponent;
   headerComponent: HeaderComponent;
   homePage: HomePage;
   learnPage: LearnPage;
+  newsPage: NewsPage;
   storyPage: StoryPage;
+  topicsPage: TopicsPage;
   subscribePage: SubscribePage;
   notebookConnectModal: NotebookConnectModal;
 }> ({
@@ -55,6 +61,9 @@ export const test = base.extend<{
   datasetSelectorComponent: async ({page}, use) => {
     await use(new DatasetSelectorComponent(page));
   },
+  dataToolkitPage: async ({page}, use) => {
+    await use(new DataToolkitPage(page));
+  },
   disclaimerComponent: async ({page}, use) => {
     await use(new DisclaimerComponent(page));
   },
@@ -73,6 +82,9 @@ export const test = base.extend<{
   learnPage: async ({page}, use) => {
     await use(new LearnPage(page));
   },
+  newsPage: async({page}, use) => {
+    await use(new NewsPage(page))
+  },
   notebookConnectModal: async({page}, use) => {
     await use(new NotebookConnectModal(page))
   },
@@ -81,6 +93,9 @@ export const test = base.extend<{
   },
   subscribePage: async ({page}, use) => {
     await use(new SubscribePage(page));
+  },
+  topicsPage: async ({page}, use) => {
+    await use(new TopicsPage(page));
   },
 });
 
