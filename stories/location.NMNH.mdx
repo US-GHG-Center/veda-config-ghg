@@ -1,8 +1,8 @@
 ---
 featuredOn:
-  - nasa_headquarters
-id: "nasa_headquarters"
-name: NASA Headquarters
+  - nmnh
+id: "si_nmnh"
+name: Smithsonian Institution National Museum of Natural History
 theme: true
 description: "
   Mary W. Jackson NASA Headquarters East Lobby
@@ -16,23 +16,23 @@ description: "
   For organized groups and schools planning a visit, please reach out via our contact form.
 "
 media:
-  src: ::file ./location.HEAD/nasa_headquarters.png
+  src: ::file ./location.NMNH/si_nmnh.png
   alt: "
     Photograph of a metal sculpted NASA worm logo in red, located outside the Mary W. Jackson NASA Headquarters.
   "
   author:
     name: "NASA"
     url: "https://nasa.gov"
-pubDate: 2023-11-28
+pubDate: 2024-10-08
 taxonomy:
   - name: Location
     values: 
-      - NASA Headquarters
+      - Smithsonian Institution National Museum of Natural History
   - name: Location Features
     values:
       - Hyperwall
-      - Earth Pulse
-      - Space for Earth
+      - Hometown Dashboard
+      - Unveiling Time
 ---
 
 import { visitLocationFeaturesStoryIds } from '../overrides/common/story-data';
@@ -61,6 +61,6 @@ import CardGallery from "./components/card_gallery";
 
 <CardGallery
   title={"Features"}
-  storyIds={visitLocationFeaturesStoryIds['nasa_headquarters']}
+  storyIds={visitLocationFeaturesStoryIds['si_nmnh']}
 />
 

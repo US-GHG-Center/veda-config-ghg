@@ -6,7 +6,7 @@ import { glsp } from "$veda-ui/@devseed-ui/theme-provider";
 import { decorativeHeader } from "../../overrides/common/style";
 import {
   visitLocationStoryIds,
-  visitLocationFeaturesStoryIds,
+  visitLocationAllFeaturesStoryIds,
 } from "../../overrides/common/story-data";
 
 const StyledH2 = styled.h2`
@@ -26,12 +26,12 @@ export default function VisitPage() {
     <Fold>
       <FoldBody>
         <FoldSection>
-          <StyledH2> Features </StyledH2>
-          <RelatedContents storyIds={visitLocationFeaturesStoryIds} />
-        </FoldSection>
-        <FoldSection>
           <StyledH2> Locations </StyledH2>
           <RelatedContents storyIds={visitLocationStoryIds} />
+        </FoldSection>
+        <FoldSection>
+          <StyledH2> Features </StyledH2>
+          <RelatedContents storyIds={visitLocationAllFeaturesStoryIds} />
         </FoldSection>
       </FoldBody>
     </Fold>
