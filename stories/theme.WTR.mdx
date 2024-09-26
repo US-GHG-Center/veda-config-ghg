@@ -24,6 +24,9 @@ taxonomy:
 import CardGallery from "./components/card_gallery";
 import { waterResourcesStoryIds } from "../overrides/common/story-data";
 
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './theme.WTR.introduction_water_resources/carousel_content.json';
+
 <Block type='wide'>
   <Prose>
     ## Info
@@ -36,6 +39,12 @@ import { waterResourcesStoryIds } from "../overrides/common/story-data";
     Using a combination of Earth observing satellites and sensors, ground-based monitoring and scientific modeling, we can observe Earth's water resources at all stages of the water cycle.
     This information can be used to make informed management decision surrounding the most vital resource on planet Earth.
   </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
 </Block>
 
 <CardGallery title={"Water Resources Stories"} storyIds={waterResourcesStoryIds} />

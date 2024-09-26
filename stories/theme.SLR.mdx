@@ -27,7 +27,10 @@ taxonomy:
 import CardGallery from "./components/card_gallery";
 import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
 
-<Block type='wide'>
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './theme.SLR.introduction_sea_level_rise/carousel_content.json';
+
+<Block>
   <Prose>
     ## Info
 
@@ -40,6 +43,24 @@ import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
 
     Using a combination space-based observations, ground-based monitoring and modeling, federal agencies work with local organizations across the country and internationally to prepare for and mitigate the impacts of sea level rise.
   </Prose>
+    <Figure>
+          <Image
+            src={new URL('./theme.SLR.introduction_sea_level_rise/oceans_spilhaus.jpg', import.meta.url).href}
+            alt="This image shows a stylized map projection of the Earth's oceans with a time-series plot overlaid on it. The y-axis of the plot is labeled 'Ocean Heat Increase since 1957 (zettajoules),' and the x-axis represents years from 1960 to 2020. The orange line graph indicates the trend of increasing ocean heat content over this period, with a notable rise from the 1980s onward. The map highlights major oceans, including the Arctic Ocean, North Atlantic Ocean, Indian Ocean, Southern Ocean, and the North and South Pacific Oceans, set against a dark background for visual contrast."
+          />
+        <Caption
+          attrAuthor='The NASA Scientific Visualization Studio'
+          attrUrl='https://svs.gsfc.nasa.gov/5111'
+        >
+          The cumulative increase in ocean heat content from 1957 to 2020, measured in zettajoules. The orange line represents the trend in ocean heat content, showing a significant and consistent rise, particularly from the 1980s onward. The background map highlights the global distribution of the oceans, emphasizing the widespread impact of increasing heat content across different ocean basins. 
+        </Caption>
+    </Figure>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
 </Block>
 
 <CardGallery title={"Sea Level Rise Stories"} storyIds={seaLevelRiseStoryIds} />
