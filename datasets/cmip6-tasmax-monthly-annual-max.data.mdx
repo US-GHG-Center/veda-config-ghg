@@ -28,7 +28,50 @@ infoDescription: |
     - **Data Units:** F
     - **Data Type:** Research
 disableExplore: true
-
+layers:
+  - id: climdex-tmaxxf-access-cm2-ssp126-90
+    stacCol: climdex-tmaxxf-access-cm2-ssp126
+    name: Days Above 90°F (SSP126)
+    type: raster
+    description: "Estimated Annual Number of Days Above 90°F (ACCESS-CM2 Model from CMIP6, SSP126) "
+    zoomExtent:
+      - 0
+      - 4
+    sourceParams:
+      assets: tmax_above_90
+      resampling_method: bilinear
+      colormap_name: wistia
+      rescale: 0,365
+      maxzoom: 4
+    compare:
+      datasetId: cmip6-climdex-tmaxxf-access-cm2
+      layerId: climdex-tmaxxf-access-cm2-ssp126-90
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }      
+    analysis:
+      exclude: false
+      metrics:
+        - mean
+    legend:
+      unit: 
+        label: Days
+      type: gradient
+      min: 0
+      max: 365
+      stops:
+      - "#E4FF7A"
+      - "#FAED2D"
+      - "#FFCE0A"
+      - "#FFB100"
+      - "#FE9900"
+      - "#FC7F00"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Days
 ---
 
 <Block type='wide'>
