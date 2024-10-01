@@ -26,12 +26,12 @@ export default function VisitPage() {
     <Fold>
       <FoldBody>
         <FoldSection>
-          <StyledH2> Locations </StyledH2>
-          <RelatedContents storyIds={visitLocationStoryIds} />
-        </FoldSection>
-        <FoldSection>
           <StyledH2> Features </StyledH2>
           <RelatedContents storyIds={visitLocationAllFeaturesStoryIds} />
+        </FoldSection>
+        <FoldSection>
+          <StyledH2> Locations </StyledH2>
+          <RelatedContents storyIds={visitLocationStoryIds} />
         </FoldSection>
       </FoldBody>
     </Fold>

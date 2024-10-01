@@ -5,7 +5,7 @@ id: "hometown_dashboard"
 name: Hometown Dashboard
 theme: true
 description: "
-  Hometown Dashboard allows users to explore climate data about their hometowns.
+  This interactive display invites users to learn how temperature and precipitation in their home region are projected to change from 1950 to 2100. Select your hometown from a global map, adjust time scales, and interact with visual charts that show historical and predicted climate changes based on different emission scenarios. What future will you choose? 
 "
 media:
   src: ::file ./locfeature.HOMETOWN/splash.png
@@ -21,9 +21,12 @@ taxonomy:
     values:
       - Hometown Dashboard
 ---
+import CardGallery from "./components/card_gallery";
 
 <Block type='wide'>
   <Prose>
     hello
   </Prose>
 </Block>
+
+<CardGallery title={"Related Applications"} storyIds={['mobile_climate_mapper']} />

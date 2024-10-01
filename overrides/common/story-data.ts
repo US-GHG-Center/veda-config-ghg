@@ -33,7 +33,6 @@ export const visitLocationFeaturesStoryIds = {
     "si_hyperwall",
     "hometown_dashboard",
     "unveiling_time",
-    "mobile_climate_mapper",
   ]
 };
 
