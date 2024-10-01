@@ -30,6 +30,7 @@ import VisitGHG from "../overrides/components/visit-ghg";
 
 import Carousel from "../overrides/common/embedded-video-carousel";
 import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_content.json';
+import narratedContentArray from './theme.GHG.introduction_greenhouse_gases/narrated_content.json';
 
 <VisitGHG />
 <Block>
@@ -58,16 +59,10 @@ import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_con
     </Figure>
 </Block>
 
-<Block type="wide">
+
+<Block type='wide'>
   <Figure>
-    <Embed
-      height="405"
-      src="https://www.youtube.com/embed/ZinKaqthYX0"
-      title="NASA and Greenhouse Gases"
-    />
-    <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
-      Methane is a powerful greenhouse gas and one monitored via instruments on the ground, on airplanes, aboard satellites, and the International Space Station. Tracking methane, carbon dioxide, and other greenhouse gases is crucial to monitoring our climate as it changes. 
-    </Caption>
+    <Carousel items={narratedContentArray} />
   </Figure>
 </Block>
 
