@@ -30,9 +30,8 @@ export const visitLocationFeaturesStoryIds = {
   ],
   "si_nmnh" : [
     "eyes_on_earth",
-    "si_hyperwall",
     "hometown_dashboard",
-    "unveiling_time",
+    "time_unveiled",
   ]
 };
 
