@@ -1,11 +1,11 @@
 export const themeLandingPageIds = [
-  "air_quality",
+  "air-quality",
   "agriculture",
   "biodiversity",
   "disasters",
   "energy",
-  "greenhouse_gases",
-  "sea_level_rise",
+  "greenhouse-gases",
+  "sea-level-rise",
   "wildfires",
   "water_resources",
 ];
