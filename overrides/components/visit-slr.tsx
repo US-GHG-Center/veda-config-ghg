@@ -84,7 +84,7 @@ export default function VisitSLR({
                 radius="square"
                 variation="primary-fill"
               >
-                Visit the U.S. Sea Level Change portal
+                Visit the US Sea Level Change website
               </Button>
             </div>
           </InfoImageContent>
