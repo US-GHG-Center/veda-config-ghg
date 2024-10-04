@@ -84,7 +84,7 @@ export default function VisitSLR({
                 radius="square"
                 variation="primary-fill"
               >
-                Visit the portal
+                Learn more on the portal
               </Button>
             </div>
           </InfoImageContent>
