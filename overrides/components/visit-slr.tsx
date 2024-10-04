@@ -27,7 +27,7 @@ const InfoImageContent = styled.div`
   display: flex;
   flex-flow: row;
   background-color: #02225b; // @TODO: But where can I get this color?
-  color: #ffffff;
+  color: #121414;
   width: 100%;
   height: 300px;
   background-image: url(${SeaSideImg});
@@ -74,7 +74,7 @@ export default function VisitSLR({
               <StyledVarHeading size="small" as="h2">
                 U.S. Sea Level Change
               </StyledVarHeading>
-              <span style="color:#121414">
+              <span>
                 Rising Seas, Changing Coasts
               </span>
               <Button
