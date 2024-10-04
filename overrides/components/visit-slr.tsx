@@ -30,7 +30,7 @@ const InfoImageContent = styled.div`
   color: #ffffff;
   width: 100%;
   height: 300px;
-  background-image: url(${RedEarthImg});
+  background-image: url(${SeaSideImg});
   background-position: right bottom -50px;
   background-repeat: no-repeat;
   div {
@@ -66,7 +66,7 @@ export default function VisitSLR({
             efforts for our planet, like the{" "}
             <ExpandLink as="a" href="https://earth.gov/sealevel">
               {" "}
-              U.S. Sea Level Change
+              U.S. Sea Level Change Portal
             </ExpandLink>
           </p>
           <InfoImageContent>
@@ -84,7 +84,7 @@ export default function VisitSLR({
                 radius="square"
                 variation="primary-fill"
               >
-                Visit the U.S. Sea Level Change website
+                Visit the U.S. Sea Level Change portal
               </Button>
             </div>
           </InfoImageContent>
