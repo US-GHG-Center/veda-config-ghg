@@ -74,7 +74,7 @@ export default function VisitSLR({
               <StyledVarHeading size="small" as="h2">
                 U.S. Sea Level Change
               </StyledVarHeading>
-              <span>
+              <span style="color:#121414">
                 Rising Seas, Changing Coasts
               </span>
               <Button
