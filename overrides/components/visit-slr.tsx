@@ -80,11 +80,11 @@ export default function VisitSLR({
               <Button
                 forwardedAs="a"
                 href="https://earth.gov/sealevel"
-                size="large"
+                size="medium"
                 radius="square"
                 variation="primary-fill"
               >
-                Visit the US Sea Level Change website
+                Visit the portal
               </Button>
             </div>
           </InfoImageContent>
