@@ -1,13 +1,13 @@
 export const themeLandingPageIds = [
-  "air_quality",
+  "air-quality",
   "agriculture",
   "biodiversity",
   "disasters",
   "energy",
   "greenhouse_gases",
-  "sea_level_rise",
+  "sea-level-rise",
   "wildfires",
-  "water_resources",
+  "water-resources",
 ];
 
 export const teachToolsStoryIds = [
