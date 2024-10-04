@@ -80,7 +80,7 @@ export default function VisitSLR({
               <Button
                 forwardedAs="a"
                 href="https://earth.gov/sealevel"
-                size="medium"
+                size="large"
                 radius="square"
                 variation="primary-fill"
               >
