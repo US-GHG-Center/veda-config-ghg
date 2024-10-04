@@ -1,11 +1,12 @@
+
 ---
 id: cmip6-climdex-tasmax-yearly-median
 name: 'Annual Maximum Near-Surface Air Temperature'
 featured: false
 description: "Global dataset of Annual Maximum Near-Surface Air Temperature provided at a 0.25 degree resolution."
 media:
-  src: ::file ./cmip6-climdex-tmaxxf-access-cm2.png
-  alt: CMIP6 Climdex TmaxXF Screenshot
+  src: ::file ./relief_monthly_max_ssp126.png
+  alt: Global temperatures for 2100 for low greenhouse gas emissions scenario
   author:
     name: NASA
     url: 
@@ -83,11 +84,27 @@ layers:
     * **Temporal Resolution:** Annual
     * **Spatial Extent:** Global 
     * **Spatial Resolution:** 0.25 degrees x 0.25 degrees
-    * **Data Units:** F
+    * **Data Units:** Degrees Farenheit
     * **Data Type:** Research
 
     This dataset provides the Annual Maximum Near-Surface Air Temperature from 1950 - 2100. The projections are provided for the four different SSP standard scenarios ([SSP126, SSP245, SSP370, SSP585](https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios)). The Annual Maximum Near-Surface Air Temperature serves as an essential metric for assessing and understanding future climate for the different emissions scenario, and is a valuable tool for climate scientists, researchers, and policymakers. Monitoring and projecting near surface air temperature over time allows for the identification of trends and variations in temperature extremes, which is crucial for understanding the impact of climate change on local and global climates.
   </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Disclaimer
+    The NEX-GDDP-CMIP6 data is calculated on a 0.25°x0.25° latitude and longitude, which is a system of lines used to map the sphere of the Earth. In some cases, temperature in major cities could be higher than what’s displayed in the gridded cell because it includes a larger area than just that city. For example, if you search for a city, such as Los Angeles, CA the average will include the temperature of Los Angeles (which could be higher than average) plus the surrounding geographical area (which could be lower than average).
+  </Prose>
+</Block>
+
+<Block>
+<Figure>
+  <Image
+  src={new URL('./temp-disclaimer.png', import.meta.url).href}
+  alt='Example of spatial average of temperature for Los Angeles, CA'
+  />
+</Figure>
 </Block>
 
 <Block>
@@ -99,6 +116,8 @@ layers:
         
     ## Acknowledgment
     The NEX-GDDP-CMIP6 downscaled climate projections by the NASA Earth eXchange (NEX) at NASA Ames Research Center. NEX-GDDP-CMIP6 was created by NEX and is distributed by the NASA Center for Climate Simulation.
+
+    Funding support for NEX-GDDP-CMIP6 was provided through the NEX workplan (2018-2022 and 2023-2027).
 
     ## Dataset Preparation
     This dataset was derived using the Monthly Maximum Near-Surface Temperature data variable (tasmax) from the NEX-GDDP-CMIP6 ACCESS-CM2 model as an input. From this input, the annual maximum was calculated by taking the maximum value of the Monthly Maximum Near-Surface Temperature for the calendar year. The median model data derived from all of the CMIP6 climate models is used to derive this product. A full list of CMIP6 models available in the NEX-GDDP-CMIP6 product can be [found here](https://www.nature.com/articles/s41597-022-01393-4/tables/3). Learn more about the ACCESS-CM2 model here: [https://research.csiro.au/access/about](https://research.csiro.au/access/about/).
