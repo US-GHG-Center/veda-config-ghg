@@ -17,6 +17,7 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 import ThemeCards from "../components/theme-cards";
 import { themeLandingPageIds } from "../common/story-data";
 import VisitGHG from "../components/visit-ghg";
+import VisitSLR from "../components/visit-slr";
 import HyperwallCTA from "../components/hyperwall-cta";
 
 import Partners from "./partners";
@@ -107,7 +108,9 @@ export default function HomeComponent() {
           </IntroHeadline>
         </HomeDescription>
         <HyperwallCTA width="82%"/>
+        <p>Earth.gov is also the gateway to other interagency cooperative efforts for our planet.</p>
         <VisitGHG width="82%"/>
+        <VisitSLR width="82%"/>
       </GradientWrapper>
         <Fold>
           <FoldHeader>

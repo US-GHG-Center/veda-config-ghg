@@ -61,14 +61,6 @@ export default function VisitSLR({
     <Fold>
       <FoldBody>
         <BottomContent width={width}>
-          <p>
-            Earth.gov is also the gateway to other interagency cooperative
-            efforts for our planet, like the{" "}
-            <ExpandLink as="a" href="https://earth.gov/sealevel">
-              {" "}
-              U.S. Sea Level Change Portal
-            </ExpandLink>
-          </p>
           <InfoImageContent>
             <div>
               <StyledVarHeading size="small" as="h2">
