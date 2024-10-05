@@ -97,9 +97,13 @@ export default function HomeComponent() {
         <HyperwallCTA width="82%"/>
       </GradientWrapper>
         <HomeDescription>
-            <StyledVarHeading as="h2" size="large">
-                Featured interagency collaborations for our planet
-            </StyledVarHeading>
+          <IntroHeadline>
+            <IntroDesc>
+               <StyledVarHeading as="h2" size="large">
+                   Featured interagency collaborations for our planet
+               </StyledVarHeading>
+            </IntroDesc>
+          </IntroHeadline>
         </HomeDescription>
         <VisitGHG width="40%"/>
         <VisitSLR width="40%"/>
