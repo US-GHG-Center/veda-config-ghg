@@ -108,9 +108,11 @@ export default function HomeComponent() {
           </IntroHeadline>
         </HomeDescription>
         <HyperwallCTA width="82%"/>
-        <p>Earth.gov is also the gateway to other interagency cooperative efforts for our planet.</p>
-        <VisitGHG width="82%"/>
-        <VisitSLR width="82%"/>
+          <IntroDesc>
+            <p>Earth.gov is also the gateway to other interagency cooperative efforts for our planet.</p>
+          </IntroDesc>
+        <VisitGHG width="40%"/>
+        <VisitSLR width="40%"/>
       </GradientWrapper>
         <Fold>
           <FoldHeader>
