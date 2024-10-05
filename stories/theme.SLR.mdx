@@ -1,7 +1,7 @@
 ---
 featuredOn:
   - sea_level_rise 
-id: "sea_level_rise"
+id: "sea-level-rise"
 name: Sea Level Rise
 description: "
   Global sea levels are rising at rates that are unprecedented over the past 2,500 years.
@@ -26,9 +26,12 @@ taxonomy:
 
 import CardGallery from "./components/card_gallery";
 import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
+import VisitSLR from "../overrides/components/visit-slr";
 
 import Carousel from "../overrides/common/embedded-video-carousel";
 import contentArray from './theme.SLR.introduction_sea_level_rise/carousel_content.json';
+
+<VisitSLR />
 
 <Block>
   <Prose>
