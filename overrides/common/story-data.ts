@@ -21,10 +21,23 @@ export const visitLocationStoryIds = [
   "si_nmnh"
 ];
 
-export const visitLocationFeaturesStoryIds = [
-  "hyperwall",
-  "earth_pulse",
-  "immersive_earth"
+export const visitLocationFeaturesStoryIds = {
+  "nasa_headquarters" : [
+    "eyes_on_earth",
+    "hyperwall",
+    "earth_pulse",
+    "immersive_earth",
+  ],
+  "si_nmnh" : [
+    "eyes_on_earth",
+    "hometown_dashboard",
+    "time_unveiled",
+  ]
+};
+
+// take the unique ids from the object above
+export const visitLocationAllFeaturesStoryIds = [
+  ...new Set(Object.values(visitLocationFeaturesStoryIds).flat())
 ];
 
 export const airQualityStoryIds = [

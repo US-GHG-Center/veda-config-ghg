@@ -1,38 +1,30 @@
 ---
 featuredOn:
-  - nasa_headquarters
-id: "nasa_headquarters"
-name: NASA Headquarters
+  - nmnh
+id: "si_nmnh"
+name: Smithsonian Institution National Museum of Natural History
 theme: true
 description: "
-  Mary W. Jackson NASA Headquarters East Lobby
-  300 E St. SW (East Lobby)
-  Washington, DC 20546
-  —
-  Monday - Friday
-  8:30am - 5:30pm
-  —
-  Admission is free.
-  For organized groups and schools planning a visit, please reach out via our contact form.
+  Smithsonian National Museum of Natural History
+  1000 Madison Drive NW Washington, D.C. 20560. Admission is free.
+  Open every day except December 25 from 10am to 5:30pm ET.
+.
 "
 media:
-  src: ::file ./location.HEAD/nasa_headquarters.png
-  alt: "
-    Photograph of a metal sculpted NASA worm logo in red, located outside the Mary W. Jackson NASA Headquarters.
-  "
+  src: ::file ./location.NMNH/si_nmnh.png
+  alt: " A photograph of a white columned building-- the view of the National Museum of Natural History from its southern entrance."
   author:
     name: "NASA"
     url: "https://nasa.gov"
-pubDate: 2023-11-28
+pubDate: 2024-10-08
 taxonomy:
   - name: Location
     values: 
-      - NASA Headquarters
+      - Smithsonian Institution National Museum of Natural History
   - name: Location Features
     values:
       - Hyperwall
-      - Earth Pulse
-      - Space for Earth
+      - Unveiling Time
       - Eyes on Earth
       - Hometown Dashboard
 ---
@@ -63,6 +55,6 @@ import CardGallery from "./components/card_gallery";
 
 <CardGallery
   title={"Features"}
-  storyIds={visitLocationFeaturesStoryIds['nasa_headquarters']}
+  storyIds={visitLocationFeaturesStoryIds['si_nmnh']}
 />
 

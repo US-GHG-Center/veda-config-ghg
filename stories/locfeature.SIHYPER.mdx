@@ -1,0 +1,35 @@
+---
+featuredOn:
+  - si_hyperwall
+id: "si_hyperwall"
+name: The Hyperwall at NMNH
+theme: true
+description: "
+  The Hyperwall features videos, dashboards with real-time data on climate and Earth science, along with dazzling imagery of our planet.
+  The Earth Information Center collects information about Earth on a variety of scales ranging from ground-based data to space-based observations from all our inter-agency partners.
+  Collecting information at each scale is important and, when combined, provides a comprehensive understanding of how the components of the atmosphere, land and ocean influence each other.
+  With this understanding the datasets become more powerful tools for addressing environmental challenges and climate change.
+"
+media:
+  src: ::file ./locfeature.SIHYPER/hyperwall.png
+  alt: "
+    Photograph of a large display showing rainbow colors, a man, esteemed science communicator Bill Nye, points at a feature.
+  "
+  author:
+    name: "NASA"
+    url: "https://nasa.gov"
+pubDate: 2023-11-28
+taxonomy:
+  - name: Location Features
+    values:
+      - Smithsonian Institution Hyperwall
+---
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './locfeature.SIHYPER/carousel_content.json';
+
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
+</Block>
