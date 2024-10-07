@@ -75,6 +75,10 @@ const CollaboratorsContent = styled.div`
     text-align: center;
   }
 `
+const SpacerDiv = styled.div`
+  padding:2rem;
+  
+`
 export default function HomeComponent() {
   const description =
     "The Earth Information Center consolidates data and insights on how Earth is changing from across the US federal government. Earth.gov is also the gateway to other interagency cooperative efforts for our planet, like the U.S. Greenhouse Gas Center.  Discover how these data are being used to prepare for climate change and mitigate, adapt and respond to environmental challenges across the country.  ";
@@ -106,7 +110,9 @@ export default function HomeComponent() {
           </IntroHeadline>
         </HomeDescription>
         <VisitSLR />
+        <SpacerDiv/>
         <VisitGHG />
+        <SpacerDiv/>
         <Fold>
           <FoldHeader>
             <FoldHeadline>
