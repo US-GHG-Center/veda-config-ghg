@@ -8,7 +8,7 @@ import Hug from "$veda-ui-scripts/styles/hug";
 import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { ExpandLink } from "./expand-link";
 import { StyledVarHeading } from "../common/style";
-import RedEarthImg from "../home/media/earth-1.png";
+import SeaSideImg from "../home/media/seaside-background.jpg";
 import { Button } from "$veda-ui/@devseed-ui/button";
 
 const BottomContent = styled(Hug)`
@@ -27,10 +27,10 @@ const InfoImageContent = styled.div`
   display: flex;
   flex-flow: row;
   background-color: #02225b; // @TODO: But where can I get this color?
-  color: #ffffff;
+  color: #121414;
   width: 100%;
   height: 300px;
-  background-image: url(${RedEarthImg});
+  background-image: url(${SeaSideImg});
   background-position: right bottom -50px;
   background-repeat: no-repeat;
   div {
@@ -51,7 +51,7 @@ const InfoImageContent = styled.div`
   `}
 `;
 
-export default function VisitGHG({
+export default function VisitSLR({
     width
   }:
   {
@@ -64,20 +64,19 @@ export default function VisitGHG({
           <InfoImageContent>
             <div>
               <StyledVarHeading size="small" as="h2">
-                U.S. Greenhouse Gas Center
+                U.S. Sea Level Change
               </StyledVarHeading>
               <span>
-                Uniting Data and Technology to Empower Tomorrow's Climate
-                Solutions
+                Rising Seas, Changing Coasts
               </span>
               <Button
                 forwardedAs="a"
-                href="https://earth.gov/ghgcenter"
+                href="https://earth.gov/sealevel"
                 size="medium"
                 radius="square"
                 variation="primary-fill"
               >
-                Visit the US GHG Center website
+                Learn more on the portal
               </Button>
             </div>
           </InfoImageContent>

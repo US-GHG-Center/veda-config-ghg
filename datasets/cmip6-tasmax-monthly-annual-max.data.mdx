@@ -1,0 +1,131 @@
+---
+id: cmip6-climdex-tasmax-yearly-median
+name: 'Annual Maximum Near-Surface Air Temperature'
+featured: false
+description: "Global dataset of Annual Maximum Near-Surface Air Temperature provided at a 0.25 degree resolution."
+media:
+  src: ::file ./relief_monthly_max_ssp126.png
+  alt: Global temperatures for 2100 for low greenhouse gas emissions scenario
+  author:
+    name: NASA
+    url: 
+taxonomy:
+  - name: Theme
+    values:
+      - Climate
+  - name: Source
+    values:
+      - NASA
+  - name: Product Type
+    values:
+      - Model Output
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** 1950 - 2100
+    - **Temporal Resolution:** Annual
+    - **Spatial Extent:** Global 
+    - **Spatial Resolution:** 0.25 degrees x 0.25 degrees
+    - **Data Units:** °F
+    - **Data Type:** Research
+disableExplore: true
+layers:
+  - id: climdex-tmaxxf-access-cm2-ssp126-90
+    stacCol: climdex-tmaxxf-access-cm2-ssp126
+    name: Days Above 90°F (SSP126)
+    type: raster
+    description: "Estimated Annual Number of Days Above 90°F (ACCESS-CM2 Model from CMIP6, SSP126) "
+    zoomExtent:
+      - 0
+      - 4
+    sourceParams:
+      assets: tmax_above_90
+      resampling_method: bilinear
+      colormap_name: wistia
+      rescale: 0,365
+      maxzoom: 4
+    compare:
+      datasetId: cmip6-climdex-tmaxxf-access-cm2
+      layerId: climdex-tmaxxf-access-cm2-ssp126-90
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }      
+    analysis:
+      exclude: false
+      metrics:
+        - mean
+    legend:
+      unit: 
+        label: Days
+      type: gradient
+      min: 0
+      max: 365
+      stops:
+      - "#E4FF7A"
+      - "#FAED2D"
+      - "#FFCE0A"
+      - "#FFB100"
+      - "#FE9900"
+      - "#FC7F00"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: °F
+---
+
+<Block type='wide'>
+  <Prose>
+    The NASA Earth Exchange (NEX) Global Daily Downscaled Projections (GDDP) dataset, or NEX-GDDP-CMIP6, was created to assist the science community in conducting studies of climate change impacts at local to regional scales and to enhance public understanding of possible future climate patterns at the spatial scale of individual towns, cities, and watersheds. The archive contains downscaled historical (1950 - 2014) and future (2015 - 2100) projections of [climate variables](https://www.nature.com/articles/s41597-022-01393-4/tables/2) such as humidity, precipitation, and near-surface air temperature, based on output from [Phase 6 of the Climate Model Intercomparison Project (CMIP6)](https://www.wcrp-climate.org/wgcm-cmip/cmip-video). The downscaled products are provided at 0.25 degree horizontal resolution. The data are also available for four different future climate scenarios modeled as part of CMIP6. These scenarios take into account future radiative forcing levels (from low to high) as well as “Shared Socioeconomic Pathways” (SSPs), which are a collection of narratives that describe potential paths society could take to combat climate change. The SSPs range from a highly sustainable approach (SSP1) to a narrative where society continues to rely heavily on fossil fuel resources (SSP5). The four resulting combined scenarios are SSP126, SSP245, SSP370 and SSP585. Learn more about the scenarios here: [https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios](https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios)
+
+    ## Data Summary  
+    * **Temporal Extent:** 1950 - 2100
+    * **Temporal Resolution:** Annual
+    * **Spatial Extent:** Global 
+    * **Spatial Resolution:** 0.25 degrees x 0.25 degrees
+    * **Data Units:** Degrees Fahrenheit
+    * **Data Type:** Research
+
+    This dataset provides the Annual Maximum Near-Surface Air Temperature from 1950 - 2100. The projections are provided for the four different SSP standard scenarios ([SSP126, SSP245, SSP370, SSP585](https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios)). The Annual Maximum Near-Surface Air Temperature serves as an essential metric for assessing and understanding future climate for the different emissions scenarios, and is a valuable tool for climate scientists, researchers, and policymakers. Monitoring and projecting near surface air temperature over time allows for the identification of trends and variations in temperature extremes, which is crucial for understanding the impact of climate change on local and global climates.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Disclaimer
+    The NEX-GDDP-CMIP6 data is calculated on a 0.25°x0.25° latitude and longitude, which is a system of lines used to map the sphere of the Earth. In some cases, temperature in major cities could be higher than what’s displayed in the gridded cell because it includes a larger area than just that city. For example, if you search for a city, such as Los Angeles, CA the average will include the temperature of Los Angeles (which could be higher than average) plus the surrounding geographical area (which could be lower than average).
+  </Prose>
+</Block>
+
+<Block>
+<Figure>
+  <Image
+  src={new URL('./temp-disclaimer.png', import.meta.url).href}
+  alt='Example of spatial average of temperature for Los Angeles, CA'
+  />
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Source Data Access
+    The annual maximum near surface air temperature is derived from the following dataset as an input:
+
+    NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6) [https://doi.org/10.7917/OFSG3345](https://doi.org/10.7917/OFSG3345) 
+        
+    ## Acknowledgment
+    The NEX-GDDP-CMIP6 downscaled climate projections by the NASA Earth eXchange (NEX) at NASA Ames Research Center. NEX-GDDP-CMIP6 was created by NEX and is distributed by the NASA Center for Climate Simulation.
+
+    Funding support for NEX-GDDP-CMIP6 was provided through the NEX workplan (2018-2022 and 2023-2027).
+
+    ## Dataset Preparation
+    This dataset was derived using the Monthly Maximum Near-Surface Temperature data variable (tasmax) from the NEX-GDDP-CMIP6 ACCESS-CM2 model as an input. From this input, the annual maximum was calculated by taking the maximum value of the Monthly Maximum Near-Surface Temperature for the calendar year. The median model data derived from all of the CMIP6 climate models is used to derive this product. A full list of CMIP6 models available in the NEX-GDDP-CMIP6 product can be [found here](https://www.nature.com/articles/s41597-022-01393-4/tables/3). Learn more about the ACCESS-CM2 model here: [https://research.csiro.au/access/about](https://research.csiro.au/access/about/).
+
+    The downscaled product (NEX-GDDP-CMIP6) used as an input to this dataset was produced using a daily variant of the monthly bias Bias-Correction Spatial Disaggregation (BCSD) method and is at 0.25 degree horizontal resolution. The demand for downscaling of Global Climate Model (GCM) outputs arises because most GCMs use relatively coarse resolution grids (e.g., a few degrees), which limit their ability to capture the spatial details in climate patterns that are often required or desired in regional or local analyses. Even the most advanced GCMs may produce projections that are globally accurate but locally biased in their statistical characteristics (i.e., mean, variance, etc.) when compared with observations. The BCSD approach used in generating the input downscaled dataset inherently assumes that the relative spatial patterns observed from 1960 through 2014 will remain constant under future  climate change. Other than the higher spatial resolution and bias correction, the input dataset does not add information beyond what is contained in the original CMIP6 scenarios, and preserves the frequency of periods of anomalously high and low values (i.e., extreme events) within each individual scenario. Due to the lack of validation of the GMFD over oceans, GDDP values over smaller island areas might not be realistic.
+
+    Learn more about CMIP6 at the following publication:
+    Thrasher, B., Wang, W., Michaelis, A. et al. NASA Global Daily Downscaled Projections, CMIP6. Sci Data 9, 262 (2022). [https://doi.org/10.1038/s41597-022-01393-4](https://doi.org/10.1038/s41597-022-01393-4)
+
+    This dataset is intended for use in scientific research only, and use of this dataset for other purposes, such as commercial applications, and engineering or design studies is not recommended without consultation with a qualified expert.
+  </Prose>
+</Block>
