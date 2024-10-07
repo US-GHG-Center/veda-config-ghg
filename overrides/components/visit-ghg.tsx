@@ -58,7 +58,7 @@ export default function VisitGHG({
     width?: string
   }) {
   return (
-    <Fold>
+    <Fold style={{paddingTop:0, paddingBottom:0}}>
       <FoldBody>
         <BottomContent width={width}>
           <InfoImageContent>

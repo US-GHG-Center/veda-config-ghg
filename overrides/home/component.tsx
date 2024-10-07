@@ -96,8 +96,8 @@ export default function HomeComponent() {
         </HomeDescription>
         <HyperwallCTA width="82%"/>
       </GradientWrapper>
-        <HomeDescription>
-          <IntroHeadline>
+        <HomeDescription style={{paddingTop:'2rem',paddingBottom:'2rem'}}>
+          <IntroHeadline >
             <IntroDesc>
                <StyledVarHeading as="h2" size="large">
                    Featured interagency collaborations for our planet
@@ -105,8 +105,8 @@ export default function HomeComponent() {
             </IntroDesc>
           </IntroHeadline>
         </HomeDescription>
-        <VisitGHG width="40%"/>
-        <VisitSLR width="40%"/>
+        <VisitSLR />
+        <VisitGHG />
         <Fold>
           <FoldHeader>
             <FoldHeadline>
