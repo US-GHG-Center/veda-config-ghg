@@ -32,6 +32,7 @@ export const visitLocationFeaturesStoryIds = {
     "eyes_on_earth",
     "hometown_dashboard",
     "time_unveiled",
+    "mobile_climate_mapper"
   ]
 };
 
