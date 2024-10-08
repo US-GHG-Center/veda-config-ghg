@@ -1,0 +1,83 @@
+[
+    {
+        "src":"https://www.youtube.com/embed/TvPjAe4j6qQ",
+        "title":"Ocean Flows",
+        "caption":"This rainbow of colors show the water temperature on the oceans' surface. The temperature variations correspond to the flow of currents on the surface. Blue is 32 degrees Fahrenheit, green is 50 -70 F, yellow is about 80 F, red is 90 F. This visualization came from computer models by a joint MIT/NASA-JPL project Estimating the Circulation and Climate of the Ocean, Phase II."
+    },{
+        "src":"https://www.youtube.com/embed/w3rtYM0HtIM",
+        "title":"A 3D View of an Atmospheric River from an Earth System Model",
+        "caption":"An Atmospheric River Visitors experience the formation of atmospheric rivers, humidity density, and global wind currents. The shape of the atmospheric river experienced in the immersive cube was based on MERRA-2 data of humidity density around Hawaii.  "
+    },{
+        "src":"https://www.youtube.com/embed/rzrUbVrmzMc",
+        "title":"Global Biosphere March 2017 - Feb 2022",
+        "caption":"Earth is Breathing Visitors feel a living Earth that appears to breathe, through visuals of seasonal polar ice expansion and constriction, chlorophyll blooms and constriction, and vegetation greening and decline through the seasons."
+    },{
+        "src":"https://www.youtube.com/embed/uKfB7kjowh0",
+        "title":"GEDI Forest Height",
+        "caption":"This global view of forest-height is data collected by the GEDI (short for Global Ecosystems Dynamics Investigation) instrument aboard the International Space Station. Bright green and white show taller plants like trees while brown is shorter plants. In this visualization height is exaggerated to depict variation at this scale and it shows a combined year of tree and plant growth from April 2019 to April 2020. Forest managers, weather forecasters, and snowpack monitors use GEDI data for their work and to create more accurate models of elevation around the world."
+    },{
+        "src":"https://www.youtube.com/embed/miTwo0oKMB4",
+        "title":"Spread of the Dixie Fire",
+        "caption":"The largest fire in California’s recorded history was the 2021 Dixie Fire. Combining active fire detections via NASA’s Suomi-NPP satellite with computer models, Earth scientists could update the size of the fire and estimate where it would spread. The data from Suomi-NPP provided updated data every 12 hours. In this visualization, yellow lines show the fire front lines based on the active fire data (red points) every 12 hours. In total, the Dixie fire burned for more than 100 days, including more than a month of fire activity after the perimeter was contained in mid-September."
+    },{
+        "src":"https://www.youtube.com/embed/aHBDHTXRzxY",
+        "title":"Active Fires As Observed by VIIRS, January-September 2021",
+        "caption":"This view of fires around the world from Jan. 1 to Sep. 24, 2021, is thanks to data from  the Visible Infrared Imaging Radiometer Suite, or  (VIIRS), aboard NASA’s Suomi-NPP satellite and the National Oceanic and Atmospheric Administration's NOAA-20 satellite. "
+    },{
+        "src":"https://www.youtube.com/embed/RCVUIcVKkXs",
+        "title":"Methane Emissions from Wetlands",
+        "caption":"This view of methane emissions from wetlands runs from 1980-2021. The highest concentrations appear as white and lower levels showing in grades of purple  Methane is a greenhouse gas that contributes to about one-third of global warming. Wetland habitats include waterlogged soils and permafrost, making them important reservoirs for carbon and thus help guard against global warming. But as a warming climate floods or dries out wetlands, their trapped carbon gets released into the atmosphere as methane."
+    },{
+        "src":"https://www.youtube.com/embed/12npc-rtlI8",
+        "title":"Water Cycle Extremes",
+        "caption":"This shows the extremes of the water cycle — droughts and  intense rainfall — over a 20-year period (2002-2021). Based on observations from two NASA satellites, GRACE (Gravity Recovery and Climate Experiment) and GRACE-Follow On, droughts are shown as red spheres, extreme rainfall as blue spheres. To show the changes over a 20-year period (2002-2021) earlier years are spheres of a lighter shade, later years are darker. The size of the sphere shows the intensity of the events with exceptional events appearing as larger spheres.. There are 1,056 extreme events shown, and the plots at the bottom show the connection to warmer global temperatures. The most intense event was a 2019 excessive and persistent rain in central Africa."
+    },{
+        "src":"https://www.youtube.com/embed/TtnhSc1rU4I",
+        "title":"Global Carbon Dioxide 2020-2021",
+        "caption":"This 3-D view of our atmosphere shows the rise of carbon dioxide levels from 2020 to 2021. The world’s vegetation and oceans absorb about half of human carbon dioxide emissions. However data stretching as far back as the 1950s, taken from sensors on the ground, show a steady upward march in carbon dioxide concentrations."
+    },{
+        "src":"https://www.youtube.com/embed/d-bFeE4YZ6s",
+        "title":"Net Ecosystem CO₂ Exchange",
+        "caption":"In colors of green and purple, this map shows ecosystems emitting and absorbing carbon dioxide from 2003 to 2017. Green shows plants absorbing the carbon dioxide, with more absorption during the spring and summer growing seasons. Purples shows plants releasing much of this carbon dioxide back to the atmosphere during the fall and winter. "
+    },{
+        "src":"https://www.youtube.com/embed/35QjTwIG-eg",
+        "title":"Arctic Sea Ice Minimum 2022.",
+        "caption":"The daily Arctic sea ice and land cover changes from the yearly maximum reach of the ice on Feb. 25, 2022, to its minimum on Sep. 18, 2022. The yellow boundary shows the minimum reach of the ice across the sea averaged over the 30-year period from 1981 to 2010. Arctic sea ice minimum has been decreasing at a rate of 13% per decade."
+    },{
+        "src":"https://www.youtube.com/embed/9QMLSKmL4FU",
+        "title":"Arctic Sea Ice Spiral",
+        "caption":"This data spiral shows the reach of Arctic sea ice from October 1978 to September 2022. This view highlights the loss of Arctic sea ice over the years. To the right are the winter months when the sea ice maximum extent begins outside the yellow line marking 15 million km2 (around 6 million mi2). It then slowly shifts inward, indicating a smaller area of winter sea ice in recent years. On the left, the Arctic sea ice minimum in September shows drastic decreases in size from year to year, at a rate of about 13% per decade."
+    },{
+        "src":"https://www.youtube.com/embed/Lk5d5Nw0Xpg",
+        "title":"GISTEMP Temperature Anomalys",
+        "caption":"The colors on the map above show Earth’s global average temperature increasing from the beginning of reliable temperatures measurements in 1880 to the 2022. The temperature is shown as an anomaly, or difference from a baseline. NASA uses the average temperature from the period from 1951-1980 as the baseline to understand how global temperatures change over time. That baseline includes climate patterns such as La Niña and El Niño, as well as unusually hot or cold years due to other factors, ensuring it encompasses natural variations in Earth's temperature. Blue colors indicate that the global average temperature for that year was cooler than the baseline. Orange and red colors indicate warmer temperatures. NASA’s analysis incorporates surface temperature measurements from more than 26,000 weather stations and thousands of ship- and buoy-based observations of sea surface temperatures. "
+    },{
+        "src":"https://www.youtube.com/embed/Na58YnwLz2s",
+        "title":"GISTEMP Zonal Temperatures",
+        "caption":"The visualization illustrates that the Arctic is warming much faster than other regions of Earth. The visualization presents temperature anomalies – that is, differences from the baseline average temperature of 1951-1980 – between the years 1880-2022 by zone, or latitude. On the globe on the left, the temperature anomalies are shown for each zone. On the right, the graph shows the the temperature anomaly, or difference from the baseline (represented by the center line labeled 0.0). Ticks to the left indicate that the zone was cooler than the baseline for that year. Ticks to the right indicate that the zone was warmer than the baseline."
+    },{
+        "src":"https://www.youtube.com/embed/TtIrFvWoY8E",
+        "title":"NASA Climate Spiral",
+        "caption":"The visualization presents monthly global temperature anomalies between the years 1880-2022. Temperature anomalies are deviations from a long term global average. In this case the period 1951-1980 is used to define the baseline for the anomaly. These temperatures are based on NASA's Surface Temperature Analysis, from NASA's Goddard Institute for Space Studies, an estimate of global surface temperature change. The term “climate spiral” describes an animated radial plot of global temperatures. Climate scientist Ed Hawkins from the National Centre for Atmospheric Science at the University of Reading popularized this style of visualization in 2016."
+    },{
+        "src":"https://www.youtube.com/embed/c3btzmkiZAA",
+        "title":"EPA Emissions in the US",
+        "caption":"Using data from the US Environmental Protection Agency, this visualization shows methane emissions across the United States The yellow spikes show how much certain activities and industries contribute to the methane emissions in different regions."
+    },{
+        "src":"https://www.youtube.com/embed/BLYnok9RngI",
+        "title":"National Carbon Dioxide Budgets",
+        "caption":"These three maps show changes in the greenhouse gas, carbon dioxide. The top shows world-wide net carbon change from 2015 to 2020 after taking into account the balance of carbon emissions and removal. The middle map shows the amount of carbon dioxide emissions attributed to fossil fuels. The bottom map shows the change in the amount of carbon stored in vegetation (trees, etc.) and on land. Green colors indicate that carbon was removed from the atmosphere and brown colors that it was added to the atmosphere. The data visualization is based on observations from ground-based sites and NASA's OCO-2 (Orbiting Carbon Observatory 2). The visualization highlights the significant impact of fossil fuel emissions on net carbon dioxide emissions and climate change, while also showcasing regional variations in terrestrial carbon stock changes, particularly in the tropics where deforestation is more prevalent."
+    },{
+        "src":"https://www.youtube.com/embed/Q_93pLMA4pM",
+        "title":"Atmospheric Carbon Dioxide Tagged by Source: Europe, the Middle East, and Africa.",
+        "caption":"This shows the daily behavior of the greenhouse gas carbon dioxide over Africa in 2021. The colors swirling in the atmosphere represent different sources of carbon dioxide: yellow is from fossil fuel emissions, red from biomass burning (fires), and teal from biomass exchange. The gridded dots on land (green) and the ocean (blue) represent carbon sinks, where carbon dioxide is pulled out of the atmosphere by vegetation and the ocean. In this view we observe contributions such as Europe and Saudi Arabia's fossil fuel emissions, as well as a distinct cloud of red agricultural burn emissions in central Africa, shedding light on the atmospheric dynamics over Europe, the Middle East, and Africa."
+    },{
+        "src":"https://www.youtube.com/embed/zAG3-t-fHbY",
+        "title":"Atmospheric Carbon Dioxide Tagged by Source: The Americas",
+        "caption":"This shows the daily behavior of the greenhouse gas carbon dioxide over North, Central and South America for 2021. This data visualization simulates the behavior of carbon dioxide from Jan. 1 to Dec. 31, 2021. The colors swirling in the atmosphere represent different sources of carbon dioxide: yellow is from fossil fuel emissions, red from biomass burning (fires), and teal from biomass exchange. The gridded dots on land (green) and the ocean (blue) represent carbon sinks, where carbon dioxide is pulled out of the atmosphere by vegetation and the ocean. In this view notable features over North and South America include a pollution hotspot in the northeastern United States and the rapid fluctuation of carbon absorption and accumulation over the Amazon rainforest, influenced by daylight photosynthesis and nighttime carbon buildup. This view comes from NASA's advanced computer modeling techniques from the Global Modeling and Assimilation Office. "
+    },{
+        "src":"https://www.youtube.com/embed/1uH_NW4mhAc",
+        "title":"Atmospheric Carbon Dioxide Tagged by Source: Australia and Asia",
+        "caption":"This shows the daily behavior of the greenhouse gas carbon dioxide over Asia, Australia and the Pacific Islands in 2021. The colors swirling in the atmosphere represent different sources of carbon dioxide: yellow is from fossil fuel emissions, red from biomass burning (fires), and teal from biomass exchange. The gridded dots on land (green) and the ocean (blue) represent carbon sinks, where carbon dioxide is pulled out of the atmosphere by vegetation and the ocean. This view of Asia and Australia reveals notable characteristics such as a pollution hotspot near Beijing, China, juxtaposed with relatively low fossil fuel emissions across the sparsely populated continent of Australia. Produced by NASA's Global Modeling and Assimilation Office, it shows key contributors to carbon dioxide as well as its transport around the globe, and its absorption by the ocean and land."
+    }
+]

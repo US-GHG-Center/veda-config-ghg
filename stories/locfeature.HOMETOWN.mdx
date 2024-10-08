@@ -1,0 +1,32 @@
+---
+featuredOn:
+  - hometown_dashboard
+id: "hometown_dashboard"
+name: Hometown Dashboard
+theme: true
+description: "
+  This interactive display invites users to learn how temperature and precipitation in their home region are projected to change from 1950 to 2100. Select your hometown from a global map, adjust time scales, and interact with visual charts that show historical and predicted climate changes based on different emission scenarios. What future will you choose? 
+"
+media:
+  src: ::file ./locfeature.HOMETOWN/kiosk.png
+  alt: "
+    Photograph of the Hometown Dashboard touch table installation at NMNH.
+  "
+  author:
+    name: "NASA"
+    url: "https://nasa.gov"
+pubDate: 2024-09-25
+taxonomy:
+  - name: Location Features
+    values:
+      - Hometown Dashboard
+---
+import CardGallery from "./components/card_gallery";
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './locfeature.HOMETOWN/carousel_content.jsx';
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
+</Block>

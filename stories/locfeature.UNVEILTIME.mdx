@@ -1,0 +1,32 @@
+---
+featuredOn:
+  - time_unveiled
+id: "time_unveiled"
+name: Time Unveiled
+theme: true
+description: "
+  Spanning periods from days to decades, satellite imagery reveals changes in Earth's landscape over time. At the exhibit, visitors use their silhouette and movement to uncover images from before and after a range of events, including flooding, urbanization, fires, and more. This interactive experience demonstrates some of the human impact on our planet.
+"
+media:
+  src: ::file ./locfeature.UNVEILTIME/screens.png
+  alt: "
+    Photograph of the Time Unveiled motion capture installation at NMNH.
+  "
+  author:
+    name: "NASA"
+    url: "https://nasa.gov"
+pubDate: 2024-09-25
+taxonomy:
+  - name: Location Features
+    values:
+      - Time Unveiled
+---
+
+import Carousel from "../overrides/common/embedded-video-carousel";
+import contentArray from './locfeature.UNVEILTIME/carousel_content.jsx';
+
+<Block type='wide'>
+  <Figure>
+    <Carousel items={contentArray} />
+  </Figure>
+</Block>

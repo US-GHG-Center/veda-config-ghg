@@ -30,6 +30,7 @@ import VisitGHG from "../overrides/components/visit-ghg";
 
 import Carousel from "../overrides/common/embedded-video-carousel";
 import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_content.json';
+import narratedContentArray from './theme.GHG.introduction_greenhouse_gases/narrated_content.json';
 
 <Block type="wide">
   <Figure>
@@ -62,16 +63,10 @@ import contentArray from './theme.GHG.introduction_greenhouse_gases/carousel_con
     </Figure>
 </Block>
 
-<Block type="wide">
+
+<Block type='wide'>
   <Figure>
-    <Embed
-      height="405"
-      src="https://www.youtube.com/embed/ZinKaqthYX0"
-      title="NASA and Greenhouse Gases"
-    />
-    <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
-      Learn how earth data are being used to help the EPA monitor methane emissions.
-    </Caption>
+    <Carousel items={narratedContentArray} />
   </Figure>
 </Block>
 
