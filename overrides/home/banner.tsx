@@ -74,12 +74,14 @@ export default function Banner() {
     setShowTempBanner(false);
   }
 
-  return (showTempBanner && !(hasExpired(bannerExpires)) &&
+  // return (showTempBanner && !(hasExpired(bannerExpires)) &&
+  return (
       <BannerBox className="banner">
         <BannerContainer>
           <BannerContent>
           <Link to={getString('tempBannerUrl')?.other || "" } target="_blank"> 
-            { getString('tempBanner').other }
+            {/* { getString('tempBanner').other } */}
+            Text on things that we want to showcase
           </Link>
           </BannerContent>
         </BannerContainer>

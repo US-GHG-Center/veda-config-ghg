@@ -21,9 +21,12 @@ import { Title } from "../../common/styled-components";
 
 import '../../common/styles.scss';
 
+import Banner from '../../overrides/home/banner';
 
 export default function Component() {  
     return (
+        <>
+        <Banner/>
         <div className="hug-reset-container margin-bottom-8">
             <GridContainer containerSize="widescreen">
                 <section>
@@ -77,5 +80,6 @@ export default function Component() {
                 </Grid>
             </GridContainer>
         </div>
+        </>
     )
 };
