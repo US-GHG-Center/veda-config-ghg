@@ -60,13 +60,50 @@ function hasExpired(expiryDatetime) {
   return !!(currentDate > expiryDate)
 }
 
-export default function Banner() {
+
+export function Banner ({text, url, skipClientRouting, postClose}) {
+  const [ showBanner, setShowBanner ] = useState(true);
+
+  return (
+    showBanner &&
+      <BannerBox className="banner">
+        <BannerContainer>
+          <BannerContent>
+          { skipClientRouting ?
+            <a href={url} target="_blank">
+              {text}
+            </a>
+            :
+            <Link to={url} target="_blank">
+              {text}
+            </Link>
+          }
+          </BannerContent>
+        </BannerContainer>
+        <Button
+          onClick={() => {
+              setShowBanner(false);
+              if (postClose) postClose();
+            }}
+          variation="base-text"
+          fitting="skinny"
+        >
+          <CollecticonXmarkSmall title="Dismiss banner" color="white" meaningful />
+        </Button>
+      </BannerBox>
+  )
+}
+
+export function BannerHome() {
   const bannerUrl = getString('tempBannerUrl')?.other || "";
   const bannerExpires = getString('tempBannerExpires')?.other || "";
   const showBanner = (localStorage.getItem(BANNER_KEY) !== bannerUrl) && !!getString('tempBanner')?.other
   const [ showTempBanner, setShowTempBanner ] = useState(showBanner);
 
-  function onClick () {
+  const url = getString('tempBannerUrl')?.other || "";
+  const text = getString('tempBanner').other || "hey there";
+
+  function postClose () {
     localStorage.setItem(
       BANNER_KEY,
       bannerUrl
@@ -74,20 +111,12 @@ export default function Banner() {
     setShowTempBanner(false);
   }
 
-  // return (showTempBanner && !(hasExpired(bannerExpires)) &&
-  return (
-      <BannerBox className="banner">
-        <BannerContainer>
-          <BannerContent>
-          <Link to={getString('tempBannerUrl')?.other || "" } target="_blank"> 
-            {/* { getString('tempBanner').other } */}
-            Text on things that we want to showcase
-          </Link>
-          </BannerContent>
-        </BannerContainer>
-        <Button onClick={onClick} variation="base-text" fitting="skinny">
-          <CollecticonXmarkSmall title="Dismiss banner" color="white" meaningful />
-        </Button>
-      </BannerBox>
+  return ((!hasExpired(bannerExpires)) && showTempBanner &&
+    <Banner
+      text={text}
+      url={url}
+      skipClientRouting={false}
+      postClose={postClose}
+    />
   )
 }

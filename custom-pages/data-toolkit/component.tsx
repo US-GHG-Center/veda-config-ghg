@@ -21,12 +21,17 @@ import { Title } from "../../common/styled-components";
 
 import '../../common/styles.scss';
 
-import Banner from '../../overrides/home/banner';
+import { Banner } from '../../overrides/home/banner';
 
 export default function Component() {  
     return (
         <>
-        <Banner/>
+        <Banner
+            text="Sign up for the AGU pre-conference workshop PREWS17. Learn JupyterHub and QGIS data visualization and analysis using US GHG Center datasets, Dec 8th, 2024. Register early!"
+            url="https://www.agu.org/annual-meeting/attend#register"
+            skipClientRouting={true}
+            postClose={null}
+        />
         <div className="hug-reset-container margin-bottom-8">
             <GridContainer containerSize="widescreen">
                 <section>
