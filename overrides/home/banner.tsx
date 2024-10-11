@@ -9,7 +9,7 @@ import {
 } from '$veda-ui/@devseed-ui/theme-provider';
 import Hug from "$veda-ui-scripts/styles/hug";
 import { getString } from 'veda';
-import { Link } from "$veda-ui/react-router-dom"; 
+import { Link } from "$veda-ui/react-router-dom";
 
 const BANNER_KEY = 'dismissedBannerUrl'
 
@@ -61,23 +61,34 @@ function hasExpired(expiryDatetime) {
 }
 
 
-export function Banner ({text, url, skipClientRouting, postClose}) {
+interface BannerItems {
+  text: string;
+  url: string;
+  skipClientRouting?: boolean; // defaults to false
+  postClose?: Function;
+}
+
+export const Banner: React.FC<BannerItems> = ({text, url, skipClientRouting, postClose}) => {
   const [ showBanner, setShowBanner ] = useState(true);
+
+  const clientRouting = (
+      <Link to={url} target="_blank">
+        {text}
+      </Link>
+  )
+
+  const absoluteRouting = (
+      <a href={url} target="_blank">
+        {text}
+      </a>
+  )
 
   return (
     showBanner &&
       <BannerBox className="banner">
         <BannerContainer>
           <BannerContent>
-          { skipClientRouting ?
-            <a href={url} target="_blank">
-              {text}
-            </a>
-            :
-            <Link to={url} target="_blank">
-              {text}
-            </Link>
-          }
+          { skipClientRouting ? absoluteRouting : clientRouting }
           </BannerContent>
         </BannerContainer>
         <Button
@@ -100,8 +111,8 @@ export function BannerHome() {
   const showBanner = (localStorage.getItem(BANNER_KEY) !== bannerUrl) && !!getString('tempBanner')?.other
   const [ showTempBanner, setShowTempBanner ] = useState(showBanner);
 
-  const url = getString('tempBannerUrl')?.other || "";
-  const text = getString('tempBanner').other || "hey there";
+  const url = getString('tempBannerUrl')?.other;
+  const text = getString('tempBanner').other;
 
   function postClose () {
     localStorage.setItem(
