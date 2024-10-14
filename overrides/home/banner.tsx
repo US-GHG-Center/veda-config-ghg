@@ -54,22 +54,57 @@ const BannerContent = styled.div`
   }
 `
 
+const MultiLinkBanner = styled.p`
+    color: white;
+    a {
+      border-bottom: 1px solid white;
+    }
+`
+
 function hasExpired(expiryDatetime) {
   const expiryDate = new Date(expiryDatetime);
   const currentDate = new Date();
   return !!(currentDate > expiryDate)
 }
 
-
 interface BannerItems {
+  children: React.ReactNode;
+  postClose?: Function;
+}
+
+interface ClickableBannerItems {
   text: string;
   url: string;
   skipClientRouting?: boolean; // defaults to false
   postClose?: Function;
 }
 
-export const Banner: React.FC<BannerItems> = ({text, url, skipClientRouting, postClose}) => {
+export const Banner: React.FC<BannerItems> = ({children, postClose}) => {
   const [ showBanner, setShowBanner ] = useState(true);
+
+  return (
+    showBanner &&
+      <BannerBox className="banner">
+        <BannerContainer>
+          <BannerContent>
+            { children }
+          </BannerContent>
+        </BannerContainer>
+        <Button
+          onClick={() => {
+              setShowBanner(false);
+              if (postClose) postClose();
+            }}
+          variation="base-text"
+          fitting="skinny"
+        >
+          <CollecticonXmarkSmall title="Dismiss banner" color="white" meaningful />
+        </Button>
+      </BannerBox>
+  )
+}
+
+export const ClickableBanner: React.FC<ClickableBannerItems> = ({text, url, skipClientRouting, postClose}) => {
 
   const clientRouting = (
       <Link to={url} target="_blank">
@@ -84,24 +119,9 @@ export const Banner: React.FC<BannerItems> = ({text, url, skipClientRouting, pos
   )
 
   return (
-    showBanner &&
-      <BannerBox className="banner">
-        <BannerContainer>
-          <BannerContent>
-          { skipClientRouting ? absoluteRouting : clientRouting }
-          </BannerContent>
-        </BannerContainer>
-        <Button
-          onClick={() => {
-              setShowBanner(false);
-              if (postClose) postClose();
-            }}
-          variation="base-text"
-          fitting="skinny"
-        >
-          <CollecticonXmarkSmall title="Dismiss banner" color="white" meaningful />
-        </Button>
-      </BannerBox>
+    <Banner postClose={postClose}>
+      { skipClientRouting ? absoluteRouting : clientRouting }
+    </Banner>
   )
 }
 
@@ -123,11 +143,21 @@ export function BannerHome() {
   }
 
   return ((!hasExpired(bannerExpires)) && showTempBanner &&
-    <Banner
+    <ClickableBanner
       text={text}
       url={url}
       skipClientRouting={false}
       postClose={postClose}
     />
+  )
+}
+
+export function DataToolkitBanner() {
+  return (
+    <Banner>
+      <MultiLinkBanner>
+        Sign up for the AGU pre-conference workshop <a href='https://agu.confex.com/agu/f/AGU24PreConWorkshops' target='_blank'>PREWS17</a>. Learn JupyterHub and QGIS data visualization and analysis using US GHG Center datasets, Dec 8th, 2024. <a href='https://www.agu.org/annual-meeting/attend#register' target='_blank'>Register early!</a>
+      </MultiLinkBanner>
+    </Banner>
   )
 }
