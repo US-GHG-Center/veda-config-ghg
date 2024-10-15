@@ -13,6 +13,18 @@ import { Link } from "$veda-ui/react-router-dom";
 
 const BANNER_KEY = 'dismissedBannerUrl'
 
+interface BannerItems {
+    children: React.ReactNode;
+    postClose?: Function;
+}
+
+interface ClickableBannerItems {
+    text: string;
+    url: string;
+    skipClientRouting?: boolean; // defaults to false
+    postClose?: Function;
+}
+
 const BannerBox = styled.div`
   display: flex;
   position: absolute;
@@ -67,18 +79,6 @@ function hasExpired(expiryDatetime) {
   return !!(currentDate > expiryDate)
 }
 
-interface BannerItems {
-  children: React.ReactNode;
-  postClose?: Function;
-}
-
-interface ClickableBannerItems {
-  text: string;
-  url: string;
-  skipClientRouting?: boolean; // defaults to false
-  postClose?: Function;
-}
-
 export const Banner: React.FC<BannerItems> = ({children, postClose}) => {
   const [ showBanner, setShowBanner ] = useState(true);
 
@@ -105,7 +105,6 @@ export const Banner: React.FC<BannerItems> = ({children, postClose}) => {
 }
 
 export const ClickableBanner: React.FC<ClickableBannerItems> = ({text, url, skipClientRouting, postClose}) => {
-
   const clientRouting = (
       <Link to={url} target="_blank">
         {text}

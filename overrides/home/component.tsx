@@ -19,7 +19,7 @@ import {
 
 
 import Partners from "./partners";
-import { BannerHome as Banner } from './banner';
+import { BannerHome as Banner } from '../../common/banner';
 import Carousel from './carousel/';
 
 import '../../common/styles.scss';

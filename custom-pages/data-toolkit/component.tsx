@@ -21,7 +21,7 @@ import { Title } from "../../common/styled-components";
 
 import '../../common/styles.scss';
 
-import { DataToolkitBanner as Banner } from '../../overrides/home/banner';
+import { DataToolkitBanner as Banner } from '../../common/banner';
 
 export default function Component() {  
     return (
