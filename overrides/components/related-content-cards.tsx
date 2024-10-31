@@ -33,7 +33,7 @@ export default function EICRelatedContents({ storyIds }:ContentsPropType) {
 
   const cards = relatedData.map((t) => (
     <li key={`${t.id}-card`}>
-      <StyledCard 
+      <StyledCard
         key={t.id}
         linkLabel="View more"
         linkTo={t.asLink?.url?? `/stories/${t.id}`}
@@ -41,6 +41,7 @@ export default function EICRelatedContents({ storyIds }:ContentsPropType) {
         description={t.description}
         imgSrc={t.media.src}
         imgAlt={t.media.alt}
+        hideExternalLinkBadge={t.hideExternalLinkBadge}
       />
     </li>
   ))
