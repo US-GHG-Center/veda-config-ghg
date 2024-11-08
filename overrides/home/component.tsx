@@ -6,11 +6,9 @@ import { Button } from "$veda-ui/@devseed-ui/button";
 import Hug from "$veda-ui-scripts/styles/hug";
 import {
   Fold,
-  FoldHeader,
-  FoldTitle,
-  FoldBody,
+  FoldHeader, FoldBody,
   FoldHeadline,
-  FoldHeadActions,
+  FoldHeadActions
 } from "$veda-ui-scripts/components/common/fold";
 import { StyledVarHeading } from "../common/style";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
@@ -31,7 +29,7 @@ const IntroHeadline = styled(Hug)`
   ${media.mediumDown`
     flex-flow: column;
   `}
-  
+
   p {
     font-size: 1.25rem;
     padding-top: 1rem;
@@ -77,7 +75,7 @@ const CollaboratorsContent = styled.div`
 `
 const SpacerDiv = styled.div`
   padding:2rem;
-  
+
 `
 export default function HomeComponent() {
   const description =
