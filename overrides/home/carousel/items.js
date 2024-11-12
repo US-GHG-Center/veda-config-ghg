@@ -1,6 +1,6 @@
 export default [
     {
-      link: 'https://earth.gov/ghgcenter,
+      link: 'https://earth.gov/ghgcenter',
       title: 'U.S. Greenhouse Gas Center',
       description: "Uniting Data and Technology to Empower Tomorrow's Climate Solutions",
       image: new URL('../media/earth-1.jpg', import.meta.url).href,
