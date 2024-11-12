@@ -64,10 +64,10 @@ export default function VisitSLR({
           <InfoImageContent>
             <div>
               <StyledVarHeading size="small" as="h2">
-                U.S. Sea Level Change
+                Global Sea Level Change
               </StyledVarHeading>
               <span>
-                Rising Seas, Changing Coasts
+                Sea Level is Rising, Worldwide
               </span>
               <Button
                 forwardedAs="a"
