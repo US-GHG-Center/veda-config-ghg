@@ -100,7 +100,7 @@ function TabletCarousel() {
 }
 
 
-export default function Carousel() {
+export default function SLRCarousel() {
   const { isMediumUp } = useMediaQuery();
   return isMediumUp?
   <LazyLoad
