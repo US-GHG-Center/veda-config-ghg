@@ -18,7 +18,9 @@ import VisitGHG from "../components/visit-ghg";
 import VisitSLR from "../components/visit-slr";
 import HyperwallCTA from "../components/hyperwall-cta";
 import Partners from "./partners";
+import Carousel from './carousel/';
 const IntroHeadline = styled(Hug)`
+
   display: flex;
   gap: ${glsp(2)};
   grid-column: content-start / content-end;
@@ -107,10 +109,7 @@ export default function HomeComponent() {
             </IntroDesc>
           </IntroHeadline>
         </HomeDescription>
-        <VisitSLR />
-        <SpacerDiv/>
-        <VisitGHG />
-        <SpacerDiv/>
+        <Carousel />
         <Fold>
           <FoldHeader>
             <FoldHeadline>
