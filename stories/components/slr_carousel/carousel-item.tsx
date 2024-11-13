@@ -46,7 +46,7 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
 
 export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent: LinkComponent }) {
   return <Card
-    gridLayout={{ tablet: { col: 4 } }}
+    gridLayout={{ tablet: { col: 6 } }}
     containerProps={{className:`hover:bg-base-lightest padding-x-1 radius-0 border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-50'}`}}>
     <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
     <CardBody className="padding-left-0 position-relative">
