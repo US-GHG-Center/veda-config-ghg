@@ -100,15 +100,15 @@ export default function HomeComponent() {
         </HomeDescription>
         <HyperwallCTA width="82%"/>
       </GradientWrapper>
-        <HomeDescription style={{paddingTop:'2rem',paddingBottom:'2rem'}}>
-          <IntroHeadline >
-            <IntroDesc>
+        <Fold style={{paddingTop:'2rem',paddingBottom:'2rem'}}>
+          <FoldHeader>
+            <FoldHeadline>
                <StyledVarHeading as="h2" size="large">
                    Featured interagency collaborations for our planet
                </StyledVarHeading>
-            </IntroDesc>
-          </IntroHeadline>
-        </HomeDescription>
+            </FoldHeadline>
+          </FoldHeader>
+        </Fold>
         <Carousel />
         <Fold>
           <FoldHeader>
