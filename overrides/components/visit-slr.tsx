@@ -27,7 +27,7 @@ const InfoImageContent = styled.div`
   display: flex;
   flex-flow: row;
   background-color: #02225b; // @TODO: But where can I get this color?
-  color: #121414;
+  color: #ffffff;
   width: 100%;
   height: 300px;
   background-image: url(${SeaSideImg});
