@@ -11,7 +11,7 @@ export default [
       title: 'Global Sea Level Rise',
       description: 'The Global Sea Level Rise Portal is an international collaboration that offers essential information on current and project sea level rise to inform coastal communities across the globe.',
       image: new URL('../media/global_slr.png', import.meta.url).href,
-      imageAlt: 'Coastline with crashing waves'
+      imageAlt: 'Satellite image of coastline'
     },
     {
     link: 'https://earth.gov/sealevel/us/',
