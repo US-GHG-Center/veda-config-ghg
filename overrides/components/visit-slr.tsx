@@ -8,7 +8,7 @@ import Hug from "$veda-ui-scripts/styles/hug";
 import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { ExpandLink } from "./expand-link";
 import { StyledVarHeading } from "../common/style";
-import SeaSideImg from "../home/media/global-bg.jpg";
+import SeaSideImg from "../home/media/global-bg-2.jpg";
 import { Button } from "$veda-ui/@devseed-ui/button";
 
 const BottomContent = styled(Hug)`
