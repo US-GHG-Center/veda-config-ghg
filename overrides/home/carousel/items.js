@@ -14,7 +14,7 @@ export default [
       imageAlt: 'Coastline with crashing waves'
     },
     {
-    link: 'https://earth.gov/sealevel/us',
+    link: 'https://earth.gov/sealevel/us/',
     title: 'U.S. Sea Level Rise',
     description: 'The U.S. Sea Level Rise portal is a multi-agency effort pairing data visualizations with explanation and science eduction to help communities prepare for challenges that will affect our coastal environments',
     image: new URL('../media/us_slr.png', import.meta.url).href,
