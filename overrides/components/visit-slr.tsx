@@ -8,7 +8,7 @@ import Hug from "$veda-ui-scripts/styles/hug";
 import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { ExpandLink } from "./expand-link";
 import { StyledVarHeading } from "../common/style";
-import SeaSideImg from "../home/media/global-bg.jpg";
+import SeaSideImg from "../home/media/global-bg-2.jpg";
 import { Button } from "$veda-ui/@devseed-ui/button";
 
 const BottomContent = styled(Hug)`
@@ -27,7 +27,7 @@ const InfoImageContent = styled.div`
   display: flex;
   flex-flow: row;
   background-color: #02225b; // @TODO: But where can I get this color?
-  color: #121414;
+  color: #ffffff;
   width: 100%;
   height: 300px;
   background-image: url(${SeaSideImg});
