@@ -3,7 +3,6 @@ import { Link } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
-import Hug from "$veda-ui-scripts/styles/hug";
 import {
   Fold,
   FoldHeader, FoldBody,
@@ -14,18 +13,18 @@ import { StyledVarHeading } from "../common/style";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 import ThemeCards from "../components/theme-cards";
 import { themeLandingPageIds } from "../common/story-data";
-import VisitGHG from "../components/visit-ghg";
-import VisitSLR from "../components/visit-slr";
 import HyperwallCTA from "../components/hyperwall-cta";
 import Partners from "./partners";
 import Carousel from './carousel/';
-const IntroHeadline = styled(Hug)`
+import { GridContainer, Grid } from '$veda-ui/@trussworks/react-uswds';
 
+const IntroHeadline = styled.div`
   display: flex;
   gap: ${glsp(2)};
-  grid-column: content-start / content-end;
+  width: 100%;
+  height: 100%;
+
   ${media.largeUp`
-    grid-column: content-2 / content-12;
     flex-flow: row;
   `}
   ${media.mediumDown`
@@ -40,13 +39,12 @@ const IntroHeadline = styled(Hug)`
     color: ${themeVal("color.primary")};
   }
 `;
-const HomeDescription = styled(Hug)`
+
+const HomeDescription = styled.div`
   padding: ${variableGlsp(2.5, 0)};
-  grid-row-gap: ${variableGlsp(2)};
-  ${media.mediumUp`
-    grid-row-gap: ${variableGlsp(3)};
-  `}
+  width: 100%;
 `;
+
 const IntroDesc = styled.div`
   ${media.largeUp`
     grid-column: -1/1;
@@ -85,32 +83,41 @@ export default function HomeComponent() {
   return (
     <>
       <GradientWrapper>
-        <HomeDescription>
-          <IntroHeadline>
-            <IntroDesc>
-              <StyledVarHeading size="xlarge" as="h1">
-                One government
-                <br />
-                working for <span>one planet.</span>
-              </StyledVarHeading>
-              <p>{description}</p>
-            </IntroDesc>
-            <Partners size="small" top={4} />
-          </IntroHeadline>
-        </HomeDescription>
-        <HyperwallCTA width="82%"/>
+        <GridContainer>
+          <Grid row>
+            <Grid col>
+              <HomeDescription>
+                <IntroHeadline>
+                  <IntroDesc>
+                    <StyledVarHeading size="xlarge" as="h1">
+                      One government
+                      <br />
+                      working for <span>one planet.</span>
+                    </StyledVarHeading>
+                    <p>{description}</p>
+                  </IntroDesc>
+                  <Partners size="small" top={4} />
+                </IntroHeadline>
+              </HomeDescription>
+              <HyperwallCTA />
+            </Grid>
+          </Grid>
+        </GridContainer>
       </GradientWrapper>
-        <Fold style={{paddingTop:'2rem',paddingBottom:'2rem'}}>
-          <FoldHeader>
-            <FoldHeadline>
-               <StyledVarHeading as="h2" size="large">
-                   Featured interagency collaborations for our planet
-               </StyledVarHeading>
-            </FoldHeadline>
-          </FoldHeader>
-        </Fold>
-        <Carousel />
-        <Fold>
+      {/* Had to add a div wrapper so that the GridContainer styles are correct applied */}
+      <div className="padding-top-10 padding-bottom-4">
+        <GridContainer>
+          <Grid row>
+            <Grid col>
+              <StyledVarHeading as="h2" size="large">
+                Featured interagency collaborations for our planet
+              </StyledVarHeading>
+            </Grid>
+          </Grid>
+        </GridContainer>
+      </div>
+      <Carousel />
+      <Fold>
           <FoldHeader>
             <FoldHeadline>
               <StyledVarHeading as="h2" size="large">

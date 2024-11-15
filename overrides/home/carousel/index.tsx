@@ -51,7 +51,7 @@ export function DesktopCarousel () {
 
 
   return (
-    <GridContainer className="carousel-grid-container" aria-roledescription="carousel" aria-label="Highlighted VEDA Dashboard projects">
+    <GridContainer aria-roledescription="carousel" aria-label="Highlighted VEDA Dashboard projects">
       <Grid row className="position-relative carousel--height" aria-live="off">
       <TransitionGroup>
           <CSSTransition
