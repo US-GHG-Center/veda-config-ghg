@@ -46,7 +46,7 @@
   .carousel-grid-container {
     // Overriding the default max-width of the USWDS grid container 1440px.
     // However, this needs to be configured on a per instance basis as a part of
-    // the USWDS settings configuration file. Since we're not exporting yet this
-    // config file from the veda-ui, we're setting this here as a workaround.
+    // the USWDS settings configuration file. As a workaround, we're setting this here.
+    // Docs: https://designsystem.digital.gov/documentation/settings/#configuring-custom-uswds-settings
     max-width: 1440px;
   }
