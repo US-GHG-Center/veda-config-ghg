@@ -24,19 +24,28 @@ taxonomy:
       - sea level rise
 ---
 
+import SLRCarousel from './components/slr_carousel/';
+
 import CardGallery from "./components/card_gallery";
 import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
-import VisitSLR from "../overrides/components/visit-slr";
 
 import Carousel from "../overrides/common/embedded-video-carousel";
 import contentArray from './theme.SLR.introduction_sea_level_rise/carousel_content.json';
+import { GridContainer, Grid } from '$veda-ui/@trussworks/react-uswds';
 
-<Block type="wide">
-  <Figure>
-    <VisitSLR />
-  </Figure>
-</Block>
-  
+
+<GridContainer className="padding-top-6 padding-bottom-4">
+  <Grid row>
+    <Grid col>
+      <Prose>
+        ## Visit the Sea Level Change Portals
+      </Prose>
+    </Grid>
+  </Grid>
+</GridContainer>
+
+<SLRCarousel />
+
 <Block>
   <Prose>
     ## Info

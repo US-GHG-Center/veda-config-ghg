@@ -1,12 +1,7 @@
 import React from "$veda-ui/react";
-import {
-  Fold,
-  FoldBody,
-} from "$veda-ui-scripts/components/common/fold";
 import styled from "$veda-ui/styled-components";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
-import { ExpandLink } from "./expand-link";
 import { StyledVarHeading } from "../common/style";
 import { Button } from "$veda-ui/@devseed-ui/button";
 import HyperwallImg from "../home/media/hyperwall-image1.png";
@@ -90,30 +85,26 @@ export default function HyperwallCTA({
     width?: string
   }) {
   return (
-    <Fold>
-      <FoldBody>
-        <BottomContent width={width}>
-          <InfoImageContent>
-            <div>
-              <StyledVarHeading size="small" as="h2">
-                Live Earth Dashboard
-              </StyledVarHeading>
-              <GutterText>
-                An interactive way to explore what's happening on Earth right now
-              </GutterText>
-              <Button
-                forwardedAs="a"
-                href="/stories/hyperwall"
-                size="medium"
-                radius="square"
-                variation="primary-fill"
-              >
-                Visit the Live Earth Dashboard
-              </Button>
-            </div>
-          </InfoImageContent>
-        </BottomContent>
-      </FoldBody>
-    </Fold>
+    <BottomContent width={width}>
+      <InfoImageContent>
+        <div>
+          <StyledVarHeading size="small" as="h2">
+            Live Earth Dashboard
+          </StyledVarHeading>
+          <GutterText>
+            An interactive way to explore what's happening on Earth right now
+          </GutterText>
+          <Button
+            forwardedAs="a"
+            href="/stories/hyperwall"
+            size="medium"
+            radius="square"
+            variation="primary-fill"
+          >
+            Visit the Live Earth Dashboard
+          </Button>
+        </div>
+      </InfoImageContent>
+    </BottomContent>
   )
 };
