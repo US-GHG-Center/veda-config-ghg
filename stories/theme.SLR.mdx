@@ -31,13 +31,18 @@ import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
 
 import Carousel from "../overrides/common/embedded-video-carousel";
 import contentArray from './theme.SLR.introduction_sea_level_rise/carousel_content.json';
+import { GridContainer, Grid } from '$veda-ui/@trussworks/react-uswds';
 
 
-<Block type='wide'>
-  <Prose>
-    ## Visit the Sea Level Rise portals
-  </Prose>
-</Block>
+<GridContainer className="padding-top-6 padding-bottom-4">
+  <Grid row>
+    <Grid col>
+      <Prose>
+        ## Visit the Sea Level Rise portals
+      </Prose>
+    </Grid>
+  </Grid>
+</GridContainer>
 
 <SLRCarousel />
 
