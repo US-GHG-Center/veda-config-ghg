@@ -5,7 +5,7 @@ export const themeLandingPageIds = [
   "disasters",
   "energy",
   "greenhouse_gases",
-  "sea-level-rise",
+  "sea-level-change",
   "wildfires",
   "water-resources",
 ];
