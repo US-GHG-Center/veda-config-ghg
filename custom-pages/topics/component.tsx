@@ -48,6 +48,24 @@ export default function HomeComponent() {
             <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
           </Card>
           </CardGroup>
+
+        <CardGroup>
+          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
+            <CardMedia exdent>
+              <img src={new URL('./media/1-maia-los-angeles-1041.png', import.meta.url).href} alt="distant view of hazy cityscape." />
+            </CardMedia>
+
+            <CardHeader>
+              <h3 className="usa-card__heading margin-top-4">Methane Emissions</h3>
+            </CardHeader>
+            <CardBody>
+              <p className="padding-bottom-2 margin-bottom-4">
+              TBD. Cities and metropolitan regions, where most of the world's population live, are responsible for approximately 70% of greenhouse gas emissions. Researchers are making rapid advances in urban emissions measurement and modeling to provide robust, accurate, and reliable emissions estimates at fine scales. The U.S. Greenhouse Gas Center offers an introduction to new urban-relevant datasets and highlights innovative emissions research in cities across the country.
+              </p>
+            </CardBody>
+            <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/methane" />
+          </Card>
+          </CardGroup>
       
         <section>
           <Title>Core Science Focus Areas</Title>
