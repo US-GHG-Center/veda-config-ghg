@@ -27,10 +27,10 @@ taxonomy:
 import SLRCarousel from './components/slr_carousel/';
 
 import CardGallery from "./components/card_gallery";
-import { seaLevelRiseStoryIds } from "../overrides/common/story-data";
+import { seaLevelChangeStoryIds } from "../overrides/common/story-data";
 
 import Carousel from "../overrides/common/embedded-video-carousel";
-import contentArray from './theme.SLR.introduction_sea_level_rise/carousel_content.json';
+import contentArray from './theme.SLR.introduction_sea_level_change/carousel_content.json';
 import { GridContainer, Grid } from '$veda-ui/@trussworks/react-uswds';
 
 
@@ -61,7 +61,7 @@ import { GridContainer, Grid } from '$veda-ui/@trussworks/react-uswds';
   </Prose>
     <Figure>
           <Image
-            src={new URL('./theme.SLR.introduction_sea_level_rise/oceans_spilhaus.jpg', import.meta.url).href}
+            src={new URL('./theme.SLR.introduction_sea_level_change/oceans_spilhaus.jpg', import.meta.url).href}
             alt="This image shows a stylized map projection of the Earth's oceans with a time-series plot overlaid on it. The y-axis of the plot is labeled 'Ocean Heat Increase since 1957 (zettajoules),' and the x-axis represents years from 1960 to 2020. The orange line graph indicates the trend of increasing ocean heat content over this period, with a notable rise from the 1980s onward. The map highlights major oceans, including the Arctic Ocean, North Atlantic Ocean, Indian Ocean, Southern Ocean, and the North and South Pacific Oceans, set against a dark background for visual contrast."
           />
         <Caption
@@ -79,4 +79,4 @@ import { GridContainer, Grid } from '$veda-ui/@trussworks/react-uswds';
   </Figure>
 </Block>
 
-<CardGallery title={"Sea Level Change Stories"} storyIds={seaLevelRiseStoryIds} />
+<CardGallery title={"Sea Level Change Stories"} storyIds={seaLevelChangeStoryIds} />
