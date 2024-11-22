@@ -64,12 +64,8 @@ export default function VisitGHG({
           <InfoImageContent>
             <div>
               <StyledVarHeading size="small" as="h2">
-                U.S. Greenhouse Gas Center
+                The U.S. Greenhouse Gas Center
               </StyledVarHeading>
-              <span>
-                Uniting Data and Technology to Empower Tomorrow's Climate
-                Solutions
-              </span>
               <Button
                 forwardedAs="a"
                 href="https://earth.gov/ghgcenter"

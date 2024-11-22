@@ -3,7 +3,7 @@ export default [
       link: 'https://earth.gov/ghgcenter',
       title: 'U.S. Greenhouse Gas Center',
       description: "The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort consolidating greenhouse gas information from observations and models.",
-      image: new URL('../media/ghgc.png', import.meta.url).href,
+      image: new URL('../media/ghgc-v2.jpg', import.meta.url).href,
       imageAlt: 'Earth with Greenhouse Gas Emissions shaded in red'
     },
     {
