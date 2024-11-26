@@ -5,7 +5,7 @@ export const themeLandingPageIds = [
   "disasters",
   "energy",
   "greenhouse_gases",
-  "sea-level-rise",
+  "sea-level-change",
   "wildfires",
   "water-resources",
 ];
@@ -65,8 +65,8 @@ export const greenhouseGasesStoryIds = [
   "introduction_greenhouse_gases"
 ];
 
-export const seaLevelRiseStoryIds = [
-  "introduction_sea_level_rise"
+export const seaLevelChangeStoryIds = [
+  "introduction_sea_level_change"
 ];
 
 export const wildfiresStoryIds = [
