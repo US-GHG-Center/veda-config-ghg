@@ -159,6 +159,18 @@ module.exports = {
       iconColor: { default: 'White', hover: '#175074' }
     }
   },
+  banner: {
+    headerText: 'An official website of the United States government',
+    headerActionText: "Here's how you know",
+    ariaLabel: 'Banner for official government website',
+    flagImgSrc: '/img/us_flag_small.png',
+    flagImgAlt: 'US flag',
+    leftGuidance: defaultGuidance.left,
+    rightGuidance: defaultGuidance.right,
+    className: '',
+    defaultIsOpen: false,
+    contentId: 'gov-banner-content'
+  },
   siteAlert: {
     content: `[Discover insights on how the COVID-19 pandemic](stories/life-of-water) impacted air quality worldwide, observed through NASA's satellite data.`,
     expires: '2026-08-03T12:00:00-04:00',
