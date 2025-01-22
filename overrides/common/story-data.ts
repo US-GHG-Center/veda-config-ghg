@@ -43,7 +43,6 @@ export const visitLocationAllFeaturesStoryIds = [
 
 export const airQualityStoryIds = [
   'air_quality_and_covid19',
-  'extra_air_pollution_burden',
   'exploring_nasa_aq_gis' 
 ];
 
