@@ -79,7 +79,7 @@ const SpacerDiv = styled.div`
 `
 export default function HomeComponent() {
   const description =
-    "The Earth Information Center consolidates data and insights on how Earth is changing from across the US federal government. Earth.gov is also the gateway to other interagency cooperative efforts for our planet, like the U.S. Greenhouse Gas Center.  Discover how these data are being used to prepare for climate change and mitigate, adapt and respond to environmental challenges across the country.  ";
+    "The Earth Information Center consolidates data on Earth science from across the US federal government. Earth.gov is also the gateway to other interagency cooperative efforts for our planet.  Discover why this data matters to us all.";
   return (
     <>
       <GradientWrapper>
