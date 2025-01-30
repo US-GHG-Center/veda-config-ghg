@@ -100,7 +100,7 @@ module.exports = {
 
   theme: {
     color: {
-      primary: "#082a64",
+      primary: "#0550d8",
       link: '#1565EF'
     },
     type: {

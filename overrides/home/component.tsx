@@ -89,26 +89,26 @@ export default function HomeComponent() {
         <Grid col={8} offset={2} className="font-heading-md margin-y-10">
           <h1 className="font-heading-2xl margin-y-6">Welcome</h1>
           <p className="margin-bottom-4 font-size-md-deprecated">
-            The U.S. Greenhouse Gas Center opens up access to trusted data on
-            greenhouse gases. This&nbsp;multi-agency effort consolidates
+            The Air Quality Portal opens up access to trusted data on
+            air quality. This&nbsp;multi-agency effort consolidates
             greenhouse gas information from observations and models to create a unified source for U.S. government and other datasets.
-            The&nbsp;goal of the US GHG Center is to provide decision makers with
+            The&nbsp;goal of the AQ portal is to provide decision makers with
             one location for data and analysis.
           </p>
           <Grid row>
             <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
-              <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
+              <CollecticonSpeechBalloon size='xlarge' color='#0550d8' className="grid-col-auto" />
             </Grid>
             <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-              <span className="margin-left-4 font-size-md-deprecated"> If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
+              <span className="margin-left-4 font-size-md-deprecated"> If you are interested in exploring partnership opportunities with the AQ Portal, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
             </Grid>
           </Grid>
           <Grid row>
             <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
-              <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
+              <CollecticonEnvelope size='xlarge' color='#0550d8' className="grid-col-auto" />
             </Grid>
             <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-              <span className="margin-left-4 font-size-md-deprecated"> To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>
+              <span className="margin-left-4 font-size-md-deprecated"> To get AQ portal updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>
             </Grid>
           </Grid>
           <Buttons className="margin-top-4">
@@ -132,7 +132,7 @@ export default function HomeComponent() {
               Joining forces for a better future
             </VarHeading>
             <p>
-              The US GHG Center is grateful for the support and expertise of our
+              The AQ Portal is grateful for the support and expertise of our
               valued, multi-agency collaborators: NASA, EPA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>

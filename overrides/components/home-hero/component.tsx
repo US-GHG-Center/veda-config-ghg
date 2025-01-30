@@ -76,7 +76,7 @@ export default function HomeHero(props) {
       <Constrainer>
         <PageHeroHGroup>
           <HeroHeadline>
-            <VarHeading size="jumbo">U.S. Greenhouse Gas Center</VarHeading>
+            <VarHeading size="jumbo">Air Quality Portal</VarHeading>
           </HeroHeadline>
           <Partners variation="negative" size="big" />
         </PageHeroHGroup>
