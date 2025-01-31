@@ -97,7 +97,7 @@ export default function HomeComponent() {
           </p>
           <Grid row>
             <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
-              <CollecticonSpeechBalloon size='xlarge' color='#0550d8' className="grid-col-auto" />
+              <CollecticonSpeechBalloon size='xlarge' color='#2C3E50' className="grid-col-auto" />
             </Grid>
             <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
               <span className="margin-left-4 font-size-md-deprecated"> If you are interested in exploring partnership opportunities with the AQ Portal, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
@@ -105,7 +105,7 @@ export default function HomeComponent() {
           </Grid>
           <Grid row>
             <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
-              <CollecticonEnvelope size='xlarge' color='#0550d8' className="grid-col-auto" />
+              <CollecticonEnvelope size='xlarge' color='#2C3E50' className="grid-col-auto" />
             </Grid>
             <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
               <span className="margin-left-4 font-size-md-deprecated"> To get AQ portal updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>

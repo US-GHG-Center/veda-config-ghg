@@ -100,12 +100,12 @@ module.exports = {
 
   theme: {
     color: {
-      primary: "#0550d8",
-      link: '#1565EF'
+      primary: "#2C3E50",
+      link: '#2980B9'
     },
     type: {
       base: {
-        color: '#1B2631',
+        color: '#34495E',
         family: '"Inter", sans-serif',
       },
     },
