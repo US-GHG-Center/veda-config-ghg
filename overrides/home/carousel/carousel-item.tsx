@@ -9,7 +9,7 @@ import {
 } from '$veda-ui/@trussworks/react-uswds';
 
 
-const progressColor = '#1565EF';
+const progressColor = '#2C3E50';
 
 const ProgressIndicator = styled.div`
   background-color: ${progressColor};
