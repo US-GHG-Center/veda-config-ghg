@@ -38,24 +38,23 @@ jobs:
     runs-on: ubuntu-latest
     needs: define-environment
     environment: ${{ needs.define-environment.outputs.env_name }}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Use Node.js ${{ env.NODE }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-node-modules
         with:
           path: |
@@ -64,7 +63,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
 
       - name: Cache dist
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dist
         with:
           path: dist
@@ -88,12 +87,12 @@ jobs:
     steps:
       # See comment on checks.yml - prep step
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
       - name: Restore node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-node-modules
         with:
           path: |
@@ -102,19 +101,19 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
 
       - name: Restore dist cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dist
         with:
           path: dist
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
 
       - name: Use Node.js ${{ env.NODE }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.DEPLOYMENT_ROLE_ARN }}
           role-session-name: "ghgc-dashboard-${{ needs.define-environment.outputs.env_name }}-deployment"
