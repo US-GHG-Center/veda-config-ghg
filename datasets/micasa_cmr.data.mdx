@@ -42,10 +42,10 @@ infoDescription: |
 
 
 layers:
-  - id: micasa-co2-flux-npp-m
+  - id: EMITL2BCH4ENH_001
     type: cmr
-    stacCol:  MICASA_FLUX_D
-    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/GESDISCCLD"
+    stacCol:  EMITL2BCH4ENH_001
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
     tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
     name: (Monthly Mean) Net Primary Production (NPP)
     description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
@@ -54,12 +54,11 @@ layers:
       - 0
       - 20
     sourceParams:
-      concept_id:	C3273638632-GES_DISC
+      concept_id:	C2748088093-LPCLOUD
       backend: rasterio
+      bands_regex:001/EMIT_L2B_CH4ENH_001
       bands:
-        - NPP
-        - B03
-        - B02
+        - 001
       minzoom: 0
       maxzoom: 20
 ---
