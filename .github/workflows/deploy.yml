@@ -11,6 +11,7 @@ on:
     branches:
     - main
     - develop
+    - fix/staging
 
 env:
   NODE: 20
@@ -26,6 +27,8 @@ jobs:
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
             echo "env_name=production" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" = "refs/heads/develop" ]; then
+            echo "env_name=staging" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref }}" = "refs/heads/fix/staging" ]; then
             echo "env_name=staging" >> $GITHUB_OUTPUT
           fi
       - name: Print the environment
@@ -79,7 +82,10 @@ jobs:
           GOOGLE_TAG_MANAGER_ID: ${{secrets.GOOGLE_TAG_MANAGER_ID}}
           GOOGLE_TAG_AUTH: ${{secrets.GOOGLE_TAG_AUTH}}
           GOOGLE_TAG_PREVIEW: ${{secrets.GOOGLE_TAG_PREVIEW}}
-        run: PUBLIC_URL="${{ vars.DOMAIN }}${{ vars.SUBPATH }}" yarn build  # vars.SUBPATH should include the preceeding slash /
+        run: |
+          ./.veda/veda --info
+          PUBLIC_URL="${{ vars.DOMAIN }}${{ vars.SUBPATH }}" yarn build 
+        #run: PUBLIC_URL="${{ vars.DOMAIN }}${{ vars.SUBPATH }}" yarn build  # vars.SUBPATH should include the preceeding slash /
 
   deploy:
     runs-on: ubuntu-latest
