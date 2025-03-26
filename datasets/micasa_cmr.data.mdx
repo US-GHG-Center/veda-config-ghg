@@ -42,23 +42,22 @@ infoDescription: |
 
 
 layers:
-  - id: EMITL2BCH4ENH_001
+  - id: tempo-l2
     type: cmr
-    stacCol:  EMITL2BCH4ENH_001
-    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    stacCol:  TEMPO_CLDO4_L2_V03
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LARC_CLOUD"
     tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
-    name: (Monthly Mean) Net Primary Production (NPP)
-    description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
+    name: TEMPO cloud pressure and fraction
+    description: Items in the collection TEMPO_CLDO4_L2_V03
     time_density: day
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      concept_id:	C2748088093-LPCLOUD
+      concept_id:	G3059360813-LARC_CLOUD
       backend: rasterio
-      bands_regex:001/EMIT_L2B_CH4ENH_001
       bands:
-        - 001
+        - 02/TEMPO_CLDO4_L2_V03_20230802T151249Z_S001G01
       minzoom: 0
       maxzoom: 20
 ---
