@@ -1,6 +1,6 @@
 ---
 id: micasa-carbonflux-grid-v1-cmr
-name:TEMPO cloud pressure and fraction
+name: TEMPO Cloud Pressure and Fraction
 description: Global, daily and monthly mean 0.1 degree resolution carbon fluxes from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE) derived from the MiCASA model, version 1
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
@@ -44,7 +44,7 @@ infoDescription: |
 layers:
   - id: tempo-l2
     type: cmr
-    stacCol:  TEMPO_CLDO4_L2_V03
+    stacCol: TEMPO_CLDO4_L2_V03
     stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LARC_CLOUD"
     tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
     name: TEMPO cloud pressure and fraction
@@ -58,7 +58,6 @@ layers:
       backend: rasterio
       bands:
         - 02/TEMPO_CLDO4_L2_V03_20230802T151249Z_S001G01
-
       minzoom: 0
       maxzoom: 20
 ---
