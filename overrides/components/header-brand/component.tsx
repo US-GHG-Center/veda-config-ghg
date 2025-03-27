@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
 import { Link } from "$veda-ui/react-router-dom";
+import LogoItem from './items';
 
 const Brand = styled.div`
   position: relative;
@@ -66,6 +67,11 @@ export default function HeaderComponent() {
     <Brand>
       <Link to="/">
         <Logo>
+        <img 
+            src={LogoItem.image} 
+            alt="AQ Portal Logo" 
+            width="100" 
+          />
           <span>AQ</span>
           <span>Portal</span>
         </Logo>
