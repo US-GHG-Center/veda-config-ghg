@@ -66,7 +66,6 @@ export default function HeaderComponent() {
   return (
     <Brand>
       <Link to="/">
-        <Logo>
         <img 
             src={LogoItem.image} 
             alt="AQ Portal Logo" 
@@ -74,7 +73,6 @@ export default function HeaderComponent() {
           />
           <span>AQ</span>
           <span>Portal</span>
-        </Logo>
       </Link>
       <VersionInfoLink to='/development'>Beta</VersionInfoLink>
     </Brand>
