@@ -71,8 +71,6 @@ export default function HeaderComponent() {
             alt="AQ Portal Logo" 
             width="100" 
           />
-          <span>AQ</span>
-          <span>Portal</span>
       </Link>
       <VersionInfoLink to='/development'>Beta</VersionInfoLink>
     </Brand>
