@@ -37,3 +37,7 @@
   .font-size-md-deprecated {
     font-size: calc(1rem + var(--base-text-increment, 0rem));
   }
+
+.usa-banner__button:after {
+  top: 0;
+}
