@@ -58,6 +58,37 @@ layers:
     projection:
       id: 'equirectangular'
     sourceParams:
+      layers: "CONUS_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178:None"
+    zoomExtent:
+      - 0
+      - 20
+    analysis:
+      exclude: true
+    legend:
+      type: gradient
+      min: 0
+      max: 46.4942
+      stops:
+        - '#000000'
+        - '#FFFFFF'
+    info:
+      source: USFS
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/year                  
+    media:
+      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
+  - id: CONUS_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178_attr_map_colorful
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    stacCol: conus_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178
+    name: Total Forest Carbon Attribute Map Colorful
+    type: wms
+    description: "Forest Carbon"
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    sourceParams:
       layers: "CONUS_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178:Total Forest Carbon Attribute Map Colorful"
     zoomExtent:
       - 0
@@ -67,20 +98,43 @@ layers:
     legend:
       type: gradient
       min: 0
-      max: 50
+      max: 46.4942
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'
+        - '#000000'
+        - '#FFFFFF'
     info:
-      source: NASA / NOAA
+      source: USFS
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/year                  
+    media:
+      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
+  - id: CONUS_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178_attr_map
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    stacCol: conus_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178
+    name: Total Forest Carbon Attribute Map
+    type: wms
+    description: "Forest Carbon"
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    sourceParams:
+      layers: "CONUS_total_forest_carbon_2018_tons_per_pixel_masked_202105172102178:Total Forest Carbon Attribute Map"
+    zoomExtent:
+      - 0
+      - 20
+    analysis:
+      exclude: true
+    legend:
+      type: gradient
+      min: 0
+      max: 46.4942
+      stops:
+        - '#000000'
+        - '#FFFFFF'
+    info:
+      source: USFS
       spatialExtent: Global
       temporalResolution: Monthly
       unit: g CH₄/m²/year                  
