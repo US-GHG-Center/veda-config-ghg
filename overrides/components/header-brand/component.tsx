@@ -1,9 +1,11 @@
 import React, { useLayoutEffect } from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
-import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
+import { glsp } from "$veda-ui/@devseed-ui/theme-provider";
 import { Link } from "$veda-ui/react-router-dom";
 
 import BrandLogo from "./logo.svg";
+
+import '/common/styles.scss';
 
 const Brand = styled.div`
   position: relative;
