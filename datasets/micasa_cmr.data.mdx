@@ -44,6 +44,8 @@ infoDescription: |
 layers:
   - id: tempo-l2
     type: cmr
+    stacCol: OCO2GriddedXCO2_4
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/cloudstac/GES_DISC"    
     tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
     name: TEMPO cloud pressure and fraction
     description: Items in the collection TEMPO_CLDO4_L2_V03
@@ -52,11 +54,10 @@ layers:
       - 0
       - 20
     sourceParams:
-      concept_id:	C1996881146-POCLOUD
-      variable: sea_ice_fraction
+      concept_id:	G3278593284-GES_DISC
       backend: xarray
       bands:
-        - 02/TEMPO_CLDO4_L2_V03_20230802T151249Z_S001G01
+        - 4/2014/OCO2GriddedXCO2_20140906_v4_1724366076
       minzoom: 0
       maxzoom: 20
       colormap_name: blues_r
