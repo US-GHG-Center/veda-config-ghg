@@ -8,7 +8,6 @@ import epaImg from "../media/epa.svg";
 import nasaImg from "../media/nasa.png";
 import noaaImg from "../media/noaa.png";
 import femaImg from "../media/fema.png";
-import usaidImg from "../media/usaid.png";
 import usdaImg from "../media/usda.png";
 import usgsImg from "../media/usgs.png";
 
@@ -74,11 +73,6 @@ export default function Partners(props: {
       href: "https://www.noaa.gov/",
       src: noaaImg,
       alt: "NOAA logo"
-    },
-    {
-      href: "https://www.usaid.gov/",
-      src: usaidImg,
-      alt: "USAID logo"
     },
     {
       href: "https://www.usda.gov/",
