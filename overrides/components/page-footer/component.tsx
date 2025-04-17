@@ -230,17 +230,12 @@ export default function PageFooter(props) {
             <FooterMenu>
               <li>
                 <FooterMenuLink to='/stories'>
-                  Stories
-                </FooterMenuLink>
-              </li>
-              <li>
-                <FooterMenuLink to='/topics'>
-                  Topics
+                  Applications
                 </FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink to='/data-toolkit'>
-                  Data Toolkit
+                  Explore Data
                 </FooterMenuLink>
               </li>
               <li>
@@ -286,7 +281,7 @@ export default function PageFooter(props) {
           <div>
             <div>
               <Link to="/">
-                <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
+                <span>By</span> <strong>US Air Quality Information Center</strong> <span>on</span>{" "}
                 <time dateTime={String(nowDate.getFullYear())}>
                   {nowDate.getFullYear()}
                 </time>
@@ -310,12 +305,8 @@ export default function PageFooter(props) {
               <Partners variation="positive" size="small" />
             </TintBox>
             <p>
-              U.S. Greenhouse Gas Center Responsible Official:{" "}
-              <a
-                {...getLinkProps("https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada")} 
-              >
-                <strong>Argyro Kavvada</strong>
-              </a>
+              U.S. Air Quality Information Center Responsible Officia:{" "}
+                <strong>Emma Knowland</strong>
             </p>
           </CreditsInfo>
         </FooterContacts>

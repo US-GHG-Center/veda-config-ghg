@@ -76,7 +76,7 @@ export default function HomeHero(props) {
       <Constrainer>
         <PageHeroHGroup>
           <HeroHeadline>
-            <VarHeading size="jumbo">Air Quality Portal</VarHeading>
+            <VarHeading size="jumbo">AIR4US</VarHeading>
           </HeroHeadline>
           <Partners variation="negative" size="big" />
         </PageHeroHGroup>

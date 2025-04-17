@@ -68,11 +68,9 @@ export default function HeaderComponent() {
       <Link to="/">
         <img 
             src={LogoItem.image} 
-            alt="AQ Portal Logo" 
+            alt="AAIR4US" 
             width="100" 
           />
-          <span>AQ</span>
-          <span>Portal</span>
       </Link>
       <VersionInfoLink to='/development'>Beta</VersionInfoLink>
     </Brand>

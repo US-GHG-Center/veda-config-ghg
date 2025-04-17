@@ -6,11 +6,9 @@ import { media } from "$veda-ui/@devseed-ui/theme-provider";
 
 import { getLinkProps } from "$veda-ui-scripts/utils/url";
 
-import epaImg from "../media/epa.svg";
+import haqastImg from "../media/haqast.png";
 import nasaImg from "../media/nasa.png";
-import nistImg from "../media/nist.png";
-import nistImgNeg from "../media/nist-neg.png";
-import noaaImg from "../media/noaa.png";
+
 
 
 
@@ -43,19 +41,8 @@ export default function Partners(props: {
       <a {...getLinkProps("https://www.nasa.gov/")}>
         <Image src={nasaImg} alt="NASA logo" height={squareLogoHeight} />
       </a>
-      <a {...getLinkProps("https://www.epa.gov/")}>
-        <Image src={epaImg} alt="EPA logo" height={squareLogoHeight} />
-      </a>
-      <a {...getLinkProps("https://www.nist.gov/")}>
-        {variation === "positive" ? (
-          <Image src={nistImg} alt="NIST logo" height={wideLogoHeight} />
-        ) : (
-          <Image src={nistImgNeg} alt="NIST logo" height={wideLogoHeight} />
-        )}
-      </a>
-
-      <a {...getLinkProps("https://www.noaa.gov/")}>
-        <Image src={noaaImg} alt="NOAA logo" height={squareLogoHeight} />
+      <a {...getLinkProps("https://haqast.org/")}>
+        <Image src={haqastImg} alt="HAQAST logo" height={squareLogoHeight} />
       </a>
     </LogoWrapper>
   );

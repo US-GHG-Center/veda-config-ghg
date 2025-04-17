@@ -3,17 +3,12 @@ const { parsed: config } = dotEnvConfig;
 
 const defaultMenuLinks = [
   {
-    title: 'Stories',
+    title: 'Applications',
     to: '/stories',
     type: 'internalLink'
   },
   {
-    title: 'Topics',
-    to: '/topics',
-    type: 'internalLink'
-  },
-  {
-    title: 'Data Toolkit',
+    title: 'Explore Data',
     to: '/data-toolkit',
     type: 'internalLink'
   },
@@ -77,7 +72,6 @@ module.exports = {
     pageFooter: "./overrides/components/page-footer/index.mdx",
     "/news-and-events": "./custom-pages/news-and-events/index.mdx",
     "/data-toolkit": "./custom-pages/data-toolkit/index.mdx",
-    "/topics": "./custom-pages/topics/index.mdx",
   },
 
   strings: {
