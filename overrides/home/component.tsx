@@ -133,7 +133,7 @@ export default function HomeComponent() {
             </VarHeading>
             <p>
               The AQ Portal is grateful for the support and expertise of our
-              valued, multi-agency collaborators: NASA, EPA, NIST, and NOAA.
+              valued, multi-agency collaborators: NASA and HAQAST.
             </p>
           </InfoCalloutHeadline>
           <Partners variation="positive" size="big" />
