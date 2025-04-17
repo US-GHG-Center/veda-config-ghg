@@ -1,7 +1,7 @@
 ---
-id: ct-ch4-monthgrid-v2023-dummy
+id: OMI_trno2-COG
 name: CarbonTracker-CH₄ Isotopic Methane Inverse Fluxes
-description: Global, monthly 1 degree resolution methane emission estimates from microbial, fossil and pyrogenic sources derived using inverse modeling, version 2023
+description: Global, monthly 0.25 degree resolution nitrogen dioxide emission, version 2023
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2023.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -27,27 +27,27 @@ taxonomy:
     values:
       - Anthropogenic Emissions
       - Natural Emissions and Sinks
-      - Methane           
+      - Nitrogen Dioxide           
   - name: Source
     values:
       - NASA
-      - NOAA
+      - OMI
   - name: Gas
     values:
-      - CH₄
+      - NO2₄
   - name: Product Type
     values:
-      - Ground Measurements
-      - Model Output
+      - Satellite Observations
+      - Inverse Modeling
 infoDescription: |
   ::markdown 
-    - Temporal Extent: January 1998 - December 2021
-    - Temporal Resolution: Monthly
-    - Spatial Extent: Global    
-    - Spatial Resolution: 1° x 1°   
-    - Data Units: Grams of methane per square meter per year (g CH₄/m²/year)       
-    - Data Type: Research
-    - Data Latency: Updated annually      
+    - Source: Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite.
+    - Resolution: 0.25° x 0.25° grid.
+    - Temporal Coverage: Daily measurements from October 2004 to present.
+    - Spatial Coverage: Global coverage.
+    - File Format: NetCDF, CSV, GeoTIFF.
+    - Applications: Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
+
 layers:
   - id: total-ch4
     stacCol: ct-ch4-monthgrid-v2023
@@ -278,7 +278,7 @@ layers:
 
 <Block>
   <Prose>   
-    **Temporal Extent:** January 1998 - December 2021<br />
+    **Source:** Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
     **Temporal Resolution:** Monthly<br />
     **Spatial Extent:** Global    
     **Spatial Resolution:** 1° x 1°   
@@ -292,71 +292,67 @@ layers:
 
   </Prose>
 </Block>
+
 <Block>
-  <Prose>
-    ## Source Data Product Citation
-    CarbonTracker CT-CH4-2023 results provided by NOAA GML, Boulder, Colorado, USA from the website at [https://doi.org/10.25925/40jt-qd67](https://doi.org/10.25925/40jt-qd67) 
-
-    ## Version History
-    The version was updated from v1 to v2023 in the US GHG Center in December 2024. Updates include:
-    - Expanded data availability from January 1998 - December 2021 (v1 data was only available for January 1999 - December 2016)
-    - Several adjustments were made to model inputs. For detailed version update information, please refer to: [https://gml.noaa.gov/ccgg/carbontracker-ch4/version.php](https://gml.noaa.gov/ccgg/carbontracker-ch4/version.php)
-    - The version of the data previously available in the US GHG Center (v1) remains accessible at [https://doi.org/10.5281/zenodo.8264108](https://doi.org/10.5281/zenodo.8264108)
-    - The STAC ID for the previous version in the [US GHG Center STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/earth.gov/ghgcenter/api/stac/?.language=en) is tm54dvar-ch4flux-monthgrid-v1 
-
-    ## Dataset Accuracy
-    Evaluating the accuracy and uncertainty of gridded emissions data is challenging because of the lack of direct physical measurements on grid scales. The emissions presented here were transported by an atmospheric model, and the resulting methane and ¹³C of methane fields were compared to atmospheric measurements of methane and ¹³C of methane globally over multiple decades. Under that transformation and within the bounds of model and observational uncertainty, these emissions satisfy the spatial patterns and time trends seen in the atmospheric measurements. More information about the model-data comparison and evaluation of the model results can be found at: [https://doi.org/10.25925/40jt-qd67](https://doi.org/10.25925/40jt-qd67).
-
-    ## Disclaimer
-    This dataset has been transformed from its original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
-
-    ## Scientific Details
-    Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Tracer Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). 
-
-    The atmospheric inverse model was run at 3° (longitude) x 2° (latitude) globally to estimate monthly surface emissions. The atmospheric inversion problem is under-constrained, and therefore inversely estimated emissions cannot be interpreted at the grid scale. Therefore, to present 1°x1° emission maps for the US GHG Center, prior 1°x1° emissions were scaled to match the posterior gridded monthly totals for each source type.
-
-    ## Key Publications
-    Oh, Y., Bruhwiler, L., Lan, X., Basu, S., Schuldt, K., Thoning, K., Michel, S. E., Clark, R., Miller, J. B., Andrews, A., Sherwood, O., Etiope, G., Crippa, M., Liu, L., Zhuang, Q., Randerson, J., van der Werf, G., Aalto, T., Amendola, S., … Xueref-Remy, I. (2023). CarbonTracker-CH4 Documentation CT-CH4 2023 release. [https://gml.noaa.gov/ccgg/carbontracker-ch4/documentation.php](https://gml.noaa.gov/ccgg/carbontracker-ch4/documentation.php)
-
-    Lan, X., Schuldt, K., Michel, S. E., Mund, J., Bruhwiler, L., Oh, Y., Basu, S., Thoning, K., Clark, R., Miller, J. B., Andrews, A., Dlugokencky, E., Tans, P., Aalto, T., Amendola, S., Andra, S., C., Andrade, M., Nguyen, N. A., Aoki, S., … Xueref-Remy, I. "Database of Methane (CH4) Abundance and Its Stable Carbon Isotope (d13C-CH4) Composition from Atmospheric Measurements Used Infor CarbonTracker-CH4 2023." NOAA Global Monitoring Laboratory, 2023. [https://doi.org/10.15138/T4MZ-2Z29](https://doi.org/10.15138/T4MZ-2Z29)
-
-    Basu, S., Lan, X., Dlugokencky, E., Michel, S., Schwietzke, S., Miller, J. B., Bruhwiler, L., Oh, Y., Tans, P. P., Apadula, F., Gatti, L. V., Jordan, A., Necki, J., Sasakawa, M., Morimoto, S., Di Iorio, T., Lee, H., Arduini, J., and Manca, G. (2022). Estimating emissions of methane consistent with atmospheric measurements of methane and δ¹³C of methane. *Atmospheric Chemistry and Physics, 22*(23), 15351–15377. [https://doi.org/10.5194/acp-22-15351-2022](https://doi.org/10.5194/acp-22-15351-2022)
-
-    Lan, X., Basu, S., Schwietzke, S., Bruhwiler, L. M. P., Dlugokencky, E. J., Michel, S. E., Sherwood, O. A., Tans, P. P., Thoning, K., Etiope, G., Zhuang, Q., Liu, L., Oh, Y., Miller, J. B., Pétron, G., Vaughn, B. H., & Crippa, M. (2021). Improved Constraints on Global Methane Emissions and Sinks Using δ¹³C-CH₄. *Global Biogeochemical Cycles, 35*, e2021GB007000. [https://doi.org/10.1029/2021GB007000](https://doi.org/10.1029/2021GB007000)
-
-    Bruhwiler, L., Dlugokencky, E., Masarie, K., Ishizawa, M., Andrews, A., Miller, J., Sweeney, C., Tans, P. & Worthy, D. (2014). CarbonTracker-CH4: an assimilation system for estimating emissions of atmospheric methane. *Atmospheric Chemistry and Physics, 14*(16), 8269-8293. [https://doi.org/10.5194/acp-14-8269-2014](https://doi.org/10.5194/acp-14-8269-2014)
-
-    ## Other Relevant Publications
-    Michel, S. E., Lan, X., Miller, J., Tans, P., Clark, J. R., Schaefer, H., Sperlich, P., Brailsford, G., Morimoto, S., Moossen, H. & Li, J. (2024). Rapid shift in methane carbon isotopes suggests microbial emissions drove record high atmospheric methane growth in 2020–2022. *Proceedings of the National Academy of Sciences, 121*(44), e2411212121. [https://doi.org/10.1073/pnas.2411212121](https://doi.org/10.1073/pnas.2411212121)
-
-    Lan, X., Nisbet, E. G., Dlugokencky, E. J., & Michel, S. E. (2021). What do we know about the global methane budget? Results from four decades of atmospheric CH₄ observations and the way forward. *Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 379*, 20200440. [https://doi.org/10.1098/rsta.2020.0440](https://doi.org/10.1098/rsta.2020.0440)
-
-    Nisbet, E. G., Dlugokencky, E. J., Manning, M. R., Lowry, D., Fisher, R. E., France, J. L., Michel, S. E., Miller, J. B., White, J. W. C., Vaughn, B., Bousquet, P., Pyle, J. A., Warwick, N. J., Cain, M., Brownlow, R., Zazzeri, G., Lanoisellé, M., Manning, A. C., Gloor, E., … Ganesan, A. L. (2016). Rising atmospheric methane: 2007–2014 growth and isotopic shift. *Global Biogeochemical Cycles, 30*, 1356–1370. [https://doi.org/10.1002/2016GB005406](https://doi.org/10.1002/2016GB005406) 
-
-    Saunois, M., Stavert, A. R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R. B., Raymond, P. A., Dlugokencky, E. J., Houweling, S., Patra, P. K., Ciais, P., Arora, V. K., Bastviken, D., Bergamaschi, P., Blake, D. R., Brailsford, G., Bruhwiler, L., Carlson, K. M., Carrol, M., … Zhuang, Q. (2020). The Global Methane Budget 2000-2017. *Earth System Science Data, 12*, 1561–1623. [https://doi.org/10.5194/essd-12-1561-2020](https://doi.org/10.5194/essd-12-1561-2020)
-
-    Schaefer, H., Fletcher, S. E. M., Veidt, C., Lassey, K. R., Brailsford, G. W., Bromley, T. M., Dlugokencky, E. J., Michel, S. E., Miller, J. B., Levin, I., Lowe, D. C., Martin, R. J., Vaughn, B. H., & White, J. W. C. (2016). A 21st century shift from fossil-fuel to biogenic methane emissions indicated by 13CH₄. *Science, 352*(6281), 80-84. [https://doi.org/10.1126/science.aad2705](https://doi.org/10.1126/science.aad2705)
-
-    Schwietzke, S., Sherwood, O. A., Bruhwiler, L. M. P., Miller, J. B., Etiope, G., Dlugokencky, E. J., Michel, S. E., Arling, V. A., Vaughn, B. H., White, J. W. C., & Tans, P. P. (2016). Upward revision of global fossil fuel methane emissions based on isotope database. *Nature, 538*, 88–91. [https://doi.org/10.1038/nature19797](https://doi.org/10.1038/nature19797) 
-
-    Sherwood, O. A., Schwietzke, S., & Lan, X. (2021). Global Inventory of Fossil and Non-fossil δ13C-CH₄ Source Signature Measurements for Improved Atmospheric Modeling, Database DOI: [https://doi.org/10.15138/qn55-e011](https://doi.org/10.15138/qn55-e011)
-
-    ## Learn More
-    - Learn more about [CarbonTracker-CH₄ at NOAA](https://gml.noaa.gov/ccgg/carbontracker-ch4/carbontracker-ch4-2023/)
-    - Learn more about methane isotopes on [NOAA’s website](https://research.noaa.gov/2021/06/17/new-analysis-shows-microbial-sources-fueling-rise-of-atmospheric-methane/)
-    - Check out this dataset mentioned in the <Link to={"/stories/modeling-natural-methane-emissions"}>Models and Observations Combine to Uncover Drivers of Natural Methane Emissions story</Link>
-    - Discover how different methane isotopes can help identify methane sources in the <Link to={"/stories/tracking-greenhouse-gas-cycles"}>Tracking Greenhouse Gas Cycles story</Link>
-
-    ## Acknowledgment
-    This work was supported by funding from the National Aeronautics and Space Administration (NASA) and the National Oceanic and Atmospheric Administration (NOAA). Measurements of atmospheric methane and ¹³C of methane were supported by several partner agencies and laboratories globally as described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022) and [Lan et al. 2023](https://gml.noaa.gov/ccgg/arc/?id=166).
-
-    ## License
-    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
-
-    ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/ct-ch4-monthgrid-v2023_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2023.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/ct-ch4-monthgrid-v2023_Processing%20and%20Verification%20Report.html)
-
+  <Prose>   
+    ## Data Preparation
+    The dataset undergoes rigorous processing:
+    Raw measurements are adjusted for cloud cover and surface reflectivity.
+    Validation is performed using ground-based observations like those from the EPA’s monitoring stations.
+    Preprocessing includes unit conversions (e.g., Dobson Units to mol/m²) and spatial averaging for usability.
   </Prose>
 </Block>
+
+<Block>
+  <Prose>
+    ## Applications and Use Cases
+    - Assessing health impacts of NO₂ exposure in collaboration with public health organizations.
+    - Tracking urban air pollution trends using HAQAST tools like the Urban Air Quality Explorer.
+    - Supporting regulatory frameworks like EPA’s AirNow system with satellite-derived insights.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Acknowledgements
+       NASA Earth Science Division.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+## FAQs
+- 1. What is NO₂?
+NO₂ is a harmful air pollutant primarily emitted from vehicles, power plants, and industrial activities. It contributes to respiratory issues and environmental degradation.
+- 2. How can I use this dataset?
+Applications include air quality monitoring, urban planning, climate modeling, and public health assessments.
+- 3. What tools are available for data analysis?
+Tools such as Jupyter Notebooks (links), VEDA visualization platform (links),  and Earthdata Search can be used to analyze this dataset.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+## Scientific Resources
+- User guide:  for dataset navigation.
+- Algorithm theoretical basis documents (ATBD) detailing data processing methods.
+- Key publications:  (add the best that describes the data )
+- User Jupyter Notebook: 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Disclaimer
+    The dataset is provided "as is" without warranty of accuracy for specific applications. Users are advised to verify its suitability for their intended use cases. This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+    This data is published for research academic and related non-commercial purposes. Creative Commons Zero v1.0 Universal (CC0 1.0).
+  </Prose>
+</Block>
+
