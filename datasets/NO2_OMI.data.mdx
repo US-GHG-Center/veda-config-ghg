@@ -145,29 +145,22 @@ layers:
       unit: N/A
 ---
 
-<Block
-  style={{
-    display: 'flex',
-    justifyContent: 'center', // Center the whole row horizontally
-    alignItems: 'flex-start', // Align items to the top
-    width: '100%',
-    gap: '32px', // Space between the two blocks
-    margin: '0 auto'
-  }}
->
-  {/* Centered Main Text */}
-  <Block
+<Block>
+  <Prose
     style={{
-      flex: 1,
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'flex-start',
+      gap: '32px',
+      width: '100%'
     }}
   >
+    {/* Main Centered Text */}
     <Prose
       style={{
-        textAlign: 'justify',
-        maxWidth: '600px'
+        flex: 1,
+        maxWidth: '600px',
+        textAlign: 'justify'
       }}
     >
       <p>
@@ -175,23 +168,15 @@ layers:
         The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
       </p>
     </Prose>
-  </Block>
 
-  {/* Right-aligned Gray Box */}
-  <Block
-    style={{
-      display: 'flex',
-      justifyContent: 'flex-end',
-      alignItems: 'flex-start',
-      minWidth: '420px' // Ensures the box stays on the right
-    }}
-  >
+    {/* Right-aligned Gray Info Box */}
     <Prose
       style={{
         backgroundColor: '#f0f0f0',
         padding: '24px',
         borderRadius: '8px',
         maxWidth: '400px',
+        minWidth: '320px',
         boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
         textAlign: 'justify'
       }}
@@ -206,8 +191,9 @@ layers:
         <strong>Applications:</strong> Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
       </p>
     </Prose>
-  </Block>
+  </Prose>
 </Block>
+
 
 {/*
 <Block
