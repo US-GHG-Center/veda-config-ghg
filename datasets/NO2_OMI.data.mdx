@@ -1,30 +1,29 @@
 ---
-id: OMI_trno2-COG
-name: CarbonTracker-CH₄ Isotopic Methane Inverse Fluxes
-description: Global, monthly 0.25 degree resolution nitrogen dioxide emission, version 2023
+id: no2
+name: OMI/Aura Nitrogen Dioxide-NO₂ Total and Tropospheric Column
+description: Global, monthly 0.25 degree resolution nitrogen dioxide emission.
 media:
-  src: ::file ./media/ct-ch4-monthgrid-v2023-cover.jpg
-  alt: Landfill
+  src: ::file ./media/OMI_global.jpg
+  alt: Science and Data
   author:
-    name:  Figure by Matt Ziminski and Youmi Oh
-    url:  https://gml.noaa.gov/ccgg/carbontracker-ch4/
+    name:  Figure by NASA Science and Data
+    url:  https://aura.gsfc.nasa.gov/omi.html/
 taxonomy:
   - name: Topics
     values:
       - Anthropogenic Emissions
       - Natural Emissions and Sinks
-      - Nitrogen Dioxide           
+      - Air Quality           
   - name: Source
     values:
       - NASA
       - OMI
   - name: Gas
     values:
-      - NO2₄
+      - NO₂
   - name: Product Type
     values:
       - Satellite Observations
-      - Inverse Modeling
 infoDescription: |
   ::markdown 
     - Source: Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite.
@@ -35,94 +34,195 @@ infoDescription: |
     - Applications: Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
 
 layers:
-  - id: OMI_trno2-COG
-    stacCol: ct-ch4-monthgrid-v2023
+  - id: no2-monthly
+    stacCol: no2-monthly
     tileApiEndpoint: "https://openveda.cloud/api/raster"
     stacApiEndpoint: "https://openveda.cloud/api/stac/no2-monthly"
-    name: "OMI NO2"
+
+    name: Nitrogen Dioxide (monthly)
     type: raster
-    description: Total methane emission from microbial, fossil and pyrogenic sources.
-    initialDatetime: newest
-    projection:
-      id: 'equirectangular'
+    description: 'Global nitrogen dioxide (NO₂) data organized into monthly metrics'
     zoomExtent:
       - 0
-      - 0
+      - 20
     sourceParams:
-      assets: total
-      colormap_name: purd
+      resampling: bilinear
+      bidx: 1
+      color_formula: gamma r 1.05
+      colormap_name: rdbu_r
       rescale:
         - 0
-        - 50
+        - 1.5e16
+    compare:
+      datasetId: no2
+      layerId: no2-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "Less"
+      max: "More"
+      stops:
+        - "#3A88BD"
+        - "#C9E0ED"
+        - "#E4EEF3"
+        - "#FDDCC9"
+        - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
 
+  - id: no2-monthly-diff
+    stacCol: no2-monthly-diff
+    name: Nitrogen Dioxide (monthly difference)
+    type: raster
+    description: 'Global nitrogen dioxide (NO₂) data which displays the difference from the same time 1 month ago'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: rdbu_r
+      rescale:
+        - -3e15
+        - 3e15
+    compare:
+      datasetId: no2
+      layerId: no2-monthly-diff
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "< -3"
+      max: "> 3"
+      stops:
+        - "#3A88BD"
+        - "#C9E0ED"
+        - "#E4EEF3"
+        - "#FDDCC9"
+        - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
+  - id: OMI_trno2-COG
+    stacCol: OMI_trno2-COG
+    name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
+    type: raster
+    description: "NASA OMI/Aura Nitrogen Dioxide (NO₂) Total and Tropospheric Column"
+    zoomExtent:
+      - 0
+      - 16
+    sourceParams:
+      colormap_name: reds
+      rescale:
+        - 0
+        - 30E14
     legend:
       unit:
-        label: g CH₄/m²/year
+        label: mol/cm2
       type: gradient
       min: 0
-      max: 50
+      max: 30e14
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'
-    analysis:
-      metrics:
-        - mean
-      sourceParams:
-        
-        dst_crs: "+proj=cea"
+        - '#ffffff'
+        - '#fdd1bf'
+        - '#e02d26'
+        - '#67000c'
     info:
-      source: NASA / NOAA
+      source: NASA
       spatialExtent: Global
-      temporalResolution: Monthly
-      unit: g CH₄/m²/year                  
-    media:
-      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
-      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
-  
-
+      temporalResolution: Monthly 
+      unit: N/A
 ---
 
 <Block>
-  <Prose>   
-    **Source:** Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
-    **Temporal Resolution:** Monthly<br />
-    **Spatial Extent:** Global    
-    **Spatial Resolution:** 1° x 1°   
-    **Data Units:** Grams of methane per square meter per year (g CH₄/m²/year)       
-    **Data Type:** Research<br />
-    **Data Latency:** Updated annually
-
-    Surface methane (CH₄) emissions are derived from atmospheric measurements of methane and its ¹³C carbon isotope content. Different sources of methane contain different ratios of the two stable isotopologues, ¹²CH₄ and ¹³CH₄. This makes normally indistinguishable collocated sources of methane, say from agriculture and oil and gas exploration, distinguishable. The National Oceanic and Atmospheric Administration (NOAA) collects whole air samples from its global cooperative network of flasks (https://gml.noaa.gov/ccgg/about.html), which are then analyzed for methane and other trace gases. A subset of those flasks are also analyzed for ¹³C of methane in collaboration with the Institute of Arctic and Alpine Research at the University of Colorado Boulder. The ground and airborne CH₄ and ¹³CH₄ data used to optimize the methane emissions for CarbonTracker-CH₄ are publicly available by [Lan et al. 2023](https://gml.noaa.gov/ccgg/arc/?id=166). 
-    
-    Scientists at NOAA and the National Aeronautics and Space Administration (NASA) used those measurements of methane and ¹³C of methane in conjunction with a model of atmospheric circulation to estimate emissions of methane separated by three source types, microbial, fossil and pyrogenic. Microbial emissions are produced by microbial decomposition of present-day organic matter, such as in wetlands, agricultural fields, livestock and landfills. Fossil emissions come from the breakdown of ancient carbonaceous matter deep underground, such as natural gas, coal bed methane, and small amounts of naturally occurring geologic seeps. Finally, pyrogenic emissions come from the burning of present-day organic matter, such as from wildfires and biofuels. These three sources of methane come with slightly different ¹³C content, and therefore can be separated given enough atmospheric measurements. This dataset presents monthly methane emissions from microbial, fossil and pyrogenic sources, along with a layer of total methane emissions from all three sources combined, at 1° resolution from 1998 to 2021.
-  </Prose>
-</Block>
-
-
-<Block>
-  <Prose>   
-    ## Data Preparation
-    ***The dataset undergoes rigorous processing:***
-    Raw measurements are adjusted for cloud cover and surface reflectivity.
-    Validation is performed using ground-based observations like those from the EPA’s monitoring stations.
-    Preprocessing includes unit conversions (e.g., Dobson Units to mol/m²) and spatial averaging for usability.
+  <Prose style={{ 
+    backgroundColor: '#f0f0f0', 
+    padding: '16px 20px', 
+    borderRadius: '6px', 
+    maxWidth: '420px', 
+    textAlign: 'left',
+    marginBottom: '24px'
+  }}>
+    <p>
+      <strong>Source:</strong> Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
+      <strong>Temporal Resolution:</strong> Daily measurements from October 2004 to present<br />
+      <strong>Spatial Extent:</strong> Global<br />
+      <strong>Spatial Resolution:</strong> 0.25° x 0.25°<br />
+      <strong>Data Units:</strong> molecules per square centimeter (molec. cm²)<br />
+      <strong>File Format:</strong> NetCDF, CSV, GeoTIFF<br />
+      <strong>Applications:</strong> Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
+    </p>
   </Prose>
 </Block>
 
 <Block>
   <Prose>
+  <p>
+    Nitrogen dioxide (NO₂) is a major air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and increased risk of infection, especially in children and individuals with asthma. Monitoring NO₂ is crucial for understanding urban pollution, tracking industrial emissions, and assessing environmental changes. 
+  </p>
+  <p>  
+    The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
+  </p>  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>   
+    ## Data Preparation
+    <p>
+      The dataset undergoes comprehensive processing to ensure accuracy, beginning with adjustments for cloud cover and surface reflectivity using Moderate Resolution Imaging Spectroradiometer (MODIS) Bidirectional Reflectance Distribution Function (BRDF) data to enhance retrieval quality over both land and water. The nitrogen dioxide algorithm employs spectral fitting in the 405–465 nanometer range via the Differential Optical Absorption Spectroscopy (DOAS) technique to convert slant column densities into vertical column densities, with synthetic spectra and Global Ozone Monitoring Experiment (GOME) observational data used to validate the method. Additionally, ground-based measurements provide localized tropospheric NO₂ estimates to further validate satellite observations.
+    </p>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  <p>
     ## Applications and Use Cases
     - Assessing health impacts of NO₂ exposure in collaboration with public health organizations.
     - Tracking urban air pollution trends using HAQAST tools like the Urban Air Quality Explorer.
     - Supporting regulatory frameworks like EPA’s AirNow system with satellite-derived insights.
+  </p>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    <p>
+    ## FAQs
+    **1. What is NO₂?**  
+    NO₂ is a harmful air pollutant primarily emitted from vehicles, power plants, and industrial activities. It contributes to respiratory issues and environmental degradation.
+     
+    **2. How does nitrogen dioxide interact with other air pollutants?**  
+    Nitrogen dioxide (NO₂) reacts with volatile organic compounds and sunlight to form harmful secondary pollutants like ground-level ozone and fine particulate matter, which contribute to smog and respiratory problems. It also combines with water vapor to create acid rain and nitrate particles, worsening air quality and environmental damage.
+
+    **3. How can I use this dataset?**  
+    Applications include air quality monitoring, urban planning, climate modeling, and public health assessments.
+
+    **4. What tools are available for data analysis?**  
+    Tools such as Jupyter Notebooks, the [VEDA visualization platform](#), and [Earthdata Search](https://search.earthdata.nasa.gov/) can be used to analyze this dataset.
+    </p>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+## Scientific Resources
+- [User guide for dataset navigation](https://disc.gsfc.nasa.gov/datasets?page=1&source=AURA%20OMI)
+- Algorithm theoretical basis documents (ATBD) detailing data processing methods. [ATBD](https://eospso.nasa.gov/atbd-category/49)
+- Key publications: References: Krotkov, N. A., McLinden, C. A., Li, C., Lamsal, L. N., Celarier, E. A., Marchenko, S. V., Swartz, W. H., Bucsela, E. J., Joiner, J., Duncan, B. N., Boersma, K. F., Veefkind, J. P., Levelt, P. F., Fioletov, V. E., Dickerson, R. R., He, H., Lu, Z., and Streets, D. G.: Aura OMI observations of regional SO2 and NO2 pollution changes from 2005 to 2015, Atmos. Chem. Phys., 16, 4605-4629, doi:10.5194/acp-16-4605-2016, 2016. Duncan, B. N., Lamsal, L. N., Thompson, A. M., Yoshida, Y., Lu, Z., Streets, D. G., Hurwitz, M. M. and Pickering, K. E.: A space-based, high-resolution view of notable changes in urban NOx pollution around the world (2005-2014), J. Geophys. Res. Atmos., 121(2), 976-996, doi:10.1002/2015JD024121, 2016.
+- User Jupyter Notebook: TBD
   </Prose>
 </Block>
 
@@ -135,34 +235,10 @@ layers:
 
 <Block>
   <Prose>
-    ## FAQs
-
-    **1. What is NO₂?**  
-    NO₂ is a harmful air pollutant primarily emitted from vehicles, power plants, and industrial activities. It contributes to respiratory issues and environmental degradation.
-
-    **2. How can I use this dataset?**  
-    Applications include air quality monitoring, urban planning, climate modeling, and public health assessments.
-
-    **3. What tools are available for data analysis?**  
-    Tools such as Jupyter Notebooks, the [VEDA visualization platform](#), and [Earthdata Search](https://search.earthdata.nasa.gov/) can be used to analyze this dataset.
-  </Prose>
-</Block>
-
-
-<Block>
-  <Prose>
-## Scientific Resources
-**User guide:  for dataset navigation.**
-** Algorithm theoretical basis documents (ATBD) detailing data processing methods.**
-**Key publications:  (add the best that describes the data )**
-** User Jupyter Notebook: **
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
+  <p>
     ## Disclaimer
-    The dataset is provided "as is" without warranty of accuracy for specific applications. Users are advised to verify its suitability for their intended use cases. This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+    This dataset is provided "as is" and users are encouraged to verify its suitability for their intended purposes. This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+  </p>
   </Prose>
 </Block>
 
