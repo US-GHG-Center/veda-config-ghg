@@ -146,14 +146,7 @@ layers:
 ---
 
 <Block>
-  <Prose style={{ 
-    backgroundColor: '#f0f0f0', 
-    padding: '16px 20px', 
-    borderRadius: '6px', 
-    maxWidth: '420px', 
-    textAlign: 'left',
-    marginBottom: '24px'
-  }}>
+  <Prose>
     <p>
       <strong>Source:</strong> Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
       <strong>Temporal Resolution:</strong> Daily measurements from October 2004 to present<br />
@@ -168,63 +161,25 @@ layers:
 
 <Block>
   <Prose>
-  <p>
-    Nitrogen dioxide (NO₂) is a major air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and increased risk of infection, especially in children and individuals with asthma. Monitoring NO₂ is crucial for understanding urban pollution, tracking industrial emissions, and assessing environmental changes. 
-  </p>
-  <p>  
-    The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
-  </p>  
+    <p>
+      Nitrogen dioxide (NO₂) is a major air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and increased risk of infection, especially in children and individuals with asthma. Monitoring NO₂ is crucial for understanding urban pollution, tracking industrial emissions, and assessing environmental changes. 
+    </p>
+    <p>  
+        The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
+    </p>  
   </Prose>
 </Block>
 
 <Block>
-  <Prose>   
+  <Prose> 
+   <p>  
     ## Data Preparation
-    <p>
-      The dataset undergoes comprehensive processing to ensure accuracy, beginning with adjustments for cloud cover and surface reflectivity using Moderate Resolution Imaging Spectroradiometer (MODIS) Bidirectional Reflectance Distribution Function (BRDF) data to enhance retrieval quality over both land and water. The nitrogen dioxide algorithm employs spectral fitting in the 405–465 nanometer range via the Differential Optical Absorption Spectroscopy (DOAS) technique to convert slant column densities into vertical column densities, with synthetic spectra and Global Ozone Monitoring Experiment (GOME) observational data used to validate the method. Additionally, ground-based measurements provide localized tropospheric NO₂ estimates to further validate satellite observations.
+        The dataset undergoes comprehensive processing to ensure accuracy, beginning with adjustments for cloud cover and surface reflectivity using Moderate Resolution Imaging Spectroradiometer (MODIS) Bidirectional Reflectance Distribution Function (BRDF) data to enhance retrieval quality over both land and water. The nitrogen dioxide algorithm employs spectral fitting in the 405–465 nanometer range via the Differential Optical Absorption Spectroscopy (DOAS) technique to convert slant column densities into vertical column densities, with synthetic spectra and Global Ozone Monitoring Experiment (GOME) observational data used to validate the method. Additionally, ground-based measurements provide localized tropospheric NO₂ estimates to further validate satellite observations.
     </p>
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-  <p>
-    ## Applications and Use Cases
-    - Assessing health impacts of NO₂ exposure in collaboration with public health organizations.
-    - Tracking urban air pollution trends using HAQAST tools like the Urban Air Quality Explorer.
-    - Supporting regulatory frameworks like EPA’s AirNow system with satellite-derived insights.
-  </p>
-  </Prose>
-</Block>
 
-<Block>
-  <Prose>
-    <p>
-    ## FAQs
-    **1. What is NO₂?**  
-    NO₂ is a harmful air pollutant primarily emitted from vehicles, power plants, and industrial activities. It contributes to respiratory issues and environmental degradation.
-     
-    **2. How does nitrogen dioxide interact with other air pollutants?**  
-    Nitrogen dioxide (NO₂) reacts with volatile organic compounds and sunlight to form harmful secondary pollutants like ground-level ozone and fine particulate matter, which contribute to smog and respiratory problems. It also combines with water vapor to create acid rain and nitrate particles, worsening air quality and environmental damage.
-
-    **3. How can I use this dataset?**  
-    Applications include air quality monitoring, urban planning, climate modeling, and public health assessments.
-
-    **4. What tools are available for data analysis?**  
-    Tools such as Jupyter Notebooks, the [VEDA visualization platform](#), and [Earthdata Search](https://search.earthdata.nasa.gov/) can be used to analyze this dataset.
-    </p>
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-## Scientific Resources
-- [User guide for dataset navigation](https://disc.gsfc.nasa.gov/datasets?page=1&source=AURA%20OMI)
-- Algorithm theoretical basis documents (ATBD) detailing data processing methods. [ATBD](https://eospso.nasa.gov/atbd-category/49)
-- Key publications: References: Krotkov, N. A., McLinden, C. A., Li, C., Lamsal, L. N., Celarier, E. A., Marchenko, S. V., Swartz, W. H., Bucsela, E. J., Joiner, J., Duncan, B. N., Boersma, K. F., Veefkind, J. P., Levelt, P. F., Fioletov, V. E., Dickerson, R. R., He, H., Lu, Z., and Streets, D. G.: Aura OMI observations of regional SO2 and NO2 pollution changes from 2005 to 2015, Atmos. Chem. Phys., 16, 4605-4629, doi:10.5194/acp-16-4605-2016, 2016. Duncan, B. N., Lamsal, L. N., Thompson, A. M., Yoshida, Y., Lu, Z., Streets, D. G., Hurwitz, M. M. and Pickering, K. E.: A space-based, high-resolution view of notable changes in urban NOx pollution around the world (2005-2014), J. Geophys. Res. Atmos., 121(2), 976-996, doi:10.1002/2015JD024121, 2016.
-- User Jupyter Notebook: TBD
-  </Prose>
-</Block>
 
 <Block>
   <Prose>
@@ -235,13 +190,12 @@ layers:
 
 <Block>
   <Prose>
-  <p>
-    ## Disclaimer
-    This dataset is provided "as is" and users are encouraged to verify its suitability for their intended purposes. This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
-  </p>
+    <p>
+      ## Disclaimer
+      This dataset is provided "as is" and users are encouraged to verify its suitability for their intended purposes. This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+    </p>
   </Prose>
 </Block>
-
 
 <Block>
   <Prose>
