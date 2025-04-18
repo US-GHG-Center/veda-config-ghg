@@ -148,6 +148,71 @@ layers:
 <Block
   style={{
     display: 'flex',
+    justifyContent: 'center', // Center the whole row horizontally
+    alignItems: 'flex-start', // Align items to the top
+    width: '100%',
+    gap: '32px', // Space between the two blocks
+    margin: '0 auto'
+  }}
+>
+  {/* Centered Main Text */}
+  <Block
+    style={{
+      flex: 1,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}
+  >
+    <Prose
+      style={{
+        textAlign: 'justify',
+        maxWidth: '600px'
+      }}
+    >
+      <p>
+        Nitrogen dioxide (NO₂) is a major air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and increased risk of infection, especially in children and individuals with asthma. Monitoring NO₂ is crucial for understanding urban pollution, tracking industrial emissions, and assessing environmental changes. <br />
+        The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
+      </p>
+    </Prose>
+  </Block>
+
+  {/* Right-aligned Gray Box */}
+  <Block
+    style={{
+      display: 'flex',
+      justifyContent: 'flex-end',
+      alignItems: 'flex-start',
+      minWidth: '420px' // Ensures the box stays on the right
+    }}
+  >
+    <Prose
+      style={{
+        backgroundColor: '#f0f0f0',
+        padding: '24px',
+        borderRadius: '8px',
+        maxWidth: '400px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+        textAlign: 'justify'
+      }}
+    >
+      <p>
+        <strong>Source:</strong> Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
+        <strong>Temporal Resolution:</strong> Daily measurements from October 2004 to present<br />
+        <strong>Spatial Extent:</strong> Global<br />
+        <strong>Spatial Resolution:</strong> 0.25° x 0.25°<br />
+        <strong>Data Units:</strong> molecules per square centimeter (molec. cm²)<br />
+        <strong>File Format:</strong> NetCDF, CSV, GeoTIFF<br />
+        <strong>Applications:</strong> Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
+      </p>
+    </Prose>
+  </Block>
+</Block>
+
+{/*
+<Block
+  style={{
+    display: 'flex',
     justifyContent: 'flex-end', // Align content to the right
     width: '100%',
     margin: '0 auto'
@@ -174,6 +239,7 @@ layers:
     </p>
   </Prose>
 </Block>
+*/}
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
