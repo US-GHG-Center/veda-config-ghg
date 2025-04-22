@@ -76,8 +76,8 @@ module.exports = {
 
   strings: {
     stories: {
-      one: "Story",
-      other: "Stories",
+      one: "Application",
+      other: "Applications",
     },
     storiesBanner:
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
