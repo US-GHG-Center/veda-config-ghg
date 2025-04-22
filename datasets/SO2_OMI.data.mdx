@@ -1,6 +1,6 @@
 ---
 id: no2
-name: OMI/Aura Monthly Total SO₂ 
+name: OMI/Aura Monthly Total and Tropospheric SO₂ 
 description: Monthly global dataset of total sulphur dioxide (SO₂) columns at 0.25° x 0.25° spatial resolution
 media:
   src: ::file ./media/SO2_omi_2005_2017.png
@@ -96,10 +96,10 @@ layers:
         maxWidth: '800px',
         boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
         textAlign: 'justify',
-        border: '1px solid #ccc' /* Added border */
+        border: '1px solid #ccc'
       }}
     >
-      <p style={{ lineHeight: '1.6' }}> {/* Added line height */}
+      <p>
         <strong>Source:</strong> Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
         <strong>Temporal Extent:</strong> January 2005 to January 2021<br />
         <strong>Temporal Resolution:</strong> Monthly measurements<br />
@@ -155,23 +155,23 @@ layers:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
   <p>
     ## Frequently Asked Questions (FAQs)
-    <p style={{ marginBottom: '0.7em' }}>
+    <p style={{ marginBottom: '0.9em' }}>
       <strong>What is SO₂?</strong><br />
       SO₂ is a harmful air pollutant primarily emitted from volcanic eruptions and the burning of fossil fuels. It contributes to respiratory issues and environmental degradation, including acid rain.
     </p>
-    <p style={{ marginBottom: '0.7em' }}>
+    <p style={{ marginBottom: '0.9em' }}>
       <strong>How does sulfur dioxide interact with other air pollutants?</strong><br />
       Sulfur dioxide (SO₂) can react with other compounds in the atmosphere to form sulfate aerosols, which contribute to respiratory problems and can affect climate by reflecting sunlight.  It also combines with water vapor to create acid rain, worsening environmental damage.
     </p>
-    <p style={{ marginBottom: '0.7em' }}>
+    <p style={{ marginBottom: '0.9em' }}>
       <strong>What is a Dobson Unit (DU)?</strong><br />
       The Dobson Unit (DU) is a unit of measurement for the total amount of a trace gas, like SO₂, in a vertical column of the Earth's atmosphere. One DU is defined as 0.01 mm thickness of the gas if it were compressed to standard temperature and pressure.
     </p>
-    <p style={{ marginBottom: '0.7em' }}>
+    <p style={{ marginBottom: '0.9em' }}>
       <strong>How can I use this dataset?</strong><br />
       Applications include volcanic eruption monitoring, industrial emission tracking, shipping lane monitoring, air quality monitoring, and climate modeling.
     </p>
-    <p style={{ marginBottom: '0.7em' }}>
+    <p style={{ marginBottom: '0.9em' }}>
       <strong>What tools are available for data analysis?</strong><br />
       Tools such as Jupyter Notebooks (TBD), the <a href="#">VEDA visualization platform</a>, and <a href="https://search.earthdata.nasa.gov/">Earthdata Search</a> can be used to analyze this dataset.
     </p>
