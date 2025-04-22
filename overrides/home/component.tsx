@@ -125,20 +125,6 @@ export default function HomeComponent() {
       </GridContainer>
       <ActionsBlock>
       </ActionsBlock>
-      <InfoCallout>
-        <InfoCalloutInner>
-          <InfoCalloutHeadline>
-            <VarHeading size="xlarge">
-              Joining forces for a better future
-            </VarHeading>
-            <p>
-              The AQ Portal is grateful for the support and expertise of our
-              valued, multi-agency collaborators: NASA and HAQAST.
-            </p>
-          </InfoCalloutHeadline>
-          <Partners variation="positive" size="big" />
-        </InfoCalloutInner>
-      </InfoCallout>
     </>
   );
 }
