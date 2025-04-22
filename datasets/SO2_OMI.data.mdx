@@ -1,9 +1,9 @@
 ---
 id: no2
 name: OMI/Aura Monthly Total and Tropospheric SO₂ 
-description: Monthly global dataset of total and tropospheric nitrogen dioxide (NO₂) columns at 0.25° x 0.25° spatial resolution
+description: Monthly global dataset of total and tropospheric sulphur dioxide (SO₂) columns at 0.25° x 0.25° spatial resolution
 media:
-  src: ::file ./media/OMI_global.png
+  src: ::file ./media/SO2_omi_2005_2017.png
   alt: Science and Data
   author:
     name:  NASA Science and Data
@@ -19,7 +19,7 @@ taxonomy:
       - NASA
   - name: Gas
     values:
-      - NO₂
+      - SO₂
   - name: Product Type
     values:
       - Satellite Observations
@@ -30,117 +30,49 @@ infoDescription: |
     - Temporal Coverage: Daily measurements from October 2004 to present.
     - Spatial Coverage: Global coverage.
     - File Format: NetCDF, CSV, GeoTIFF.
-    - Applications: Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
+    - Applications: Volcanic eruption monitoring, industrial emissions tracking, shipping lane monitoring, and air quality studies related to SO₂
 
 layers:
-  - id: no2-monthly
-    stacCol: no2-monthly
+  - id: OMSO2PCA-COG
+    stacCol: OMSO2PCA-COG
     tileApiEndpoint: "https://openveda.cloud/api/raster"
-    stacApiEndpoint: "https://openveda.cloud/api/stac/no2-monthly"
-
-    name: Nitrogen Dioxide (monthly)
+    stacApiEndpoint: "https://openveda.cloud/api/stac"
+    name: 'Sulfur Dioxide'
     type: raster
-    description: 'Global nitrogen dioxide (NO₂) data organized into monthly metrics'
+    description: 'NASA OMI/Aura Sulfur Dioxide (SO2) Total Column'
     zoomExtent:
       - 0
-      - 20
+      - 11
     sourceParams:
       resampling: bilinear
       bidx: 1
-      color_formula: gamma r 1.05
-      colormap_name: rdbu_r
+      colormap_name: rdylbu_r
       rescale:
         - 0
-        - 1.5e16
+        - 1
     compare:
-      datasetId: no2
-      layerId: no2-monthly
+      datasetId: so2
+      layerId: OMSO2PCA-COG
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
-      min: "Less"
-      max: "More"
+      label: SO2 Total column (DU)
+      min: "0"
+      max: "1"
       stops:
-        - "#3A88BD"
-        - "#C9E0ED"
-        - "#E4EEF3"
-        - "#FDDCC9"
-        - "#DD7059"
+      - "#313695"
+      - "#74add1"
+      - "#e0f3f8"
+      - "#fee090"
+      - "#f46d43"
+      - "#a50026"
     info:
       source: NASA
       spatialExtent: Global
-      temporalResolution: Monthly 
-      unit: N/A
-
-  - id: no2-monthly-diff
-    stacCol: no2-monthly-diff
-    name: Nitrogen Dioxide (monthly difference)
-    type: raster
-    description: 'Global nitrogen dioxide (NO₂) data which displays the difference from the same time 1 month ago'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: rdbu_r
-      rescale:
-        - -3e15
-        - 3e15
-    compare:
-      datasetId: no2
-      layerId: no2-monthly-diff
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      type: gradient
-      min: "< -3"
-      max: "> 3"
-      stops:
-        - "#3A88BD"
-        - "#C9E0ED"
-        - "#E4EEF3"
-        - "#FDDCC9"
-        - "#DD7059"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Monthly 
-      unit: N/A
-
-  - id: OMI_trno2-COG
-    stacCol: OMI_trno2-COG
-    name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
-    type: raster
-    description: "NASA OMI/Aura Nitrogen Dioxide (NO₂) Total and Tropospheric Column"
-    zoomExtent:
-      - 0
-      - 16
-    sourceParams:
-      colormap_name: reds
-      rescale:
-        - 0
-        - 30E14
-    legend:
-      unit:
-        label: mol/cm2
-      type: gradient
-      min: 0
-      max: 30e14
-      stops:
-        - '#ffffff'
-        - '#fdd1bf'
-        - '#e02d26'
-        - '#67000c'
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Monthly 
+      temporalResolution: Annual 
       unit: N/A
 ---
 
@@ -168,13 +100,13 @@ layers:
     >
       <p>
         <strong>Source:</strong> Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
-        <strong>Temporal Extent:</strong> October 2020 to October 2022<br />
-        <strong>Temporal Resolution:</strong> Monthly measurements from October 2004 to present<br />
+        <strong>Temporal Extent:</strong> January 2005 to January 2021<br />
+        <strong>Temporal Resolution:</strong> Monthly measurements<br />
         <strong>Spatial Extent:</strong> Global<br />
         <strong>Spatial Resolution:</strong> 0.25 x 0.25 degree <br />
-        <strong>Data Units:</strong> Molecules per cm² (mol/cm²)<br />
+        <strong>Data Units:</strong> Dobson Units (DU)<br />
         <strong>File Format:</strong> GeoTIFF<br />
-        <strong>Applications:</strong> Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies
+       <strong>Applications:</strong> Volcanic eruption monitoring, industrial emissions tracking, shipping lane monitoring, and air quality studies related to SO₂
       </p>
     </Prose>
   </Prose>
@@ -186,16 +118,13 @@ layers:
     <p>
       ## Introduction
       <p style={{ marginBottom: '0.0em' }}>
-      Nitrogen dioxide (NO₂) is a major air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and increased risk of infection, especially in children and individuals with asthma. Monitoring NO₂ is crucial for understanding urban pollution, tracking industrial emissions, and assessing environmental changes.
-      <br />
+      Sulfur dioxide (SO₂) is a significant air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and cardiovascular diseases. It is primarily emitted from volcanic eruptions, industrial processes (such as burning fossil fuels), and shipping activities. Monitoring SO₂ is crucial for understanding volcanic activity, tracking industrial emissions, and assessing the impact of shipping on air quality.
       </p>
       <p style={{ marginBottom: '0.0em' }}>
-        The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
-      <br />
+      The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of SO₂ concentrations in Dobson Units (DU), offering a consistent and reliable data record that supports research and policymaking. OMI measures not only SO₂ but also other criteria pollutants such as ozone (O₃), nitrogen dioxide (NO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and volcanic plumes, making it a vital tool for air quality and climate research.
       </p>
       <p style={{ marginBottom: '0.0em' }}>
-        Monthly NO₂ data were analyzed to visualize changes during the COVID-19 pandemic. Scientists observed substantial decreases in nitrogen dioxide levels worldwide, primarily linked to shifts in human activity in response to the pandemic. As communities implemented lockdown restrictions to limit the spread of COVID-19, reductions in transportation and industrial activities led to marked declines in NO₂ emissions. In many regions, these decreases were dramatic: for example, global population-weighted NO₂ concentrations in April 2020 were approximately 29% lower in countries with strict lockdowns compared to those without, and in some cases, the reductions were equivalent to 15 years of typical emission declines.
-      <br />
+        Monthly SO₂ data can be used to identify and monitor volcanic eruptions, track SO₂ emissions from industrial facilities, and assess the impact of new regulations on shipping emissions. Analysis of OMI data has revealed significant SO₂ plumes from both natural and anthropogenic sources around the world.
       </p>
     </p>
   </Prose>
@@ -203,44 +132,48 @@ layers:
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-      <p>  
+      <p>
     ## Data Preparation
-        The dataset undergoes comprehensive processing to ensure accuracy, beginning with adjustments for cloud cover and surface reflectivity using Moderate Resolution Imaging Spectroradiometer (MODIS) Bidirectional Reflectance Distribution Function (BRDF) data to enhance retrieval quality over both land and water. The nitrogen dioxide algorithm employs spectral fitting in the 405–465 nanometer range via the Differential Optical Absorption Spectroscopy (DOAS) technique to convert slant column densities into vertical column densities, with synthetic spectra and Global Ozone Monitoring Experiment (GOME) observational data used to validate the method. Additionally, ground-based measurements provide localized tropospheric NO₂ estimates to further validate satellite observations.
+        The dataset undergoes comprehensive processing to ensure accuracy, beginning with adjustments for cloud cover and surface reflectivity. The SO₂ algorithm employs spectral fitting in the UV range via the Differential Optical Absorption Spectroscopy (DOAS) technique to retrieve SO₂ vertical column densities. These values are then converted and reported in Dobson Units (DU). Ground-based measurements and independent satellite observations provide SO₂ estimates to further validate OMI satellite observations.
     </p>
   </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p> 
+   <p>
     ## Applications and Use Cases
-      - Monthly NO₂ data was used to visualize global reductions in nitrogen dioxide emissions during COVID-19 lockdowns, highlighting the impact of decreased human activity
-      - Assessing health impacts of NO₂ exposure in collaboration with public health organizations
-      - Tracking urban air pollution trends using HAQAST tools like the Urban Air Quality Explorer
-      - Supporting regulatory frameworks like EPA’s AirNow system with satellite-derived insights
+      - Monitoring SO₂ emissions from volcanic eruptions to assess aviation hazards and climate impacts
+      - Tracking SO₂ emissions from industrial sources to evaluate air quality and compliance with environmental regulations
+      - Assessing the impact of regulations on shipping emissions by monitoring SO₂ concentrations in major shipping lanes
+      - Supporting air quality forecasting and public health advisories related to SO₂ exposure
   </p>
   </Prose>
 </Block>
 
 <Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-  <p> 
+  <p>
     ## Frequently Asked Questions (FAQs)
     <p style={{ marginBottom: '0.7em' }}>
-      <strong>What is NO₂?</strong><br />
-      NO₂ is a harmful air pollutant primarily emitted from vehicles, power plants, and industrial activities. It contributes to respiratory issues and environmental degradation
+      <strong>What is SO₂?</strong><br />
+      SO₂ is a harmful air pollutant primarily emitted from volcanic eruptions and the burning of fossil fuels. It contributes to respiratory issues and environmental degradation, including acid rain.
     </p>
     <p style={{ marginBottom: '0.7em' }}>
-      <strong>How does nitrogen dioxide interact with other air pollutants?</strong><br />
-      Nitrogen dioxide (NO₂) reacts with volatile organic compounds and sunlight to form harmful secondary pollutants like ground-level ozone and fine particulate matter, which contribute to smog and respiratory problems. It also combines with water vapor to create acid rain and nitrate particles, worsening air quality and environmental damage
+      <strong>How does sulfur dioxide interact with other air pollutants?</strong><br />
+      Sulfur dioxide (SO₂) can react with other compounds in the atmosphere to form sulfate aerosols, which contribute to respiratory problems and can affect climate by reflecting sunlight.  It also combines with water vapor to create acid rain, worsening environmental damage.
     </p>
     <p style={{ marginBottom: '0.7em' }}>
       <strong>How can I use this dataset?</strong><br />
-      Applications include air quality monitoring, urban planning, climate modeling, and public health assessments
+      Applications include volcanic eruption monitoring, industrial emission tracking, shipping lane monitoring, air quality monitoring, and climate modeling.
+    </p>
+    <p style={{ marginBottom: '0.7em' }}>
+      <strong>What is a Dobson Unit (DU)?</strong><br />
+      The Dobson Unit (DU) is a unit of measurement for the total amount of a trace gas, like SO₂, in a vertical column of the Earth's atmosphere. One DU is defined as 0.01 mm thickness of the gas if it were compressed to standard temperature and pressure.
     </p>
     <p style={{ marginBottom: '0.7em' }}>
       <strong>What tools are available for data analysis?</strong><br />
-      Tools such as Jupyter Notebooks (TBD), the <a href="#">VEDA visualization platform</a>, and <a href="https://search.earthdata.nasa.gov/">Earthdata Search</a> can be used to analyze this dataset
+      Tools such as Jupyter Notebooks (TBD), the <a href="#">VEDA visualization platform</a>, and <a href="https://search.earthdata.nasa.gov/">Earthdata Search</a> can be used to analyze this dataset.
     </p>
   </p>
   </Prose>
