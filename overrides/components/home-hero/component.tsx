@@ -27,7 +27,7 @@ const PageHeroHGroup = styled.div`
   grid-column: 1 / -1;
   display: flex;
   flex-flow: column;
-  gap: ${glsp(3)};
+  gap: ${glsp(2)};
   align-items: center;
 `;
 
@@ -35,12 +35,18 @@ const HeroHeadline = styled.div`
   grid-column: 1 / -1;
   display: flex;
   flex-flow: column;
-  gap: ${glsp()};
+ 
   align-items: center;
 
   p {
     font-size: 1.25rem;
   }
+`;
+const HeroSubtitle = styled.div`
+  grid-column: 1 / -1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 `;
 
 const PageHeroCover = styled(Figure)`
@@ -67,7 +73,6 @@ const PageHeroCover = styled(Figure)`
   }
 `;
 
-
 export default function HomeHero(props) {
   const { isMediumUp } = useMediaQuery();
 
@@ -78,8 +83,11 @@ export default function HomeHero(props) {
           <HeroHeadline>
             <VarHeading size="jumbo">AIR4US</VarHeading>
           </HeroHeadline>
-          <Partners variation="negative" size="big" />
         </PageHeroHGroup>
+        <HeroSubtitle>
+            <VarHeading size="xsmall">Data and Tools for Assessing Air Quality </VarHeading>
+          </HeroSubtitle>
+          <Partners variation="negative" size="big" />
       </Constrainer>
       <PageHeroCover>
         {isMediumUp ? (
