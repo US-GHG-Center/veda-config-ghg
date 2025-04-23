@@ -76,11 +76,11 @@ module.exports = {
 
   strings: {
     stories: {
-      one: "Application",
-      other: "Applications",
+      one: "Data Application",
+      other: "Data Applications",
     },
     storiesBanner:
-        "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
+        "Explore examples of air quality data use to understand a particular event, area or issue",
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     // Temporary Banner Text/URL/expiry
