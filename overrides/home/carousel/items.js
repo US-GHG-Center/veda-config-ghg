@@ -1,24 +1,24 @@
 export default [
   {
-    link: '/stories/methane',
-    title: 'Spotlight on Methane Emissions',
-    description: 'The U.S. Greenhouse Gas Center offers a collection of tools, stories, training, and datasets to support greater understanding of methane emissions around the world.',
-    image: new URL('../../media/Methane_Carousel_card.png', import.meta.url).href,
-    imageAlt: 'Earth shown with purple gas indicating atmospheric methane.'
+    link: '/stories/sanfrancisco',
+    title: 'Scientists Use Low-Cost Sensor Network to Track San Francisco Area Emissions',
+    description: 'Cities have implemented a variety of measures to meet greenhouse gas emissions goals, including expanding renewable energy use and incentivizing residents to drive electric cars. But a challenge for city leaders is measuring if policies are working. One solution is a network of low-cost sensors, scientists say.',
+    image: new URL('../../../stories/media/sanfran_banner.png', import.meta.url).href,
+    imageAlt: 'view of the golden gate bridge'
   },
   {
-    link: '/stories/nist-methane-intercomparisons',
-    title: 'NIST Developing Standards for Methane Plume Data',
-    description: 'Read about NIST efforts to develop consensus standards for growing volume of public and private methane plume satellite data.',
-    image: new URL('../../../stories/methane/media/NIST_Methane_Intercomparisons_card.png', import.meta.url).href,
-    imageAlt: 'Construction worker overlooking an industrial refinery at dusk, with interconnected glowing lines and nodes overlaid in the sky.'
+    link: '/stories/no2-and-so2',
+    title: ' Nitrogen Dioxide and Sulfur Dioxide',
+    description: "A picture diary of air quality in the northeastern regions of India, China, and the United States.",
+    image: new URL('../../../stories/media/air-quality-and-covid-19--discovery-cover.jpg', import.meta.url).href,
+    imageAlt: 'Clear nightsky with crescent moon above the mountains'
   },
   {
 
-    link: '/stories/modeling-natural-methane-emissions',
-    title: 'Uncovering Drivers of Natural Methane Emissions',
-    description: "Read about how researchers are using advanced technology and models to deepen understanding of the role of natural sources and sinks in global atmospheric concentrations of methane.",
-    image: new URL('../../../stories/methane/media/Wetlands_image_v2_rs.png', import.meta.url).href,
-    imageAlt: 'View of wetland and brush/forest area from above.'
+    link: '/stories/houston-aod',
+    title: 'Aerosols and Their Impacts on Houston, TX',
+    description: "A look into how aerosols affect those in and around Houston, TX.",
+    image: new URL('../../../stories/media/steam-power-plant.png', import.meta.url).href,
+    imageAlt: 'Smokestack from Power Plants'
   },
 ]
