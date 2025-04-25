@@ -72,10 +72,12 @@ export default function HeaderComponent() {
             width="100" 
           />
       </Link> */}
+      <Link to="/">
       <Logo>
-  <span>AIR4US</span>
-  <small><small><small><b>Data and Tools for Assessing Air Quality</b></small></small></small>
-</Logo>
+        <span>AIR4US</span>
+        <small><small><small><b>Data and Tools for Assessing Air Quality</b></small></small></small>
+    </Logo>
+    </Link>
 
       <VersionInfoLink to='/development'>Prototype</VersionInfoLink>
     </Brand>
