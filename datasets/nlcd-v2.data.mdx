@@ -1,7 +1,7 @@
 ---
 id: nlcd-annual-conus-v2
 name: National Land Cover Database LULC Classifications
-description: ational Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2021 at 30 m resolution.
+description: National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2023 at 30 m resolution.
 media:
   src: ::file ./media/eccodarwin--dataset-cover.jpg
   alt: Contiguous 48 USA States
@@ -11,29 +11,22 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Anthropogenic Emissions
-      - Natural Emissions and Sinks
-      - Methane           
+      - Anthropogenic Emissions         
   - name: Source
     values:
-      - NASA
-      - NOAA
-  - name: Gas
-    values:
-      - CH₄
+      - USGS
   - name: Product Type
     values:
-      - Ground Measurements
-      - Model Output
+      - Satellite Observations
 infoDescription: |
   ::markdown
-    - Temporal Extent: Two weeks prior - present
-    - Temporal Resolution: Daily
+    - Temporal Extent: 2001-2023
+    - Temporal Resolution: Yearly
     - Spatial Extent: CONUS
-    - Spatial Resolution: 0.03° x 0.03°
-    - Data Units: Percentage (%)
-    - Data Type: Research
-    - Data Latency: Updated daily
+    - Spatial Resolution: 30m
+    - Data Units: NA
+    - Data Type: NA
+    - Data Latency: Updated yearly
 layers:
   - id: conus_nlcd-annual
     stacCol: nlcd-annual-conus-v2
@@ -48,14 +41,9 @@ layers:
       - 0
       - 20
     sourceParams:
-      layers: Land-Cover-Native_conus_year_data
+      layers: mrlc_Land-Cover_conus_year_data:Land-Cover_conus_year_data
       version: 1.3.0
-      crs: EPSG:3857
-      assets: landcover
-      bidx: [1]
-      nodata: 0
-      resampling: nearest
-      colormap_name: nlcd      
+      srs: EPSG:3857  
     compare:
       datasetId: nlcd-annual-conus-v2
       layerId: conus_nlcd-annual
@@ -67,48 +55,38 @@ layers:
       type: categorical
       min: "0"
       max: "255"
-      stops:
-        - color: "#486DA2"
+      stops:   
+        - color: "#476BA0"
           label: "Open Water"
-        - color: "#E7EFFC"
+        - color: "#D1DDF9"
           label: "Perennial Ice/Snow"
-        - color: "#E1CDCE"
+        - color: "#DDC9C9"
           label: "Developed, Open Space"
-        - color: "#DC9881"
+        - color: "#D89382"
           label: "Developed, Low Intensity"
-        - color: "#F10100"
+        - color: "#ED0000"
           label: "Developed, Medium Intensity"
-        - color: "#AB0101"
+        - color: "#AA0000"
           label: "Developed High Intensity"
-        - color: "#B3AFA4"
+        - color: "#B2ADA3"
           label: "Barren Land (Rock/Sand/Clay)"
-        - color: "#6BA966"
-        # label: "Vegetation"
+        - color: "#68AA63"
           label: "Deciduous Forest"
-        - color: "#1D6533"
+        - color: "#1C6330"
           label: "Evergreen Forest"
-        - color: "#BDCC93"
+        - color: "#B5C98E"
           label: "Mixed Forest"
-        - color: "#B29C46"
-          label: "Dwarf Scrub"
-        - color: "#D1BB82"
+        - color: "#CCBA7C"
           label: "Shrub/Scrub"
-        - color: "#EDECCD"
+        - color: "#E2E2C1"
           label : "Grassland/Herbaceous"
-        - color: "#D0D181"
-          label: "Sedge/Herbaceous"
-        - color: "#A4CC51"
-          label: "Lichens"
-        - color: "#82BA9D"
-          label: "Moss"
-        - color: "#DDD83E"
+        - color: "#DBD83D"
           label: "Pasture/Hay"
-        - color: "#AE7229"
+        - color: "#AA7028"
           label: "Cultivated Crops"
-        # label: "Agriculture"
-        - color: "#BBD7ED"
+        - color: "#BAD8EA"
           label: "Woody Wetlands"
-        - color: "#71A4C1"
+        - color: "#70A3BA"
           label: "Emergent Herbaceous Wetlands"
     analysis:
       exclude: true
@@ -122,13 +100,13 @@ layers:
 
 <Block>
   <Prose>
-    **Temporal Extent:** 15 days prior - Present<br />
-    **Temporal Resolution:** Daily<br />
+    **Temporal Extent:** 2001-2023<br />
+    **Temporal Resolution:** <br />
     **Spatial Extent:** Contiguous United States (CONUS)
-    **Spatial Resolution:** 0.03° x 0.03°
-    **Data Units:** Percentage (%)
-    **Data Type:** Research<br />
-    **Data Latency:** Updated Daily
+    **Spatial Resolution:** °
+    **Data Units:**  (%)
+    **Data Type:** <br />
+    **Data Latency:** 
 
 
   </Prose>
@@ -178,7 +156,7 @@ layers:
     
   ### Citing this Dataset
 
-  U.S. Geological Survey (USGS) & Multi-Resolution Land Characteristics (MRLC) Consortium. (2021). National Land Cover Database (NLCD) 2021: Conterminous U.S. Land Cover. Earth Resources Observation and Science (EROS) Center. Retrieved from https://www.mrlc.gov/data
+  U.S. Geological Survey (USGS) & Multi-Resolution Land Characteristics (MRLC) Consortium. (2023). National Land Cover Database (NLCD) 2023: Conterminous U.S. Land Cover. Earth Resources Observation and Science (EROS) Center. Retrieved from https://www.mrlc.gov/data
   
   </Prose>
 </Block>
@@ -187,9 +165,7 @@ layers:
   <Prose>
   
   ## Disclaimer
-
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
+ 
   </Prose>
 </Block>
 
