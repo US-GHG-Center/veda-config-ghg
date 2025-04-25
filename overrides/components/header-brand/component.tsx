@@ -65,14 +65,19 @@ export default function HeaderComponent() {
 
   return (
     <Brand>
-      <Link to="/">
+      {/* <Link to="/">
         <img 
             src={LogoItem.image} 
             alt="AAIR4US" 
             width="100" 
           />
-      </Link>
-      <VersionInfoLink to='/development'>Beta</VersionInfoLink>
+      </Link> */}
+      <Logo>
+  <span>AIR4US</span>
+  <small><small><small><b>Data and Tools for Assessing Air Quality</b></small></small></small>
+</Logo>
+
+      <VersionInfoLink to='/development'>Prototype</VersionInfoLink>
     </Brand>
   );
 }

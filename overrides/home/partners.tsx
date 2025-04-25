@@ -6,7 +6,7 @@ import { media } from "$veda-ui/@devseed-ui/theme-provider";
 
 import { getLinkProps } from "$veda-ui-scripts/utils/url";
 
-import haqastImg from "../media/haqast.png";
+//import haqastImg from "../media/haqast.png";
 import nasaImg from "../media/nasa.png";
 
 
@@ -41,9 +41,9 @@ export default function Partners(props: {
       <a {...getLinkProps("https://www.nasa.gov/")}>
         <Image src={nasaImg} alt="NASA logo" height={squareLogoHeight} />
       </a>
-      <a {...getLinkProps("https://haqast.org/")}>
+      {/* <a {...getLinkProps("https://haqast.org/")}>
         <Image src={haqastImg} alt="HAQAST logo" height={squareLogoHeight} />
-      </a>
+      </a> */}
     </LogoWrapper>
   );
 }

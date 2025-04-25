@@ -305,7 +305,7 @@ export default function PageFooter(props) {
               <Partners variation="positive" size="small" />
             </TintBox>
             <p>
-              U.S. Air Quality Information Center Responsible Officia:{" "}
+              U.S. Air Quality Information Center Responsible Official:{" "}
                 <strong>Emma Knowland</strong>
             </p>
           </CreditsInfo>
