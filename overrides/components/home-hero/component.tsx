@@ -15,7 +15,7 @@ import Partners from "../../home/partners";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 
 import coverImgSrc from "./earth.png";
-import coverVideoSrc from "url:./earth-gas.mp4";
+import coverVideoSrc from "url:./no2_trimmed.mp4";
 
 const Hero = styled.div`
   background: ${themeVal("color.primary")};
