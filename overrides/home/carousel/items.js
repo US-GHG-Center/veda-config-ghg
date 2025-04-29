@@ -9,14 +9,14 @@ export default [
   {
     link: '/stories/no2-and-so2',
     title: ' Nitrogen Dioxide and Sulfur Dioxide',
-    description: "A picture diary of air quality in the northeastern regions of India, China, and the United States.",
+    description: "Examination of changes in SO2 and NO2 levels in the northeastern regions of India, China, and the United States over a time.",
     image: new URL('../../../stories/media/air-quality-and-covid-19--discovery-cover.jpg', import.meta.url).href,
     imageAlt: 'Clear nightsky with crescent moon above the mountains'
   },
   {
 
     link: '/stories/houston-aod',
-    title: 'Aerosols and Their Impacts on Houston, TX',
+    title: 'Houston, TX is a spatially large city of large population that produce high levels of aerosols impacting the surrounding environment and individuals.',
     description: "A look into how aerosols affect those in and around Houston, TX.",
     image: new URL('../../../stories/media/steam-power-plant.png', import.meta.url).href,
     imageAlt: 'Smokestack from Power Plants'
