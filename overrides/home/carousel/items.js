@@ -16,8 +16,8 @@ export default [
   {
 
     link: '/stories/houston-aod',
-    title: 'Houston, TX is a spatially large city of large population that produce high levels of aerosols impacting the surrounding environment and individuals.',
-    description: "A look into how aerosols affect those in and around Houston, TX.",
+    title: 'Aerosols and Their Impacts on Houston, TX',
+    description: "Houston, TX is a spatially large city of large population that produce high levels of aerosols impacting the surrounding environment and individuals.",
     image: new URL('../../../stories/media/steam-power-plant.png', import.meta.url).href,
     imageAlt: 'Smokestack from Power Plants'
   },
