@@ -39,9 +39,9 @@ function sortByDateCustom(items) {
 export const NEWSLETTER_ITEMS = sortByDateDesc([
   {
     name: 'October 2024 - US GHG Center Newsletter',
-    asLink : {
-      url: 'https://conta.cc/48jqdkT'
-    },
+    // asLink : {
+    //   url: 'https://conta.cc/48jqdkT'
+    // },
     media: {
       src: new URL('./media/news/newsletter-v1.4.jpg', import.meta.url).href,
       alt: 'October 2024'
@@ -51,9 +51,9 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
   },
   {
     name: 'May 2024 - US GHG Center Newsletter',
-    asLink : {
-      url: 'https://conta.cc/4blhTSu'
-    },
+    // asLink : {
+    //   url: 'https://conta.cc/4blhTSu'
+    // },
     media: {
       src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
       alt: 'May 2024'
@@ -63,9 +63,9 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
   },
   {
     name: 'March 2024 - US GHG Center Newsletter',
-    asLink : {
-      url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
-    },
+    // asLink : {
+    //   url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
+    // },
     media: {
       src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
       alt: 'March 2024'
@@ -75,9 +75,9 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
   },
   {
     name: 'July 2024 - US GHG Center Newsletter',
-    asLink : {
-      url: 'https://conta.cc/4fxbpCD'
-    },
+    // asLink : {
+    //   url: 'https://conta.cc/4fxbpCD'
+    // },
     media: {
       src: new URL('./media/news/newsletter-v1.3.jpg', import.meta.url).href,
       alt: 'July 2024'
@@ -91,9 +91,9 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
 export const NEWS_ITEMS = [
   {
     name: 'EPA RFI on Methane Emission Technology',
-    asLink : {
-      url: 'https://www.regulations.gov/document/EPA-HQ-OAR-2024-0350-0001'
-    },
+    // asLink : {
+    //   url: 'https://www.regulations.gov/document/EPA-HQ-OAR-2024-0350-0001'
+    // },
     media: {
       src: new URL('./media/news/epa.png', import.meta.url).href,
       alt: 'EPA RFI'
@@ -102,9 +102,9 @@ export const NEWS_ITEMS = [
   },
   {
     name: 'US GHG Center announced at COP28',
-    asLink : {
-      url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
-    },
+    // asLink : {
+    //   url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
+    // },
     media: {
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'Cop 28 Logo'
@@ -113,9 +113,9 @@ export const NEWS_ITEMS = [
   },
   {
     name: 'The US GHG Center at the 2023 AGU Fall Meeting',
-    asLink : {
-      url: 'https://www.youtube.com/watch?v=8_aFRPqiXGw&feature=youtu.be&ab_channel=NASAVideo'
-    },
+    // asLink : {
+    //   url: 'https://www.youtube.com/watch?v=8_aFRPqiXGw&feature=youtu.be&ab_channel=NASAVideo'
+    // },
     media: {
       src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
@@ -127,9 +127,9 @@ export const NEWS_ITEMS = [
 export const EVENT_ITEMS = sortByDateCustom([
   {
     name: 'New ARSET Training on Methane Observations',
-    asLink : {
-      url: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and'
-    },
+    // asLink : {
+    //   url: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and'
+    // },
     media: {
       src: new URL('./media/events/arset_logo.png', import.meta.url).href,
       alt: 'ARSET Logo'
@@ -140,9 +140,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: ' AGU Pre-conference Workshop',
-    asLink : {
-      url: 'https://agu.confex.com/agu/agu24/meetingapp.cgi/Session/229081'
-    },
+    // asLink : {
+    //   url: 'https://agu.confex.com/agu/agu24/meetingapp.cgi/Session/229081'
+    // },
     media: {
       src: new URL('./media/events/agu_logo.png', import.meta.url).href,
       alt: 'AGU Logo'
@@ -153,9 +153,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'Join the 2nd Annual Stakeholder Forum; Dec 4-5, 2024',
-    asLink : {
-      url: 'https://emg-wd.wixsite.com/us-ghg-2024'
-    },
+    // asLink : {
+    //   url: 'https://emg-wd.wixsite.com/us-ghg-2024'
+    // },
     media: {
       src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.png', import.meta.url).href,
       alt: 'GHGC Stakeholder Forum Announcement Image'
@@ -166,9 +166,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',
-    asLink : {
-      url: 'https://carbon.nasa.gov/docs/May%202024%20PSS%20Talk%20Announcement.pdf'
-    },
+    // asLink : {
+    //   url: 'https://carbon.nasa.gov/docs/May%202024%20PSS%20Talk%20Announcement.pdf'
+    // },
     media: {
       src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_G3W_Webinar.png', import.meta.url).href,
       alt: 'CMS speaker series screenshot'
@@ -179,9 +179,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'US GHG Center Summer School',
-    asLink : {
-      url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
-    },
+    // asLink : {
+    //   url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
+    // },
     media: {
       src: new URL('./media/events/summer-school.png', import.meta.url).href,
       alt: 'Summer school info screenshot'
@@ -192,9 +192,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'Policy Speaker Series: Implementing the U.S. Greenhouse Gas Center',
-    asLink : {
-      url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
-    },
+    // asLink : {
+    //   url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
+    // },
     media: {
       src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_v1.png', import.meta.url).href,
       alt: 'CMS speaker series screenshot'
@@ -205,9 +205,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'American Meteorological Society (AMS) Annual Meeting',
-    asLink : {
-      url: 'https://us-ghg-center.github.io/ams-2024-workshop/ghg-center-at-ams-2024.html'
-    },
+    // asLink : {
+    //   url: 'https://us-ghg-center.github.io/ams-2024-workshop/ghg-center-at-ams-2024.html'
+    // },
     media: {
       src: new URL('./media/events/AMS24_Logo.png', import.meta.url).href,
       alt: 'AMS 24 logo'
@@ -218,9 +218,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'Launch of the US Greenhouse Gas Center at COP28 (12-4-23)',
-    asLink : {
-      url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
-    },
+    // asLink : {
+    //   url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
+    // },
     media: {
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'COP 23 UAE logo'
@@ -231,9 +231,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'US GHG Center Stakeholder Forum',
-    asLink : {
-      url: 'https://www.youtube.com/playlist?list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_'
-    },
+    // asLink : {
+    //   url: 'https://www.youtube.com/playlist?list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_'
+    // },
     media: {
       src: new URL('./media/events/stakeholder-forum.png', import.meta.url).href,
       alt: 'Stakeholder forum slidedeck intro slide'
@@ -244,9 +244,9 @@ export const EVENT_ITEMS = sortByDateCustom([
   },
   {
     name: 'Listening Session at the NASA Carbon Monitoring System Science Team Meeting',
-    asLink : {
-      url: 'https://cce-datasharing.gsfc.nasa.gov/files/conference_presentations/Talk_Combley_92_39.pptx'
-    },
+    // asLink : {
+    //   url: 'https://cce-datasharing.gsfc.nasa.gov/files/conference_presentations/Talk_Combley_92_39.pptx'
+    // },
     media: {
       src: new URL('./media/events/cms.png', import.meta.url).href,
       alt: 'CMS meeting logo'
@@ -260,9 +260,9 @@ export const EVENT_ITEMS = sortByDateCustom([
 export const TUTORIAL_ITEMS = [
   {
     name: 'Tour the US GHG Center',
-    asLink : {
-      url: 'https://youtu.be/6xWdIlWqhBE?si=KEaUug75HvH94aBo'
-    },
+    // asLink : {
+    //   url: 'https://youtu.be/6xWdIlWqhBE?si=KEaUug75HvH94aBo'
+    // },
     media: {
       src: new URL("./media/tutorials/tutorial_intro_video.png", import.meta.url).href,
       alt: ''
@@ -273,9 +273,9 @@ export const TUTORIAL_ITEMS = [
   },
   {
     name: 'How to Explore Data',
-    asLink : {
-      url: 'https://www.youtube.com/watch?v=S2XL5WT9W4g'
-    },
+    // asLink : {
+    //   url: 'https://www.youtube.com/watch?v=S2XL5WT9W4g'
+    // },
     media: {
       src: new URL("./media/tutorials/tutorial_exploration_video.png", import.meta.url).href,
       alt: ''
