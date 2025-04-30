@@ -76,7 +76,7 @@ export default function HeaderComponent() {
       <img 
             src={LogoItem.image} 
             alt="AAIR4US" 
-            width="100"
+            width="150"
           />
     </Link>
 
