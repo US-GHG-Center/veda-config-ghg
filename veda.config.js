@@ -82,7 +82,7 @@ module.exports = {
     storiesBanner:
         "Explore examples of air quality data use to understand a particular event, area or issue",
     dataCatalogBanner:
-        "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+        "This catalog contains the data products that provide insights into air quality issues.  Detailed data pages contain access to visualizations, stories and outside resources.",
     // Temporary Banner Text/URL/expiry
     tempBanner:
         "Read the new story on using EMIT and AVIRIS-3 for monitoring large methane emission events.",
