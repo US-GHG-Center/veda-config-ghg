@@ -25,16 +25,20 @@ layers:
     type: raster
     description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
     initialDatetime: newest
+    bidx: 1
     zoomExtent:
         - 0
         - 20
+    rescale:
+        - 0
+        - 1
     sourceParams:
       colormap: '{"0":[22,158,242,255]}'
     legend:
       type: categorical
       stops:
         - color: "#169ef2"
-          label: Clipper Snowfall
+          label: Nighttime Flare
     info:
       source: UAH
       unit: Binary
