@@ -104,6 +104,34 @@ import Quote from "./components/quote";
             compareLabel="CO₂ Emissions (left) VS NOₓ Emissions (right) (Dec 2021)"
             center={[-74.144488, 40.6976312]}
             zoom={6}
+            layerOverrides={{
+                rescale: [0, 1000],
+                name: 'Custom CO₂ Emissions',
+                legend: {
+                    unit: { label: 'tonne CO₂/km²/month (adjusted)' },
+                    type: 'gradient',
+                    min: 0,
+                    max: 1000,
+                    stops: [
+                        '#5e4fa2',
+                        '#75c8a5',
+                        '#f1f9a9',
+                        '#fdbf6f',
+                        '#d8434e'
+                    ]
+                }
+            }}
+            compareOverrides={{
+                rescale: [0, 2],
+                name: 'Custom NOₓ Emissions',
+                legend: {
+                    unit: { label: 'tonne CO₂/km²/month (adjusted)' },
+                    type: 'gradient',
+                    min: 0,
+                    max: 2,
+                }
+            }}
+            
         />
         <Caption>
             GRA²PES geospatial data allows researchers to examine and better understand air quality and greenhouse gas pollution sources at a local level. Shown here over New York City in December 2021, carbon dioxide (CO₂) and nitrogen oxides (NOₓ) are both byproducts of fossil fuel burning.
