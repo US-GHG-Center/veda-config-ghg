@@ -1,0 +1,47 @@
+---
+id: nighttime-flare
+name: 'Nighttime Combustion Dataset from NASA’s Black Marble Product Suite'
+description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
+
+media:
+  src: ::file ./media/ct-ch4-monthgrid-v2023-cover.jpg
+  alt: Landfill
+  author:
+    name:  Figure by Matt Ziminski and Youmi Oh
+    url:  https://gml.noaa.gov/ccgg/carbontracker-ch4/
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - UAH
+layers:
+  - id: nighttime-flare
+    stacCol: nighttime-flare
+    name: Nighttime Flare
+    type: raster
+    description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
+    initialDatetime: newest
+    bidx: 1
+    zoomExtent:
+        - 0
+        - 20
+    rescale:
+        - 0
+        - 1
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Nighttime Flare
+    info:
+      source: UAH
+      unit: Binary
+
+ 
+---
