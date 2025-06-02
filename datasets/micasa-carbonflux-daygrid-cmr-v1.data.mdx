@@ -40,7 +40,7 @@ infoDescription: |
     - Data Type: Research
     - Data Latency: Less than a year, typically 6 months
 layers:
-  - id: micasa-co2-flux-npp-m
+  - id: micasa-co2-flux-npp-m-cmr
     stacCol: micasa-carbonflux-monthgrid-cmr-v1
     type: cmr 
     tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
@@ -66,7 +66,7 @@ layers:
       tile_scale: 3
     compare:
       datasetId: micasa-carbonflux-grid-cmr-v1
-      layerId: micasa-co2-flux-npp-m
+      layerId: micasa-co2-flux-npp-m-cmr
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
