@@ -6,8 +6,8 @@ description: The Aboveground Biomass Density Mean (L4B, v2.1, 2019 APR to 2023 M
 media:
   src: https://earthdata.nasa.gov/s3fs-public/styles/hds_hero_half/public/2024-08/gedi-agbd-us-cloudfree--2-07-2023.jpg?VersionId=E_Zx.ti84WTiK8GB2XWD5VqrwZi7QNDl&itok=cjabduMn
 infoDescription: |
-  ::markdown
-    World Viewer
+    - Temporal Extent: April 2019 - March 2023
+    - Temporal Resolution: Daily
 layers:
   - id: GEDI_ISS_L4B_Aboveground_Biomass_Density_Mean_201904-202303
     stacApiEndpoint: https://dev.ghg.center/api/stac/
@@ -25,7 +25,10 @@ layers:
       - 0
       - 5
     analysis:
-      exclude: true
+      metrics:
+        - mean
+      sourceParams:        
+        dst_crs: "+proj=cea"
     legend:
       type: gradient
       min: 0
