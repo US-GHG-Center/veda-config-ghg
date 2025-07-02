@@ -1,7 +1,6 @@
 ---
 id: blackmarble-radiance-daygrid-v2nrt
-name: VIIRS/NPP Daily DNB Nighttime NRT Grid
-featured: true
+name: Black Marble Nighttime Light Emissions
 description: Nighttime light emissions observed by Suomi NPP VIIRS Day/Night Band in a linear latitude-longitude projection and gridded at 500m
 
 usage:
@@ -53,9 +52,9 @@ layers:
   - id: VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
     stacApiEndpoint: https://dev.ghg.center/api/stac/
     stacCol:  VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
-    name: VIIRS/NPP Daily DNB Nighttime NRT Grid
+    name: Nighttime Light Emissions
     type: wmts 
-    description: Nighttime light emissions observed by Suomi NPP VIIRS Day/Night Band in a linear latitude-longitude projection and gridded at 500m
+    description: At sensor nighttime radiance observed by the Suomi NPP VIIRS Day/Night band.
     sourceParams:
       layers: 1
       version: 1.3.0
