@@ -59,6 +59,10 @@ layers:
       layers: 1
       version: 1.3.0
       crs: EPSG:3857
+      colormap_name: gray
+      rescale:
+        - 0
+        - 5      
       styles:
     zoomExtent:
       - 0
@@ -67,8 +71,8 @@ layers:
       exclude: true
     legend:
       type: gradient
-      min: 0.0e+16
-      max: '>2.0e+16'
+      min: 0
+      max: 5
       stops:
         - rgb(255,255,224)  # Light yellow (low concentration)
         - rgb(255,230,140)
