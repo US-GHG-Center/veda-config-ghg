@@ -1,5 +1,5 @@
 ---
-id: mangrove-biomass-abg
+id: cms-mangrove-biomass-abg
 name: 'Global Mangrove Distribution, Aboveground Biomass, and Canopy Height'
 description: "Global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field measurement data"
 media:
@@ -24,31 +24,33 @@ infoDescription: |
   ::markdown
      Global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field measurement data.
 layers:
-  - id: mangrove-biomass-abg
-    stacCol: mangrove-biomass-abg
+  - id: mangrove-biomass-agb
+    stacCol: cms-mangrove-biomass-height
     name: 'Global Mangrove Aboveground Biomass'
     stacApiEndpoint: https://dev.ghg.center/api/stac
     rasterApiEndpoint: https://dev.ghg.center/api/raster
     type: raster
     description: 'Global Mangrove Aboveground Biomass'
+    initialDatetime: newest
     projection:
       id: 'equirectangular'
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      asset_bidx: cog_default|1
+      assets: mangrove-agb
+      colormap_name: "reds"
       rescale:
         - 0
-        - 911
-      nodata: "0."
+        - 526
+      nodata: -9999
       minzoom: 0
       maxzoom: 20
       tile_scale: 1
     legend:
       type: gradient
-      min: "0"
-      max: "911"
+      min: 0
+      max: 526
       stops:
         - rgb(255, 247, 236)
         - rgb(254, 232, 200)
@@ -62,7 +64,9 @@ layers:
       unit:
         label: (Mg ha-1)
       label: (Mg ha-1)
-
+    analysis:
+      metrics:
+        - mean
     info:
       source: NASA
       spatialExtent: Coastal Zones
@@ -71,7 +75,7 @@ layers:
 
 
   - id: mangrove-basal-area-height
-    stacCol: mangrove-basal-area-height
+    stacCol: cms-mangrove-biomass-height
     name: 'Global Mangrove Basal-Area Weighted Height'
     stacApiEndpoint: https://dev.ghg.center/api/stac
     rasterApiEndpoint: https://dev.ghg.center/api/raster
@@ -83,7 +87,7 @@ layers:
     projection:
       id: 'equirectangular'
     sourceParams:
-      asset_bidx: cog_default|1
+      assets: mangrove-hba
       rescale:
         - 0
         - 40
@@ -115,8 +119,99 @@ layers:
       unit: meters
 
   - id: mangrove-max-height
-    stacCol: mangrove-max-height
-    name: 'Mangrove Canopy Maximum Height '
+    stacCol: cms-mangrove-biomass-height
+    name: 'Mangrove Canopy Maximum Height'
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    rasterApiEndpoint: https://dev.ghg.center/api/raster
+    type: raster
+    description: 'Mangrove canopy maximum height (height of the tallest tree)'
+    zoomExtent:
+      - 0
+      - 20
+    projection:
+      id: 'equirectangular'
+    sourceParams:
+      assets: mangrove-hmax95
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 63
+      nodata: 0
+      minzoom: 0
+      maxzoom: 20
+      tile_scale: 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "63"
+      unit:
+        label: (meters)
+      label: (meters)
+      stops:
+        - '#FFFED9'
+        - '#EDF8B1'
+        - '#C7E9B4'
+        - '#7FCDBB'
+        - '#41B7C4'    
+        - '#1D91C0'
+        - '#225EA8'
+        - '#253494'
+        - '#081D58'
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: meters
+
+  - id: test
+    stacCol: cms-mangrove-biomass-height
+    name: 'Mangrove test1 - Using the same parameters as mangrove-max-height which renders correctly'
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    rasterApiEndpoint: https://dev.ghg.center/api/raster
+    type: raster
+    description: 'Mangrove canopy maximum height (height of the tallest tree)'
+    zoomExtent:
+      - 0
+      - 20
+    projection:
+      id: 'equirectangular'
+    sourceParams:
+      assets: mangrove-agb
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 63
+      nodata: 0
+      minzoom: 0
+      maxzoom: 20
+      tile_scale: 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "63"
+      unit:
+        label: (meters)
+      label: (meters)
+      stops:
+        - '#FFFED9'
+        - '#EDF8B1'
+        - '#C7E9B4'
+        - '#7FCDBB'
+        - '#41B7C4'    
+        - '#1D91C0'
+        - '#225EA8'
+        - '#253494'
+        - '#081D58'
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: meters
+
+
+  - id: test2
+    stacCol: mangrove-biomass-abg
+    name: 'Mangrove test2 - Directly from STAC item using a single config/dataset'
     stacApiEndpoint: https://dev.ghg.center/api/stac
     rasterApiEndpoint: https://dev.ghg.center/api/raster
     type: raster
@@ -158,6 +253,7 @@ layers:
       spatialExtent: Coastal Zones
       temporalResolution: Decadal
       unit: meters
+
 ---
 
 
