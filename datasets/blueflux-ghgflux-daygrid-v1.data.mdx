@@ -1,0 +1,193 @@
+---
+id: blueflux-ghgflux-daygrid-v1
+name: BlueFlux CO₂ and Methane Fluxes for Southern Florida Wetlands
+description: Estimates of greenhouse gas fluxes across Southern Florida mangrove and marsh ecosystems 
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fblueflux-ghgflux-daygrid-v1_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://data.ghg.center/browseui/index.html#blueflux-ghgflux-daygrid-v1/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./media/geos-casa-gfed-cover.jpg
+  alt: wildfire
+  author:
+    name: Marcus Kauffman
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CO₂
+      - CH₄
+  - name: Product Type
+    values:
+      - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: February 25, 2000 - August 31, 2024
+    - Temporal Resolution: Daily
+    - Spatial Extent: Southern Florida (82.22 W, 79.96 W, 26.68 N, 24.48 N)
+    - Spatial Resolution: 500 m
+    - Data Units: Micromoles of carbon dioxide per square meter per second (μmol CO₂/m2/s), Nanomoles of methane per square meter per second (nmol CH₄/m2/s) 
+    - Data Type: Research
+    - Data Latency: NA
+
+layers:
+  - id: blueflux-ghgflux-daygrid-ch4-v1
+    stacCol: blueflux-ghgflux-daygrid-v1
+    name: Methane Flux
+    type: raster
+    description: 
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fch4mean
+      colormap_name: purd
+      rescale:
+        - 3
+        - 75
+      tile_scale: 3
+    compare:
+      datasetId: blueflux-ghgflux-daygrid-v1
+      layerId: blueflux-ghgflux-daygrid-ch4-v1
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: nmol CH₄/m2/s
+      type: gradient
+      min: 3
+      max: 75
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Southern Florida (82.22 W, 79.96 W, 26.68 N, 24.48 N)
+      temporalResolution: Daily
+      unit: nmol CH₄/m2/s
+  - id: blueflux-ghgflux-daygrid-co2-v1
+    stacCol: blueflux-ghgflux-daygrid-v1
+    name: CO₂ Flux
+    type: raster
+    description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fco2mean
+      colormap_name: purd
+      rescale:
+        - -4
+        - 0
+      tile_scale: 3
+    compare:
+      datasetId: blueflux-ghgflux-daygrid-v1
+      layerId:blueflux-ghgflux-daygrid-co2-v1
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: μmol CO₂/m2/s
+      type: gradient
+      min: -4
+      max: 0
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Southern Florida (82.22 W, 79.96 W, 26.68 N, 24.48 N)
+      temporalResolution: Daily
+      unit: μmol CO₂/m2/s
+  ---
+
+<Block>
+  <Prose>
+    **Temporal Extent:** February 25, 2000 - August 31, 2024<br />
+    **Temporal Resolution:** Daily<br />
+    **Spatial Extent:** Southern Florida (82.22 W, 79.96 W, 26.68 N, 24.48 N)<br />
+    **Spatial Resolution:** 500m<br />
+    **Data Units:**  Micromoles of carbon dioxide per square meter per second (μmol CO₂/m2/s), Nanomoles of methane per square meter per second (nmol CH₄/m2/s)<br />
+    **Data Type:** Research<br />
+    **Data Latency:** NA<br />
+
+   
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+
+    ## Version History
+
+    ## Disclaimer
+
+    ## Scientific Details
+
+    ## Key Publications
+
+    ## Other Relevant Publications
+
+    ## Learn More
+
+    ## Acknowledgment
+
+    ## License
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/blueflux-ghgflux-daygrid-v1_Data_Flow.html)
+    - Data Transformation Code: n/a - The dataset was utilized in its original, unaltered format
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/blueflux-ghgflux-daygrid-v1_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>
