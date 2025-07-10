@@ -116,7 +116,7 @@ layers:
       tile_scale: 3
     compare:
       datasetId: blueflux-ghgflux-daygrid-v1
-      layerId:blueflux-ghgflux-daygrid-co2-v1
+      layerId: blueflux-ghgflux-daygrid-co2-v1
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
