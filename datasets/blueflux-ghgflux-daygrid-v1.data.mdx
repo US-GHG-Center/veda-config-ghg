@@ -46,7 +46,7 @@ layers:
     stacCol: blueflux-ghgflux-daygrid-v1
     name: Methane Flux
     type: raster
-    description: Daily estimates of methane (CH4) flux over mangrove and marsh ecosystems.
+    description: Daily estimates of methane (CH₄) flux over mangrove and marsh ecosystems.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -75,16 +75,17 @@ layers:
       min: 0
       max: 60
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'
+        - '#440154'  
+        - '#482878'
+        - '#3e4989'
+        - '#31688e'
+        - '#26828e'
+        - '#1f9e89'
+        - '#35b779'
+        - '#6ece58'
+        - '#b5de2b'
+        - '#fde725'  
+
     analysis:
       metrics:
         - mean
@@ -99,7 +100,7 @@ layers:
     stacCol: blueflux-ghgflux-daygrid-v1
     name: Carbon Dioxide Flux
     type: raster
-    description: Daily estimates of carbon dioxide (CO2) flux over mangrove and marsh ecosystems.
+    description: Daily estimates of carbon dioxide (CO₂) flux over mangrove and marsh ecosystems.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -128,16 +129,17 @@ layers:
       min: -4
       max: 0
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'
+        - '#0d0887'  
+        - '#3b049a'
+        - '#6300a7'
+        - '#8901a8'
+        - '#ae2892'
+        - '#cb4679'
+        - '#e16462'
+        - '#f1834b'
+        - '#fca636'
+        - '#f0f921'  
+
     analysis:
       metrics:
         - mean
