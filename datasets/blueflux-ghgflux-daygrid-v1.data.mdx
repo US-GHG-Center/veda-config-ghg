@@ -168,28 +168,49 @@ layers:
 </Block>
 <Block>
   <Prose>
+    Wetland ecosystems play key roles in the carbon cycle. Wetlands serve as a carbon sink, removing carbon dioxide (CO₂) from the atmosphere, and they also serve as a carbon source, returning CO₂ and methane (CH₄) to the atmosphere. When these ecosystems are healthy, they sequester and store more carbon emissions than they release. 
+
+    Wetlands are currently threatened by extreme storms, deforestation, and rising sea levels. Multi-scale measurements of CO₂ and CH₄ fluxes are necessary to understand the current state of wetlands. NASA’s Carbon Monitoring System (CMS) funded the BlueFlux project to create a database of CO₂ and CH₄ fluxes in mangrove ecosystems in Florida. The project focused on significant wetlands within Everglades National Park, the Big Cypress National Preserve, and surrounding ecosystems throughout southern Florida. BlueFlux utilized airborne and ground-based instruments to measure CO₂ and CH₄, offering insights on changes in GHG emissions across regional mangrove ecosystems over time. This information may be useful for decision-makers and data users involved in efforts to manage mangrove restoration and conservation.
+
+    This dataset includes daily gridded estimates of CO₂ and CH₄ fluxes across southern Florida from February 2000 to August 2024. Estimates were generated using flux data from airborne measurements during the BlueFlux project from 2022 to 2024 and regional eddy covariance towers since 2004, upscaled using satellite observations from the MODerate-resolution Imaging Spectroradiometer (MODIS) and machine learning modeling.
+
+    
     ## Source Data Product Citation
+    Doughty, C.L., Q. Ying, E.J. Ward, E.R. Delaria, G.M. Wolfe, and B. Poulter. 2025. BlueFlux: Modeled Daily CO₂ and CH₄ Wetland Fluxes, Southern Florida, 2000-2024. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2404 
 
     ## Version History
 
     ## Disclaimer
 
     ## Scientific Details
+    Half-hourly data of CO₂ and CH₄ fluxes were used from eight eddy covariance (EC) towers within the study area. Daily integrated average fluxes were estimated when data for more than 80% of the 24 hours were available. Airborne flux measurements were obtained from NASA’s CARAFE instrument during the five flight deployments of BlueFlux: April 2022, October 2022, February 2023, April 2023, and July 2024. The daily integrated average CO₂ fluxes were estimated using linear fits, as described in Delaria et al. 2024, from four EC towers coinciding with BlueFlux flights, and were adapted for the remaining towers. Daily airborne CH₄ fluxes were estimated as the mean midday CH₄ flux scaled to 24 hours. The MODIS NBAR product was used for upscaling and provided gridded surface reflectance at a 500 m resolution. MODIS band reflectances were sampled at 500 m for each flux measurement on a given date to serve as predictor covariates in upscaling. Using combined airborne and tower data, bootstrap random forest regression models were developed for each flux. These models were then used to predict gridded daily CO₂ and CH₄ fluxes based on MODIS NBAR reflectance at a 500 m resolution from February 2000 to August 2024. The model outputs provide daily mean flux intensity and uncertainty.
 
     ## Key Publications
 
     ## Other Relevant Publications
+    Assessment of Landscape-Scale Fluxes of Carbon Dioxide and Methane in Subtropical Coastal Wetlands of South Florida
+    - October 30, 2024
+    - https://doi.org/10.1029/2024JG008165 
+
+    Multi-scale observations of mangrove blue carbon ecosystem fluxes: The NASA Carbon Monitoring System BlueFlux field campaign
+    - July 10, 2023
+    - http://doi.org/10.1088/1748-9326/acdae6
+    
+    Mapping CO₂ fluxes of cypress swamp and marshes in the Greater Everglades using eddy covariance measurements and Landsat data
+    - September 1, 2021
+    - https://doi.org/10.1016/j.rse.2021.112523
 
     ## Learn More
 
     ## Acknowledgment
+    The BlueFlux Project was supported by the NASA Carbon Monitoring Program (Grant Number 20-CMS20-0009). We are grateful to our community partners, including the Miccosukee Tribe of Indians and the Seminole Tribe of Florida that permitted research on their ancestral lands. We thank the programs and people supporting the the Ameriflux network in South Florida, including the National Science Foundation, the Florida Coastal Everglades Long Term Ecological Research Program, Everglades National Park, the USGS Greater Everglades Priority Ecosystem Sciences Program, the DOE National Institute for Climate Change Research (NICCR), and the Alabama Water Institute. 
 
     ## License
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
 
     ## Data Stewardship
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/blueflux-ghgflux-daygrid-v1_Data_Flow.html)
-    - Data Transformation Code: n/a - The dataset was utilized in its original, unaltered format
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/blueflux-ghgflux-daygrid-v1.html)
     - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/blueflux-ghgflux-daygrid-v1_Processing%20and%20Verification%20Report.html)
 
   </Prose>

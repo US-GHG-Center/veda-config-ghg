@@ -1,0 +1,186 @@
+---
+id: cms-mangrove-agb-canopyheight-grid-v1.3
+name: Global Mangrove Aboveground Biomass and Canopy Height 
+description: Biomass density and canopy height data for mangroves around the world in the year 2000 
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fcms-mangrove-agb-canopyheight-grid-v1.3_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://data.ghg.center/browseui/index.html#cms-mangrove-agb-canopyheight-grid-v1.3/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./stories/media/la-img1.jpg
+  alt: oco-3 instrument
+  author:
+    name: na
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CO₂
+  - name: Product Type
+    values:
+      - Satellite Observations
+disableExplore: true      
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2000
+    - Temporal Resolution: One-time estimates for nominal year 2000
+    - Spatial Extent: Global
+    - Spatial Resolution: 30m
+    - Data Units: Megagrams of biomass per hectare (Mg/ha), meters (m)
+    - Data Type: Research
+    - Data Latency: Monthly
+
+layers:
+  - id: cms-mangrove-agb-canopyheight-grid-v1.3-d
+    stacCol: cms-mangrove-agb-canopyheight-grid-v1.3
+    name: Methane Flux
+    type: raster
+    description: 
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: cog_default
+      colormap_name: purd
+      rescale:
+        - 400
+        - 420
+      tile_scale: 3
+    compare:
+      datasetId: cms-mangrove-agb-canopyheight-grid-v1.3
+      layerId: cms-mangrove-agb-canopyheight-grid-v1.3-d
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: nmol CH₄/m2/s
+      type: gradient
+      min: 3
+      max: 75
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: 2.25 km x 1.29 km
+      temporalResolution: Daily
+      unit: ppm
+  ---
+
+<Block>
+  <Prose>
+    **Temporal Extent:** 2000<br />
+    **Temporal Resolution:** One-time estimates for nominal year 2000<br />
+    **Spatial Extent:** Global<br />
+    **Spatial Resolution:** 30m<br />
+    **Data Units:**  Megagrams of biomass per hectare (Mg/ha), meters (m)<br />
+    **Data Type:** Research<br />
+    **Data Latency:** Monthly<br />
+
+   
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    Mangrove wetlands are among the most productive ecosystems in the world, capturing and storing significant amounts of carbon dioxide (CO₂) in the aboveground biomass (AGB) and soil. Understanding their structural attributes is vital for determining regional and global carbon stock estimates and supporting coastal management. NASA’s Carbon Monitoring System (CMS) was designed to characterize, quantify, understand, and predict the evolution of global carbon through improved monitoring of carbon stocks and fluxes. In support of the CMS project, this dataset characterizes the global distribution, biomass, and canopy height of mangrove wetlands using remotely sensed and in situ measurements. Estimates of mangrove AGB, maximum canopy height (the height of the tallest tree), and basal-area weighted height (individual tree heights weighted in proportion to their basal area) for the nominal year 2000 were derived across a 30-meter resolution map for mangroves globally, as identified in locations spanning 116 countries, utilizing satellite canopy height measurements and region-specific models. Field measurements of forest structures, tree height, and tree density in mangrove wetlands were also collected to estimate forest structure attributes. These maps can be used to assess regional processes and environmental conditions that may influence the forest structure and carbon cycles of mangrove wetlands.
+
+<Block>
+  <Prose>
+    <div style={{ border: '2px solid red', padding: '10px', display: 'inline-block', color: '#1b2631' }}>
+      <span style={{ color: 'red', fontWeight: 'bold' }}>Attention!</span>
+      A marker location in the visualization environment below represents the area within the mangrove forest.
+    </div>
+  </Prose>
+</Block>
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1"
+    />
+  </Figure>
+</Block>
+
+    ## Source Data Product Citation
+    Simard, M., T. Fatoyinbo, C. Smetanka, V.H. Rivera-monroy, E. Castaneda, N. Thomas, and T. Van der stocken. 2019. Global Mangrove Distribution, Aboveground Biomass, and Canopy Height. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1665
+    
+    ## Version History
+
+    ## Disclaimer
+
+    ## Scientific Details
+    A global mangrove extent map, as outlined in Giri et al. (2011), was used to identify mangrove ecotype areas and mask non-mangrove regions in the SRTM elevation dataset. Canopy height maps were generated using SRTM DEM data collected in February 2000 and lidar height measurements from the GLAS Spaceborne from 2003 to 2009. A regression model applied GLAS height measurements to SRTM elevation measurements to create a global map of maximum canopy height. In situ field data collected August 20, 2004 - May 22, 2014 were used to validate the estimates, and included estimated forest structure attributes and derived stand-level allometry involving AGB, basal-area weighted height (HBA), and maximum canopy height (HMAX). As indicated in prior studies, AGB was estimated for each tree using regional or site-specific allometric equations. A generalized pantropical tree allometric model, as defined in Chave et al. (2014), calculated individual trees' above- and belowground biomass. The sum of the individual trees was then computed and normalized, considering plot sizes, to represent total forest stand AGB density in Mg ha-1. The global mangrove forest AGB map was generated by linking the field-measured biomass-height allometry with SRTM estimates of HBA.
+    
+    ## Key Publications
+
+    ## Other Relevant Publications
+    Mangrove canopy height globally related to precipitation, temperature and cyclone frequency
+    - December 20, 2018
+    - https://doi.org/10.1038/s41561-018-0279-1
+
+    Harnessing Big Data to Support the Conservation and Rehabilitation of Mangrove Forests Globally
+    - May 22, 2020
+​​    - https://doi.org/10.1016/j.oneear.2020.04.018
+
+    Mangrove ecosystems in Southeast Asia region: Mangrove extent, blue carbon potential and CO2 emissions in 1996-2000
+    - March 10, 2024
+    - https://doi.org/10.1016/j.scitotenv.2024.170052
+
+    The role of predictive model data in designing mangrove forest carbon programs
+    - July 23, 2020
+    - https://doi.org/10.1088/1748-9326/ab7e4e
+
+    Status and distribution of mangrove forests of the world using earth observation satellite data
+    - August 17, 2010
+    - https://doi.org/10.1111/j.1466-8238.2010.00584.x
+
+    Improved allometric models to estimate the aboveground biomass of tropical trees
+    - May 10, 2014
+    - https://doi.org/10.1111/gcb.12629
+
+
+    ## Learn More
+
+    ## Acknowledgment
+    This study was supported by the NASA Carbon Monitoring Program (Grant Number N4-CMS14-0028). 
+
+    ## License
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/cms-mangrove-agb-canopyheight-grid-v1.3_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/cms-mangrove-agb-canopyheight-grid-v1.3.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/cms-mangrove-agb-canopyheight-grid-v1.3_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>
