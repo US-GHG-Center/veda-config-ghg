@@ -21,10 +21,8 @@ infoDescription: |
      Global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field measurement data.
 layers:
   - id: mangrove-biomass-agb
-    stacCol: cms-mangrove-biomass-height-v6
+    stacCol: cms-mangrove-agb-canopyheight-grid-v1.3
     name: 'Global Mangrove Aboveground Biomass'
-    stacApiEndpoint: https://dev.ghg.center/api/stac
-    rasterApiEndpoint: https://dev.ghg.center/api/raster
     type: raster
     description: 'Global Mangrove Aboveground Biomass'
     initialDatetime: newest
@@ -34,7 +32,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: mangrove-agb
+      assets: agb
       colormap_name: "reds"
       rescale:
         - 0
@@ -71,10 +69,8 @@ layers:
 
 
   - id: mangrove-basal-area-height
-    stacCol: cms-mangrove-biomass-height-v6
+    stacCol: cms-mangrove-agb-canopyheight-grid-v1.3
     name: 'Global Mangrove Basal-Area Weighted Height'
-    stacApiEndpoint: https://dev.ghg.center/api/stac
-    rasterApiEndpoint: https://dev.ghg.center/api/raster
     type: raster
     description: 'Mangrove basal-area weighted height (individual tree heights weighted in proportion to their basal area)'
     zoomExtent:
@@ -83,7 +79,7 @@ layers:
     projection:
       id: 'equirectangular'
     sourceParams:
-      assets: mangrove-hba
+      assets: hba
       colormap_name: blues
       rescale:
         - 0
@@ -116,10 +112,8 @@ layers:
       unit: meters
 
   - id: mangrove-max-height
-    stacCol: cms-mangrove-biomass-height-v6
+    stacCol: cms-mangrove-agb-canopyheight-grid-v1.3
     name: 'Mangrove Canopy Maximum Height'
-    stacApiEndpoint: https://dev.ghg.center/api/stac
-    rasterApiEndpoint: https://dev.ghg.center/api/raster
     type: raster
     description: 'Mangrove canopy maximum height (height of the tallest tree)'
     zoomExtent:
@@ -128,7 +122,7 @@ layers:
     projection:
       id: 'equirectangular'
     sourceParams:
-      assets: mangrove-hmax95
+      assets: hmax95
       colormap_name: "blues"
       rescale:
         - 0
