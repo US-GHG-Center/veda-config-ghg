@@ -46,7 +46,7 @@ infoDescription: |
     - Data type: Research
     - Data Latency: 2-3 months        
 layers:
-  - id: geos-ghg-daygrid-vPRE-column
+  - id: geos-ghg-daygrid-vPRE-xco2
     stacCol: geos-ghg-daygrid-vPRE
     name: Average Dry-Air Column CO₂ (XCO₂)
     type: raster
@@ -65,7 +65,7 @@ layers:
         - 400
     compare:
       datasetId: geos-ghg-daygrid-vPRE
-      layerId: geos-ghg-daygrid-vPRE-column
+      layerId: geos-ghg-daygrid-vPRE-xco2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -96,6 +96,105 @@ layers:
       src: ::file ./media/oco2geos-co2-daygrid-v10r.thumbnails.daily.png
       alt: OCO-2 GEOS Column CO₂ Concentrations - Average Dry-Air Column CO₂ (XCO₂)
 
+  - id: geos-ghg-daygrid-vPRE-xch4
+    stacCol: geos-ghg-daygrid-vPRE
+    name: Average Dry-Air Column CH₄ (XCH₄)
+    type: raster
+    description: Daily column-averaged mole fractions of methane derived from satellite data.
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: xch4
+      colormap_name: magma
+      rescale:
+        - 1750
+        - 1900
+    compare:
+      datasetId: geos-ghg-daygrid-vPRE
+      layerId: geos-ghg-daygrid-vPRE-xch4
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: ppm
+      type: gradient
+      min: 1750
+      max: 1900
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:        
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm        
+    media:
+      src: ::file ./media/oco2geos-co2-daygrid-v10r.thumbnails.daily.png
+      alt: OCO-2 GEOS Column CO₂ Concentrations - Average Dry-Air Column CO₂ (XCO₂)
+
+  - id: geos-ghg-daygrid-vPRE-xco
+    stacCol: geos-ghg-daygrid-vPRE
+    name: Average Dry-Air Column CO (XCO)
+    type: raster
+    description: Daily column-averaged mole fractions of carbon dioxide derived from satellite data.
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: xco
+      colormap_name: magma
+      rescale:
+        - 50
+        - 90
+    compare:
+      datasetId: geos-ghg-daygrid-vPRE
+      layerId: geos-ghg-daygrid-vPRE-xco
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: ppm
+      type: gradient
+      min: 50
+      max: 90
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:        
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm        
+    media:
+      src: ::file ./media/oco2geos-co2-daygrid-v10r.thumbnails.daily.png
+      alt: OCO-2 GEOS Column CO₂ Concentrations - Average Dry-Air Column CO (XCO)
 ---
 
 <Block>
