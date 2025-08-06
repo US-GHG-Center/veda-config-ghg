@@ -38,12 +38,12 @@ taxonomy:
       - Model Output
 infoDescription: |
   ::markdown
-    - Temporal Extent: anuary 1, 2015 – Ongoing      
+    - Temporal Extent: January 1, 2015 – Ongoing      
     - Temporal Resolution: Daily
-    - Spatial extent: Global    
-    - Spatial resolution: 0.25° x 0.25°   
-    - Data units: Parts per million (ppm)       
-    - Data type: Research
+    - Spatial Extent: Global    
+    - Spatial Resolution: 0.25° x 0.25°   
+    - Data Units: Parts per million (ppm) and Parts per billion (ppb)       
+    - Data Type: Research
     - Data Latency: 2-3 months        
 layers:
   - id: geos-ghg-daygrid-vPRE-xco2
@@ -122,7 +122,7 @@ layers:
         }
     legend:
       unit:
-        label: ppm
+        label: ppb
       type: gradient
       min: 1750
       max: 1900
@@ -141,7 +141,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: ppm        
+      unit: ppb        
     media:
       src: ::file ./media/oco2geos-co2-daygrid-v10r.thumbnails.daily.png
       alt: OCO-2 GEOS Column CO₂ Concentrations - Average Dry-Air Column CO₂ (XCO₂)
@@ -172,7 +172,7 @@ layers:
         }
     legend:
       unit:
-        label: ppm
+        label: ppb
       type: gradient
       min: 50
       max: 90
@@ -191,7 +191,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: ppm        
+      unit: ppb        
     media:
       src: ::file ./media/oco2geos-co2-daygrid-v10r.thumbnails.daily.png
       alt: OCO-2 GEOS Column CO₂ Concentrations - Average Dry-Air Column CO (XCO)
@@ -199,15 +199,15 @@ layers:
 
 <Block>
   <Prose>
-    **Temporal Extent:** anuary 1, 2015 – Ongoing      
+    **Temporal Extent:** January 1, 2015 – Ongoing      
     **Temporal Resolution:** Daily<br /> 
-    **Spatial extent:** Global    
-    **Spatial resolution:** 0.25° x 0.25°   
-    **Data units:**  Parts per million (ppm)       
-    **Data type:** Research<br /> 
+    **Spatial Extent:** Global    
+    **Spatial Resolution:** 0.25° x 0.25°   
+    **Data Units:**  Parts per million (ppm) and Parts per billion (ppb)      
+    **Data Type:** Research<br /> 
     **Data Latency:** 2-3 months
 
-    In July 2014, NASA successfully launched the first dedicated Earth remote sensing satellite to study atmospheric carbon dioxide (CO₂)  from space. The Orbiting Carbon Observatory-2 (OCO-2) is an exploratory science mission designed to collect space-based global measurements of atmospheric CO₂ with the precision, resolution, and coverage needed to characterize sources and sinks (fluxes) on regional scales (≥1000 km). This dataset provides global gridded, daily column-averaged carbon dioxide (XCO₂) concentrations from January 1, 2015 - February 28, 2022. The data are derived from OCO-2 observations that were input to the Goddard Earth Observing System (GEOS) Constituent Data Assimilation System (CoDAS), a modeling and data assimilation system maintained by NASA’s Global Modeling and Assimilation Office (GMAO). Concentrations are measured in moles of carbon dioxide per mole of dry air (mol CO₂/mol dry) at a spatial resolution of 0.5° x 0.625°. Data assimilation synthesizes simulations and observations, adjusting modeled atmospheric constituents like CO₂ to reflect observed values. With the support of NASA’s Carbon Monitoring System (CMS) Program and the OCO Science Team, this dataset was produced as part of the OCO-2 mission which provides the highest quality space-based XCO₂ retrievals to date.
+    In July 2014, NASA successfully launched the first dedicated Earth remote sensing satellite to study atmospheric carbon dioxide (CO₂)  from space. The Orbiting Carbon Observatory-2 (OCO-2) is an exploratory science mission designed to collect space-based global measurements of atmospheric CO₂ with the precision, resolution, and coverage needed to characterize sources and sinks (fluxes) on regional scales (≥1000 km). This dataset provides global gridded, daily column-averaged carbon dioxide (XCO₂) concentrations from JJanuary 1, 2015 - February 28, 2022. The data are derived from OCO-2 observations that were input to the Goddard Earth Observing System (GEOS) Constituent Data Assimilation System (CoDAS), a modeling and data assimilation system maintained by NASA’s Global Modeling and Assimilation Office (GMAO). Concentrations are measured in moles of carbon dioxide per mole of dry air (mol CO₂/mol dry) at a spatial resolution of 0.5° x 0.625°. Data assimilation synthesizes simulations and observations, adjusting modeled atmospheric constituents like CO₂ to reflect observed values. With the support of NASA’s Carbon Monitoring System (CMS) Program and the OCO Science Team, this dataset was produced as part of the OCO-2 mission which provides the highest quality space-based XCO₂ retrievals to date.
 
 
   </Prose>
