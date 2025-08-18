@@ -1,7 +1,7 @@
 ---
 id: blackmarble-radiance-daygrid-v2nrt
-name: Black Marble Nighttime Light Emissions
-description: Nighttime light emissions observed by Suomi NPP VIIRS Day/Night Band in a linear latitude-longitude projection and gridded at 500m
+name: Black Marble Nighttime at Sensor Radiance
+description: Nighttime at sensor radiance observed by Suomi NPP VIIRS Day/Night Band in a linear latitude-longitude projection and gridded at 500m
 
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/blackmarble-radiance-daygrid-v2nrt.html'
@@ -50,9 +50,8 @@ infoDescription: |
     - Data Latency: Updated daily       
 layers:
   - id: VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
-    stacApiEndpoint: https://dev.ghg.center/api/stac/
-    stacCol:  VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
-    name: Nighttime Light Emissions
+    stacCol: VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
+    name: Nighttime at Sensor Radiance
     type: wmts 
     description: At sensor nighttime radiance observed by the Suomi NPP VIIRS Day/Night band.
     sourceParams:
@@ -71,21 +70,22 @@ layers:
       exclude: true
     legend:
       unit:
-        label: W/cm²/sr        
+        label: nW/cm²/sr        
       type: gradient
       min: 0
       max: 5
       stops:
-        - rgb(240,240,240) 
-        - rgb(192,192,192)
-        - rgb(128,128,128)
-        - rgb(64,64,64)
         - rgb(0,0,0)  
+        - rgb(64,64,64)
+        - rgb(128,128,128)
+        - rgb(192,192,192)
+        - rgb(240,240,240) 
+
     info:
       source: NASA
       spatialExtent: Global 
       temporalResolution: Daily
-      unit: W/cm²/sr                
+      unit: nW/cm²/sr                
 
 ---
 <Block>
