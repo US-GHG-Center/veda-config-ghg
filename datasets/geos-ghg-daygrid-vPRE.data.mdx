@@ -1,6 +1,6 @@
 ---
 id: geos-ghg-daygrid-vPRE
-name: GEOS Assimilated CO₂, CH₄, and CO Column Concentrations
+name: Goddard Earth Observing System (GEOS) Assimilated CO2, CH4, and CO Column Concentrations
 description: Daily, global assimilated CO₂, CH₄, and CO average column concentrations derived from satellite data
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/geos-ghg-daygrid-vPRE.html'
@@ -61,8 +61,8 @@ layers:
       assets: xco2
       colormap_name: magma
       rescale:
-        - 395
-        - 400
+        - 420
+        - 430
     compare:
       datasetId: geos-ghg-daygrid-vPRE
       layerId: geos-ghg-daygrid-vPRE-xco2
@@ -74,8 +74,8 @@ layers:
       unit:
         label: ppm
       type: gradient
-      min: 395
-      max: 400
+      min: 420
+      max: 430
       stops:
         - '#2c115f'
         - '#721f81'
@@ -112,7 +112,7 @@ layers:
       colormap_name: magma
       rescale:
         - 1750
-        - 1900
+        - 2000
     compare:
       datasetId: geos-ghg-daygrid-vPRE
       layerId: geos-ghg-daygrid-vPRE-xch4
@@ -125,7 +125,7 @@ layers:
         label: ppb
       type: gradient
       min: 1750
-      max: 1900
+      max: 2000
       stops:
         - '#2c115f'
         - '#721f81'
