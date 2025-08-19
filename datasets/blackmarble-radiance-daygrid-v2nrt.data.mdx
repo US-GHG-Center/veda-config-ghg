@@ -1,0 +1,137 @@
+---
+id: blackmarble-radiance-daygrid-v2nrt
+name: Black Marble Nighttime at Sensor Radiance
+description: Nighttime at sensor radiance observed by Suomi NPP VIIRS Day/Night Band in a linear latitude-longitude projection and gridded at 500m
+
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/blackmarble-radiance-daygrid-v2nrt.html'
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fblackmarble-radiance-daygrid-v2nrt_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://search.earthdata.nasa.gov/search/granules?p=C2780753001-LANCEMODIS&pg[0][v]=f&pg[0][gsk]=-start_date&q=VIIRS/NPP%20Daily%20Gridded%20Day%20Night%20Band%20500m%20Linear%20Lat.%20Lon.%20Grid%20Night%20NRT&tl=1723239933.855!4
+    label: Browse and download the data
+    title: Data Browser
+
+media:
+  src: https://eoimages.gsfc.nasa.gov/images/imagerecords/90000/90008/europe_vir_2016.jpg
+  alt: Night Light Map
+  author:
+    name:  Earth Observatory NASA
+    url:  https://earthobservatory.nasa.gov
+taxonomy:
+  - name: Topics
+    values:
+      - Land
+      - Aquatic    
+  - name: Source
+    values:
+      - NASA
+      - NOAA
+  - name: Gas
+    values:
+      - CH₄
+      - CO₂
+  - name: Product Type
+    values:
+      - Satellite Observations
+infoDescription: |
+  ::markdown 
+    - Temporal Extent: October 10, 2023 - Ongoing
+    - Temporal Resolution: Daily
+    - Spatial Extent: Global    
+    - Spatial Resolution: 500m   
+    - Data Units: Watts per square centimeter per steradian (nW/cm²/sr)       
+    - Data Type: Operational
+    - Data Latency: Updated daily       
+layers:
+  - id: VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
+    stacCol: VIIRS_SNPP_DayNightBand_At_Sensor_Radiance
+    name: Nighttime at Sensor Radiance
+    type: wmts 
+    description: At sensor nighttime radiance observed by the Suomi NPP VIIRS Day/Night band.
+    sourceParams:
+      layers: 1
+      version: 1.3.0
+      crs: EPSG:3857
+      colormap_name: gray
+      rescale:
+        - 0
+        - 5      
+      styles:
+    zoomExtent:
+      - 0
+      - 5
+    analysis:
+      exclude: true
+    legend:
+      unit:
+        label: nW/cm²/sr        
+      type: gradient
+      min: 0
+      max: 5
+      stops:
+        - rgb(0,0,0)  
+        - rgb(64,64,64)
+        - rgb(128,128,128)
+        - rgb(192,192,192)
+        - rgb(240,240,240) 
+
+    info:
+      source: NASA
+      spatialExtent: Global 
+      temporalResolution: Daily
+      unit: nW/cm²/sr                
+
+---
+<Block>
+  <Prose>   
+    **Temporal Extent:** October 10, 2023 - Ongoing<br />
+    **Temporal Resolution:** Daily<br />
+    **Spatial Extent:** Global    
+    **Spatial Resolution:** 500m   
+    **Data Units:** Watts per square centimeter per steradian (W/cm²/sr)       
+    **Data Type:** Operational<br />
+    **Data Latency:** Updated daily
+
+    Greenhouse gas (GHG) emission indicators, such as energy consumption, urban development, transportation, and industrial processes, are often difficult to monitor due to limitations in the spatial and temporal coverage of conventional ground-based measurements. In 2022 alone, the Intergovernmental Panel on Climate Change (IPCC) report indicated that approximately 35% of anthropogenic emissions recorded in 2019 were attributed to electricity and heat production. Satellite observations offer unique capabilities for enhancing GHG monitoring efforts as they can effectively map the extent and distribution of the GHGs across varied geographic areas and times with a high degree of accuracy. Nightlight data can particularly present valuable insights into human activities as they possess high radiometric resolution, enabling the identification of bright urban lights down to gas flares. Collected by the Visible Infrared Imaging Radiometer Suite (VIIRS) sensor aboard the Suomi National Polar-orbiting Partnership (NPP) satellite, the Daily Gridded Day/Night Band (DNB) product supplies measurements of nocturnal visible and near-infrared (NIR) light emitted from cities, industrial sites, power plants, gas flaring sources, biomass burning, as well as other human-induced emission initiators. The light emitted and captured by the VIIRS sensor can be a valuable indicator of GHG emissions, enabling the better identification of hotspots and the estimation of emissions across a given location in Near Real-Time (NRT). The DNB collection provides global linear 0.0045° x 0.0045° latitude and longitude grid nightlight data with a 500-meter spatial resolution. 
+
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    Román, M. O. 2023. About. MODAPS Services. NASA Suomi-NPP/VIIRS Land SIPS/Land, Atmosphere Near real-time Capability for EOS (LANCE) Moderate Resolution Imaging Spectroradiometer (MODIS). https://doi.org/10.5067/VIIRS/VNP46A1_NRT.002
+    
+    ## Version History
+
+    ## Dataset Accuracy
+
+    ## Disclaimer
+
+    ## Scientific Details
+    The Top of Atmosphere (TOA) nighttime radiance product is updated daily and contains 26 Science Data Sets (SDS), including sensor radiance, zenith and azimuth angles (at-sensor, solar, and lunar), cloud-mask flags, time, shortwave infrared (IR) radiance, brightness temperatures, VIIRS quality flags, moon phase angle, and moon illumination fraction. The DNB’s ultra-sensitivity in low-light conditions enhances the process of monitoring the magnitude and radiance signature of nighttime phenomena, particularly sources of manmade light emissions. The product is produced using lunar irradiance modeling, temporal gap filling, and gridding algorithms to convert data to a lat and long grid available at 15 arc-second resolution. The gidding algorithms were modified to comply with DNB’s unique viewing geometry and to collect observations from available 6-min swath granules (2,366 km along track, and about 3,100 km across track), allowing for the derivation of high-quality data with minimal impact from cloud cover and off-nadir viewing. By employing the “turning off the moon” approach, the upward surface radiance from artificial light emissions can be extracted from at-sensor nighttime radiance at TOA. To reduce uncertainty due to existing vegetation within the ground-to-sensor geometry path, particularly in cities with temperate climates, the clumping index, known as the vegetation dispersion parameter, was used to quantify the confined distribution of foliage for a given area. Radiance values are reported in Watts per square centimeter per steradian (W/cm²/sr) and span across a spectral range of 500 to 900 nm with global coverage between ±75° latitude. The files are originally provided in the standard Hierarchical Data Format - Earth Observing System (HDF-EOS) format. 
+
+    ## Key Publications
+
+    ## Other Relevant Publications
+
+    ## Learn More
+
+    ## Acknowledgment
+    This dataset was produced by researchers at NASA Suomi-NPP/VIIRS Land SIPS/Land, Atmosphere Near Real-time Capability for EOS (LANCE)Moderate Resolution Imaging Spectroradiometer (MODIS), located at NASA Goddard Space Flight Center (GSFC) in Greenbelt, MD, United States. We thank the Black Marble Science Team for their continued efforts in acquiring, processing, validating, and disseminating this product.
+
+    ## License
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/blackmarble-radiance-daygrid-v2nrt_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/blackmarble-radiance-daygrid-v2nrt.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/blackmarble-radiance-daygrid-v2nrt_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>

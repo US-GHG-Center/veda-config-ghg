@@ -1,0 +1,185 @@
+---
+id: oco3-co2-sams-daygrid-v11r
+name: OCO-3 Snapshot Area Maps of Column CO₂ Concentrations 
+description: OCO-3 SAM XCO₂ 
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Foco3-co2-sams-daygrid-v11r_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://data.ghg.center/browseui/index.html#oco3-co2-sams-daygrid-v11r/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./media/la-img1.jpg
+  alt: oco-3 instrument
+  author:
+    name: na
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CO₂
+  - name: Product Type
+    values:
+      - Satellite Observations
+disableExplore: true      
+infoDescription: |
+  ::markdown
+    - Temporal Extent: August 06, 2019 - Ongoing
+    - Temporal Resolution: Daily
+    - Spatial Extent: Global, 52°N to 52°S latitude
+    - Spatial Resolution: 2.25 km x 1.29 km
+    - Data Units: Parts per million (ppm)
+    - Data Type: Research
+    - Data Latency: Monthly
+
+layers:
+  - id: oco3-co2-sams-daygrid-v11r-d
+    stacCol: oco3-co2-sams-daygrid-v11r
+    name: Methane Flux
+    type: raster
+    description: 
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: cog_default
+      colormap_name: purd
+      rescale:
+        - 400
+        - 420
+      tile_scale: 3
+    compare:
+      datasetId: oco3-co2-sams-daygrid-v11r
+      layerId: oco3-co2-sams-daygrid-v11r-d
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: nmol CH₄/m2/s
+      type: gradient
+      min: 3
+      max: 75
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: 2.25 km x 1.29 km
+      temporalResolution: Daily
+      unit: ppm
+---
+
+<Block>
+  <Prose>
+    **Temporal Extent:** August 06, 2019 - Ongoing<br />
+    **Temporal Resolution:** Daily<br />
+    **Spatial Extent:** Global, 52°N to 52°S latitude km<br />
+    **Spatial Resolution:** 2.25 km x 1.29 km<br />
+    **Data Units:**  Parts per million (ppm)<br />
+    **Data Type:** Research<br />
+    **Data Latency:** Monthly<br />
+
+   
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    The [Orbiting Carbon Observatory-3](https://www.jpl.nasa.gov/missions/orbiting-carbon-observatory-3-oco-3), or OCO-3, is deployed on the International Space Station (ISS) and designed to investigate fundamental questions about the distribution of carbon dioxide (CO₂) and solar-induced chlorophyll fluorescence (SIF) on Earth as it relates to uptake by the natural biosphere and oceans, growing urban populations and changing patterns of fossil fuel combustion. OCO-3’s Snapshot Area Mapping (SAM) mode is an unique mode of operation that allows OCO-3 to quickly scan large areas (80 km x 80 km) and collect data over specific targets, like urban areas and megacities, improving our ability to better quantify and study localized sources of CO₂ emissions. OCO-3 SAM mode observations are unique and currently no other instrument (ground-based or space-based) in the world takes these types of measurements. Since the beginning of the mission, OCO-3 has collected over 22,000 SAMs across the globe over a variety of targets, such as megacities, volcanoes and biospheric hotspots. These data are available from August 2019 – November 2023. From November 2023 to July 2024, OCO-3 was in storage to let another NASA payload complete its nominal mission on the ISS. OCO-3 was reinstalled and resumed science operations and SAM data collection from July 16, 2024. 
+
+<Block>
+  <Prose>
+    <div style={{ border: '2px solid red', padding: '10px', display: 'inline-block', color: '#1b2631' }}>
+      <span style={{ color: 'red', fontWeight: 'bold' }}>Attention!</span>
+      A marker location in the visualization environment below represents the area within the snapshot area. The marker does <strong>not</strong> indicate the source.
+    </div>
+  </Prose>
+</Block>
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1"
+    />
+  </Figure>
+</Block>
+
+    ## Source Data Product Citation
+    OCO-2/OCO-3 Science Team, Vivienne Payne, Abhishek Chatterjee (2024), OCO-3 Level 2 bias-corrected XCO₂ and other select fields from the full-physics retrieval aggregated as daily files, Retrospective processing V11r, Greenbelt, MD, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], 10.5067/8U0VGVQC7HZG
+    
+    ## Version History
+
+    ## Disclaimer
+
+    ## Scientific Details
+    The [Orbiting Carbon Observatory-3](https://www.jpl.nasa.gov/missions/orbiting-carbon-observatory-3-oco-3), or OCO-3, is deployed on the International Space Station (ISS) and designed to investigate fundamental questions about the distribution of carbon dioxide (CO₂) and solar-induced chlorophyll fluorescence (SIF) on Earth as it relates to uptake by the natural biosphere and oceans, growing urban populations and changing patterns of fossil fuel combustion. OCO-3’s Snapshot Area Mapping (SAM) mode is an unique mode of operation that allows OCO-3 to quickly scan large areas (80 km x 80 km) and collect data over specific targets, like urban areas and megacities. This is made possible by an agile 2-D pointing mechanism, called a Pointing Mirror Assembly (PMA), that allows for rapid transitions in pointing. The PMA is used to collect SAMs to sample emission sources and gradients, areas where plants and crops are being studied, volcanos, and other local carbon sources from space. The PMA also allows for target mode observations, similar to those taken by OCO-2, typically at Total Column Carbon Observation Network (TCCON) ground sites, that are then used in validation. OCO-3 SAM mode observations are unique, providing key observations to support the monitoring and understanding of changes to Earth’s surface and atmosphere. Currently no other instrument (ground-based or space-based) in the world takes these types of measurements. 
+
+    ## Key Publications
+
+    ## Other Relevant Publications
+    Satellite-Based Analysis of CO₂ Emissions From Global Cities: Regional, Economic, and Demographic Attributes
+    - July 16, 2025
+    - https://doi.org/10.1029/2025AV001747
+    
+    Exploitation of OCO-3 Satellite Data to Analyse Carbon Dioxide Emissions from the Mt. Etna Volcano
+    - May 31, 2025
+    - https://doi.org/10.3390/rs17111918
+    
+    Constraining Sector-Specific CO₂ Fluxes Using Space-Based XCO₂ Observations Over the Los Angeles Basin
+    - November 9, 2023
+    - https://doi.org/10.1029/2023GL104376
+    
+    Role of space station instruments for improving tropical carbon flux estimates using atmospheric data
+    - November 20, 2022
+    - https://doi.org/10.1038/s41526-022-00231-6
+    
+    Urban-focused satellite CO₂ observations from the Orbiting Carbon Observatory-3: A first look at the Los Angeles megacity
+    - June 1, 2021
+    - https://doi.org/10.1016/j.rse.2021.112314
+    
+    The OCO-3 mission: measurement objectives and expected performance based on 1 year of simulated data
+    - April 15, 2019
+    - https://doi.org/10.5194/amt-12-2341-2019
+
+    ## Learn More
+
+    ## Acknowledgment
+    OCO-3 Project and Mission Team
+
+    ## License
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/oco3-co2-sams-daygrid-v11r_Data_Flow.html)
+    - Data Transformation Code: n/a - The dataset was utilized in its original, unaltered format
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/oco3-co2-sams-daygrid-v11r_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>
