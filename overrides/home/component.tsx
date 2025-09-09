@@ -89,11 +89,7 @@ export default function HomeComponent() {
         <Grid col={8} offset={2} className="font-heading-md margin-y-10">
           <h1 className="font-heading-2xl margin-y-6">Welcome</h1>
           <p className="margin-bottom-4 font-size-md-deprecated">
-            The Air Quality Portal opens up access to trusted data on
-            air quality. This&nbsp;multi-agency effort consolidates
-            greenhouse gas information from observations and models to create a unified source for U.S. government and other datasets.
-            The&nbsp;goal of the AQ portal is to provide decision makers with
-            one location for data and analysis.
+          AIR4US is designed to be a trusted center for exploring air quality.  This effort consolidates air quality data and information from observations and models to create a unified source for decision makers.
           </p>
           <Grid row>
             <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
@@ -125,20 +121,6 @@ export default function HomeComponent() {
       </GridContainer>
       <ActionsBlock>
       </ActionsBlock>
-      <InfoCallout>
-        <InfoCalloutInner>
-          <InfoCalloutHeadline>
-            <VarHeading size="xlarge">
-              Joining forces for a better future
-            </VarHeading>
-            <p>
-              The AQ Portal is grateful for the support and expertise of our
-              valued, multi-agency collaborators: NASA, EPA, NIST, and NOAA.
-            </p>
-          </InfoCalloutHeadline>
-          <Partners variation="positive" size="big" />
-        </InfoCalloutInner>
-      </InfoCallout>
     </>
   );
 }

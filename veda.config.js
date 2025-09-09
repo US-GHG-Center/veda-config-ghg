@@ -3,17 +3,12 @@ const { parsed: config } = dotEnvConfig;
 
 const defaultMenuLinks = [
   {
-    title: 'Stories',
+    title: 'Applications',
     to: '/stories',
     type: 'internalLink'
   },
   {
-    title: 'Topics',
-    to: '/topics',
-    type: 'internalLink'
-  },
-  {
-    title: 'Data Toolkit',
+    title: 'Explore Data',
     to: '/data-toolkit',
     type: 'internalLink'
   },
@@ -77,18 +72,17 @@ module.exports = {
     pageFooter: "./overrides/components/page-footer/index.mdx",
     "/news-and-events": "./custom-pages/news-and-events/index.mdx",
     "/data-toolkit": "./custom-pages/data-toolkit/index.mdx",
-    "/topics": "./custom-pages/topics/index.mdx",
   },
 
   strings: {
     stories: {
-      one: "Story",
-      other: "Stories",
+      one: "Data Application",
+      other: "Data Applications",
     },
     storiesBanner:
-        "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
+        "Explore examples of air quality data use to understand a particular event, area or issue",
     dataCatalogBanner:
-        "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+        "This catalog contains the data products that provide insights into air quality issues.  Detailed data pages contain access to visualizations, stories and outside resources.",
     // Temporary Banner Text/URL/expiry
     tempBanner:
         "Read the new story on using EMIT and AVIRIS-3 for monitoring large methane emission events.",

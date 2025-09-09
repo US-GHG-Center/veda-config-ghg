@@ -1,0 +1,271 @@
+---
+id: no2
+name: OMI/Aura Nitrogen Dioxide-NO₂ Total and Tropospheric Column
+description: Daily global dataset of total and tropospheric nitrogen dioxide (NO₂) columns at 0.25° x 0.25° spatial resolution.
+media:
+  src: ::file ./media/OMI_global.png
+  alt: Science and Data
+  author:
+    name:  NASA Science and Data
+    url:  https://aura.gsfc.nasa.gov/omi.html/
+taxonomy:
+  - name: Topics
+    values:
+      - Air Quality    
+      - Anthropogenic Emissions
+      - Natural Emissions and Sinks       
+  - name: Source
+    values:
+      - NASA
+      - OMI
+  - name: Gas
+    values:
+      - NO₂
+  - name: Product Type
+    values:
+      - Satellite Observations
+infoDescription: |
+  ::markdown 
+    - Source: Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite.
+    - Resolution: 0.25° x 0.25° grid.
+    - Temporal Coverage: Daily measurements from October 2004 to present.
+    - Spatial Coverage: Global coverage.
+    - File Format: NetCDF, CSV, GeoTIFF.
+    - Applications: Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
+
+layers:
+  - id: no2-monthly
+    stacCol: no2-monthly
+    tileApiEndpoint: "https://openveda.cloud/api/raster"
+    stacApiEndpoint: "https://openveda.cloud/api/stac/"
+
+    name: Nitrogen Dioxide (monthly)
+    type: raster
+    description: 'Global nitrogen dioxide (NO₂) data organized into monthly metrics'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      color_formula: gamma r 1.05
+      colormap_name: rdbu_r
+      rescale:
+        - 0
+        - 1.5e16
+    compare:
+      datasetId: no2
+      layerId: no2-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "Less"
+      max: "More"
+      stops:
+        - "#3A88BD"
+        - "#C9E0ED"
+        - "#E4EEF3"
+        - "#FDDCC9"
+        - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
+  - id: no2-monthly-diff
+    stacCol: no2-monthly-diff
+    name: Nitrogen Dioxide (monthly difference)
+    type: raster
+    description: 'Global nitrogen dioxide (NO₂) data which displays the difference from the same time 1 month ago'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: rdbu_r
+      rescale:
+        - -3e15
+        - 3e15
+    compare:
+      datasetId: no2
+      layerId: no2-monthly-diff
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "< -3"
+      max: "> 3"
+      stops:
+        - "#3A88BD"
+        - "#C9E0ED"
+        - "#E4EEF3"
+        - "#FDDCC9"
+        - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
+  - id: OMI_trno2-COG
+    stacCol: OMI_trno2-COG
+    name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
+    type: raster
+    description: "NASA OMI/Aura Nitrogen Dioxide (NO₂) Total and Tropospheric Column"
+    zoomExtent:
+      - 0
+      - 16
+    sourceParams:
+      colormap_name: reds
+      rescale:
+        - 0
+        - 30E14
+    legend:
+      unit:
+        label: mol/cm2
+      type: gradient
+      min: 0
+      max: 30e14
+      stops:
+        - '#ffffff'
+        - '#fdd1bf'
+        - '#e02d26'
+        - '#67000c'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+---
+
+<Block>
+  <Prose
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      gap: '32px',
+      width: '100%'
+    }}
+  >
+    {/* Main Centered Text */}
+    <Prose
+      style={{
+        backgroundColor: '#f0f0f0',
+        padding: '24px',
+        borderRadius: '8px',
+        flex: 1,
+        maxWidth: '600px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+        textAlign: 'justify'
+      }}
+    >
+      <p>
+        <strong>Source:</strong> Ozone Monitoring Instrument (OMI) on NASA’s Aura satellite<br />
+        <strong>Temporal Resolution:</strong> Daily measurements from October 2004 to present<br />
+        <strong>Spatial Extent:</strong> Global<br />
+        <strong>Spatial Resolution:</strong> 0.25° x 0.25°<br />
+        <strong>Data Units:</strong> Molecules per cm² (molec./cm²)<br />
+        <strong>File Format:</strong> NetCDF, CSV, GeoTIFF<br />
+        <strong>Applications:</strong> Urban pollution analysis, industrial emissions tracking, climate modeling, health impact studies.
+      </p>
+    </Prose>
+  </Prose>
+</Block>
+
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+      <p>  
+    ## Introduction
+      Nitrogen dioxide (NO₂) is a major air pollutant that affects human health, air quality, and climate, with exposure linked to respiratory issues and increased risk of infection, especially in children and individuals with asthma. Monitoring NO₂ is crucial for understanding urban pollution, tracking industrial emissions, and assessing environmental changes. <br />
+      The Ozone Monitoring Instrument (OMI) aboard NASA’s Aura satellite provides daily, global measurements of NO₂ concentrations, offering a consistent and reliable data record that supports research and policymaking. OMI measures not only NO₂ but also other criteria pollutants such as ozone (O₃), sulfur dioxide (SO₂), and aerosols, enabling detailed analysis of pollution sources and trends. Building on the legacy of NASA’s Total Ozone Mapping Spectrometer (TOMS) and the European Space Agency’s Global Ozone Monitoring Experiment (GOME), OMI offers improved ground resolution and the ability to detect a wider range of atmospheric constituents, including lower atmospheric dust, smoke, and other aerosols, making it a vital tool for air quality and climate research.
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+      <p>  
+    ## Data Preparation
+        The dataset undergoes comprehensive processing to ensure accuracy, beginning with adjustments for cloud cover and surface reflectivity using Moderate Resolution Imaging Spectroradiometer (MODIS) Bidirectional Reflectance Distribution Function (BRDF) data to enhance retrieval quality over both land and water. The nitrogen dioxide algorithm employs spectral fitting in the 405–465 nanometer range via the Differential Optical Absorption Spectroscopy (DOAS) technique to convert slant column densities into vertical column densities, with synthetic spectra and Global Ozone Monitoring Experiment (GOME) observational data used to validate the method. Additionally, ground-based measurements provide localized tropospheric NO₂ estimates to further validate satellite observations.
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p> 
+    ## Applications and Use Cases
+      - Assessing health impacts of NO₂ exposure in collaboration with public health organizations.
+      - Tracking urban air pollution trends using HAQAST tools like the Urban Air Quality Explorer.
+      - Supporting regulatory frameworks like EPA’s AirNow system with satellite-derived insights.
+  </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>
+        ## Frequently Asked Questions (FAQs)
+            **1. What is NO₂?**  
+              NO₂ is a harmful air pollutant primarily emitted from vehicles, power plants, and industrial activities. It contributes to respiratory issues and environmental degradation.<br />
+
+            **2. How does nitrogen dioxide interact with other air pollutants?**  
+              Nitrogen dioxide (NO₂) reacts with volatile organic compounds and sunlight to form harmful secondary pollutants like ground-level ozone and fine particulate matter, which contribute to smog and respiratory problems. It also combines with water vapor to create acid rain and nitrate particles, worsening air quality and environmental damage.<br />
+
+            **3. How can I use this dataset?**  
+              Applications include air quality monitoring, urban planning, climate modeling, and public health assessments.<br />
+
+            **4. What tools are available for data analysis?**  
+              Tools such as Jupyter Notebooks (TBD), the [VEDA visualization platform](#), and [Earthdata Search](https://search.earthdata.nasa.gov/) can be used to analyze this dataset.<br />
+     </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p> 
+    ## Scientific Resources
+      - [User guide for dataset navigation](https://disc.gsfc.nasa.gov/datasets?page=1&source=AURA%20OMI)
+      - Algorithm theoretical basis documents [ATBD](https://eospso.nasa.gov/atbd-category/49) detailing data processing methods. 
+      - Key publication: [Ozone Monitoring Instrument (OMI) Aura nitrogen dioxide standard product version 4.0 with improved surface and cloud treatments.](https://amt.copernicus.org/articles/14/455/2021/)
+      - User Jupyter Notebook: TBD
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+      <p>  
+    ## Disclaimer 
+      This dataset is provided "as is" and users are encouraged to verify its suitability for their intended purposes. This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>  
+    ## License
+    This data is published for research academic and related non-commercial purposes. Creative Commons Zero v1.0 Universal (CC0 1.0).
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+    ## Acknowledgements
+       NASA Earth Science Division.
+  </p>
+  </Prose>
+</Block>
+

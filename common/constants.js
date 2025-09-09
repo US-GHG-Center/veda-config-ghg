@@ -85,7 +85,7 @@ export const focusAreasStories = focusAreaDatasets.map((area, index) => {
 export const dataEngagements = [
   {
     "title": "Data Catalog",
-    "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
+    "desc": "Detailed dataset information for insight into the quality of the air we breathe.",
     "img": {
       "src": new URL('./media/data_catalog.png', import.meta.url).href,
       "alt": "icon showing file drawers with an earth representing data card catalog."
@@ -124,7 +124,7 @@ export const dataEngagements = [
   },
   {
     "title": "Documentation",
-    "desc": "Access technical documentation for US GHG Center data services, including a collection of code notebooks and instructions for accessing data via API.",
+    "desc": "Access technical documentation for US4AIR data services, including a collection of code notebooks and instructions for accessing data via API.",
     "img": {
       "src": new URL('./media/documentation.png', import.meta.url).href,
       "alt": "icon of an open laptop surrounded by icons of documents, and a chart."

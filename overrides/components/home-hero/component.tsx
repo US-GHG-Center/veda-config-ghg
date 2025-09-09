@@ -15,7 +15,7 @@ import Partners from "../../home/partners";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 
 import coverImgSrc from "./earth.png";
-import coverVideoSrc from "url:./earth-gas.mp4";
+import coverVideoSrc from "url:./no2_trimmed.mp4";
 
 const Hero = styled.div`
   background: ${themeVal("color.primary")};
@@ -27,7 +27,7 @@ const PageHeroHGroup = styled.div`
   grid-column: 1 / -1;
   display: flex;
   flex-flow: column;
-  gap: ${glsp(3)};
+  gap: ${glsp(2)};
   align-items: center;
 `;
 
@@ -35,12 +35,18 @@ const HeroHeadline = styled.div`
   grid-column: 1 / -1;
   display: flex;
   flex-flow: column;
-  gap: ${glsp()};
+ 
   align-items: center;
 
   p {
     font-size: 1.25rem;
   }
+`;
+const HeroSubtitle = styled.div`
+  grid-column: 1 / -1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 `;
 
 const PageHeroCover = styled(Figure)`
@@ -67,7 +73,6 @@ const PageHeroCover = styled(Figure)`
   }
 `;
 
-
 export default function HomeHero(props) {
   const { isMediumUp } = useMediaQuery();
 
@@ -76,10 +81,13 @@ export default function HomeHero(props) {
       <Constrainer>
         <PageHeroHGroup>
           <HeroHeadline>
-            <VarHeading size="jumbo">Air Quality Portal</VarHeading>
+            <VarHeading size="jumbo">AIR4US</VarHeading>
           </HeroHeadline>
-          <Partners variation="negative" size="big" />
         </PageHeroHGroup>
+        <HeroSubtitle>
+            <VarHeading size="xsmall">Data and Tools for Assessing Air Quality </VarHeading>
+          </HeroSubtitle>
+          <Partners variation="negative" size="big" />
       </Constrainer>
       <PageHeroCover>
         {isMediumUp ? (
