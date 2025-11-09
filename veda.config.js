@@ -170,11 +170,11 @@ module.exports = {
     defaultIsOpen: false,
     contentId: 'gov-banner-content'
   },
-  // siteAlert: {
-  //   content: `[Discover insights on how the COVID-19 pandemic](stories/life-of-water) impacted air quality worldwide, observed through NASA's satellite data.`,
-  //   expires: '2026-08-03T12:00:00-04:00',
-  //   type: 'info',
-  //   slim: true,
-  //   showIcon: true
-  // },
+  siteAlert: {
+    content: `We are currently experiencing some technical difficulties and some of our datasets [EMIT Methane Point Source Plume Complexes](/data-catalog/emit-ch4plume-v1) and Wetland Methane Emissions, [LPJ-EOSIM Model](/data-catalog/lpjeosim-wetlandch4-grid-v1) are having issues. We are working on fixing these as soon as possible.`,
+    expires: '2026-08-03T12:00:00-04:00',
+    type: 'warning',
+    slim: true,
+    showIcon: true
+  },
 };
