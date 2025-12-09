@@ -19,105 +19,73 @@ taxonomy:
     values:
       - EIE
 ---
-<Block type="wide">
+<Block type='wide'>
   <Prose>
-    ## Quest for Clarity: The Vulcan CO₂ Footprint Across America
+    # Understanding Vulcan v4.0: Unveiling Fossil Fuel CO₂ Emissions Across America
   </Prose>
-</Block>
 
 <Block>
-  <Prose>
-    ### Introduction
+    <Prose>
+      ## Introduction
 
-The year is 2010, and the focus is on Chautauqua County, Kansas, located at the geographic heart of the United States.
+      In the heart of America lies Chautauqua County, Kansas, a seeming patchwork of fields, towns, and industrial facilities. Yet, it is also a crucial battleground in the climate crisis, with carbon footprints from a variety of sectors layering invisible yet significant impacts over its terrain. This is part of a larger tapestry—the Vulcan Project Version 4.0—stretching across the entire nation, meticulously mapping CO₂ emissions from fossil fuels and cement production.
 
-    An expansive view over Chautauqua County reveals rolling plains, scattered clusters of trees, and a serene horizon. Overlaying this idyllic landscape are visual representations of carbon emissions data grids, detailing various emissions sources that loom above the plains.
-
-    In the ongoing battle to understand and reduce carbon emissions, the Vulcan Project spearheads an effort to unravel the complex tapestry of carbon dioxide emissions from fossil fuels. With its latest iteration, version 4.0, Vulcan seeks to clarify the emissions landscape across the continental United States, achieving remarkable precision down to a scale of 1 km² for each year from 2010 to 2021.
+  Chautauqua County, with its coordinates at **96 longitude** and **37 latitude**, displays a vivid representation of vulnerability due to ongoing fossil fuel-related emissions. A sweeping aerial view reveals _factories, railroads, and residential areas_, highlighting a nexus of energy usage entwined with the invisible cloud of emissions.
       </Prose>
     </Block>
 
-    <Block>
+      <Block>
+          <Prose>
+            ## The Data Event: Vulcan v4.0
+
+            The Vulcan v4.0 data provides an unprecedented look into CO₂ emissions across diverse sectors of the contiguous United States, showcased vividly on a data map unveiled in 2011. This centerpiece of environmental observation encapsulates an extensive heatmap overlay of CO₂ distribution across various sectors.
+
+  From railroads crisscrossing the plains to towering power plants in urban areas, every fossil fuel combustion has been quantified. Vulcan 4.0 reveals patterns that not only challenge existing knowledge but also inform actionable climate strategies. Here in 2011, as documented by Vulcan, CO₂ from railroads alone stretched heavily across Kansas and beyond.
+      </Prose>
+    </Block>
+
+      <ScrollytellingBlock>
+          <Chapter
+            center={[-96, 37]}
+            zoom={10}
+            datasetId='vulcan-ffco2-yeargrid-v4'
+            layerId='vulcan-res-co2'
+            datetime='2011'
+          >
+            <Prose>
+              This data block details the estimated total annual CO₂ emissions from railroads in Chautauqua County, underpinning the significant role of transportation in local emissions.
+            </Prose>
+          </Chapter>
+          <Chapter
+            center={[-96, 37]}
+            zoom={10}
+            datasetId='vulcan-ffco2-yeargrid-v4'
+            layerId='vulcan-res-co2'
+            datetime='2012'
+          >
+            <Prose>
+              This data block reflects the estimated total annual CO₂ emissions across all sectors, showcasing the broader impact of fossil fuel use in the region.
+            </Prose>
+          </Chapter>
+        </ScrollytellingBlock>
+
+  <Block>
       <Prose>
-        ### The Data Event
+        ## Implications and Solutions
 
-In Chautauqua County, Kansas, the focus remains unwavering.
+        Vulcan v4.0 isn't just a map of numbers—it's a narrative of cause and effect. As we zoom out from Kansas, the focus broadens to encompass major urban centers and industrial hubs across the nation, spotlighting urgent implications for policy and personal accountability. 
 
-    Dynamic graphics begin to illustrate the emissions from various sectors—railroads, industrial operations, on-road transport, and residential areas—spreading outward from this central point. Contrasting colors and flow lines vividly exhibit the dissemination of emissions, painting a stark picture of pollution distribution.
-
-    Here, Vulcan's data collection methods visualize emissions from each sector with unprecedented clarity. This visual mapping represents a breakthrough in emissions tracking, providing decision-makers with precise data needed to implement effective policies and actively reduce the carbon footprint.
+        A time-lapse animation depicting changes in emission concentrations over the years punctuates the narrative, illustrated with critical data points and statistics. The data illuminates areas demanding change, empowering policymakers and citizens alike to act decisively to reduce their footprints. Improved transportation, cleaner energy, and stringent regulations pave the path to a sustainable future, clearly etched against the backdrop laid out by Vulcan.
       </Prose>
     </Block>
 
-    <Block>
+  <Block>
       <Prose>
-        ### Broader Implications
+        ## Conclusion
 
-As the perspective zooms out, it reveals a broader view of all the contiguous United States.
+        As the focus returns to the human element, everyday activities in places like Chautauqua serve as a microcosm of a much larger story. Transitioning from emissions data back to scenes of daily life reveals residents commuting, farmers working, and children playing, bridging the gap between data and reality.
 
-    A time-lapse animation showcases the changing landscape of emissions from 2010 to 2021, adorned with color-coded overlays representing different sectors and states. This visual narrative captures the evolving battle against climate change.
-
-    The Vulcan Project not only enhances our understanding of emissions but also assists in tracking progress over time. By systematically compiling high-resolution emissions data, it delivers vital insights to scientists and policymakers across the nation. The project illuminates which sectors and regions lead the charge in carbon reduction and which require additional focus, effectively becoming an indispensable tool within the climate action arsenal.
+  It becomes clear that individual actions multiply, culminating in formidable forces of change. By understanding the detailed and varied sources of CO₂ emissions captured by Vulcan v4.0, we hold the power to adapt. Together, we can carve paths to lower our carbon footprint and foster an environment where mankind and nature can both thrive. Much like the past, the solution lies in collective determination, powered ever forward by informed insights.
       </Prose>
     </Block>
-
-    <Block>
-      <Prose>
-        ### Conclusion
-
-Returning focus to a single, vibrant map of the nation, the states showcasing notable emissions trends are highlighted.
-
-    A glowing pathway starts to emerge on the map, signifying the positive change driven by informed action.
-
-    As the world races against the challenges of climate change, projects like Vulcan are pivotal in illuminating the path forward. Through rich data, America can forge a future where emissions are not just a statistic to be monitored but a challenge to be strategically reduced, ensuring a sustainable planet for generations yet to come.
-      </Prose>
-    </Block>
-
-    <ScrollytellingBlock>
-      <Chapter
-        center={[-96, 37]}
-        zoom={10}
-        datasetId='vulcan-ffco2-yeargrid-v4'
-        layerId='vulcan-res-co2'
-        datetime='2010'>
-      </Chapter>
-      <Chapter
-        center={[-96, 37]}
-        zoom={10}
-        datasetId='vulcan-ffco2-yeargrid-v4'
-        layerId='vulcan-res-co2'
-        datetime='2011'>
-      </Chapter>
-      <Chapter
-        center={[-96, 37]}
-        zoom={10}
-        datasetId='vulcan-ffco2-yeargrid-v4'
-        layerId='vulcan-res-co2'
-        datetime='2012'>
-        1
-      </Chapter>
-      <Chapter
-        center={[-96, 37]}
-        zoom={10}
-        datasetId='vulcan-ffco2-yeargrid-v4'
-        layerId='vulcan-res-co2'
-        datetime='2013'>
-        2
-      </Chapter>
-      <Chapter
-        center={[-96, 37]}
-        zoom={10}
-        datasetId='vulcan-ffco2-yeargrid-v4'
-        layerId='vulcan-res-co2'
-        datetime='2014'>
-        3
-      </Chapter>
-      <Chapter
-        center={[-96, 37]}
-        zoom={10}
-        datasetId='vulcan-ffco2-yeargrid-v4'
-        layerId='vulcan-res-co2'
-        datetime='2015'>
-        4
-      </Chapter>
-    </ScrollytellingBlock>
+  </Block>
