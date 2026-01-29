@@ -2,7 +2,7 @@
   "name": "veda-config",
   "description": "Configuration for Veda",
   "version": "3.1.20",
-  "source": "./.veda/ui/app/index.html",
+  "source": "./.veda/ui/apps/dashboard-parcel/index.html",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "yarn clean && yarn serve",
@@ -17,7 +17,7 @@
   },
   "targets": {
     "veda-app": {
-      "source": "./.veda/ui/app/index.html",
+      "source": "./.veda/ui/apps/dashboard-parcel/index.html",
       "context": "browser"
     }
   },
