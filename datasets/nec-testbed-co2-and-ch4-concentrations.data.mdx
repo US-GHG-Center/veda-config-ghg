@@ -12,7 +12,7 @@ usage:
   - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fnec-testbed-ghg-concentrations_User_Notebook.ipynb&branch=main"
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: 'https://data.nist.gov/od/id/mds2-3012'
+  - url: 'https://doi.org/10.18434/mds2-3765 '
     label: Browse and download data from NIST
     title: 'Data Browser'    
 media:
@@ -40,7 +40,7 @@ taxonomy:
       - CH₄
 infoDescription: |
   ::markdown
-    - Temporal Extent: January 1, 2015 - December 31, 2022    
+    - Temporal Extent: January 1, 2015 - January 31, 2025    
     - Temporal Resolution: Hourly averages    
     - Spatial Extent: Northeastern United States (86.20 W, 70.49 W, 43.71 N, 35.20 N)   
     - Spatial Resolution: Point location samples    
@@ -124,7 +124,12 @@ layers:
 <Block>
     <Prose>
     ## Source Data Product Citation
-    Karion, A., DiGangi, E., Prinzivalli, S., Draper, C., Baldelli, S., Fain, C., Biggs, B., Stock, M., Michalak, B., Salameh, P., Kim, J., Callahan, W., and Whetstone, J. (2023), Observations of carbon dioxide (CO₂), methane (CH₄), and carbon monoxide (CO) mole fractions from the NIST Northeast Corridor urban testbed, https://doi.org/10.18434/mds2-3012 (Accessed 2024-08-08).
+    Karion, A., DiGangi, E., Prinzivalli, S., Draper, C., Baldelli, S., Fain, C., Biggs, B., Stock, M., Michalak, B., Salameh, P., Jooil, K., Lueker, T.,  and Whetstone, J. (2025), Observations of carbon dioxide (CO₂), methane (CH4), and carbon monoxide (CO) mole fractions from the NIST Northeast Corridor urban testbed, National Institute of Standards and Technology, [https://doi.org/10.18434/mds2-3765](https://doi.org/10.18434/mds2-3765) (Accessed 2025-12-22).
+    
+    ## Version History
+    This version was updated in the US GHG Center in January 2026. Updates include:
+    - Expanded data availability from January 1, 2015 - January 31, 2025. Previously, data were only available from January 1, 2015 - December 31, 2022.
+    - CO₂ data are now reported on the NOAA/WMO X2019 scale. Previously, CO₂ data were reported on the X2007 scale.
 
     ## Dataset Accuracy
     Uncertainty estimates on each hourly observation are estimated using algorithms detailed in Karion et al., 2020 ([https://doi.org/10.5194/essd-12-699-2020](https://doi.org/10.5194/essd-12-699-2020)) and included in each data file.
@@ -133,12 +138,12 @@ layers:
     This data is published for research academic and related non-commercial purposes consistent with NIST’s mandate to further the science and the promulgation of appropriate standards.      
 
     ## Scientific Details
-    The Northeast Corridor (NEC) Urban Test Bed Project was designed to demonstrate a scientifically robust measurement of total emissions and multi-year emission trends for carbon dioxide (CO₂) and methane (CH₄) in an urban environment and attribute these trends to emissions from various sectors.  
+    The Northeast Corridor (NEC) Urban Test Bed Project was designed to demonstrate a scientifically robust measurement of total emissions and multi-year emission trends for carbon dioxide (CO₂) and methane (CH₄) in an urban environment and identify which sectors produced these emissions.  
 
     Continuous, in-situ measurements of CO₂, CH₄, and sometimes carbon monoxide (CO) dry air mole fractions (only CO₂ and CH₄ data are displayed in the GHG Center) are made from rooftops or towers in the Northeastern US region, including a dense network of towers in the Washington, DC and Baltimore, Maryland metro area. Most tower sites have measurements at multiple heights, but only measurements from the upper-most height are displayed in the GHG Center. 
 
-    Measurements are reported on the NOAA/WMO X2007 (CO₂) and X2004A (CH₄) calibration scales. The CO₂ data will be updated to the NOAA/WMO X2019 calibration scale at a future date.
-
+    Measurements are reported on the NOAA/WMO X2019 (CO₂) and X2004A (CH₄) calibration scales. 
+    
     ## Key Publications
     Karion, A., Callahan, W., Stock, M., Prinzivalli, S., Verhulst, K. R., Kim, J., Salameh, P. K., Lopez-Coto, I., & Whetstone, J. (2020). Greenhouse gas observations from the Northeast Corridor tower network. *Earth Syst. Sci. Data, 12*, 699–717. [https://doi.org/10.5194/essd-12-699-2020](https://doi.org/10.5194/essd-12-699-2020) 
     
