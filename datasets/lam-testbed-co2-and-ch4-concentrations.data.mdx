@@ -12,7 +12,7 @@ usage:
   - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Flam-testbed-ghg-concentrations_User_Notebook.ipynb&branch=main"
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)     
-  - url: 'https://doi.org/10.18434/mds2-2388'
+  - url: 'https://doi.org/10.18434/mds2-3814'
     label: Browse and download data from NIST
     title: 'Data Browser'    
 media:
@@ -42,7 +42,7 @@ taxonomy:
       - CH₄
 infoDescription: |
   ::markdown
-    - Temporal Extent: January 1, 2015 - December 31, 2023    
+    - Temporal Extent: January 1, 2015 - January 31, 2025    
     - Temporal Resolution: Hourly averages    
     - Spatial Extent:California’s South Coast Air Basin (includes urbanized portions of Los Angeles, Orange, Riverside, and San Bernardino counties)    
     - Spatial Resolution: Point location samples    
@@ -102,7 +102,7 @@ layers:
 
 <Block>
   <Prose>
-    **Temporal Extent:** January 1, 2015 - December 31, 2023    
+    **Temporal Extent:** January 1, 2015 - January 31, 2025    
     **Temporal Resolution:**  Hourly averages    
     **Spatial Extent:** California’s South Coast Air Basin (includes urbanized portions of Los Angeles, Orange, Riverside, and San Bernardino counties)    
     **Spatial Resolution:** Point location samples    
@@ -128,8 +128,13 @@ layers:
 <Block>
     <Prose>
     ## Source Data Product Citation
-    Kim, J., Verhulst, K., Lueker, T., Salameh, P., Cox, A., Walker, S., Paplawsky, W., Prinzivalli, S., Fain, C., Stock, M., DiGangi, E., Biggs, B., Angel, B., Karion, A., Pongetti, T., Callahan, W., Weiss, R. F., Keeling, R. F., Miller, C. E. (2021), In Situ Carbon Dioxide, Methane, and Carbon Monoxide Mole Fractions from the Los Angeles Megacity Carbon Project, Revision 3, National Institute of Standards and Technology, [https://doi.org/10.18434/mds2-2388](https://doi.org/10.18434/mds2-2388) (Accessed 2024-05-17).  
-    
+    Jooil, K., Lueker, T., DiGangi, E., Prinzivalli, S., Salinas, G., Draper, C., Seth, B., Salameh, P., Karion, A., Whetstone, J., Miller, Charles., Weiss, R., and Keeling, R. (2025), Observations of carbon dioxide (CO2), methane (CH4), and carbon monoxide (CO) mole fractions from the Los Angeles Megacity Carbon Project, National Institute of Standards and Technology, [https://doi.org/10.18434/mds2-3814](https://doi.org/10.18434/mds2-3814) (Accessed 2025-12-22)
+
+    ## Version History
+    This version was updated in the US GHG Center in January 2026. Updates include:
+    - Expanded data availability from January 1, 2015 - January 31, 2025. Previously, data were only available from January 1, 2015 - December 31, 2023.
+    - CO₂ data are now reported on the NOAA/WMO X2019 scale. Previously, CO₂ data were reported on the X2007 scale.
+
     ## Dataset Accuracy
     Uncertainty estimates on each hourly observation are estimated using algorithms detailed in Karion et al., 2020 ([https://doi.org/10.5194/essd-12-699-2020](https://doi.org/10.5194/essd-12-699-2020)) and included in each data file.
     
@@ -139,8 +144,8 @@ layers:
     ## Scientific Details
     The Los Angeles Megacity Carbon Project (LA-MCP) was designed to demonstrate a scientifically robust measurement of multi-year emission trends for carbon dioxide (CO₂) and methane (CH₄) in a large urban environment (a “megacity”) and to attribute such trends to emissions from various sectors. Determination of greenhouse gas fluxes and uncertainties in urban areas is critical for evaluating mitigation strategies. The current LA surface observation network includes eleven in situ analyzers situated on tower- or rooftop/building- based platforms for continuous measurements of CO₂, CH₄ and CO (not all species are measured at all sites, and only CO₂ and CH₄ data are displayed in the GHG Center). 
 
-    Measurements are reported as dry air mole fractions on the NOAA/WMO X2007 (CO₂) and X2004A (CH₄) calibration scales, as reported by the WMO's CCL, NOAA/ESRL/GML. NOAA has recently released a new CO₂ scale, X2019. These data are reported on the X2007 scale. NIST plans to release all the data going back to 2015 under either a new version or an entirely separate release at a later date. 
-
+    Measurements are reported as dry air mole fractions on the NOAA/WMO X2019 (CO₂) and X2004A (CH₄) calibration scales, as reported by the WMO's CCL, NOAA/ESRL/GML. NIST plans to release all the data going back to 2015 under either a new version or an entirely separate release at a later date. 
+    
     The data from the in-situ towers and rooftops are currently being used in both forward and inverse modeling frameworks and the inverse model results have been used to estimate carbon fluxes for Southern California. The Hestia project ([https://hestia.rc.nau.edu/About.html](https://hestia.rc.nau.edu/About.html)) has produced bottom-up inventory estimates of fossil carbon emissions for a total of five counties in the South Coast Air Basin, including Los Angeles, with high space/time resolution. The Hestia data product also provides information on sectorally-resolved fossil carbon emissions. 
 
     The LA Megacity project has also included flask sampling of ¹⁴CO₂ and other trace gases in the past.  In addition, the California Laboratory for Atmospheric Remote Sensing (CLARS, [tmf.jpl.nasa.gov/clarsweather](https://tmf.jpl.nasa.gov/clarsweather/)) instrument on Mt. Wilson measures the slant column abundance of greenhouse gases by rastering across the LA basin roughly every 90 minutes. There have also been periodic aircraft sampling of greenhouse gases and meteorological conditions in the Los Angeles megacity during intensive campaigns.
