@@ -1,18 +1,18 @@
 ---
-id: ct-ch4-monthgrid-v2023
+id: ct-ch4-monthgrid-v2025
 name: CarbonTracker-CH₄ Isotopic Methane Inverse Fluxes
-description: Global, monthly 1 degree resolution methane emission estimates from microbial, fossil and pyrogenic sources derived using inverse modeling, version 2023
+description: Global, monthly 1 degree resolution methane emission estimates from microbial, fossil and pyrogenic sources derived using inverse modeling, version 2025
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2023.html'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2025.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
   - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
     label: Notebooks to read, visualize, and explore data statistics
     title: 'Data Usage Notebooks'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fct-ch4-monthgrid-v2023_User_Notebook.ipynb&branch=main'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fct-ch4-monthgrid-v2025_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://data.ghg.center/browseui/index.html#ct-ch4-monthgrid-v2023/
+  - url: https://data.ghg.center/browseui/index.html#ct-ch4-monthgrid-v2025/
     label: Browse and download the data
     title: Data Browser
 
@@ -41,7 +41,7 @@ taxonomy:
       - Model Output
 infoDescription: |
   ::markdown 
-    - Temporal Extent: January 1998 - December 2021
+    - Temporal Extent: January 1998 - December 2023
     - Temporal Resolution: Monthly
     - Spatial Extent: Global    
     - Spatial Resolution: 1° x 1°   
@@ -50,7 +50,7 @@ infoDescription: |
     - Data Latency: Updated annually      
 layers:
   - id: total-ch4
-    stacCol: ct-ch4-monthgrid-v2023
+    stacCol: ct-ch4-monthgrid-v2025
     name: Total CH₄ Emission
     type: raster
     description: Total methane emission from microbial, fossil and pyrogenic sources.
@@ -68,7 +68,7 @@ layers:
         - 50
       
     compare:
-      datasetId: ct-ch4-monthgrid-v2023
+      datasetId: ct-ch4-monthgrid-v2025
       layerId: total-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -106,7 +106,7 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
   - id: microbial-ch4
-    stacCol: ct-ch4-monthgrid-v2023
+    stacCol: ct-ch4-monthgrid-v2025
     name: Microbial CH₄ Emission
     type: raster
     description: Emission of methane from all microbial sources, such as wetlands, ruminants, agriculture and termites.
@@ -124,7 +124,7 @@ layers:
         - 30
       
     compare:
-      datasetId: ct-ch4-monthgrid-v2023
+      datasetId: ct-ch4-monthgrid-v2025
       layerId: microbial-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -162,7 +162,7 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.microbial.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Microbial CH₄ Emission
   - id: fossil-ch4
-    stacCol: ct-ch4-monthgrid-v2023
+    stacCol: ct-ch4-monthgrid-v2025
     name: Fossil CH₄ Emission
     type: raster
     description: Emission of methane from all fossil sources, such as oil and gas activities and coal mining.
@@ -180,7 +180,7 @@ layers:
         - 50
       
     compare:
-      datasetId: ct-ch4-monthgrid-v2023
+      datasetId: ct-ch4-monthgrid-v2025
       layerId: fossil-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -218,7 +218,7 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.fossil.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Fossil CH₄ Emission
   - id: pyrogenic-ch4
-    stacCol: ct-ch4-monthgrid-v2023
+    stacCol: ct-ch4-monthgrid-v2025
     name: Pyrogenic CH₄ Emission
     type: raster
     description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
@@ -236,7 +236,7 @@ layers:
         - 8
       
     compare:
-      datasetId: ct-ch4-monthgrid-v2023
+      datasetId: ct-ch4-monthgrid-v2025
       layerId: pyrogenic-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -278,7 +278,7 @@ layers:
 
 <Block>
   <Prose>   
-    **Temporal Extent:** January 1998 - December 2021<br />
+    **Temporal Extent:** January 1998 - December 2023<br />
     **Temporal Resolution:** Monthly<br />
     **Spatial Extent:** Global    
     **Spatial Resolution:** 1° x 1°   
@@ -288,24 +288,30 @@ layers:
 
     Surface methane (CH₄) emissions are derived from atmospheric measurements of methane and its ¹³C carbon isotope content. Different sources of methane contain different ratios of the two stable isotopologues, ¹²CH₄ and ¹³CH₄. This makes normally indistinguishable collocated sources of methane, say from agriculture and oil and gas exploration, distinguishable. The National Oceanic and Atmospheric Administration (NOAA) collects whole air samples from its global cooperative network of flasks (https://gml.noaa.gov/ccgg/about.html), which are then analyzed for methane and other trace gases. A subset of those flasks are also analyzed for ¹³C of methane in collaboration with the Institute of Arctic and Alpine Research at the University of Colorado Boulder. The ground and airborne CH₄ and ¹³CH₄ data used to optimize the methane emissions for CarbonTracker-CH₄ are publicly available by [Lan et al. 2023](https://gml.noaa.gov/ccgg/arc/?id=166). 
     
-    Scientists at NOAA and the National Aeronautics and Space Administration (NASA) used those measurements of methane and ¹³C of methane in conjunction with a model of atmospheric circulation to estimate emissions of methane separated by three source types, microbial, fossil and pyrogenic. Microbial emissions are produced by microbial decomposition of present-day organic matter, such as in wetlands, agricultural fields, livestock and landfills. Fossil emissions come from the breakdown of ancient carbonaceous matter deep underground, such as natural gas, coal bed methane, and small amounts of naturally occurring geologic seeps. Finally, pyrogenic emissions come from the burning of present-day organic matter, such as from wildfires and biofuels. These three sources of methane come with slightly different ¹³C content, and therefore can be separated given enough atmospheric measurements. This dataset presents monthly methane emissions from microbial, fossil and pyrogenic sources, along with a layer of total methane emissions from all three sources combined, at 1° resolution from 1998 to 2021.      
+    Scientists at NOAA and the National Aeronautics and Space Administration (NASA) used those measurements of methane and ¹³C of methane in conjunction with a model of atmospheric circulation to estimate emissions of methane separated by three source types, microbial, fossil and pyrogenic. Microbial emissions are produced by microbial decomposition of present-day organic matter, such as in wetlands, agricultural fields, livestock and landfills. Fossil emissions come from the breakdown of ancient carbonaceous matter deep underground, such as natural gas, coal bed methane, and small amounts of naturally occurring geologic seeps. Finally, pyrogenic emissions come from the burning of present-day organic matter, such as from wildfires and biofuels. These three sources of methane come with slightly different ¹³C content, and therefore can be separated given enough atmospheric measurements. This dataset presents monthly methane emissions from microbial, fossil and pyrogenic sources, along with a layer of total methane emissions from all three sources combined, at 1° resolution from 1998 to 2023.      
 
   </Prose>
 </Block>
 <Block>
   <Prose>
     ## Source Data Product Citation
-    CarbonTracker CT-CH4-2023 results provided by NOAA GML, Boulder, Colorado, USA from the website at [https://doi.org/10.25925/40jt-qd67](https://doi.org/10.25925/40jt-qd67) 
+    CarbonTracker CT-CH4-2025 results provided by NOAA GML, Boulder, Colorado, USA from the website at  [https://doi.org/10.25925/hxks-v755](https://doi.org/10.25925/hxks-v755)  
 
     ## Version History
-    The version was updated from v1 to v2023 in the US GHG Center in December 2024. Updates include:
+    This version was updated from v2023 to v2025 in the US GHG Center in January 2026. Updates include:
+    - Expanded data availability to from January 1998 - December 2023 (v2023 data was available for January 1998 - December 2021)
+    - The version of the data previously available in the US GHG Center (v2023) remains accessible at [https://doi.org/10.25925/40jt-qd67](https://doi.org/10.25925/40jt-qd67)
+    - The STAC ID for the previous version (v2023) in the [US GHG Center STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/earth.gov/ghgcenter/api/stac/?.language=en) is ct-ch4-monthgrid-v2023
+    - For detailed version update information, please refer to: [https://gml.noaa.gov/ccgg/carbontracker-ch4/carbontracker-ch4-2025/documentation.php](https://gml.noaa.gov/ccgg/carbontracker-ch4/carbontracker-ch4-2025/documentation.php) 
+    
+   v1 was updated to v2023 in the US GHG Center in December 2024. Updates included:
     - Expanded data availability from January 1998 - December 2021 (v1 data was only available for January 1999 - December 2016)
     - Several adjustments were made to model inputs. For detailed version update information, please refer to: [https://gml.noaa.gov/ccgg/carbontracker-ch4/version.php](https://gml.noaa.gov/ccgg/carbontracker-ch4/version.php)
     - The version of the data previously available in the US GHG Center (v1) remains accessible at [https://doi.org/10.3334/ORNLDAAC/2411](https://doi.org/10.3334/ORNLDAAC/2411)
-    - The STAC ID for the previous version in the [US GHG Center STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/earth.gov/ghgcenter/api/stac/?.language=en) is tm54dvar-ch4flux-monthgrid-v1 
-
+    - The STAC ID for the previous version (v1) in the [US GHG Center STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/earth.gov/ghgcenter/api/stac/?.language=en) is tm54dvar-ch4flux-monthgrid-v1 
+ 
     ## Dataset Accuracy
-    Evaluating the accuracy and uncertainty of gridded emissions data is challenging because of the lack of direct physical measurements on grid scales. The emissions presented here were transported by an atmospheric model, and the resulting methane and ¹³C of methane fields were compared to atmospheric measurements of methane and ¹³C of methane globally over multiple decades. Under that transformation and within the bounds of model and observational uncertainty, these emissions satisfy the spatial patterns and time trends seen in the atmospheric measurements. More information about the model-data comparison and evaluation of the model results can be found at: [https://doi.org/10.25925/40jt-qd67](https://doi.org/10.25925/40jt-qd67).
+    Evaluating the accuracy and uncertainty of gridded emissions data is challenging because of the lack of direct physical measurements on grid scales. The emissions presented here were transported by an atmospheric model, and the resulting methane and ¹³C of methane fields were compared to atmospheric measurements of methane and ¹³C of methane globally over multiple decades. Under that transformation and within the bounds of model and observational uncertainty, these emissions satisfy the spatial patterns and time trends seen in the atmospheric measurements. More information about the model-data comparison and evaluation of the model results can be found at: [https://doi.org/10.25925/hxks-v755](https://doi.org/10.25925/hxks-v755).
 
     ## Disclaimer
     This dataset has been transformed from its original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
@@ -316,7 +322,7 @@ layers:
     The atmospheric inverse model was run at 3° (longitude) x 2° (latitude) globally to estimate monthly surface emissions. The atmospheric inversion problem is under-constrained, and therefore inversely estimated emissions cannot be interpreted at the grid scale. Therefore, to present 1°x1° emission maps for the US GHG Center, prior 1°x1° emissions were scaled to match the posterior gridded monthly totals for each source type.
 
     ## Key Publications
-    Oh, Y., Bruhwiler, L., Lan, X., Basu, S., Schuldt, K., Thoning, K., Michel, S. E., Clark, R., Miller, J. B., Andrews, A., Sherwood, O., Etiope, G., Crippa, M., Liu, L., Zhuang, Q., Randerson, J., van der Werf, G., Aalto, T., Amendola, S., … Xueref-Remy, I. (2023). CarbonTracker-CH4 Documentation CT-CH4 2023 release. [https://gml.noaa.gov/ccgg/carbontracker-ch4/documentation.php](https://gml.noaa.gov/ccgg/carbontracker-ch4/documentation.php)
+    Oh, Y., Bruhwiler, L., Lan, X., Schuldt, K., Basu, S., Thoning, K., Michel, S. E., Clark, R., Miller, J. B., Andrews, A., Aalto, T., Andrade, M., Aoki, S., Apadula, F., Arduini, J., Arnold, S., … Zimnoch, M. (2025). CarbonTracker-CH4 Documentation CT-CH4 2025 release. [https://gml.noaa.gov/ccgg/carbontracker-ch4/documentation.php](https://gml.noaa.gov/ccgg/carbontracker-ch4/documentation.php)
 
     Lan, X., Schuldt, K., Michel, S. E., Mund, J., Bruhwiler, L., Oh, Y., Basu, S., Thoning, K., Clark, R., Miller, J. B., Andrews, A., Dlugokencky, E., Tans, P., Aalto, T., Amendola, S., Andra, S., C., Andrade, M., Nguyen, N. A., Aoki, S., … Xueref-Remy, I. "Database of Methane (CH4) Abundance and Its Stable Carbon Isotope (d13C-CH4) Composition from Atmospheric Measurements Used Infor CarbonTracker-CH4 2023." NOAA Global Monitoring Laboratory, 2023. [https://doi.org/10.15138/T4MZ-2Z29](https://doi.org/10.15138/T4MZ-2Z29)
 
@@ -342,7 +348,7 @@ layers:
     Sherwood, O. A., Schwietzke, S., & Lan, X. (2021). Global Inventory of Fossil and Non-fossil δ13C-CH₄ Source Signature Measurements for Improved Atmospheric Modeling, Database DOI: [https://doi.org/10.15138/qn55-e011](https://doi.org/10.15138/qn55-e011)
 
     ## Learn More
-    - Learn more about [CarbonTracker-CH₄ at NOAA](https://gml.noaa.gov/ccgg/carbontracker-ch4/carbontracker-ch4-2023/)
+    - Learn more about [CarbonTracker-CH₄ at NOAA](https://gml.noaa.gov/ccgg/carbontracker-ch4/carbontracker-ch4-2025/)
     - Learn more about methane isotopes on [NOAA’s website](https://research.noaa.gov/2021/06/17/new-analysis-shows-microbial-sources-fueling-rise-of-atmospheric-methane/)
     - Check out this dataset mentioned in the <Link to={"/stories/modeling-natural-methane-emissions"}>Models and Observations Combine to Uncover Drivers of Natural Methane Emissions story</Link>
     - Discover how different methane isotopes can help identify methane sources in the <Link to={"/stories/tracking-greenhouse-gas-cycles"}>Tracking Greenhouse Gas Cycles story</Link>
@@ -354,9 +360,9 @@ layers:
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/ct-ch4-monthgrid-v2023_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2023.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/ct-ch4-monthgrid-v2023_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/ct-ch4-monthgrid-v2025_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2025.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/ct-ch4-monthgrid-v2025_Processing%20and%20Verification%20Report.html)
 
   </Prose>
 </Block>
