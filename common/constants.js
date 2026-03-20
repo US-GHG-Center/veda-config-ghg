@@ -147,7 +147,7 @@ export const customInterfaces = [
       "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
     },
     "link": {
-      "url": "https://earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/",
+      "url": "https://earth.gov/ghgcenter/data-tools/view/goes-plume-viewer",
       "text": "See more"
     },
     "footer": null
@@ -161,7 +161,7 @@ export const customInterfaces = [
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
-      "url": "https://earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
+      "url": "https://earth.gov/ghgcenter/data-tools/view/emit-plume-viewer",
       "text": "See more"
     },
     "footer": null
@@ -181,11 +181,11 @@ export const customInterfaces = [
       "links": [
         {
           "title": "Carbon Dioxide",
-          "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=co2&frequency=all"
+          "url": "https://earth.gov/ghgcenter/data-tools/view/noaa-concentration-viewer?ghg=co2&frequency=all"
         },
         {
           "title": "Methane",
-          "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=ch4&frequency=all"
+          "url": "https://earth.gov/ghgcenter/data-tools/view/noaa-concentration-viewer?ghg=ch4&frequency=all"
         }
       ]
     }
@@ -205,15 +205,15 @@ export const customInterfaces = [
       "links": [
         {
           "title": "Indianapolis Flux Experiment (INFLUX)",
-          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=in&zoom-level=8"
+          "url": "https://earth.gov/ghgcenter/data-tools/view/nist-tower-data-viewer?agency=nist&region=in&zoom-level=8"
         },
         {
           "title": "Los Angeles Megacity Carbon Project",
-          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=lam&zoom-level=7"
+          "url": "https://earth.gov/ghgcenter/data-tools/view/nist-tower-data-viewer?agency=nist&region=lam&zoom-level=7"
         },
         {
           "title": "Northeast Corridor (NEC) Urban Test Bed",
-          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=nec&zoom-level=5"
+          "url": "https://earth.gov/ghgcenter/data-tools/view/nist-tower-data-viewer?agency=nist&region=nec&zoom-level=5"
         }
       ]
     }
