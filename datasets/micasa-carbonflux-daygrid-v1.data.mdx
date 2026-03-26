@@ -770,34 +770,28 @@ layers:
 ---
 
 <Block>
-  <div style={{ display: "flex", gap: "24px", alignItems: "flex-start" }}>
 
-    {/* LEFT SIDE — TEXT */}
-    <div style={{ flex: 1 }}>
-      <Prose>
-        <strong>Temporal Extent:</strong> January 1, 2001 - Ongoing<br />
-        <strong>Temporal Resolution:</strong> Daily and Monthly Averages<br />
-        <strong>Spatial Extent:</strong> Global<br />
-        <strong>Spatial Resolution:</strong> 0.1° x 0.1°<br />
-        <strong>Data Units:</strong> Grams of Carbon per square meter per day (g Carbon/m²/day)<br />
-        <strong>Data Type:</strong> Research<br />
-        <strong>Data Latency:</strong> Less than a year, typically 6 months<br /><br />
+  <Figure>
+    <iframe
+      src="https://dev.openveda.cloud/api/raster/collections/climdex-tmaxxf-access-cm2-ssp126/items/climdex-tmaxxf-access-cm2-ssp126-2100/WebMercatorQuad/map?bidx=1&assets=tmax_above_90&nodata=nan&rescale=0%2C365&resampling=bilinear&colormap_name=ylorrd"
+      width="100%"
+      height="400px"
+      style={{ border: "none", borderRadius: "8px" }}
+    />
+  </Figure>
 
-        This dataset presents a variety of carbon flux parameters derived from the MiCASA model...
-      </Prose>
-    </div>
+  <Prose>
+    **Temporal Extent:** January 1, 2001 - Ongoing<br />
+    **Temporal Resolution:** Daily and Monthly Averages<br />
+    **Spatial Extent:** Global<br />
+    **Spatial Resolution:** 0.1° x 0.1°<br />
+    **Data Units:** Grams of Carbon per square meter per day (g Carbon/m²/day)<br />
+    **Data Type:** Research<br />
+    **Data Latency:** Less than a year, typically 6 months<br /><br />
 
-    {/* RIGHT SIDE — MAP */}
-    <div style={{ flex: 1 }}>
-      <iframe
-        src="https://earth.gov/ghgcenter/api/raster/collections/micasa-carbonflux-daygrid-v1/items/micasa-carbonflux-daygrid-v1-20241231/WebMercatorQuad/map?assets=npp&rescale=0%2C8&colormap_name=purd"
-        width="100%"
-        height="400px"
-        style={{ border: "none", borderRadius: "8px" }}
-      />
-    </div>
+    This dataset presents a variety of carbon flux parameters derived from the MiCASA model...
+  </Prose>
 
-  </div>
 </Block>
 <Block>
   <Prose>
