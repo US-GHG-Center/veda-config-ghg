@@ -40,12 +40,12 @@ infoDescription: |
     - Data Type: Research
     - Data Latency: Less than a year, typically 6 months
 layers:
-  - id: micasa-co2-flux-nbe-m-cmr
-    stacCol: micasa-carbonflux-monthgrid-cmr-v1
+  - id: micasa-co2-flux-nbe-cmr
+    stacCol: micasa-carbonflux-daygrid-cmr-v1
     type: cmr
     stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
     tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
-    name: (Monthly Mean)  Net Biosphere Exchange (NBE)
+    name: (Daily-On fly)  Net Biosphere Exchange (NBE)
     description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
     time_density: month
     initialDatetime: newest
@@ -58,8 +58,11 @@ layers:
     sourceParams:
       concept_id: C3273638632-GES_DISC
       backend: xarray
-      variables: ["NEE", "FIRE", "FUEL"],
-      expression: "86400000*(NEE+FIRE+FUEL)",  # convert from kg C/m2/s to g C/m2/day
+      variables: 
+        - NEE
+        - FIRE
+        - FUEL
+      expression: 86400000*(NEE+FIRE+FUEL)
       colormap_name: coolwarm
       rescale:
         - -4
@@ -68,7 +71,7 @@ layers:
       tile_scale: 3
     compare:
       datasetId: micasa-carbonflux-grid-cmr-v1
-      layerId: micasa-co2-flux-nbe-m-cmr
+      layerId: micasa-co2-flux-nbe-cmr
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -77,8 +80,8 @@ layers:
       unit:
         label: g Carbon/m²/day
       type: gradient
-      min: 0
-      max: 0.000000092
+      min: -4
+      max: 4
       stops:
         - '#3B4CC0'
         - '#6788EE'
