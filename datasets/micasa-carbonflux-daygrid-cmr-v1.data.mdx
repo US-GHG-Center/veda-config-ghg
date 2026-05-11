@@ -160,8 +160,8 @@ layers:
     type: cmr
     stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
     tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
-    name: (Raster Calculation Test) Net Primary Production (NPP)
-    description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
+    name: (Raster Calculation Test) Net Biosphere Exchange (NBE)
+    description: Model-estimated net biosphere exchange (NBE), which is the net carbon flux to the atmosphere from the ecosystem, taking into account wildfire and wood fuel burning sources of carbon (Rh + FIRE + FUEL - NPP)
     time_density: Daily
     initialDatetime: newest
     projection:
@@ -177,8 +177,8 @@ layers:
         - NPP
         - FIRE
         - FUEL
-      expression: 86400000*(NPP+FIRE+FUEL)
-      colormap_name: purd
+      expression: 86400000*(NEE+FIRE+FUEL)
+      colormap_name: coolwarm
       rescale:
         - 0
         - 9.25925926e-8
@@ -198,16 +198,14 @@ layers:
       min: 0
       max: 9.25925926e-8
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'
+        - '#3B4CC0'
+        - '#6788EE'
+        - '#9ABBFF'
+        - '#C9D7F0'
+        - '#EDD1C2'
+        - '#F7A889'
+        - '#E26952'
+        - '#B40426'
     analysis:
       metrics:
         - mean
