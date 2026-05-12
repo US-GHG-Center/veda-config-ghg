@@ -40,7 +40,7 @@ infoDescription: |
     - Data Type: Research
     - Data Latency: Less than a year, typically 6 months
 layers:
-  - id: micasa-co2-flux-nee-cmr
+  - id: micasa-co2-flux-npp-cmr
     stacCol: micasa-carbonflux-daygrid-cmr-tes
     type: cmr
     stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
@@ -67,7 +67,7 @@ layers:
       tile_scale: 3
     compare:
       datasetId: micasa-carbonflux-grid-cmr-v1
-      layerId: micasa-co2-flux-nee-cmr
+      layerId: micasa-co2-flux-npp-cmr
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -95,14 +95,14 @@ layers:
     info:
       source: NASA
       spatialExtent: Global
-      temporalResolution: Daily
+      temporalResolution: Monthly
       unit: g Carbon/m²/day 
-  - id: micasa-co2-flux-nee-cmr-raw
+  - id: micasa-co2-flux-npp-cmr-raw
     stacCol: micasa-carbonflux-daygrid-cmr-tes
     type: cmr
     stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
     tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
-    name: (No conversion) Net Primary Production (NPP)
+    name: (No conversion - Daily) Net Primary Production (NPP)
     description: Model-estimated net primary production (NPP), which is the rate at which plants produce and store carbon that is available to the ecosystem (biomass increase)
     time_density: Daily
     initialDatetime: newest
@@ -124,7 +124,7 @@ layers:
       tile_scale: 3
     compare:
       datasetId: micasa-carbonflux-grid-cmr-v1
-      layerId: micasa-co2-flux-nee-cmr-raw
+      layerId: micasa-co2-flux-npp-cmr-raw
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -155,7 +155,7 @@ layers:
       temporalResolution: Daily
       unit: kg Carbon/m²/day
 
-  - id: micasa-co2-flux-nee-cmr-raster
+  - id: micasa-co2-flux-nbe-cmr-raster
     stacCol: micasa-carbonflux-daygrid-cmr-tes
     type: cmr
     stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
@@ -174,10 +174,10 @@ layers:
       concept_id: C3273638632-GES_DISC
       backend: xarray
       variables: 
-        - NPP
+        - NEE
         - FIRE
         - FUEL
-      expression: 86400000*(NPP+FIRE+FUEL)
+      expression: 86400000*(NEE+FIRE+FUEL)
       colormap_name: coolwarm
       rescale:
         - -4
@@ -186,7 +186,7 @@ layers:
       tile_scale: 3
     compare:
       datasetId: micasa-carbonflux-grid-cmr-v1
-      layerId: micasa-co2-flux-nee-cmr-raster
+      layerId: micasa-co2-flux-nbe-cmr-raster
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
