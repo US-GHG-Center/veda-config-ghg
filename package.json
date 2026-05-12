@@ -23,7 +23,7 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "2.7.0",
