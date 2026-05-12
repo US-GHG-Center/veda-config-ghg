@@ -14,7 +14,7 @@ on:
     - 'main'
 
 env:
-  NODE: 20
+  NODE: 24
 
 jobs:
   prep:
@@ -31,7 +31,7 @@ jobs:
       # to GH does not have access to the veda-ui submodule, we have to
       # manually check it out using a ssh deploy key.
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
@@ -89,7 +89,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         submodules: recursive
     - name: Use Node.js ${{ env.NODE }}
