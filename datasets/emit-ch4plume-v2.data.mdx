@@ -3,16 +3,16 @@ id: emit-ch4plume-v2
 name: EMIT Methane Point Source Plume Complexes
 description: Methane point source plume complexes measured by the EMIT imaging spectrometer on the International Space Station (ISS)
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/emit-ch4plume-v1.html'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/emit-ch4plume-v2.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/emit-ch4plume-v1_User_Notebook.html'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/emit-ch4plume-v2_User_Notebook.html'
     label: Notebooks to read, visualize, and explore data statistics
     title: 'Data Usage Notebooks'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Femit-ch4plume-v1_User_Notebook.ipynb&branch=main'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Femit-ch4plume-v2_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://search.earthdata.nasa.gov/search/granules?p=C2748088093-LPCLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&q=emit%20plume&tl=1694622854.77!3!!
+  - url: https://search.earthdata.nasa.gov/search/granules?p=C3242707413-LPCLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&q=emit%20plume&tl=1694622854.77!3!!
     label: Download data from NASA Distributed Active Archive Center
     title: Data Browser
 media:
@@ -57,7 +57,7 @@ layers:
         - 1500
       nodata: -9999
     compare:
-      datasetId: emit-ch4plume-v1
+      datasetId: emit-ch4plume-v2
       layerId: ch4-plume-emissions
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -129,7 +129,7 @@ layers:
     - An updated match filter algorithm was used to derive methane enhancement estimates including uncertainty and sensitivities. 
     - Emission rate estimates in the GeoJSON source metadata were added for applicable plume complexes.
 
-    For detailed version update information, please refer to the [ATBD](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md#424-plume-complex-identification)
+    For detailed version update information, please refer to the [ATBD](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md#424-plume-complex-identification).
 
     ## Dataset Accuracy
     Uncertainty in the methane (ppm-m) depends on instrument, observation, and surface factors as described in the ATBD by Broderick, et al. 2025 (see link in references below). An uncertainty value (ppm-m) is calculated and reported for each plume complex. As described in the ATBD, EMIT plume complexes are manually identified and reviewed. While we publish high confidence examples, false positives can occur and when identified these cases are removed from subsequent data releases.
@@ -141,13 +141,13 @@ layers:
     EMIT has demonstrated the capacity to characterize methane point source emissions by measuring gas absorption features in the shortwave infrared. The EMIT GHG point source plumes provided here build on a substantial history of remote greenhouse gas detections from airborne imaging spectrometers (Thorpe et al., 2013, 2014, 2017; Thompson et al., 2015; Frankenberg et al., 2016; Duren et al., 2019; Cusworth et al., 2022). We leverage a per-column adaptive matched filter for the primary detection, due to the speed and efficacy of identifying subtle signatures. Plumes are identified and assessed by scientists following a protocol in order to provide only instances with maximum confidence. For each EMIT point source plume complex, methane enhancements in units of ppm-m are provided. See the [ATBD](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md#424-plume-complex-identification) for more details.
 
     ## Key Publications
-    Thorpe, Andrew K et al., Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space. Sci. Adv. 9, eadh2391 (2023). DOI: [10.1126/sciadv.adh2391](https://doi.org/10.1126/sciadv.adh2391)
+    Thorpe, Andrew K et al., Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space. _Sci. Adv._ 9, eadh2391 (2023). DOI: [10.1126/sciadv.adh2391](https://doi.org/10.1126/sciadv.adh2391)
 
     A. K. Thorpe, D. A. Roberts, E. S. Bradley, C. C. Funk, P. E. Dennison, I. Leifer, High resolution mapping of methane emissions from marine and terrestrial sources using a Cluster-Tuned Matched Filter technique and imaging spectrometry. *Remote Sensing of Environment. 134*, 305–318 (2013).
 
     D. R. Thompson, I. Leifer, H. Bovensmann, M. Eastwood, M. Fladeland, C. Frankenberg, K. Gerilowski, R. O. Green, S. Kratwurst, T. Krings, B. Luna, A. K. Thorpe, Real-time remote detection and measurement for airborne imaging spectroscopy: A case study with methane. *Atmospheric Measurement Techniques. 8*, 4383–4397 (2015).
 
-    Brodrick, P. G. , Thorpe, A.K., Fahlen, J., Thompson, D.R. (2025). EMIT Greenhouse Gas Algorithms:  Greenhouse Gas Point Source Mapping and Related Products, v2.0, November 2025, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, [https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD)
+    Brodrick, P.G., Thorpe, A.K., Fahlen, J., Thompson, D.R. (2025). EMIT Greenhouse Gas Algorithms:  Greenhouse Gas Point Source Mapping and Related Products, v2.0, November 2025, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, [https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md)
 
     Level 2B Greenhouse Gas Data Product User Guide, v2.0, November 2025, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, [https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_User_Guide.md](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_User_Guide.md)
 
