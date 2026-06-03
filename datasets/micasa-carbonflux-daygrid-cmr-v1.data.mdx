@@ -131,7 +131,7 @@ layers:
         }
     legend:
       unit:
-        label: kg Carbon/m²/day
+        label: kg Carbon/m²/s
       type: gradient
       min: 0
       max: 9.25925926e-8
@@ -153,14 +153,14 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day
+      unit: kg Carbon/m²/s
 
   - id: micasa-co2-flux-nbe-cmr-raster
     stacCol: micasa-carbonflux-daygrid-cmr-tes
     type: cmr
     stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
     tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
-    name: (Raster Calculation Test) Net Biosphere Exchange (NBE)
+    name: (Raster Calculation Test) Net Biosphere Exchange (NBE) - NEE+FIRE+FUEL
     description: Model-estimated net biosphere exchange (NBE), which is the net carbon flux to the atmosphere from the ecosystem, taking into account wildfire and wood fuel burning sources of carbon (Rh + FIRE + FUEL - NPP)
     time_density: Daily
     initialDatetime: newest
@@ -213,7 +213,69 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: kg Carbon/m²/day             
+      unit: kg Carbon/m²/day
+
+
+  - id: micasa-co2-flux-nbe1-cmr-raster
+    stacCol: micasa-carbonflux-daygrid-cmr-tes
+    type: cmr
+    stacApiEndpoint: "https://dev.ghg.center/api/stac/" 
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    name: (Raster Calculation Test) Net Biosphere Exchange (NBE) Rh+FIRE+FUEL-NPP
+    description: Model-estimated net biosphere exchange (NBE), which is the net carbon flux to the atmosphere from the ecosystem, taking into account wildfire and wood fuel burning sources of carbon (Rh + FIRE + FUEL - NPP)
+    time_density: Daily
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      concept_id: C3273638632-GES_DISC
+      backend: xarray
+      variables: 
+        - NPP
+        - FIRE
+        - FUEL
+        - Rh
+      expression: 86400000*(Rh+FIRE+FUEL-NPP)
+      colormap_name: coolwarm
+      rescale:
+        - -4
+        - 4
+      maxzoom: 12  
+      tile_scale: 3
+    compare:
+      datasetId: micasa-carbonflux-grid-cmr-v1
+      layerId: micasa-co2-flux-nbe1-cmr-raster
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: kg Carbon/m²/day
+      type: gradient
+      min: -4
+      max: 4
+      stops:
+        - '#3B4CC0'
+        - '#6788EE'
+        - '#9ABBFF'
+        - '#C9D7F0'
+        - '#EDD1C2'
+        - '#F7A889'
+        - '#E26952'
+        - '#B40426'
+    analysis:
+      metrics:
+        - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: kg Carbon/m²/day                       
 ---
 
 <Block>
