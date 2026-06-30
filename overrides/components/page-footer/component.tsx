@@ -312,7 +312,7 @@ export default function PageFooter(props) {
             <p>
               U.S. Greenhouse Gas Center Responsible Official:{" "}
               <a
-                {...getLinkProps("https://science.nasa.gov/people/argyro-kavvada/)")} 
+                {...getLinkProps("https://science.nasa.gov/people/argyro-kavvada/")} 
               >
                 <strong>Argyro Kavvada</strong>
               </a>
