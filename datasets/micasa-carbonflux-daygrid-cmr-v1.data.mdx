@@ -316,8 +316,8 @@ layers:
       unit:
         label: kg Carbon/m²/day
       type: gradient
-      min: -4
-      max: 4
+      min: -5e-8
+      max: 5e-8
       stops:
         - '#3B4CC0'
         - '#6788EE'
@@ -364,8 +364,8 @@ layers:
       expression: 86400000*(NEE+FIRE+FUEL)-86400000*(Rh+FIRE+FUEL-NPP)
       colormap_name: coolwarm
       rescale:
-        - -4
-        - 4
+        - -1
+        - 1
       maxzoom: 12  
       tile_scale: 3
     compare:
@@ -379,8 +379,8 @@ layers:
       unit:
         label: kg Carbon/m²/day
       type: gradient
-      min: -4
-      max: 4
+      min: -1
+      max: 1
       stops:
         - '#3B4CC0'
         - '#6788EE'
