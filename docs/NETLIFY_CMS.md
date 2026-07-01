@@ -32,7 +32,7 @@ Currently, when you are updating your post, the button will continue to say 'Vie
 
 Think of configuration UI (Netlify CMS) as a thin wrapper on top of Git flow. When you are saving a new dataset, what the configuration editor is doing is creating a new branch with your changes. This generates a preview. By Publishing through the editor, you are essentially merging your branch into the main branch. The editor allows you to create, edit, and merge a branch without ever having to go to Github. Once created, you also have the ability to go to github and treat it like any other branch.
 
-![Example PR generated through Netlify CMS](./media/example-pr-netlify-cms.png)
+![Example PR generated through Netlify CMS](./media/example-pr-netlify-cms.webp)
 
 ### Where can I find the post that I (or my collaborator) saved?
 

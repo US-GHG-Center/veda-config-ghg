@@ -14,7 +14,7 @@ import {
 import Partners from "../../home/partners";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 
-import coverImgSrc from "./earth.png";
+import coverImgSrc from "./earth.webp";
 import coverVideoSrc from "url:./earth-gas.mp4";
 
 const Hero = styled.div`
