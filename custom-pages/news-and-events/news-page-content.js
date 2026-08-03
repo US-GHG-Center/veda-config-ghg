@@ -43,7 +43,7 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
       url: 'https://conta.cc/48jqdkT'
     },
     media: {
-      src: new URL('./media/news/newsletter-v1.4.jpg', import.meta.url).href,
+      src: new URL('./media/news/newsletter-v1.4.webp', import.meta.url).href,
       alt: 'October 2024'
     },
     description: 'Volume 1.4, October 2024',
@@ -55,7 +55,7 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
       url: 'https://conta.cc/4blhTSu'
     },
     media: {
-      src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
+      src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.webp', import.meta.url).href,
       alt: 'May 2024'
     },
     description: 'Volume 1.2, May 2024',
@@ -67,7 +67,7 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
       url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
     },
     media: {
-      src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
+      src: new URL('./media/news/newsletter.webp', import.meta.url).href,
       alt: 'March 2024'
     },
     description: 'Volume 1.1, March 2024',
@@ -79,7 +79,7 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
       url: 'https://conta.cc/4fxbpCD'
     },
     media: {
-      src: new URL('./media/news/newsletter-v1.3.jpg', import.meta.url).href,
+      src: new URL('./media/news/newsletter-v1.3.webp', import.meta.url).href,
       alt: 'July 2024'
     },
     description: 'Volume 1.3, July 2024',
@@ -95,7 +95,7 @@ export const NEWS_ITEMS = [
       url: 'https://www.regulations.gov/document/EPA-HQ-OAR-2024-0350-0001'
     },
     media: {
-      src: new URL('./media/news/epa.png', import.meta.url).href,
+      src: new URL('./media/news/epa.webp', import.meta.url).href,
       alt: 'EPA RFI'
     },
     description: 'The U.S. Environmental Protection Agency (EPA) is inviting public comment on the potential for expanded use of advanced and emerging technologies for methane emissions quantification in the Agency’s Greenhouse Gas Reporting Program (GHGRP). Responses to the request for information (RFI) are due by November 27, 2024.'
@@ -117,7 +117,7 @@ export const NEWS_ITEMS = [
       url: 'https://www.youtube.com/watch?v=8_aFRPqiXGw&feature=youtu.be&ab_channel=NASAVideo'
     },
     media: {
-      src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
+      src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.webp', import.meta.url).href,
       alt: 'NASA logo'
     },
     description: 'The US GHG Center and beta portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
@@ -131,7 +131,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and'
     },
     media: {
-      src: new URL('./media/events/arset_logo.png', import.meta.url).href,
+      src: new URL('./media/events/arset_logo.webp', import.meta.url).href,
       alt: 'ARSET Logo'
     },
     description: "Registration for the “Methane Observations for Large Emission Event Detection and Monitoring” training is now available on ARSET, NASA’s remote sensing training platform. The training introduces participants to using data gathered by the Earth surface Mineral dust Source Investigation (EMIT) mission. Training will occur November 19-21, 2024.",
@@ -144,7 +144,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://agu.confex.com/agu/agu24/meetingapp.cgi/Session/229081'
     },
     media: {
-      src: new URL('./media/events/agu_logo.png', import.meta.url).href,
+      src: new URL('./media/events/agu_logo.webp', import.meta.url).href,
       alt: 'AGU Logo'
     },
     description: "On Sunday, December 8 (1:00 - 4:30PM EST), US GHG Center team members will host a workshop at the 2024 American Geophysical Union annual conference. Join us at Advancing Open Science: Greenhouse Gas Emission Data Analysis using the U.S. Greenhouse Gas Center’s JupyterHub. Early bird registration ends on November 6.",
@@ -157,7 +157,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://emg-wd.wixsite.com/us-ghg-2024'
     },
     media: {
-      src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.png', import.meta.url).href,
+      src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.webp', import.meta.url).href,
       alt: 'GHGC Stakeholder Forum Announcement Image'
     },
     description: "This 2-day forum will focus on gathering input from the stakeholder community to inform the Center's priorities and future directions. Join us on Dec 4-5, 2024 in College Park, Maryland!",
@@ -170,7 +170,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://carbon.nasa.gov/docs/May%202024%20PSS%20Talk%20Announcement.pdf'
     },
     media: {
-      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_G3W_Webinar.png', import.meta.url).href,
+      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_G3W_Webinar.webp', import.meta.url).href,
       alt: 'CMS speaker series screenshot'
     },
     description: "The US GHG Center is joining with NASA's Carbon Monitoring System (CMS) Initiative to present a webinar on Wednesday, May 8, 2024 from 12-1PM ET. Gianpaolo Balsamo, director of the World Meteorological Organization (WMO) and G3W leader, will discuss how G3W fills critical information gaps on greenhouse gases via an integrated operational framework. Participants can register for the event virtually through WebEx. Attendees must register.",
@@ -183,7 +183,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
     },
     media: {
-      src: new URL('./media/events/summer-school.png', import.meta.url).href,
+      src: new URL('./media/events/summer-school.webp', import.meta.url).href,
       alt: 'Summer school info screenshot'
     },
     description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction in state-of-the-art atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
@@ -196,7 +196,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
     },
     media: {
-      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_v1.png', import.meta.url).href,
+      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_v1.webp', import.meta.url).href,
       alt: 'CMS speaker series screenshot'
     },
     description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. Attendees must register.',
@@ -235,7 +235,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://www.youtube.com/playlist?list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_'
     },
     media: {
-      src: new URL('./media/events/stakeholder-forum.png', import.meta.url).href,
+      src: new URL('./media/events/stakeholder-forum.webp', import.meta.url).href,
       alt: 'Stakeholder forum slidedeck intro slide'
     },
     description: ' U.S. Greenhouse Gas Center team members presented the beta version of the US GHG Center at the Stakeholder Forum on November 28, 2023 in Washington, D.C. Presenters highlighted the capabilities and scientific potential of the website through demonstrations. Representatives of federal, state, and local governments as well as NGOs, boundary organizations, private organizations, and academia attended the forum.',
@@ -248,7 +248,7 @@ export const EVENT_ITEMS = sortByDateCustom([
       url: 'https://cce-datasharing.gsfc.nasa.gov/files/conference_presentations/Talk_Combley_92_39.pptx'
     },
     media: {
-      src: new URL('./media/events/cms.png', import.meta.url).href,
+      src: new URL('./media/events/cms.webp', import.meta.url).href,
       alt: 'CMS meeting logo'
     },
     description: 'On September 26, 2023, several US GHG Center team members met with a community of potential users and considered how the site could best serve stakeholders. Meeting participants shared ideas on focus areas and needs for the US GHG Center and also suggested stakeholders who might be interested in a targeted Stakeholder Forum for the US GHG Center (November 2023). In addition, team members explored a potential partnership with NASA CMS stakeholder engagement.',
@@ -264,7 +264,7 @@ export const TUTORIAL_ITEMS = [
       url: 'https://youtu.be/6xWdIlWqhBE?si=KEaUug75HvH94aBo'
     },
     media: {
-      src: new URL("./media/tutorials/tutorial_intro_video.png", import.meta.url).href,
+      src: new URL("./media/tutorials/tutorial_intro_video.webp", import.meta.url).href,
       alt: ''
     },
     description: 'Learn how to use the US GHG Center portal.',
@@ -277,7 +277,7 @@ export const TUTORIAL_ITEMS = [
       url: 'https://www.youtube.com/watch?v=S2XL5WT9W4g'
     },
     media: {
-      src: new URL("./media/tutorials/tutorial_exploration_video.png", import.meta.url).href,
+      src: new URL("./media/tutorials/tutorial_exploration_video.webp", import.meta.url).href,
       alt: ''
     },
     description: "Learn how to navigate the Exploration Environment.",
