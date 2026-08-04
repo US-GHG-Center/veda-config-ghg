@@ -145,13 +145,11 @@ taxonomy:
 
 <Block>
     <Figure>
-        <Image 
-            src={new URL('./media/net-carbon-emissions.mp4', import.meta.url).href}
-            alt="NASA animation of country-level CO₂ emissions inferred from atmospheric observations " 
-            align="left"
-            attrAuthor=" NASA Science Visualization Studio/Greg Shirah and Helen-Nicole Kostis"
-            attrUrl="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.mp4"
-        />
+        <video style={{ width: '100%', aspectRatio: "16/9" }} controls autoplay muted>
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.webm" type="video/webm" />
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         <Caption> Models use observations from NOAA’s network of surface stations and NASA’s OCO-2 satellite to estimate net emissions and removals of CO₂, which reflect the combined impact of fossil fuel emissions and absorption by land and ocean sinks. Variability highlights the role of the 2015-2016 El Nino that resulted in increased emissions from tropical ecosystems as well as large fire events like those in Australia during 2020. </Caption>
     </Figure>
     <Prose>
