@@ -3,7 +3,7 @@ id: 'tracking-greenhouse-gas-cycles'
 name: Tracking Greenhouse Gas Cycles
 description: 'Understanding carbon transfers between land, ocean, and atmosphere.'
 media:
-  src: ::file ./media/tracking-ghg-cycles--cover.jpeg
+  src: ::file ./media/tracking-ghg-cycles--cover.webp
   alt: Satellite view of wetland area
   author:
     name: NASA Earth Observatory/Michael Taylor and Adam Voiland
@@ -50,10 +50,11 @@ taxonomy:
 
 <Block>
     <Figure>
-        <video style={{ width: '100%', aspectRatio: "16/9" }} poster={new URL('./media/screenshot-co2-explainer.png', import.meta.url).href} controls autoplay muted>
-            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005110/CO2explainer_1080p30.mp4" type="video/mp4"/>
+        <video style={{ width: '100%', aspectRatio: "16/9" }} poster={new URL('./media/screenshot-co2-explainer.webp', import.meta.url).href} controls autoplay muted>
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005110/CO2composite.webm" type="video/webm" />
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005110/CO2composite.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-        </video> 
+        </video>
         {/* <iframe src="https://svs.gsfc.nasa.gov/prepub/mark/drafts/CO2explainer.mp4" width="800" height="480" allow="autoplay"></iframe> */}
         <Caption> This animation combines information from NASA models and datasets featured on the US GHG Center to track the influences on atmospheric CO₂ over the course of a year. Global views highlight the influence of fossil fuel and fire emissions in the atmosphere and land and ocean sinks at the surface using different colors. The waterfall diagram shows estimates of the global contributions of major sources and sinks and illustrates how their balance shifts with the season. At the end of the year, the land and ocean have absorbed nearly half of CO₂ emissions. *Video Credit: NASA Science Visualization Studio/Anansa Keaton-Ashanti and Mark SubbaRao* </Caption>
     </Figure>
@@ -72,8 +73,8 @@ taxonomy:
     <Figure>
         <div style={{"background-color": "black"}}>
         <CompareImage
-            leftImageSrc={new URL('./media/nee-1.png', import.meta.url).href}
-            rightImageSrc={new URL('./media/nee-2.png', import.meta.url).href}
+            leftImageSrc={new URL('./media/nee-1.webp', import.meta.url).href}
+            rightImageSrc={new URL('./media/nee-2.webp', import.meta.url).href}
             width="100"
             attrAuthor="NASA Science Visualization Studio, Mark SubbaRao"
             alt="Differences between January and July Net Ecosystem Exchange (NEE)"
@@ -144,13 +145,11 @@ taxonomy:
 
 <Block>
     <Figure>
-        <Image 
-            src={new URL('./media/net-carbon-emissions.gif', import.meta.url).href}
-            alt="NASA animation of country-level CO₂ emissions inferred from atmospheric observations " 
-            align="left"
-            attrAuthor=" NASA Science Visualization Studio/Greg Shirah and Helen-Nicole Kostis"
-            attrUrl="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.mp4"
-        />
+        <video style={{ width: '100%', aspectRatio: "16/9" }} controls autoplay muted>
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.webm" type="video/webm" />
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         <Caption> Models use observations from NOAA’s network of surface stations and NASA’s OCO-2 satellite to estimate net emissions and removals of CO₂, which reflect the combined impact of fossil fuel emissions and absorption by land and ocean sinks. Variability highlights the role of the 2015-2016 El Nino that resulted in increased emissions from tropical ecosystems as well as large fire events like those in Australia during 2020. </Caption>
     </Figure>
     <Prose>

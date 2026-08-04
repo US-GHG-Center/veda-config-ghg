@@ -170,11 +170,11 @@ module.exports = {
     defaultIsOpen: false,
     contentId: 'gov-banner-content'
   },
-  siteAlert: {
-    content: `Placeholder banner text.`,
-    expires: '2025-11-12T12:00:00-04:00',
-    type: 'emergency',
-    slim: true,
-    showIcon: true
-  },
+  // siteAlert: {
+  //   content: `Placeholder banner text.`,
+  //   expires: '2025-11-12T12:00:00-04:00',
+  //   type: 'emergency',
+  //   slim: true,
+  //   showIcon: true
+  // },
 };
