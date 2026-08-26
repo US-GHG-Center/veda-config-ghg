@@ -1,0 +1,184 @@
+---
+id: emit-ch4plume-v2
+name: EMIT Methane Point Source Plume Complexes
+description: Methane point source plume complexes measured by the EMIT imaging spectrometer on the International Space Station (ISS)
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/emit-ch4plume-v2.html'
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/emit-ch4plume-v2_User_Notebook.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Femit-ch4plume-v2_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://search.earthdata.nasa.gov/search/granules?p=C3242707413-LPCLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&q=emit%20plume&tl=1694622854.77!3!!
+    label: Download data from NASA Distributed Active Archive Center
+    title: Data Browser
+media:
+  src: ::file ./media/emit-plume--cover.webp
+  alt: emission from industry
+  author:
+    name: Chris Leboutillier
+taxonomy:
+  - name: Topics
+    values:
+      - Large Emission Events
+      - Methane       
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CH₄
+  - name: Product Type
+    values:
+      - Satellite Observations
+disableExplore: true
+layers:
+  - id: ch4-plume-emissions
+    stacCol: emit-ch4plume-v2
+    name: CH₄ Point Source Plume Complexes
+    type: raster
+    description: Methane point source plume complex extents with methane enhancements
+    initialDatetime: newest
+    analysis:
+      exclude: true
+    zoomExtent:
+      - 8
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      assets: ch4-plume-emissions
+      colormap_name: plasma
+      rescale:
+        - 1
+        - 1500
+      nodata: -9999
+    compare:
+      datasetId: emit-ch4plume-v2
+      layerId: ch4-plume-emissions
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: ppm-m
+      type: gradient
+      min: 1
+      max: +1500
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
+---
+
+<Block>
+  <Prose>
+    **Temporal Extent:** August 10, 2022 - Ongoing<br />
+    **Temporal Resolution:** Variable (based on ISS orbit, solar illumination, and target mask)<br />
+    **Spatial Extent:** 54°N to 54°S latitude within target mask<br />
+    **Spatial Resolution:** 60 m<br />
+    **Data Units:** Parts per million meter (ppm-m)<br />
+    **Data Type:** Research<br />
+    **Data Latency:** EMIT plume complex identification primarily occurs about a week after the observation and can vary with ISS data downlink rates and the need for manual review. Some plume complexes may be identified rapidly, but with improving algorithms, additional older plume complexes may continue to appear in the dataset over time.
+
+    Methane is a strong greenhouse gas that is invisible to the human eye. Large methane emissions, typically referred to as point source emissions, represent a significant proportion of total methane emissions from the production, transport, and processing of oil and natural gas, landfills, and other sources. By measuring the spectral fingerprint of methane, EMIT can map areas of high methane concentration over background levels in the atmosphere, identifying plume complexes, and estimating the methane enhancements. This dataset includes methane plume complexes measured within the extent and timeframe of EMIT observations. EMIT is on the International Space Station and therefore does not sample everywhere on Earth nor can methane plumes be derived for all locations observed.
+    
+    The EMIT Methane Plume Complex data files can be directly accessed [from the LP DAAC via Earthdata Search](https://search.earthdata.nasa.gov/search/granules?p=C3242707413-LPCLOUD).
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    <div style={{ border: '2px solid red', padding: '10px', display: 'inline-block', color: '#1b2631' }}>
+      <span style={{ color: 'red', fontWeight: 'bold' }}>Attention!</span>
+      A marker location in the visualization environment below represents the area of maximum enhancement within the plume. The marker does <strong>not</strong> indicate the plume source.
+    </div>
+  </Prose>
+</Block>
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://earth.gov/ghgcenter/data-tools/view/emit-plume-viewer"
+    />
+  </Figure>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    Thorpe, A., Brodrick, P., Chadwick, D., Lopez, A., Villanueva-Weeks, C., Fahlen, J., Jensen, D., Bender, H., Vinckier, Q., Xiang, C., Olson-Duvall, W., Chlus, A., Lundeen, S., Thompson, D., & Green, R. (2026). EMIT L2B Estimated Methane Plume Complexes 60 m V002 [Data set]. NASA Land Processes Distributed Active Archive Center. [https://doi.org/10.5067/EMIT/EMITL2BCH4PLM.002](https://doi.org/10.5067/EMIT/EMITL2BCH4PLM.002).
+
+    ## Version History
+    The current dataset is v2, which replaced the v1 dataset in the US GHG Center in August 2026. 
+    Updates include:
+    - An updated match filter algorithm was used to derive methane enhancement estimates including uncertainty and sensitivities. 
+    - Emission rate estimates in the GeoJSON source metadata were added for applicable plume complexes.
+
+    For detailed version update information, please refer to the [ATBD](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md).
+
+    ## Dataset Accuracy
+    Uncertainty in the methane (ppm-m) depends on instrument, observation, and surface factors as described in the ATBD by Broderick, et al. 2025 (see link in references below). An uncertainty value (ppm-m) is calculated and reported for each plume complex. As described in the ATBD, EMIT plume complexes are manually identified and reviewed. While we publish high confidence examples, false positives can occur and when identified these cases are removed from subsequent data releases.
+
+    ## Disclaimer
+    Plume complexes are identified only when EMIT acquires data over a region and the portion of the scene is cloud free. There are also plumes that are below the detection limit of the EMIT instrument. As such, the absence of a plume at a particular point and time should not be taken as strong evidence that a plume does not exist. 
+
+    ## Scientific Details
+    EMIT has demonstrated the capacity to characterize methane point source emissions by measuring gas absorption features in the shortwave infrared. The EMIT GHG point source plumes provided here build on a substantial history of remote greenhouse gas detections from airborne imaging spectrometers (Thorpe et al., 2013, 2014, 2017; Thompson et al., 2015; Frankenberg et al., 2016; Duren et al., 2019; Cusworth et al., 2022). We leverage a per-column adaptive matched filter for the primary detection, due to the speed and efficacy of identifying subtle signatures. Plumes are identified and assessed by scientists following a protocol in order to provide only instances with maximum confidence. For each EMIT point source plume complex, methane enhancements in units of ppm-m are provided. See the [ATBD](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md) for more details.
+
+    ## Key Publications
+    Thorpe, Andrew K et al., Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space. _Sci. Adv._ 9, eadh2391 (2023). DOI: [10.1126/sciadv.adh2391](https://doi.org/10.1126/sciadv.adh2391)
+
+    Thorpe, A. K., Roberts, D. A., Bradley, E. S., Funk, C. C., Dennison, P. E., Leifer, I. (2013). High resolution mapping of methane emissions from marine and terrestrial sources using a Cluster-Tuned Matched Filter technique and imaging spectrometry. _Remote Sensing of Environment. 134_, 305–318. [https://doi.org/10.1016/j.rse.2013.03.018](https://doi.org/10.1016/j.rse.2013.03.018)
+
+    Thompson, D. R., Leifer, I., Bovensmann, H., Eastwood, M., Fladeland, M., Frankenberg, C., Gerilowski, K., Green, R.O., Kratwurst, S., Krings, T., Luna, B., Thorpe, A. K. (2015). Real-time remote detection and measurement for airborne imaging spectroscopy: A case study with methane. _Atmospheric Measurement Techniques. 8_, 4383–4397. [https://doi.org/10.5194/amt-8-4383-2015](https://doi.org/10.5194/amt-8-4383-2015) 
+
+    Brodrick, P. G., Thorpe, A. K., Fahlen, J., Thompson, D. R. (2025). _EMIT Greenhouse Gas Algorithms:  Greenhouse Gas Point Source Mapping and Related Products, v2.0_, November 2025, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, [https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_ATBD.md)
+
+    _Level 2B Greenhouse Gas Data Product User Guide, v2.0_, November 2025, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, [https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_User_Guide.md](https://github.com/emit-sds/emit-sds-tgp/blob/main/docs/EMIT_L2B_TRACE_GAS_User_Guide.md)
+
+    ## Other Relevant Publications
+    Thorpe, A. K., Frankenberg, C., Thompson, D. R., Duren, R. M., Aubrey A. D., Bue, B. D., Green, R. O., Gerilowski, K., Krings, T., Borchardt, J., Kort, E. A., Sweeney, C., Conley, S., Roberts, D. A., Dennison, P. E. (2017). Airborne DOAS retrievals of methane, carbon dioxide, and water vapor concentrations at high spatial resolution: Application to AVIRIS-NG. _Atmospheric Measurement Techniques. 10_, 3833–3850. [https://doi.org/10.5194/amt-10-3833-2017](https://doi.org/10.5194/amt-10-3833-2017) 
+
+    Thorpe, A. K., Frankenberg, C., Roberts, D. A. (2014). Retrieval techniques for airborne imaging of methane concentrations using high spatial and moderate spectral resolution: Application to AVIRIS. _Atmospheric Measurement Techniques. 7_, 491–506. [https://doi.org/10.5194/amt-7-491-2014](https://doi.org/10.5194/amt-7-491-2014) 
+
+    Duren, R. M., Thorpe, A. K., Foster, K. T., Rafiq, T., Hopkins, F. M., Yadav, V., Bue, B. D., Thompson, D. R., Conley, S., Colombi, N. K., Frankenberg, C., McCubbin, I. B., Eastwood, M. L., Falk, M., Herner, J. D., Croes, B. E., Green, R. O., Miller, C. E. (2019). California’s methane super-emitters. _Nature. 575_, 180–184. [https://doi.org/10.1038/s41586-019-1720-3](https://doi.org/10.1038/s41586-019-1720-3)
+
+    Frankenberg, C., Thorpe, A. K., Thompson, D. R., Hulley, G., Kort, E. A., Vance, N., Borchardt, J., Krings, T., Gerilowski, K., Sweeney, C., Conley, S., Bue, B. D., Aubrey, A. D., Hook, S., Green, R. O. (2016). Airborne methane remote measurements reveal heavy-tail flux distribution in Four Corners region. _Proceedings of the National Academy of Sciences of the United States of America. 113_, 9734–9739. [https://doi.org/10.1073/pnas.1605617113](https://doi.org/10.1073/pnas.1605617113) 
+
+    Cusworth, D. H., Thorpe, A. K., Ayasse, A. K., Stepp, D., Heckler, J., Asner, G. P., Miller, C. E., Yadav, V., Chapman, J. W., Eastwood, M. L., Green, R. O., Hmiel, B., Lyon, D. R., Duren, R. M. (2022). Strong methane point sources contribute a disproportionate fraction of total emissions across multiple basins in the United States. _Proceedings of the National Academy of Sciences. 119_, e2202338119. [https://doi.org/10.1073/pnas.2202338119](https://doi.org/10.1073/pnas.2202338119)
+
+    ## Learn More
+    - EMIT data are available through the NASA LP DAAC and [additional information is available](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/emit-overview/#emit-metadata)
+    - The Jet Propulsion Lab (JPL) contains [VISIONS - The EMIT open data portal](https://earth.jpl.nasa.gov/emit/data/data-portal/coverage-and-forecasts/)
+    - See how EMIT contributes to new technologies to detect and quantify large methane release events in the <Link to={"/stories/discovering-large-methane-emissions"}>Discovering Large Methane Emission Events with Remote Measurement story</Link>
+    - Learn how EMIT and data collected by aircraft can be used together to better understand methane super emitter events in the <Link to={"/stories/emit-and-aviris-3"}>Tracking Methane Plumes from Space and Sky story</Link>
+    - Get the latest update on EMIT and AVIRIS in the <Link to={"/stories/emit-extension-aviris-flights"}>NASA Expands Capabilities in Methane Detection from Air and Space story</Link>
+    
+    ## Acknowledgment
+    Thanks to contributions of the entire EMIT engineering and science teams and the ISS team for enabling the EMIT mission. Thanks to NASA’s Earth Science Division with special thanks to Dr. Jack Kaye for continued support of the EMIT greenhouse gas application. Thanks to NASA LP DAAC for working with the US GHG Center to coordinate expedited data access.
+
+    ## License
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/licenses/by/1.0/legalcode) (CC BY 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/emit-ch4plume-v2_Data_Flow.html)
+    - [Data Ingest](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/emit-ch4plume-v2.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/emit-ch4plume-v2_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>

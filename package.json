@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "3.1.24",
+  "version": "3.1.25",
   "source": "./.veda/ui/apps/dashboard-parcel/index.html",
   "license": "Apache-2.0",
   "scripts": {
