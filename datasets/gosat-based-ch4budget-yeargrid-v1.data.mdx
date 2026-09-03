@@ -1,7 +1,7 @@
 ---
 id: gosat-based-ch4budget-yeargrid-v1
 name: GOSAT-based Top-down Total and Natural Methane Emissions
-description: Total and wetland yearly methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data for 2010 to 2022 on a 4 x 5 degree (lat/lon) grid  
+description: Total and wetland yearly methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data for 2010 to 2022 on a 4 x 5 degree (lat/lon) grid
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -11,11 +11,11 @@ usage:
     title: 'Data Usage Notebooks'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fgosat-based-ch4budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
-    title: Interactive Session in the US GHG Center JupyterHub (requires account) 
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
   - url: https://data.ghg.center/browseui/index.html#gosat-based-ch4budget-yeargrid-v1/
     label: Browse and download the data
     title: Data Browser
-  
+
 media:
   src: ::file ./media/oco2-mip-ch4budget-yeargrid-v1--cover.jpg
   alt: Dried/Burned trees
@@ -26,7 +26,7 @@ taxonomy:
   - name: Topics
     values:
       - Natural Emissions and Sinks
-      - Methane      
+      - Methane
   - name: Source
     values:
       - NASA
@@ -38,13 +38,13 @@ taxonomy:
       - Model Output
 infoDescription: |
   ::markdown
-    - Temporal Extent: 2010 - 2022   
-    - Temporal Resolution: Annual   
-    - Spatial Extent: Global    
-    - Spatial Resolution: 4°(latitude) x 5°(longitude)     
+    - Temporal Extent: 2010 - 2022
+    - Temporal Resolution: Annual
+    - Spatial Extent: Global
+    - Spatial Resolution: 4°(latitude) x 5°(longitude)
     - Data Units: Teragrams of methane per year (Tg CH₄/year)
     - Data Type: Research
-    - Data Latency: Updated yearly         
+    - Data Latency: Updated yearly
 layers:
   - id: post-total
     stacCol: gosat-based-ch4budget-yeargrid-v1
@@ -72,7 +72,7 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: Tg CH₄/year
       type: gradient
       min: 0
@@ -85,8 +85,8 @@ layers:
         - '#f1f9a9'
         - '#feeea2'
         - '#fdbf6f'
-        - '#f67b4a' 
-        - '#d8434e' 
+        - '#f67b4a'
+        - '#d8434e'
         - '#9e0142'
     analysis:
       metrics:
@@ -97,7 +97,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Annual
-      unit: Tg CH₄/yr                
+      unit: Tg CH₄/yr
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.total.webp
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Total
@@ -127,7 +127,7 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: Tg CH₄/year
       type: gradient
       min: 0
@@ -140,8 +140,8 @@ layers:
         - '#f1f9a9'
         - '#feeea2'
         - '#fdbf6f'
-        - '#f67b4a' 
-        - '#d8434e' 
+        - '#f67b4a'
+        - '#d8434e'
         - '#9e0142'
     analysis:
       metrics:
@@ -152,23 +152,23 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Annual
-      unit: Tg CH₄/yr                
+      unit: Tg CH₄/yr
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.wetlands.webp
-      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands 
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands
 ---
 
 <Block>
   <Prose>
     **Temporal Extent:** 2010 - 2022<br />
-    **Temporal Resolution:** Annual   
-    **Spatial Extent:** Global    
-    **Spatial Resolution:** 4°(latitude) x 5°(longitude)  
+    **Temporal Resolution:** Annual<br />
+    **Spatial Extent:** Global<br />
+    **Spatial Resolution:** 4°(latitude) x 5°(longitude)<br />
     **Data Units:** Teragrams of methane per year (Tg CH₄/year)<br />
     **Data Type:** Research<br />
-    **Data Latency:** Updated yearly 
+    **Data Latency:** Updated yearly
 
-    As part of the global stock take (GST), countries are asked to provide a record of their greenhouse gas emissions to inform decisions on how to reduce GHG emissions. The NASA Carbon Monitoring System Flux (CMS-Flux) team has used remote sensing observations from Japan’s Greenhouse gases Observing SATellite (GOSAT) to produce modeled total methane (CH₄) emissions and uncertainties on a 4 degree (latitude) by 5 degree (longitude) resolution grid for the years 2010 - 2022. The GOSAT data is used in the model to inform total emission estimates, as well as wetland (the primary natural source of methane). These estimates are expressed in teragrams of CH₄ per year (Tg/year). Only the total and wetlands model-derived emissions are included in the US GHG Center. The source dataset contains emissions data for all other anthropogenic sources.  
+    As part of the global stock take (GST), countries are asked to provide a record of their greenhouse gas emissions to inform decisions on how to reduce GHG emissions. The NASA Carbon Monitoring System Flux (CMS-Flux) team has used remote sensing observations from Japan’s Greenhouse gases Observing SATellite (GOSAT) to produce modeled total methane (CH₄) emissions and uncertainties on a 4 degree (latitude) by 5 degree (longitude) resolution grid for the years 2010 - 2022. The GOSAT data is used in the model to inform total emission estimates, as well as wetland (the primary natural source of methane). These estimates are expressed in teragrams of CH₄ per year (Tg/year). Only the total and wetlands model-derived emissions are included in the US GHG Center. The source dataset contains emissions data for all other anthropogenic sources.
   </Prose>
 </Block>
 <Block>
@@ -180,17 +180,17 @@ layers:
     This data product (v1) was updated in the US GHG Center in December 2024. Updates include:
     - Data added for 2010 - 2022 (previously, data was only provided for 2019)
     - Change in spatial resolution from 1° x 1° to 4° (latitude) x 5°(longitude)
-    - Removal of uncertainty and priori data layers (priori model-estimated methane emissions for wetlands remains accessible via the [US GHG Center STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/earth.gov/ghgcenter/api/stac/?.language=en))
-    - Updated layer names and descriptions 
-   
+    - Removal of uncertainty and priori data layers (priori model-estimated methane emissions for wetlands remains accessible via the [US GHG Center STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/earth.gov/eic/api/stac/ghgc?.language=en))
+    - Updated layer names and descriptions
+
     ## Dataset Accuracy
-    Data accuracy is determined by understanding the uncertainties in the model emissions. Bottom-up uncertainties are generally calculated by comparing how emissions attributions to each sector differ across studies, by comparing emission models and remote sensing data, and using expert opinion when uncertainties are especially challenging to estimate. Recent studies show that there could be larger than expected emissions from aquatic and fossil fuel sources. This means that current methane budgets estimated from both bottom-up and top-down models are either inaccurate in their allocations to existing sectors or that the atmospheric methane removal mechanisms (sinks) are not fully understood. 
-    
-    For top-down uncertainties, recent studies also show that there can be considerable errors in the models used by remote sensing instruments to relate measurements to concentrations. Model transport errors can add additional uncertainty when inverting concentrations to fluxes. The flux inversion used for this top-down dataset reduces the impact of variability in the hydroxyl radical (OH), the main driver of methane removal, on methane emissions by jointly estimating OH and CH₄ emissions. A latitudinal correction is used to reduce the impacts of stratospheric chemistry and transport errors. Other systematic errors in model transport and chemistry were not characterized but it is not expected that these errors are significant. Additionally, the Bayesian approach used for this dataset enables the quantification of smoothing error, which can be a significant contributor to emission uncertainty, and reduces the potential for introducing additional uncertainty and biases when fluxes are projected back to emissions. 
+    Data accuracy is determined by understanding the uncertainties in the model emissions. Bottom-up uncertainties are generally calculated by comparing how emissions attributions to each sector differ across studies, by comparing emission models and remote sensing data, and using expert opinion when uncertainties are especially challenging to estimate. Recent studies show that there could be larger than expected emissions from aquatic and fossil fuel sources. This means that current methane budgets estimated from both bottom-up and top-down models are either inaccurate in their allocations to existing sectors or that the atmospheric methane removal mechanisms (sinks) are not fully understood.
+
+    For top-down uncertainties, recent studies also show that there can be considerable errors in the models used by remote sensing instruments to relate measurements to concentrations. Model transport errors can add additional uncertainty when inverting concentrations to fluxes. The flux inversion used for this top-down dataset reduces the impact of variability in the hydroxyl radical (OH), the main driver of methane removal, on methane emissions by jointly estimating OH and CH₄ emissions. A latitudinal correction is used to reduce the impacts of stratospheric chemistry and transport errors. Other systematic errors in model transport and chemistry were not characterized but it is not expected that these errors are significant. Additionally, the Bayesian approach used for this dataset enables the quantification of smoothing error, which can be a significant contributor to emission uncertainty, and reduces the potential for introducing additional uncertainty and biases when fluxes are projected back to emissions.
 
     ## Disclaimer
-    This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.  
-    
+    This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+
     The [original source dataset](https://ceos.org/gst/methane.html) contains CH₄ emissions layers for various anthropogenic sources that are not presented in the US GHG Center. The [original source data](https://ceos.org/gst/methane.html) also contains a .csv text format file with CH₄ emissions listed by country. Note that uncertainties are only appropriate for use at the grid cell  (i.e. 1 degree) resolution. Care must be taken when using or interpreting this data.
 
     ## Scientific Details
@@ -209,19 +209,19 @@ layers:
     Qu, Z., Jacob, D. J., Shen, L., Lu, X., Zhang, Y., Scarpelli, T. R., Nesser, H., Sulprizio, M. P., Maasakkers, J. D., Bloom, A. A., Worden, J. R., Parker, R. J., & Delgado, A. L. (2021). Global distribution of methane emissions: a comparative inverse analysis of observations from the TROPOMI and GOSAT satellite instruments. *Atmos. Chem. Phys., 21*, 14159–14175. [https://doi.org/10.5194/acp-21-14159-2021](https://doi.org/10.5194/acp-21-14159-2021)
 
     United Nations Climate Change. (n.d.). *Global Stocktake*. [https://unfccc.int/topics/global-stocktake](https://unfccc.int/topics/global-stocktake)
-    
+
     Zhang, Y., Jacob, D. J., Lu, X., Maasakkers, J. D., Scarpelli, T. R., Sheng, J.-X., Shen, L., Qu, Z., Sulprizio, M. P., Chang, J., Bloom, A. A., Ma, S., Worden, J., Parker, R. J., and Boesch, H. (2021). Attribution of the accelerating increase in atmospheric methane during 2010–2018 by inverse analysis of GOSAT observations. *Atmos. Chem. Phys., 21*, 3643–3666. [https://doi.org/10.5194/acp-21-3643-2021](https://doi.org/10.5194/acp-21-3643-2021)
-    
+
     ## Learn More
     - Check out this dataset mentioned in the <Link to={"/stories/modeling-natural-methane-emissions"}>Models and Observations Combine to Uncover Drivers of Natural Methane Emissions story</Link>
     - Learn more about how ground based measurements, satellite measurements and models are used to estimate methane emissions from human-caused and natural sources such as wetlands in the <Link to={"/stories/tracking-greenhouse-gas-cycles"}>Tracking Greenhouse Gas Cycles story</Link>
 
     ## Acknowledgment
     Part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with NASA. This research was motivated by Committee on Earth Observation Satellites (CEOS) activities related to quantifying greenhouse gas emissions. This research was supported by funding from NASA's Carbon Monitoring System (CMS) and National Institute of Advanced Industrial Science and Technology (AIST) programs. Additional funding from the National Natural Science Foundation of China (NSFC) was also provided.
-    
+
     ## License
-    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
-          
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
     ## Data Stewardship
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/gosat-based-ch4budget-yeargrid-v1_Data_Flow.html)
     - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html)
